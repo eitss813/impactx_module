@@ -1,0 +1,698 @@
+diff --git a/application/modules/Activity/views/scripts/_activityText.tpl b/application/modules/Activity/views/scripts/_activityText.tpl
+index ab4bacc6..588ba9a0 100755
+--- a/application/modules/Activity/views/scripts/_activityText.tpl
++++ b/application/modules/Activity/views/scripts/_activityText.tpl
+@@ -150,13 +150,13 @@ $this->headScript()
+       $actionType = $action->type;
+     $objectType = $action->object_type;
+     $flag =0;
+-    $is_metric = false;
+-
++    $not_submitted = $is_metric = false;
++    
+     if($objectType == 'sitepage_metric' && $actionType == 'post'){
+ 
+         $params = $action->params;
+         $metric = Engine_Api::_()->getItem('sitepage_metric', $action->object_id);
+-
++        
+         if(isset($params['metric_value']) && isset($params['form_id']) ){
+             $owner_id = $action->subject_id;
+             $getEntryIDByUserIdAndFormId = Engine_Api::_()->impactx()->getEntryIDByOwnerIdAndFormId($params['form_id'], $owner_id);
+@@ -178,10 +178,15 @@ $this->headScript()
+                 
+                 if( empty($isAdmin) && empty($isPageAdmin) && empty($entry->publish) )
+                     continue;
++            }else {
++                $not_submitted = 'Not Submitted';
++                // $objectLink= $metric->getHref();
++                $objectLink= $yndform->getHref();
+             }
+             
+             
+         }else{
++            $not_submitted = 'Not Available';
+             $typeContent = ' has comment on';
+             $objectName= $metric['metric_name'];
+             $objectLink= $metric->getHref();
+@@ -362,16 +367,22 @@ $this->headScript()
+                 <?php if($flag == 0): ?>
+                     <a  class="object_content" target="_blank" href="<?php echo $objectLink ; ?>"><?php echo $objectName?></a>
+                     
+-                    <?php if( !empty($is_metric) && (!empty($isAdmin) || !empty($isPageAdmin)) ): ?>
+-                        <div id="<?php echo $action->action_id ?>-publish-now" class="<?php echo $action->action_id ?>-publish-now" style="float: right; display: <?php echo empty($entry->publish)? 'block': 'none'; ?>">
+-                            <button onclick="updatePublishStatusByActivity('<?php echo $action->action_id ?>', '<?php echo $entry->getIdentity() ?>', 'true')">Publish</button> 
+-                            <span id='<?php echo $action->action_id ?>-publish-now-spinner' style="visibility: hidden;"><img src="application/modules/Yndynamicform/externals/images/loading.gif"/></span>
++                    <?php if( !empty($not_submitted) && (!empty($isAdmin) || !empty($isPageAdmin)) ): ?>
++                        <div style="float: right;">
++                            <button style="background: #d4d4d4; border: #d4d4d4;"><?php echo $not_submitted; ?></button>
+                         </div>
++                    <?php else: ?>
++                        <?php if( !empty($is_metric) && (!empty($isAdmin) || !empty($isPageAdmin)) ): ?>
++                            <div id="<?php echo $action->action_id ?>-publish-now" class="<?php echo $action->action_id ?>-publish-now" style="float: right; display: <?php echo empty($entry->publish)? 'block': 'none'; ?>">
++                                <button onclick="updatePublishStatusByActivity('<?php echo $action->action_id ?>', '<?php echo $entry->getIdentity() ?>', 'true')">Publish</button> 
++                                <span id='<?php echo $action->action_id ?>-publish-now-spinner' style="visibility: hidden;"><img src="application/modules/Yndynamicform/externals/images/loading.gif"/></span>
++                            </div>
+ 
+-                        <div id="<?php echo $action->action_id ?>-unpublish-now" class="<?php echo $action->action_id ?>-unpublish-now" style="float: right; display: <?php echo empty($entry->publish)? 'none': 'block'; ?>">
+-                            <button onclick="updatePublishStatusByActivity('<?php echo $action->action_id ?>', '<?php echo $entry->getIdentity() ?>', '')">Unpublish</button> 
+-                            <span id='<?php echo $action->action_id ?>-unpublish-now-spinner' style="visibility: hidden;"><img src="application/modules/Yndynamicform/externals/images/loading.gif"/></span>
+-                        </div>
++                            <div id="<?php echo $action->action_id ?>-unpublish-now" class="<?php echo $action->action_id ?>-unpublish-now" style="float: right; display: <?php echo empty($entry->publish)? 'none': 'block'; ?>">
++                                <button onclick="updatePublishStatusByActivity('<?php echo $action->action_id ?>', '<?php echo $entry->getIdentity() ?>', '')" style="background: #b1b1b1; border: #b1b1b1;">Unpublish</button> 
++                                <span id='<?php echo $action->action_id ?>-unpublish-now-spinner' style="visibility: hidden;"><img src="application/modules/Yndynamicform/externals/images/loading.gif"/></span>
++                            </div>
++                        <?php endif; ?>
+                     <?php endif; ?>
+                 <?php endif; ?>
+       </span>
+diff --git a/application/modules/Impactx/Api/Core.php b/application/modules/Impactx/Api/Core.php
+index 33adaae3..81f9b803 100644
+--- a/application/modules/Impactx/Api/Core.php
++++ b/application/modules/Impactx/Api/Core.php
+@@ -102,5 +102,16 @@ class Impactx_Api_Core extends Core_Api_Abstract
+         return $select-> query()->fetchColumn();
+ 
+     }
++    
++    public function getAllSubmittedEntries($form_id) {
++        $table = Engine_Api::_()->getDbtable('entries', 'yndynamicform');
++        $rName = $table->info('name');
++
++        $select = $table->select()->from($rName)
++            ->where('form_id = ?', $form_id)
++            ->order('creation_date DESC');
++
++        return $table->fetchAll($select);
++    }
+ }
+ 
+diff --git a/application/modules/Sitepage/controllers/ManageformsController.php b/application/modules/Sitepage/controllers/ManageformsController.php
+index f7a153d7..5578ea0b 100644
+--- a/application/modules/Sitepage/controllers/ManageformsController.php
++++ b/application/modules/Sitepage/controllers/ManageformsController.php
+@@ -692,9 +692,10 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+             $values['own_actual_formula'] = $params['own_actual_formula'];
+             
+             // After replace all formula made tags, now it formula should be blank, If it's not blank then it means, user entered the wrong input.
++            $validateOwnFormulaInput = @str_replace(".", "", $validateOwnFormulaInput);
+             $validateOwnFormulaInput = @str_replace(["(", ")", "%", "/", "-", "+", "*", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "", $validateOwnFormulaInput);
+             if( !empty($validateOwnFormulaInput) )
+-                return $form->addError('It seems that you entered the wrong formula. Please insert the allowed tag only!');
++                return $form->addError('1 It seems that you entered the wrong formula. Please insert the allowed tag only!');
+         }
+         
+         unset($params['conditional_logic_tpl']);
+@@ -973,17 +974,18 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+             
+             // After replace all formula made tags, now it formula should be blank, If it's not blank then it means, user entered the wrong input.
+             if(substr_count($validateOwnFormulaInput, "(") != substr_count($validateOwnFormulaInput, ")"))
+-                return $form->addError('It seems that you entered the wrong formula. Please insert the allowed tag only!');
++                return $form->addError('2 It seems that you entered the wrong formula. Please insert the allowed tag only!');
+             
+             if((substr_count($validateOwnFormulaInput, "[") != 0) || (substr_count($validateOwnFormulaInput, "]") != 0))
+-                return $form->addError('It seems that you entered the wrong formula. Please insert the allowed tag only!');
++                return $form->addError('3 It seems that you entered the wrong formula. Please insert the allowed tag only!');
+             
+ //            if( strstr($validateOwnFormulaInput, "%%") || strstr($validateOwnFormulaInput, "//") || strstr($validateOwnFormulaInput, "--") || strstr($validateOwnFormulaInput, "++") || strstr($validateOwnFormulaInput, "**") )
+ //                    return $form->addError('It seems that you entered the wrong formula. Please insert the allowed tag only!');
+             
++            $validateOwnFormulaInput = @str_replace(".", "", $validateOwnFormulaInput);
+             $validateOwnFormulaInput = @str_replace(["(", ")", "%", "/", "-", "+", "*", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "", $validateOwnFormulaInput);
+             if( !empty($validateOwnFormulaInput) )
+-                return $form->addError('It seems that you entered the wrong formula. Please insert the allowed tag only!');
++                return $form->addError('4 It seems that you entered the wrong formula. Please insert the allowed tag only!');
+         }
+         
+         unset($params['conditional_logic_tpl']);
+@@ -3367,7 +3369,7 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+         $viewer = Engine_Api::_()->user()->getViewer();
+         $this->view->yndform = $yndform = Engine_Api::_() -> getItem('yndynamicform_form', $form_id);
+ 
+-        $this->view->form_submitted_paginator = $form_submitted_paginator = Engine_Api::_()->getDbTable('entries', 'yndynamicform')->getAllSubmittedEntries($form_id);
++        $this->view->form_submitted_paginator = $form_submitted_paginator = Engine_Api::_()->impactx()->getAllSubmittedEntries($form_id);
+ 
+     }
+ 
+diff --git a/application/modules/Sitepage/controllers/MetricsController.php b/application/modules/Sitepage/controllers/MetricsController.php
+index f1b9adb0..e9b44b48 100644
+--- a/application/modules/Sitepage/controllers/MetricsController.php
++++ b/application/modules/Sitepage/controllers/MetricsController.php
+@@ -17,107 +17,117 @@ class Sitepage_MetricsController extends Core_Controller_Action_Standard
+ 
+     public function indexAction()
+     {
+-        $this->view->metric_id = $metric_id = $this->_getParam('metric_id');
+-
+-        $this->view->metric_details = $metric_details = Engine_Api::_()->getItem('sitepage_metric', $metric_id);
+-
+-        if (!Engine_Api::_()->core()->hasSubject('sitepage_metric')) {
+-            Engine_Api::_()->core()->setSubject($metric_details);
+-        }
+-
+-        $request = Zend_Controller_Front::getInstance()->getRequest();
+-        $params = $request->getParams();
+-
+-        // get field_id
+-        $field_ids = array();
+-        foreach (Engine_Api::_()->fields()->getFieldsMeta('yndynamicform_entry') as $field) {
+-            if ($field->type == 'metrics') {
+-                $fieldMeta = Engine_Api::_()->fields()->getField($field->field_id, 'yndynamicform_entry');
+-                if ($fieldMeta->config['selected_metric_id'] == $metric_id) {
+-                    $field_ids[] = $field->field_id;
+-                }
+-            }
+-        }
+-
+-        if ($field_ids) {
+-            $entryTable = Engine_Api::_()->getDbTable('entries', 'yndynamicform');
+-            $entryTableName = $entryTable->info('name');
+-
+-            $valuesTableName = 'engine4_yndynamicform_entry_fields_values';
+-
+-            $projectSelect = $entryTable->select()
+-                ->setIntegrityCheck(false)
+-                ->from($entryTableName, array("$entryTableName.form_id", "$entryTableName.project_id", "$entryTableName.entry_id", "$valuesTableName.value"))
+-                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id", array("$valuesTableName.value", "$valuesTableName.field_id"))
+-                ->where("$valuesTableName.field_id in (?)", $field_ids)
+-                ->where("$entryTableName.publish=1")
+-                ->where("$entryTableName.project_id IS NOT NULL")
+-                ->where("$entryTableName.user_id IS NULL");
+-
+-            $userSelect = $entryTable->select()
+-                ->setIntegrityCheck(false)
+-                ->from($entryTableName, array("$entryTableName.form_id", "$entryTableName.user_id", "$entryTableName.entry_id", "$valuesTableName.value"))
+-                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id", array("$valuesTableName.value", "$valuesTableName.field_id"))
+-                ->where("$valuesTableName.field_id in (?)", $field_ids)
+-                ->where("$entryTableName.publish=1")
+-                ->where("$entryTableName.project_id IS NULL")
+-                ->where("$entryTableName.user_id IS NOT NULL");
+-
+-            $project_paginator = $entryTable->fetchAll($projectSelect);
+-            $user_paginator = $entryTable->fetchAll($userSelect);
+-
+-
+-            // get total aggregate value
+-            $project_aggregate_value = $entryTable->select()
+-                ->setIntegrityCheck(false)
+-                ->from($entryTableName, array("SUM($valuesTableName.value) as project_aggregate"))
+-                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id")
+-                ->where("$valuesTableName.field_id in (?)", $field_ids)
+-                ->where("$entryTableName.publish=1")
+-                ->where("$entryTableName.project_id IS NOT NULL")
+-                ->where("$entryTableName.user_id IS NULL")
+-                ->query()
+-                ->fetchColumn();
+-
+-            $user_aggregate_value = $entryTable->select()
+-                ->setIntegrityCheck(false)
+-                ->from($entryTableName, array("SUM($valuesTableName.value) as user_aggregate"))
+-                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id")
+-                ->where("$valuesTableName.field_id in (?)", $field_ids)
+-                ->where("$entryTableName.publish=1")
+-                ->where("$entryTableName.project_id IS NULL")
+-                ->where("$entryTableName.user_id IS NOT NULL")
+-                ->query()
+-                ->fetchColumn();
+-
+-            $this->view->project_aggregate_value = $project_aggregate_value;
+-            $this->view->user_aggregate_value = $user_aggregate_value;
+-            $this->view->totalAggregateValue = (int)$project_aggregate_value + (int)$user_aggregate_value;
+-
+-            /*
+-            $project_paginator = Zend_Paginator::factory($projectSelect);
+-            $user_paginator = Zend_Paginator::factory($userSelect);
+-
+-            if (!empty($params['projects_page_no'])) {
+-                $project_paginator->setCurrentPageNumber($params['projects_page_no']);
+-                $this->view->projects_page_no = $projects_page_no = $params['projects_page_no'];
+-            }elseif (!empty($params['users_page_no'])) {
+-                $user_paginator->setCurrentPageNumber($params['users_page_no']);
+-                $this->view->users_page_no = $user_page_no = $params['users_page_no'];
+-            } else {
+-                $project_paginator->setCurrentPageNumber(1);
+-                $user_paginator->setCurrentPageNumber(1);
+-                $this->view->projects_page_no = $projects_page_no = 1;
+-                $this->view->users_page_no = $user_page_no = 1;
+-            }
+-
+-            $project_paginator->setItemCountPerPage(1);
+-            $user_paginator->setItemCountPerPage(1);
+-            */
+-
+-            $this->view->project_entries = $project_paginator;
+-            $this->view->user_entries = $user_paginator;
+-
++//        $this->view->metric_id = $metric_id = $this->_getParam('metric_id');
++//
++//        $this->view->metric_details = $metric_details = Engine_Api::_()->getItem('sitepage_metric', $metric_id);
++//
++//        if (!Engine_Api::_()->core()->hasSubject('sitepage_metric')) {
++//            Engine_Api::_()->core()->setSubject($metric_details);
++//        }
++//
++//        $request = Zend_Controller_Front::getInstance()->getRequest();
++//        $params = $request->getParams();
++//
++//        // get field_id
++//        $field_ids = array();
++//        foreach (Engine_Api::_()->fields()->getFieldsMeta('yndynamicform_entry') as $field) {
++//            if ($field->type == 'metrics') {
++//                $fieldMeta = Engine_Api::_()->fields()->getField($field->field_id, 'yndynamicform_entry');
++//                if ($fieldMeta->config['selected_metric_id'] == $metric_id) {
++//                    $field_ids[] = $field->field_id;
++//                }
++//            }
++//        }
++//
++//        if ($field_ids) {
++//            $entryTable = Engine_Api::_()->getDbTable('entries', 'yndynamicform');
++//            $entryTableName = $entryTable->info('name');
++//
++//            $valuesTableName = 'engine4_yndynamicform_entry_fields_values';
++//
++//            $projectSelect = $entryTable->select()
++//                ->setIntegrityCheck(false)
++//                ->from($entryTableName, array("$entryTableName.form_id", "$entryTableName.project_id", "$entryTableName.entry_id", "$valuesTableName.value"))
++//                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id", array("$valuesTableName.value", "$valuesTableName.field_id"))
++//                ->where("$valuesTableName.field_id in (?)", $field_ids)
++//                ->where("$entryTableName.publish=1")
++//                ->where("$entryTableName.project_id IS NOT NULL")
++//                ->where("$entryTableName.user_id IS NULL");
++//
++//            $userSelect = $entryTable->select()
++//                ->setIntegrityCheck(false)
++//                ->from($entryTableName, array("$entryTableName.form_id", "$entryTableName.user_id", "$entryTableName.entry_id", "$valuesTableName.value"))
++//                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id", array("$valuesTableName.value", "$valuesTableName.field_id"))
++//                ->where("$valuesTableName.field_id in (?)", $field_ids)
++//                ->where("$entryTableName.publish=1")
++//                ->where("$entryTableName.project_id IS NULL")
++//                ->where("$entryTableName.user_id IS NOT NULL");
++//
++//            $project_paginator = $entryTable->fetchAll($projectSelect);
++//            $user_paginator = $entryTable->fetchAll($userSelect);
++//
++//
++//            // get total aggregate value
++//            $project_aggregate_value = $entryTable->select()
++//                ->setIntegrityCheck(false)
++//                ->from($entryTableName, array("SUM($valuesTableName.value) as project_aggregate"))
++//                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id")
++//                ->where("$valuesTableName.field_id in (?)", $field_ids)
++//                ->where("$entryTableName.publish=1")
++//                ->where("$entryTableName.project_id IS NOT NULL")
++//                ->where("$entryTableName.user_id IS NULL")
++//                ->query()
++//                ->fetchColumn();
++//
++//            $user_aggregate_value = $entryTable->select()
++//                ->setIntegrityCheck(false)
++//                ->from($entryTableName, array("SUM($valuesTableName.value) as user_aggregate"))
++//                ->join($valuesTableName, "$entryTableName.entry_id = $valuesTableName.item_id")
++//                ->where("$valuesTableName.field_id in (?)", $field_ids)
++//                ->where("$entryTableName.publish=1")
++//                ->where("$entryTableName.project_id IS NULL")
++//                ->where("$entryTableName.user_id IS NOT NULL")
++//                ->query()
++//                ->fetchColumn();
++//
++//            $this->view->project_aggregate_value = $project_aggregate_value;
++//            $this->view->user_aggregate_value = $user_aggregate_value;
++//            $this->view->totalAggregateValue = (int)$project_aggregate_value + (int)$user_aggregate_value;
++//
++//            /*
++//            $project_paginator = Zend_Paginator::factory($projectSelect);
++//            $user_paginator = Zend_Paginator::factory($userSelect);
++//
++//            if (!empty($params['projects_page_no'])) {
++//                $project_paginator->setCurrentPageNumber($params['projects_page_no']);
++//                $this->view->projects_page_no = $projects_page_no = $params['projects_page_no'];
++//            }elseif (!empty($params['users_page_no'])) {
++//                $user_paginator->setCurrentPageNumber($params['users_page_no']);
++//                $this->view->users_page_no = $user_page_no = $params['users_page_no'];
++//            } else {
++//                $project_paginator->setCurrentPageNumber(1);
++//                $user_paginator->setCurrentPageNumber(1);
++//                $this->view->projects_page_no = $projects_page_no = 1;
++//                $this->view->users_page_no = $user_page_no = 1;
++//            }
++//
++//            $project_paginator->setItemCountPerPage(1);
++//            $user_paginator->setItemCountPerPage(1);
++//            */
++//
++//            $this->view->project_entries = $project_paginator;
++//            $this->view->user_entries = $user_paginator;
++//
++//        }
++        
++        $coremodule = Engine_Api::_()->getDbtable('modules', 'core')->getModule('core');
++        $coreversion = $coremodule->version;
++        if( empty(Engine_Api::_()->seaocore()->checkVersion($coreversion, '4.1.0')) ) {
++          $this->_helper->content->render();
++        } else {
++          $this->_helper->content
++          ->setNoRender()
++          ->setEnabled();
+         }
+ 
+     }
+diff --git a/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl b/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
+index f1b8152a..fa4e979a 100644
+--- a/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
++++ b/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
+@@ -223,9 +223,25 @@ if($field_id){
+ 			$metric_aggregate_fields = $fieldMeta->config['metric_aggregate_fields'];
+ 			$selected_metric_id = $fieldMeta->config['selected_metric_id'];
+ 			$own_formula_input = $fieldMeta->config['own_formula_input'];
+-			$own_actual_formula = $fieldMeta->config['own_actual_formula'];
++                        
++                        // Start work to make the new formula according to the ids, may number fields name has been updated!
++                        $own_formula_by_id = $fieldMeta->config['own_formula_by_id'];
++                        foreach ($fieldData as $key => $field):
++                            if($field['type'] == 'integer' || $field['type'] == 'float' ):
++                                $own_formula_by_id = str_replace('field_id_' . $field['field_id'], '[' . $field['label'] . ']', $own_formula_by_id);
++                            endif;
++                        endforeach;
++                        
++                        $own_actual_formula = !empty($own_formula_by_id)? $own_formula_by_id: $fieldMeta->config['own_actual_formula'];
+ 			?>
+                         
++                        <?php foreach ($fieldData as $key => $field): ?>
++                                <?php if($field['type'] == 'integer' || $field['type'] == 'float' ):?>
++                                        <?php $tempAvailableFields[] = array('field_id' => $field['field_id'], 'label' => $field['label']); ?>
++                                        <?php echo '[' . $field['label'] . ']';?> <br>
++                                <?php endif;?>
++                        <?php endforeach; ?>
++                        
+ 			<?php if($metric_aggregate_type == "metric_sum" && count($metric_aggregate_fields)):?>
+                         
+ 				<!-- Metrics Aggregate fields-->
+diff --git a/application/modules/Sitepage/views/scripts/manageforms/export-form-submission-as-csv.tpl b/application/modules/Sitepage/views/scripts/manageforms/export-form-submission-as-csv.tpl
+index 46dd4ca7..d24c1d54 100644
+--- a/application/modules/Sitepage/views/scripts/manageforms/export-form-submission-as-csv.tpl
++++ b/application/modules/Sitepage/views/scripts/manageforms/export-form-submission-as-csv.tpl
+@@ -32,6 +32,7 @@ print "\n"; // Add a line, unless excel error..
+ <?php $body = array();?>
+ 
+ <?php foreach ($this->form_submitted_paginator as $entry_details): ?>
++
+     <?php $bodyContent = array();?>
+ 
+     <?php $entry = Engine_Api::_() -> getItem('yndynamicform_entry', $entry_details->getIdentity()); ;?>
+@@ -41,12 +42,16 @@ print "\n"; // Add a line, unless excel error..
+ 
+     <?php
+         if ($entry && $entry->owner_id) {
+-            $bodyContent[] = $entry->getOwner()->getTitle();
++            $title = $entry->getOwner()->getTitle();
+         } else if ($entry->user_email) {
+-            $bodyContent[] = $entry->user_email;
++            $title = $entry->user_email;
+         } else {
+-            $bodyContent[] = 'Anonymous';
++            $title = 'Anonymous';
+         }
++        
++        $title .= ( !empty($entry->submission_status) && ($entry->submission_status == 'preview') )? ' (test)': '';
++            
++        $bodyContent[] = $title;
+     ?>
+ 
+     <?php
+diff --git a/application/modules/Sitepage/views/scripts/manageforms/list.tpl b/application/modules/Sitepage/views/scripts/manageforms/list.tpl
+index b126092c..0237312a 100644
+--- a/application/modules/Sitepage/views/scripts/manageforms/list.tpl
++++ b/application/modules/Sitepage/views/scripts/manageforms/list.tpl
+@@ -136,7 +136,7 @@ $this->headScript()
+                                         <li>
+                                             <?php
+                                             
+-                                                echo $this->htmlLink(array('route' => 'yndynamicform_entry_specific', 'action' => 'view', 'entry_id' => $entry->getIdentity(), 'is_popup' => 1), $this->translate('view'), array('class' => 'smoothbox'));
++                                                echo $this->htmlLink(array('route' => 'yndynamicform_entry_specific', 'action' => 'view', 'entry_id' => $entry->getIdentity(), 'is_popup' => 1), 'view', array('class' => 'smoothbox'));
+                                             
+                                             /*
+                                              echo $this->htmlLink(array(
+diff --git a/application/modules/Sitepage/views/scripts/metrics/index.tpl b/application/modules/Sitepage/views/scripts/metrics/index.tpl
+index 948631fb..20405199 100644
+--- a/application/modules/Sitepage/views/scripts/metrics/index.tpl
++++ b/application/modules/Sitepage/views/scripts/metrics/index.tpl
+@@ -187,6 +187,7 @@
+ 
+ <br>
+ 
++<!-- 
+ <div class="generic_layout_container layout_main">
+     <div class="generic_layout_container layout_middle">
+         <div class="generic_layout_container layout_activity_feed">
+@@ -197,6 +198,7 @@
+ </div>
+ 
+ <div id="hidden_ajax_data" style="display: none;"></div>
++-->
+ 
+ <style>
+     .common_btn_custom {
+diff --git a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 5f0dee95..00000000
+--- a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,17 +0,0 @@
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagealbum', 'albums', 'recent_pagealbums', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'albums', 'liked_pagealbums', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'albums', 'viewed_pagealbums', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'albums', 'commented_pagealbums', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'albums', 'featured_pagealbums', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'albums', 'random_pagealbums', 'Random', '0', '6', '24'),
+-('sitepagealbum', 'photos', 'recent_pagephotos', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'photos', 'liked_pagephotos', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'photos', 'viewed_pagephotos', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'photos', 'commented_pagephotos', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'photos', 'featured_pagephotos', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'photos', 'random_pagephotos', 'Random', '0', '6', '24');
+-
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagealbum_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_album' LIMIT 1 ;
+-
+-UPDATE `engine4_core_pages` SET `name` = 'sitepage_album_browse' WHERE `engine4_core_pages`.`name` ='sitepage_album_albumlist' LIMIT 1 ;
+\ No newline at end of file
+diff --git a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 3224903c..00000000
+--- a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,10 +0,0 @@
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagevideo_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_video' LIMIT 1 ;
+-UPDATE `engine4_core_pages` SET `name` = 'sitepagevideo_index_browse' WHERE `engine4_core_pages`.`name` ='sitepagevideo_index_videolist' LIMIT 1 ;
+-
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagevideo', 'videos', 'recent_pagevideos', 'Recent', '1', '1', '24'),
+-('sitepagevideo', 'videos', 'liked_pagevideos', 'Most Liked', '1', '2', '24'),
+-('sitepagevideo', 'videos', 'viewed_pagevideos', 'Most Viewed', '1', '3', '24'),
+-('sitepagevideo', 'videos', 'commented_pagevideos', 'Most Commented', '0', '4', '24'),
+-('sitepagevideo', 'videos', 'featured_pagevideos', 'Featured', '0', '5', '24'),
+-('sitepagevideo', 'videos', 'random_pagevideos', 'Random', '0', '6', '24');
+\ No newline at end of file
+diff --git a/application/modules/Yndynamicform/views/scripts/entries/create.tpl b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+index f5fb706f..c5e84725 100644
+--- a/application/modules/Yndynamicform/views/scripts/entries/create.tpl
++++ b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+@@ -1,5 +1,4 @@
+ <?php
+-
+ $baseUrl = $this->layout()->staticBaseUrl;
+ $this->headLink()->appendStylesheet($baseUrl . 'application/modules/Yndynamicform/externals/styles/ui-redmond/jquery-ui-1.8.18.custom.css');
+ $this->headScript()
+@@ -1034,7 +1033,10 @@ if(!$this->project_id && $this->user_id){
+                 matrics_aggregation_element = element;
+                 matrics_aggregation_element_id = element.id;
+                 var metrics_label = document.getElementById(matrics_aggregation_element_id+'-label').innerHTML;
+-                var own_formula_input_value = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_input");
++                // var own_formula_input_value = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_input");
++                
++                var own_formula_by_id = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_by_id");
++                var own_formula_input_value = getUpdatedFormula(own_formula_by_id);
+                 
+                 // Add multiple metrics in the array
+                 metrics_field_id_array[metrics_field_id_array_flag++] = matrics_aggregation_element_id;
+@@ -1076,6 +1078,27 @@ if(!$this->project_id && $this->user_id){
+             calculateTheMetricsValue();
+         });
+         
++        // Get the number form fields label.
++        function getUpdatedFormula(formula) {
++            var elements = document.getElementById("form_detail").elements;
++            
++            for (var i = 0, element; element = elements[i++];) {
++                var id = element.id;
++                var full_id = element.id;
++                id = id.split('_');
++                id = id[id.length - 1];
++                
++                var temp_label = ''
++                if( document.getElementById(full_id + '-label').childNodes[0].innerHTML )
++                    temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
++                
++                if( temp_label && (formula.search("field_id_" + id) >= 0) )
++                    formula = formula.replace("field_id_" + id, temp_label);
++                
++                return formula;
++            }
++        }
++        
+         window.onload = function() {
+           calculateTheMetricsValue();
+         };
+@@ -1132,7 +1155,7 @@ if(!$this->project_id && $this->user_id){
+                             total = total + parseFloat(data);
+                             if(total && total !== null && total.value !== "" && !total.isNaN){
+                                 if( temp_metric_aggregate_type == 'own_formula' ) {
+-                                    if( own_formula.search("field_id_" + id) > 0 )
++                                    if( own_formula.search("field_id_" + id) >= 0 )
+                                         own_formula = own_formula.replace("field_id_" + id, parseFloat(data));
+                                 }else {
+                                     document.getElementById(current_metrics_id).value = total;
+@@ -1142,8 +1165,11 @@ if(!$this->project_id && $this->user_id){
+                     }
+                 }
+ 
+-                if( temp_metric_aggregate_type == 'own_formula' )
+-                    document.getElementById(current_metrics_id).value = eval(own_formula);
++                if( temp_metric_aggregate_type == 'own_formula' ) {
++                    var formula_value = eval(own_formula);
++                    formula_value = formula_value.toFixed(2);
++                    document.getElementById(current_metrics_id).value = eval(formula_value);
++                }
+             }
+         }
+ 
+diff --git a/application/modules/Yndynamicform/views/scripts/entries/view.tpl b/application/modules/Yndynamicform/views/scripts/entries/view.tpl
+index e49c8a54..4049057d 100644
+--- a/application/modules/Yndynamicform/views/scripts/entries/view.tpl
++++ b/application/modules/Yndynamicform/views/scripts/entries/view.tpl
+@@ -398,8 +398,7 @@
+     }
+ </style>
+ 
+-<?php $this->headScript()->appendFile($this->layout()->staticBaseUrl . 'application/modules/Yndynamicform/externals/scripts/html2pdf.js'); ?>
+-
++<script type="text/javascript" src="<?php echo $this->layout()->staticBaseUrl . 'application/modules/Yndynamicform/externals/scripts/html2pdf.js' ?>"></script>
+ <script>
+     // Update publish status in the table
+     function updatePublishStatus(entry_id, publish){
+@@ -457,7 +456,7 @@
+                 html2pdf().set(opt).from(page_content).save();
+                 setTimeout(function(){
+                     document.getElementById('save-as-pdf-loading').style.display = 'none';
+-                }, 5000);
++                }, 2000);
+             }
+         })
+         request.send();
+diff --git a/application/modules/Yndynamicform/views/scripts/form/detail.tpl b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+index ff739df5..1cad560b 100644
+--- a/application/modules/Yndynamicform/views/scripts/form/detail.tpl
++++ b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+@@ -530,11 +530,22 @@ $this->headScript()
+     .form-label {
+         margin-bottom: 0px !important;
+     }
++    .yndform_page_next_text {
++        border: none;
++    }
++    .yndform_page_prev_text {
++        border: none;
++    }
+     div.form-element {
+         display: flex !important;
+-        flex-direction: column-reverse;
++        flex-direction: column;
++        // flex-direction: column-reverse;
+         margin-bottom: 5px !important;
+     }
++    .layout_page_yndynamicform_form_detail .global_form .form-elements .form-wrapper .form-element .yndform_page_prev_text, .layout_page_yndynamicform_form_detail .global_form .form-elements .form-wrapper .form-element .yndform_page_prev_image, #global_page_yndynamicform-entries-edit .global_form .form-elements .form-wrapper .form-element .yndform_page_prev_text, #global_page_yndynamicform-entries-edit .global_form .form-elements .form-wrapper .form-element .yndform_page_prev_image {
++        margin-right: unset;
++        margin-top: 5px;
++    }
+     p.description {
+         margin-bottom: 10px !important;
+         margin-top: 0px !important;
+@@ -601,7 +612,9 @@ $this->headScript()
+                 matrics_aggregation_element = element;
+                 matrics_aggregation_element_id = element.id;
+                 var metrics_label = document.getElementById(matrics_aggregation_element_id+'-label').innerHTML;
+-                var own_formula_input_value = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_input");
++                
++                var own_formula_by_id = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_by_id");
++                var own_formula_input_value = getUpdatedFormula(own_formula_by_id);
+                 
+                 // Add multiple metrics in the array
+                 metrics_field_id_array[metrics_field_id_array_flag++] = matrics_aggregation_element_id;
+@@ -619,6 +632,27 @@ $this->headScript()
+             calculateTheMetricsValue();
+         });
+         
++        // Get the number form fields label.
++        function getUpdatedFormula(formula) {
++            var elements = document.getElementById("form_detail").elements;
++            
++            for (var i = 0, element; element = elements[i++];) {
++                var id = element.id;
++                var full_id = element.id;
++                id = id.split('_');
++                id = id[id.length - 1];
++                
++                var temp_label = ''
++                if( document.getElementById(full_id + '-label').childNodes[0].innerHTML )
++                    temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
++                
++                if( temp_label && (formula.search("field_id_" + id) >= 0) )
++                    formula = formula.replace("field_id_" + id, temp_label);
++                
++                return formula;
++            }
++        }
++        
+         window.onload = function() {
+           calculateTheMetricsValue();
+         };
+@@ -675,7 +709,7 @@ $this->headScript()
+                             total = total + parseFloat(data);
+                             if(total && total !== null && total.value !== "" && !total.isNaN){
+                                 if( temp_metric_aggregate_type == 'own_formula' ) {
+-                                    if( own_formula.search("field_id_" + id) > 0 )
++                                    if( own_formula.search("field_id_" + id) >= 0 )
+                                         own_formula = own_formula.replace("field_id_" + id, parseFloat(data));
+                                 }else {
+                                     document.getElementById(current_metrics_id).value = total;
+@@ -685,8 +719,11 @@ $this->headScript()
+                     }
+                 }
+ 
+-                if( temp_metric_aggregate_type == 'own_formula' )
+-                    document.getElementById(current_metrics_id).value = eval(own_formula);
++                if( temp_metric_aggregate_type == 'own_formula' ) {
++                    var formula_value = eval(own_formula);
++                    formula_value = formula_value.toFixed(2);
++                    document.getElementById(current_metrics_id).value = eval(formula_value);
++                }
+             }
+         }
+     
+diff --git a/application/modules/YounetCore/externals/styles/main.css b/application/modules/YounetCore/externals/styles/main.css
+index 10d08d30..f0c90e6c 100644
+--- a/application/modules/YounetCore/externals/styles/main.css
++++ b/application/modules/YounetCore/externals/styles/main.css
+@@ -1008,7 +1008,10 @@ body[class*=insignia]{
+ 	}
+ }
+ #smoothbox_window{
+-	overflow: hidden;
++	// overflow: hidden;
++        
++        // Following line added by [Deepak] on 27082021, due this no scrolling are coming in SocialEngine popup and user unable to see long data with in the popup. 
++        overflow: scroll;
+ 
+ 	body[class*=insignia]{
+ 		overflow: hidden;

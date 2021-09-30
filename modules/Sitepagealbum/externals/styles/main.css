@@ -1,0 +1,25 @@
+
+.item_icon_sitepage_album::before, .notification_type_sitepagealbum_create::before {
+  content:"\\f03e";
+}
+/* Activity Feed Album */
+ul.feed .feed_attachment_sitepage_photo {
+	display: inline-block;
+	overflow: hidden;
+	margin: 0px 0px 5px 0px;
+	vertical-align: top;
+}
+ul.feed .feed_attachment_sitepage_photo a {
+	display: block;
+	float: left;
+}
+ul.feed .feed_attachment_sitepage_photo a > img {
+	display: inline-block;
+	max-width: 90px;
+	max-height: 90px;
+	vertical-align: top;
+}
+
+#sitepagealbum-wrapper {
+   display: none; 
+}

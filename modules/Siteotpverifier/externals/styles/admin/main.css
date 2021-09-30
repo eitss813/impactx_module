@@ -1,0 +1,153 @@
+.otpverifier_email_icon::before                {content: "\\f0e0";  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-style: normal;
+  margin-right: 7px;
+  vertical-align: top;
+}
+.otpverifier_email_icon:hover::before {
+	text-decoration: none;
+}
+#global_page_siteotpverifier-admin-settings-contactinfo .search form > div {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 0;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#global_page_siteotpverifier-admin-settings-contactinfo .buttons {
+	margin-top: 1.25em;
+}
+#global_page_siteotpverifier-admin-settings-contactinfo #country_code {
+	max-width: 382px;
+}
+
+/*TABS START HERE*/
+.siteotpverifier_admin_tabs.tabs,
+.siteotpverifier_admin_tabs {
+	border: none;
+	background-image: none;
+	margin: 5px 0px 15px 0px;
+  clear: both;
+	padding: 3px;
+	background:#E9F4FA;
+	overflow:auto;
+}
+.siteotpverifier_admin_tabs.tabs ul,
+.siteotpverifier_admin_tabs ul {
+	margin: 0px;
+	text-align: left;
+	font-weight: bold;
+	padding:0;
+	float:left;
+  border-bottom: 0;
+  border: 0;
+}
+.siteotpverifier_admin_tabs.tabs ul li,
+.siteotpverifier_admin_tabs ul li {
+	padding: 0px;
+	font-size:12px;
+	float:left;
+}
+.siteotpverifier_admin_tabs.tabs.tabs ul li.tab_active a, .siteotpverifier_admin_tabs.tabs.tabs ul li.active a,
+.siteotpverifier_admin_tabs ul li.active a {
+	background-color: #fff;
+	color: #444;
+	position: relative;
+	padding: 5px 8px;
+	float:left;
+	margin:1px;
+  border: 0;
+}
+.siteotpverifier_admin_tabs.tabs ul li a,
+.siteotpverifier_admin_tabs ul li a {
+	padding: 5px 8px;
+	text-decoration: none;
+	color: #888;
+	border-bottom: none;
+	outline: none;
+	font-weight: bold;
+	float:left;
+	margin:1px;
+}
+.siteotpverifier_admin_tabs.tabs ul li a:hover,
+.siteotpverifier_admin_tabs ul li a:hover {
+	background-color: #fff;
+	color: #444;
+}
+/*TABS END HERE*/
+
+/*ADMIN SETTING FORM CSS START HERE*/
+.siteotpverifier_settings_form {
+	clear:both;
+}
+.siteotpverifier_settings_form .settings form {
+	float: none !important;
+	width:auto !important;
+}
+.siteotpverifier_settings_form .settings .form-description {
+	max-width: none !important;
+	width:auto !important;
+}
+.siteotpverifier_settings_form .settings .form-element, .siteotpverifier_settings_form .settings .form-element .description {
+	max-width: 680px !important;
+}
+.siteotpverifier_settings_form .settings .form-element .description > a {
+	cursor: pointer;
+}
+/*ADMIN SETTING FORM CSS END HERE*/
+
+
+/*ADMIN FAQ PAGES START HERE*/
+.siteotpverifier_faq_tabs ul li a {
+	font-size:11px !important;
+}
+.admin_siteotpverifier_files_wrapper {
+ +rounded;
+	background: #e9f4fa;
+	padding: 10px;
+}
+.admin_siteotpverifier_files {
+ +rounded;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow-y: auto;
+	list-style:decimal !important;
+	padding-left:10px;
+}
+.admin_siteotpverifier_files > li {
+	margin-left: 20px;
+	padding: 7px 12px 7px 1px;
+}
+.admin_siteotpverifier_files > li + li {
+	border-top: 1px solid #eee;
+}
+.siteotpverifier_faq li > div {
+	clear:both;
+	border-left:3px solid #ccc;
+	padding:5px 5px 5px 10px;
+	margin:5px;
+	font-family:arial;
+	line-height:18px;
+}
+.siteotpverifier_faq li > div b {
+	font-weight:bold;
+}
+.siteotpverifier_faq li div ul li ul {
+	list-style: circle;
+	padding-left: 10px;
+	margin-left:5px;
+}
+.siteotpverifier_faq li div ul {
+	list-style: disc;
+	padding-left: 10px;
+}
+.admin_statistics_search .global_form_box label {
+	display: block;
+}
+.siteotpverifier_settings_form #add-element {
+	text-align: left
+}
+/* END HERE */

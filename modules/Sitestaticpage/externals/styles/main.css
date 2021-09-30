@@ -1,0 +1,102 @@
+/* $Id:main.css 2014-02-16 5:40:21Z SocialEngineAddOns Copyright 2013-2014 BigStep Technologies Pvt. Ltd. $ */
+
+/*Pages Content CSS Start Here*/
+.layout_sitestaticpage_page_content {
+	overflow: inherit;
+}
+.stpage_cont_body{
+  clear:both;
+}
+.stpage_cont_body *{
+  font-family: inherit;
+}
+.stpage_cont_body h1,
+.stpage_cont_body h2,
+.stpage_cont_body h3,
+.stpage_cont_body h4,
+.stpage_cont_body h5,
+.stpage_cont_body h6{
+  background: none;
+  padding: 0;
+}
+.stpage_cont_body table {
+  border-collapse: separate;
+}
+.stpage_cont_body p, .stpage_cont_body ol, .stpage_cont_body ul{
+  margin-bottom:10px;
+}
+.stpage_cont_body ol {
+  margin-left:30px;
+}
+.stpage_cont_body ul {
+  margin-left:30px;
+  list-style-type:disc;
+}
+[dir="rtl"] .stpage_cont_body ol,
+[dir="rtl"] .show_content_body ul{
+  margin-left:0px;
+  margin-right:30px;
+}
+.stpage_cont_body img{
+  max-width:100%;
+  margin:5px;
+}
+.stpage_cont_body blockquote {
+  display: block;
+  margin: 20px;
+}
+/*Form*/
+.stpage_cont_body ul.form-options-wrapper{
+  list-style:none;
+  margin:0;
+}
+.layout_left .stpage_cont_body .global_form > div,
+.layout_right .stpage_cont_body .global_form > div{
+  float:none;
+}
+.layout_left .stpage_cont_body .global_form > div > div,
+.layout_right .stpage_cont_body .global_form > div > div{
+  padding:10px;
+}
+.layout_left .stpage_cont_body .global_form div.form-label,
+.layout_right .stpage_cont_body .global_form div.form-label{
+  float:none;
+  text-align:left;
+}
+.layout_left .stpage_cont_body .global_form input[type="checkbox"],
+.layout_right .stpage_cont_body .global_form input[type="checkbox"],
+.layout_left .stpage_cont_body .global_form input[type="radio"],
+.layout_right .stpage_cont_body .global_form input[type="radio"]{
+  float:left;
+  margin-right:5px;
+}
+.layout_left .stpage_cont_body .global_form input[type="checkbox"] + label,
+.layout_right .stpage_cont_body .global_form input[type="checkbox"] + label,
+.layout_left .stpage_cont_body .global_form input[type="radio"] + label,
+.layout_right .stpage_cont_body .global_form input[type="radio"] + label{
+  display: inherit;
+  float: none;
+  overflow: hidden;
+}
+.layout_left .stpage_cont_body .global_form #submit-label,
+.layout_right .stpage_cont_body .global_form #submit-label{
+  display:none;
+}
+/*Html Block*/
+.layout_sitestaticpage_html_blocks{
+  clear:both;
+  margin-bottom:15px;
+}
+.layout_sitestaticpage_html_blocks .stpage_cont_body{
+  overflow:hidden;
+}
+/*Responsiveness Css work*/
+@media only screen and (max-width: 920px){ 
+	.stpage_cont_body {width: 100% !important;}
+	.stpage_cont_body * {box-sizing: border-box; max-width: 99% !important; min-width: auto !important;}
+	.stpage_cont_body .global_form input[type="checkbox"], 
+	.stpage_cont_body .global_form input[type="radio"] {width: auto !important;}
+	.stpage_cont_body h1, .stpage_cont_body h2, .stpage_cont_body h3, 
+	.stpage_cont_body h4, .stpage_cont_body h5, .stpage_cont_body h6 {display: list-item;}
+	.stpage_cont_body .global_form div.form-label {width: 100%;}
+}

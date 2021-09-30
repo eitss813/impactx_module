@@ -1,0 +1,31 @@
+
+/*Page And Extensions Notification Icon*/
+.notification_type_liked, .notification_type_sitepage_contentlike{
+	background-image: url(~/application/modules/Sitepage/externals/images/like.png) !important;
+}
+.notification_type_sitepage_manageadmin::before{
+	content:"\f0f6";
+}
+.notification_type_sitepageevent_invite::before, .notification_type_sitepageevent_accepted::before, .notification_type_sitepageevent_create::before{
+	content:"\f073";
+}
+
+.notification_type_sitepage_notificationpost::before, .notification_type_sitepagemember_notificationpost::before, .notification_type_sitepage_contentcomment::before, .notification_type_sitepage_discussion_response::before, .notification_type_sitepage_discussion_reply::before{
+	content:"\f0e5";
+}
+
+.notification_type_sitepagenote_create::before{
+	content:"\f24a";
+}
+.notification_type_sitepagevideo_create::before{
+	content:"\f03d";
+}
+.notification_type_sitepagealbum_create::before{
+	content:"\f03e";
+}
+.notification_type_sitepageoffer_create::before{
+	content:"\f02b";
+}
+.notification_type_sitepagemusic_create::before{
+	content:"\f001";
+}

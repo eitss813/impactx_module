@@ -1,0 +1,251 @@
+#signup
+{
+  margin: 0 auto;
+  clear: both;
+}
+.l_banner
+{
+ margin: 20px auto;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+.l_banner ul li
+{
+  list-style: initial;
+}
+.banner
+{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;/*background-color:#4DB1E2;*/
+}
+.banner h1
+{
+  font-size: 35px;
+  line-height: 30px;
+  color: #707070;
+  padding: 20px 10px 10px 10px;
+}
+.banner h2
+{
+  font-size: 25px;
+  color: #707070;
+  padding: 10px 10px 20px 10px;
+  line-height: 30px;
+}
+.container
+{
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+.row
+{
+  text-align: center;
+  position: relative;
+  padding: 5px 0;
+}
+.background
+{
+  background-color: #F4F4F4;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
+}
+.head
+{
+  background-color: #4DB1E2;
+  height: 60px;
+  padding: 10px;
+}
+.head h1
+{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 20px;
+}
+.price
+{
+  position: relative;
+  background-color: #fff;
+  padding: 20px 8px;
+  z-index: 0;
+  margin-top: -22px;
+}
+.price h1
+{
+  text-align: center !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #7C7C7C;
+  margin: 0 auto;
+}
+.price h1 span
+{
+  font-size: 16px;
+}
+.background2
+{
+  border: 5px solid #ff6600;
+  width: 30%;
+  display: inline-block;
+  background-color: #F4F4F4;
+  text-align: center;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
+}
+.background2 > .fa
+{
+  color: #FF6700;
+  position: relative;
+  z-index: 1;
+}
+.mini_head
+{
+  position: relative;
+  background-color: #4DB1E2;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  color: #fff;
+  z-index: 0;
+  margin-top: -27px;
+}
+.mini_head p
+{
+  padding: 0 5px 20px 5px;
+  margin: 0 auto;
+}
+.head2
+{
+  background-color: #FF6700;
+  height: 60px;
+  padding: 10px;
+}
+.head2 h1
+{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 20px;
+}
+.price2
+{
+  position: relative;
+  background-color: #fff;
+  padding: 20px 8px;
+  z-index: 0;
+  margin-top: -22px;
+}
+.price2 h1
+{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #7C7C7C;
+  margin: 0 auto;
+}
+.price2 h1 span
+{
+  font-size: 16px;
+}
+.button1
+{
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #4DB1E2;
+  color: #4DB1E2;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button1:hover
+{
+  background-color: #4DB1E2;
+  color: #fff;
+  height: auto !important;
+}
+.button2
+{
+  width: 80%;
+  background-color: #ff6600;
+  border: 1px solid #ff6600;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 10%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button2:hover
+{
+  background-color: #fff;
+  color: #ff6600;
+  height: auto !important;
+}
+.content
+{
+  width: 100%;
+}
+.content ul
+{
+  padding: 0px;
+}
+.content ul li
+{
+  list-style: none;
+  padding: 20px 8px;
+  border-bottom: 1px solid rgba(0,143,213,0.1);
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  color: #7c7c7c;
+}
+.horizontalScrollbar
+{
+  clear: both;
+}
+.horizontalThumb
+{
+  background: #aaa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9px;
+  width: 15px;
+  overflow: hidden;
+}
+.horizontalTrack
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  float: left;
+  height: 9px;
+  width: 255px; /*635px; */
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}

@@ -1,0 +1,106 @@
+<?php
+/**
+ * SocialEngine
+ *
+ * @category   Application_Extensions
+ * @package    Sitecrowdfunding
+ * @copyright  Copyright 2017-2021 BigStep Technologies Pvt. Ltd.
+ * @license    http://www.socialengineaddons.com/license/
+ * @version    $Id: editphotos.tpl 2017-03-27 9:40:21Z SocialEngineAddOns $
+ * @author     SocialEngineAddOns
+ */
+?>
+
+<?php include_once APPLICATION_PATH . '/application/modules/Sitecrowdfunding/views/scripts/_DashboardNavigation.tpl'; ?>
+
+<div class="sitecrowdfunding_dashboard_content">
+    <?php echo $this->partial('application/modules/Sitecrowdfunding/views/scripts/dashboard/header.tpl', array('project' => $this->project, 'sectionTitle'=>'Outcome', 'sectionDescription'=> 'Manage the Outcome of this project.')); ?>
+    <div class="sitecrowdfunding_dashboard_form">
+        <div class="clr">
+            <?php echo $this->htmlLink(array('module'=>'sitecrowdfunding', 'controller'=> 'outcome' , 'action'=>'add-outcome', 'project_id' => $this->project_id), $this->translate('Add Outcome'), array('class' => 'icon seaocore_icon_add')) ?>
+        </div>
+        <div class="organization-div">
+            <h3>
+                <?php echo $this->translate("Outcome"); ?>
+            </h3>
+
+            <?php if(count($this->outcomes) > 0): ?>
+                <?php foreach($this->outcomes as $outcome): ?>
+
+                    <?php echo $this->htmlLink(
+                    array(
+                        'route' => 'sitecrowdfunding_extended',
+                        'controller' => 'outcome',
+                        'action' => 'delete-outcome',
+                        'outcome_id' => $outcome['outcome_id'],
+                    ),
+                    $this->translate('Delete'), array(
+                        'class' => 'buttonlink smoothbox seaocore_icon_remove',
+                        'style' => 'float: right; color: #FF0000; padding-top: 10px;'
+                    )) ?>
+
+                    <?php echo $this->htmlLink(
+                    array(
+                        'route' => 'sitecrowdfunding_milestoneedit',
+                        'controller' => 'outcome',
+                        'action' => 'edit-outcome',
+                        'outcome_id' => $outcome['outcome_id'],
+                        'project_id' => $this->project->project_id,
+                    ),
+                    $this->translate('Edit'), array(
+                        'class' => 'buttonlink seaocore_icon_edit',
+                        'style' => 'float: right; color: #FF0000; padding-top: 10px;padding-right: 5px'
+                    )) ?>
+
+                    <ul class="organization-list" >
+                        <li>
+                            <span><?php echo $this->translate("Name : "); ?></span>
+                            <span><?php echo $outcome['title']; ?></span>
+                        </li>
+                        <li>
+                            <span><?php echo  $this->translate("Description : "); ?></span>
+                            <span><?php echo  $outcome['description']; ?></span>
+                        </li>
+                    </ul>
+
+                <?php endforeach;?>
+            <?php endif; ?>
+        </div>
+
+    </div>
+</div>
+
+<style type="text/css">
+    .sitecrowdfunding_dashboard_form{
+        padding: 10px;
+    }
+    .organization-div{
+        padding-top: 20px
+    }
+    .organization-list{
+        border-bottom: 1px solid #f2f0f0;
+        padding: 10px 0px 10px 0px;
+    }
+    .organization-list li span{
+        display: block;
+        float: left;
+        overflow: hidden;
+        width: 175px;
+        margin-right: 15px;
+
+    }
+    .organization-list > li > span + span {
+        min-width: 0px;
+        display: block;
+        float: none;
+        overflow: hidden;
+        width: 400px
+    }
+    .organization-list > li > span + span {
+        display: inline-block !important;
+    }
+    .organization-list-view{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+</style>

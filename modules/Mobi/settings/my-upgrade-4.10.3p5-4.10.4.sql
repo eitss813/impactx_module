@@ -1,0 +1,2 @@
+INSERT IGNORE INTO `engine4_core_menuitems` (`name`, `module`, `label`, `plugin`, `params`, `menu`, `submenu`, `order`) VALUES
+('mobi_profile_general', 'mobi', 'Edit Settings', 'Mobi_Plugin_Menus', '', 'mobi_profile', '', 7);

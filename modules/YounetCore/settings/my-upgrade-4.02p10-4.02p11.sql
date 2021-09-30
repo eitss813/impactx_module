@@ -1,0 +1,1 @@
+UPDATE `engine4_core_modules` SET `version` = '4.02p11' where 'name' = 'younet-core';

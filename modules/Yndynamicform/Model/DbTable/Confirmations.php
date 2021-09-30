@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: Nguyen Thanh
+ * Date: 8/2/2016
+ * Time: 5:28 PM
+ */
+class Yndynamicform_Model_DbTable_Confirmations extends Engine_Db_Table
+{
+    protected $_rowClass = 'Yndynamicform_Model_Confirmation';
+
+    public function getConfirmations($params)
+    {
+        $table = Engine_Api::_()->getDbtable('confirmations', 'yndynamicform');
+        $rName = $table->info('name');
+
+        $select = $this -> select() -> from($rName) -> setIntegrityCheck(true);
+
+        // Form id
+        if (!empty($params['form_id'])) {
+            $select->where("$rName.form_id = ?", $params['form_id']);
+        }
+
+        // Title
+        if (!empty($params['name'])) {
+            $select->where("$rName.name LIKE ?", "%{$params['name']}%");
+        }
+
+        // Isenable ?
+        if (isset($params['status']) && is_numeric($params['status'])) {
+            $select->where($rName . '.enable = ?', $params['status']);
+        }
+
+        $select->order("$rName.order ASC");
+
+        return $table->fetchAll($select);
+    }
+}

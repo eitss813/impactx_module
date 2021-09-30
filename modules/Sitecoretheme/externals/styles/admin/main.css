@@ -1,0 +1,440 @@
+/* $Id: main.css 2014-10-09 00:00:00Z SocialEngineAddOns Copyright 2019-2020 BigStep Technologies Pvt. Ltd. $ */
+
+/* THEME MENU TAB IN ADMIN PANEL */
+.sitecoretheme_admin_main_theme
+{
+  background-color: #e32162;
+  color: #fff !important;
+  border-radius: 4px 4px 0 0;
+}
+.settings .sitecoretheme_constant_color_single_element .form-label, .settings .sitecoretheme_constant_color_group_element .form-label
+{
+  float: none;
+}
+/* CUSTOM TAB ERROR AND SUCCESS MESSAGE TIP */
+.sitecoretheme_custom_css_error_msg
+{
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 15px;
+}
+.sitecoretheme_custom_css_sucess_msg
+{
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 15px;
+}
+/* FAQ WHILE SEAOCORE IS NOT PRESENT */
+.sitecoretheme_faq
+{
+ +rounded;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  list-style: decimal !important;
+  padding-left: 10px;
+}
+.sitecoretheme_faq > li
+{
+  margin-left: 20px;
+  padding: 7px 12px 7px 1px;
+}
+.sitecoretheme_faq > li + li
+{
+  border-top: 1px solid #eee;
+}
+.sitecoretheme_faq li > div
+{
+  clear: both;
+  border-left: 3px solid #ccc;
+  padding: 5px 5px 5px 10px;
+  margin: 5px;
+  font-family: arial;
+  line-height: 18px;
+}
+.sitecoretheme_faq li > div b
+{
+  font-weight: bold;
+}
+.sitecoretheme_faq li div ul li ul
+{
+  list-style: circle;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+.sitecoretheme_faq li div ul
+{
+  list-style: disc;
+  padding-left: 10px;
+}
+.code
+{
+  background-color: #F9F6D5;
+  padding: 10px;
+  color: #000;
+  font-family: "Trebuchet MS", tahoma, verdana, arial, serif;
+  overflow: auto;
+}
+.code img
+{
+  margin-top: 10px;
+}
+/* FOOTER SETTING ARROW */
+.sitecoretheme_footer_exp_colps
+{
+  margin-top: -150px;
+  float: right;
+  max-width: 200px;
+}
+.sitecoretheme_footer_exp_colps > span
+{
+  display: block;
+  text-align: right;
+  color: #999;
+}
+#clickable_link
+{
+  background-image: url(~/application/modules/Sitecoretheme/externals/images/admin/footer-expand-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  min-width: 16px;
+  height: 16px;
+  background-position: right;
+  cursor: pointer;
+  margin-top: 5px;
+}
+#clickable_link.open
+{
+  background-image: url(~/application/modules/Sitecoretheme/externals/images/admin/footer-collaps-arrow.png);
+}
+.sitecoretheme_icon_view
+{
+  background-image: url(~/application/modules/Sitecoretheme/externals/images/admin/eye.png);
+  padding-left: 16px;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+  min-width: 16px;
+  height: 16px;
+}
+/* HIGHLIGHTED SETTING TABLE */
+.sitecoretheme_admin_edit_highlight img
+{
+  max-height: 20px;
+}
+/* SERVICES SETTING TABLE */
+.sitecoretheme_admin_manage_services img
+{
+  max-height: 25px;
+}
+/* ACHIVEMENTS BLOCK */
+.sitecoretheme_stats_page .form-elements > .form-wrapper:not(:first-child)
+{
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+  width: 100%;
+}
+.sitecoretheme_stats_page .form-elements > .form-wrapper:not(:first-child) fieldset .form-wrapper
+{
+  width: 28%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+  padding: 0;
+}
+.sitecoretheme_stats_page .form-label
+{
+  margin-bottom: 10px;
+}
+.sitecoretheme_stats_page .form-wrapper:not(:first-child) .form-element
+{
+  clear: both;
+}
+.sitecoretheme_stats_page .form-wrapper:not(:first-child) .form-element input
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+.sitecoretheme_stats_page button
+{
+  display: block;
+}
+/* ACTION BUTTON BLOCK */
+#global_page_sitecoretheme-admin-landing-page-cta-buttons .form-elements > .form-wrapper
+{
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons .form-elements > .form-wrapper fieldset .form-wrapper
+{
+  width: 22%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  padding: 0 0 15px 0;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons .form-label
+{
+  margin-bottom: 10px;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons .form-wrapper .form-element
+{
+  clear: both;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons .form-wrapper .form-element input[type="text"]
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons #sitecoretheme_landing_cta_newtab-wrapper
+{
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+#global_page_sitecoretheme-admin-landing-page-cta-buttons button
+{
+  display: block;
+}
+/* THEME CUSTOMIZATION COLOR SCHEME PAGE */
+.sitecoretheme_theme_chooser ul.admin_themes > li
+{
+  width: 145px;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px 25px 5px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.sitecoretheme_theme_chooser ul.admin_themes .theme_wrapper
+{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  height: 145px;
+  border: none;/*	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+}
+.sitecoretheme_theme_chooser ul.admin_themes .theme_wrapper img
+{
+  width: 130px;
+  margin: 0 auto;
+}
+.sitecoretheme_theme_chooser ul.admin_themes .theme_chooser_info
+{
+  clear: both;
+  text-align: center;
+}
+.sitecoretheme_theme_chooser .theme_chooser_info form
+{
+  display: inline-block;
+}
+.sitecoretheme_theme_chooser form > button
+{
+  display: inline-block;
+  margin-top: 10px;
+}
+.sitecoretheme_theme_chooser .update_button
+{
+  margin-top: 10px;
+}
+.sitecoretheme_theme_chooser ul.admin_themes .current_theme
+{
+  text-align: center;
+}
+.sitecoretheme_theme_chooser .delete-theme, .sitecoretheme_theme_chooser .delete-theme:hover
+{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sitecoretheme_theme_chooser .admin_theme_header_controls
+{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.sitecoretheme_theme_chooser .admin_theme_header_controls h3
+{
+  float: none;
+  margin: 0;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.sitecoretheme_theme_chooser .admin_theme_header_controls h3:before
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 120px;
+  margin: 0 auto;
+  bottom: 0;
+  background: #e32162;
+  height: 2px;
+  content: " ";
+  color: #333;
+}
+#global_page_sitecoretheme-admin-themes-index .admin_theme_editor_selected
+{
+  margin-bottom: 0;
+}
+/* THEME FOOTER TEMPLATE PAGE */
+#global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_facebook_block-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_twitter_block-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_pinterest_block-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_youtube_block-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_linkedin_block-wrapper
+{
+  background: #f6f6f6;
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+}
+#global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_facebook_block-wrapper .form-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_twitter_block-wrapper .form-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_pinterest_block-wrapper .form-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_youtube_block-wrapper .form-wrapper, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_linkedin_block-wrapper .form-wrapper
+{
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+}
+#global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_facebook_block-wrapper .form-wrapper .form-label, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_twitter_block-wrapper .form-wrapper .form-label, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_pinterest_block-wrapper .form-wrapper .form-label, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_youtube_block-wrapper .form-wrapper .form-label, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_linkedin_block-wrapper .form-wrapper .form-label
+{
+  width: auto;
+}
+#global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_facebook_block-wrapper .form-wrapper input, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_twitter_block-wrapper .form-wrapper input, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_pinterest_block-wrapper .form-wrapper input, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_youtube_block-wrapper .form-wrapper input, #global_page_sitecoretheme-admin-footer-templates-index #sitecoretheme_linkedin_block-wrapper .form-wrapper input
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+#global_page_sitecoretheme-admin-footer-templates-index button
+{
+  margin-top: 15px;
+}
+/* THEME UPDATE COLOR PAGE */
+#sitecoretheme_header_constants_label-wrapper, #sitecoretheme_footer_constants_label-wrapper, #sitecoretheme_body_constants_label-wrapper
+{
+  padding: 10px 0;
+  text-transform: uppercase;
+  position: relative;
+}
+#sitecoretheme_header_constants_label-wrapper:before, #sitecoretheme_footer_constants_label-wrapper:before, #sitecoretheme_body_constants_label-wrapper:before
+{
+  text-transform: uppercase;
+  position: absolute;
+  background: #ddd;
+  width: 80px;
+  left: 0;
+  bottom: 0;
+  content: " ";
+  height: 2px;
+}
+#sitecoretheme_header_constants_label-wrapper label, #sitecoretheme_footer_constants_label-wrapper label, #sitecoretheme_body_constants_label-wrapper label
+{
+  color: #333;
+}
+.vertical-autosuggest
+{
+  position: absolute;
+  padding: 0px;
+  width: 300px;
+  z-index: 50;
+  border: 1px solid #d0d1d5;
+  margin: 0px;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #fff;
+}
+.vertical-autosuggest > li
+{
+  padding: 3px;
+  margin: 0 !important;
+  overflow: hidden;
+}
+.vertical-autosuggest > li + li
+{
+  border-top: 1px solid #d0d1d5;
+}
+.vertical-autosuggest > li img
+{
+  max-width: 24px;
+  max-height: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+}
+.vertical-autosuggest > li.autocompleter-selected
+{
+  background: #eee;
+  color: #555;
+}
+.vertical-autosuggest > li.autocompleter-choices
+{
+  font-size: .8em;
+  cursor: pointer;
+}
+.vertical-autosuggest > li.autocompleter-choices:hover
+{
+  color: #5ba1cd;
+}
+.vertical-autosuggest > li.autocompleter-choices .autocompleter-choice
+{
+  line-height: 25px;
+}
+.vertical-autosuggest > li:hover
+{
+  background: #eee;
+  color: #555;
+}
+.vertical-autosuggest > li span.autocompleter-queried
+{
+  font-weight: bold;
+}
+ul.vertical-autosuggest .search-working
+{
+  background-image: none;
+}
+
+#myDemo1{ left:0!important; }
+.settings .form-options-wrapper input[type="radio"], 
+.settings .form-options-wrapper input[type="checkbox"]{
+  margin-left: 3px;
+}
+.sitecoretheme_admin_background_image_preview {
+  width: 100%;
+  max-height: 100px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.sitecoretheme_admin_background_image_preview >  img{
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+[id*="global_page_sitecoretheme-admin-"] .settings .form-description {
+	max-width: 100%;
+	box-sizing: border-box;
+}

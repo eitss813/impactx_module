@@ -1,0 +1,138 @@
+/*Verify Popup*/
+#verify_members_popup {	
+	border: 0;
+	height: auto;
+	min-height: 75px;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;;
+}
+.verify_members_popup_btns {
+	padding: 10px;
+	box-sizing: border-box;
+	float: right;
+}
+#verify_members_popup .item_photo img {
+	float: left;
+	margin: 5px;
+}
+html[dir='rtl'] #verify_members_popup .item_photo img {
+	float: right;
+}
+#verify_members_popup .item_member_list {
+	border-bottom: 0;
+}
+#verify_members_popup .item_member_list + .item_member_list {
+	border-top-width: 1px;	
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+.sitepage_users_block_links {
+	font-weight: bold;
+	overflow: auto;
+	padding: 0 3px;
+}
+.sitepage_users_block_links .seaocore_members_popup_content {
+	height: inherit;
+	max-height: 250px;
+	width: inherit;
+}
+#sitepage_comment textarea {
+	max-width: 320px;
+	vertical-align: top;
+}
+.item_member_details .span_comment {
+    font-weight: normal;
+}
+/*loading image in popup*/
+#verify_pops_loding_image {
+	margin-right: 5px;
+}
+
+/*Verify button*/
+.layout_sitepage_verify_button {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+/*.sitepage_button {
+  background-color: #0cb3d8;
+  border-radius: 3px;
+  color: #fff;
+	cursor: pointer;
+  font-size: 14px;
+  display: block;
+  padding: 6px;
+  text-align: center;
+}
+.sitepage_button:hover {
+	background-color: #0b9fc0;
+}*/
+
+/*Tooltip on Sitepage Button*/
+.layout_sitepage_verify_button .sitepage_tip {
+	margin-left: 37px !important;
+	margin-top: 4px;
+}
+html[dir='rtl'] .layout_sitepage_verify_button .sitepage_tip {
+	margin-right: 37px !important;
+}
+/*.sitepage_tick_image:hover .sitepage_tip {
+	display: block;
+}*/
+
+/*Verify Button/Message in Middle Column*/
+.layout_middle .layout_sitepage_verify_button {
+	clear: both;
+	float: left;
+}
+html[dir='rtl'] .layout_middle .layout_sitepage_verify_button {
+	float: right;
+}
+.layout_middle .sitepage_verify_msg_box {
+	width: 100%;
+	box-sizing: border-box;
+}
+/*Verify Button in left and right Column*/
+/*.layout_left .layout_sitepage_verify_button  button,
+.layout_right .layout_sitepage_verify_button  button,*/
+.layout_left .layout_sitepage_verify_button,
+.layout_right .layout_sitepage_verify_button {
+	width: 100%;
+}
+
+/*Verify Message box*/
+.sitepage_verify_msg_box {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-width: 1px;
+	overflow: hidden;
+  padding: 5px;
+}
+.sitepage_tick_image {
+  background: url(../images/verify.png) left center no-repeat;
+  height: 32px;
+  margin-right: 5px;
+	width: 32px;
+}
+html[dir='rtl'] .sitepage_tick_image {
+	background: url(../images/verify.png) right center no-repeat;
+}
+.sitepage_verify_label {
+  display: table-cell;
+  height: 30px;
+  vertical-align: middle;
+}
+.sitepage_links {
+  float: right;
+}
+html[dir='rtl'] .sitepage_links {
+	float: left;
+}
+
+/*-----------------------------Responsive css--------------------------*/
+@media only screen and (max-width: 468px) {
+	#verify_members_popup {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+

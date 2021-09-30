@@ -1,0 +1,15 @@
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.feature.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.sponserdsitepage.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.comment.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.likes.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.usersitepage.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.popular.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.recent.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.random.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.favourite.pages' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.suggest.sitepages' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.recently.view' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.recentlyfriend_view' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.pagelike.view' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.mostdiscussed.widgets' LIMIT 1;
+DELETE FROM `engine4_core_settings` WHERE `engine4_core_settings`.`name` = 'sitepage.popular.locations' LIMIT 1;

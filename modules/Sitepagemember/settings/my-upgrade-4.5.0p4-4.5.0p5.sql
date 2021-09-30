@@ -1,0 +1,2 @@
+INSERT IGNORE INTO `engine4_core_menuitems` (`name`, `module`, `label`, `plugin`, `params`, `menu`, `submenu`, `custom`, `order`) VALUES
+('sitepage_gutter_respondmemberinvite', 'sitepagemember', 'Respond to Membership Invitation', 'Sitepagemember_Plugin_Menus', '{"route":"sitepage_profilepagemember", "class":"buttonlink smoothbox icon_sitepage_accept","action":"respondinvite"}', 'sitepage_gutter', '', 0, 990);

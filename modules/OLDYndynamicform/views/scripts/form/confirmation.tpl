@@ -1,0 +1,1 @@
+<?php echo $this -> confirmation -> confirmation_text ?>

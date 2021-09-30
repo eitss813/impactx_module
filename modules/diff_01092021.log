@@ -1,0 +1,606 @@
+diff --git a/application/modules/Impactx/Api/Core.php b/application/modules/Impactx/Api/Core.php
+index 81f9b803..61594cb0 100644
+--- a/application/modules/Impactx/Api/Core.php
++++ b/application/modules/Impactx/Api/Core.php
+@@ -113,5 +113,70 @@ class Impactx_Api_Core extends Core_Api_Abstract
+ 
+         return $table->fetchAll($select);
+     }
++    
++    /*
++     * Update the formula values for the all metrics available in updated form field.
++     */
++    public function updateFormulaOnEditNumberField($params) {
++        $option_id = $params['option_id'];
++        
++        $tempParams = array();
++        $fieldMaps = Engine_Api::_()->fields()->getFieldsMaps('yndynamicform_entry')->getRowsMatching('option_id', $option_id);
++        foreach ($fieldMaps as $item) {
++            $field = $item->getChild();
++            $values = $field->toArray();
++            
++            if( isset($values['type']) && !empty($values['type']) && ($values['type'] == 'float') ) {
++                $tempParams[$values['field_id']] = ($params['field_id'] == $values['field_id'])? $params['label']: $values['label'];
++            }
++        }
++        
++        foreach ($fieldMaps as $item) {
++            $field = $item->getChild();
++            $values = $field->toArray();
++            
++            if( isset($values['type']) && !empty($values['type']) && ($values['type'] == 'metrics') ) {
++                $own_formula_input = $own_actual_formula = $values['config']['own_formula_by_id'];
++                if( !empty($tempParams) && !empty($own_actual_formula) && !empty($own_formula_input) ) {
++                    foreach($tempParams as $field_id => $label) {
++                        $own_formula_input = str_replace("field_id_" . $field_id, $label, $own_formula_input);
++                        $own_actual_formula = str_replace("field_id_" . $field_id, '[' . $label . ']', $own_actual_formula);
++                    }
++                }
++                
++                
++                $values['config']['own_formula_input'] = $own_formula_input;
++                $values['config']['own_actual_formula'] = $own_actual_formula;
++                
++                $db = Engine_Db_Table::getDefaultAdapter();
++                $db->update('engine4_yndynamicform_entry_fields_meta', array(
++                    'config' => json_encode($values['config']),
++                ), array(
++                    'field_id = ?' => $values['field_id'],
++                ));
++            }
++        }
++        
++        return;
++    }
++    
++    /*
++     * Validate the metrics formula on number field delete
++     */
++    public function validateMetricsFormulaOnNumFieldDeletion($map) {
++        $option_id = $map->option_id;
++        $child_id = $map->child_id;
++        
++        $fieldMaps = Engine_Api::_()->fields()->getFieldsMaps('yndynamicform_entry')->getRowsMatching('option_id', $option_id);
++        foreach ($fieldMaps as $item) {
++            $field = $item->getChild();
++            $values = $field->toArray();
++            
++            if( isset($values['type']) && !empty($values['type']) && ($values['type'] == 'metrics') && isset($values['config']['metric_aggregate_fields']) && !empty($values['config']['metric_aggregate_fields']) && in_array($child_id, $values['config']['metric_aggregate_fields']) )
++                return true;
++        }
++
++        return false;
++    }
+ }
+ 
+diff --git a/application/modules/Sitepage/controllers/ManageformsController.php b/application/modules/Sitepage/controllers/ManageformsController.php
+index b3bbfd56..8f9f3422 100644
+--- a/application/modules/Sitepage/controllers/ManageformsController.php
++++ b/application/modules/Sitepage/controllers/ManageformsController.php
+@@ -944,6 +944,11 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+         if( isset($values['temp_description']) && !empty($values['temp_description']) )
+             $values['description'] = $values['temp_description'];
+         
++        // Update the formula values for metrics
++        if( !empty($params['type']) && ($params['type'] == 'float') ) {
++            Engine_Api::_()->impactx()->updateFormulaOnEditNumberField($params); 
++        }
++        
+         // Send the form posted values to show the prefields values in the form.
+         if( isset($params['metric_aggregate_type']) && !empty($params['metric_aggregate_type']) && ($params['metric_aggregate_type'] == 'own_formula')) {
+             if( empty($params['own_formula_input']) ) {
+@@ -1501,9 +1506,23 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+         $this->view->htmlArr = $html;
+     }
+ 
++    public function validateMapDeleteAction() {
++        $map = Engine_Api::_()->fields()->getMap($this->_getParam('child_id'), $this->_getParam('option_id'), $this->_fieldType);
++        
++        $validateMetricsFormulaOnNumFieldDeletion = Engine_Api::_()->impactx()->validateMetricsFormulaOnNumFieldDeletion($map);
++        if( !empty($validateMetricsFormulaOnNumFieldDeletion) ) {
++            echo 'Error: Please delete the metrics first';
++            exit;
++        }
++        
++        echo 'HELLO';
++        exit;
++    }
++    
+     public function mapDeleteAction()
+     {
+         $map = Engine_Api::_()->fields()->getMap($this->_getParam('child_id'), $this->_getParam('option_id'), $this->_fieldType);
++        
+         Engine_Api::_()->fields()->deleteMap($map);
+     }
+     public function deleteAction() {
+@@ -1582,7 +1601,7 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+                 $start_id = $valuess['field_id'];
+                 $currentStartId = array();
+ 
+-                $all_fields_ids = array();
++                $temp_formula_array = $all_fields_ids = array();
+                 foreach ($fieldMaps as $item)
+                 {
+                     $field = $item->getChild();
+@@ -1596,7 +1615,8 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+                         array_push($store_count,$vall - $start_id);
+                     }
+              
+-
++                    if( isset($values['config']['own_formula_by_id']) && !empty($values['config']['own_formula_by_id']) )
++                        $temp_formula_array[$values['field_id']] = $values['config']['own_formula_by_id'];
+ 
+                     unset($values['field_id']);
+                     unset($values['config']);
+@@ -1673,6 +1693,54 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+                     $all_fields_ids[] = $field_data;
+ 
+                 }
++                
++                /*
++                 * [Start] Update the Formula and It's values for the newly cloned form field.
++                 */
++                if( !empty($temp_formula_array) ) {
++                    foreach( $temp_formula_array as $field_id => $formula ) {
++                        if( !empty($field_id) ) {
++                            $metricAggregateFieldsArray = array();
++                            foreach( $all_fields_ids as $fields ) {
++                                if( $fields['old_field_id'] == $field_id )
++                                    $new_field_id = $fields['new_field_id'];
++                                
++                                // make the formua with new fields ids
++                                $formula = @str_replace($fields['old_field_id'], $fields['new_field_id'], $formula);
++                                
++                                // make an array for "metric_aggregate_fields" field
++                                if( strstr($formula, 'field_id_' . $fields['new_field_id']) )
++                                    $metricAggregateFieldsArray[] = $fields['new_field_id'];
++                            }
++                            
++                            $db = Engine_Db_Table::getDefaultAdapter();
++                            $fieldDetails =  $db->select()
++                                ->from('engine4_yndynamicform_entry_fields_meta')
++                                ->where('field_id = ?', $new_field_id)
++                                ->limit(1)
++                                ->query()
++                                ->fetchAll();
++                            $fieldDetails = $fieldDetails[0];
++                            
++                            if( isset($fieldDetails['config']) && !empty($fieldDetails['config']) ) {
++                                $config = json_decode($fieldDetails['config'], true);
++                                $config['own_formula_by_id'] = $formula;
++                                $config['metric_aggregate_fields'] = $metricAggregateFieldsArray;
++                                
++                                $tempConfig = @json_encode($config);
++                                
++                                $db->update('engine4_yndynamicform_entry_fields_meta', array(
++                                    'config' => $tempConfig,
++                                ), array(
++                                    'field_id = ?' => $new_field_id,
++                                ));
++                            }
++                        }
++                    }
++                }
++                /*
++                 * [End] Update the Formula and It's values for the newly cloned form field.
++                 */
+ 
+                 // clone other data
+                 $new_form_id = $new_form->getIdentity();
+@@ -1749,7 +1817,7 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+         $this -> renderScript('admin-form/clone.tpl');
+     }
+     // Other
+-
++    
+     public function orderAction()
+     {
+         if( !$this->getRequest()->isPost() ) {
+diff --git a/application/modules/Sitepage/views/scripts/_jsAdmin.tpl b/application/modules/Sitepage/views/scripts/_jsAdmin.tpl
+index cc610765..e097c77e 100644
+--- a/application/modules/Sitepage/views/scripts/_jsAdmin.tpl
++++ b/application/modules/Sitepage/views/scripts/_jsAdmin.tpl
+@@ -32,7 +32,8 @@
+     },
+     map : {
+       create : '<?php echo $this->url(array('action' => 'map-create')) ?>',
+-      remove : '<?php echo $this->url(array('action' => 'map-delete')) ?>'
++      remove : '<?php echo $this->url(array('action' => 'map-delete')) ?>',
++      validate : '<?php echo $this->url(array('action' => 'validate-map-delete')) ?>'
+     },
+     type : {
+       create : '<?php echo $this->url(array('action' => 'type-create')) ?>',
+@@ -533,8 +534,28 @@
+     var ids = readIdentifiers(parentEl.get('id'));
+     var url = urls.field.edit;
+     if( confirm('<?php echo $this->string()->escapeJavascript($this->translate("Are you sure you want to delete this field?")) ?>') ) {
+-      //doFieldDelete(ids.child_id);
+-      doFieldUnMap(ids.parent_id, ids.option_id, ids.child_id);
++        
++        // Following code is to validate the metric formulas
++        var request = new Request.HTML({
++          'url' : urls.map.validate,
++          'data' : {
++            'format' : 'html',
++            'fieldType' : fieldType,
++            'parent_id' : ids.parent_id,
++            'option_id' : ids.option_id,
++            'child_id' : ids.child_id
++          },
++          onSuccess: function (responseTree, responseElements, responseHTML, responseJavaScript) {
++                if( responseHTML && (responseHTML.search("Error:") >= 0) ) {
++                    alert("This field used in metric formula. Please update the metric formula first and remove this field from the formula and then try to delete this field!");
++                }else {
++                    //doFieldDelete(ids.child_id);
++                    doFieldUnMap(ids.parent_id, ids.option_id, ids.child_id);
++                }
++          }
++        });
++
++        request.send();
+     }
+   }
+ 
+diff --git a/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl b/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
+index 9833ff91..a04911f1 100644
+--- a/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
++++ b/application/modules/Sitepage/views/scripts/_metrics-conditional-logic.tpl
+@@ -99,7 +99,7 @@ if($field_id){
+                                         $metric_fetch_type = 'existing_metric';
+                                 ?>
+ 				<div id="metric_fetch_type-element" class="form-element">
+-					<select name="metric_fetch_type" id="metric_fetch_type" onchange="javascript:onselect_metric_fetch_type()">
++					<select name="metric_fetch_type" id="metric_fetch_type" onchange="javascript:onselect_metric_fetch_type('call')">
+ 						<option value="null"><?php echo $this->translate('Select') ?></option>
+                                                 <option value="existing_metric" <?php echo (!empty($metric_fetch_type) && ($metric_fetch_type == 'existing_metric'))? 'selected': ''; ?>><?php echo $this->translate('Existing Metrics') ?></option>
+ 						<option value="new_metric" <?php echo (!empty($metric_fetch_type) && ($metric_fetch_type == 'new_metric'))? 'selected': ''; ?>><?php echo $this->translate('New Metrics') ?></option>
+@@ -142,7 +142,7 @@ if($field_id){
+                                 <?php $tempMetricsArray[$metricsID] = $metricsLabel; ?>
+                                 
+                                     <div class='metric_multiradio_single_div'>
+-                                        <input type="radio" <?php echo (!empty($metricAutocompletePostVal) && ($metricAutocompletePostVal == $metricSuggestion['id']))? 'checked': ''; ?> value="<?php echo $metricSuggestion['id'] ?>" class="metric_input" name="metric_autocomplete" id="metric_autocomplete" onclick="select_metric('<?php echo $metricsID ?>', '<?php echo $metricsLabel ?>', '<?php echo $metricsMetricName ?>', '<?php echo $metricsMetricDescription ?>', '<?php echo $metricsMetricUnit ?>', '<?php echo $metricsMetricId ?>'); insert_metric();">
++                                        <input type="radio" <?php echo (!empty($metricAutocompletePostVal) && ($metricAutocompletePostVal == $metricSuggestion['id']))? 'checked': ''; ?> value="<?php echo $metricSuggestion['id'] ?>" class="metric_input" name="metric_autocomplete" id="metric_autocomplete" onclick="select_metric('<?php echo $metricsID ?>', '<?php echo $metricsLabel ?>', '<?php echo $metricsMetricName ?>', '<?php echo $metricsMetricDescription ?>', '<?php echo $metricsMetricUnit ?>', '<?php echo $metricsMetricId ?>'); insert_metric('onload');">
+                                         <label><?php echo $metricsMetricName ?></label>
+                                     </div>
+                                 <?php endforeach; ?>
+@@ -238,7 +238,7 @@ if($field_id){
+                         <?php foreach ($fieldData as $key => $field): ?>
+                                 <?php if($field['type'] == 'integer' || $field['type'] == 'float' ):?>
+                                         <?php $tempAvailableFields[] = array('field_id' => $field['field_id'], 'label' => $field['label']); ?>
+-                                        <?php echo '[' . $field['label'] . ']';?> <br>
++                                        <?php // echo '[' . $field['label'] . ']<br>';?>
+                                 <?php endif;?>
+                         <?php endforeach; ?>
+                         
+@@ -375,9 +375,9 @@ if($field_id){
+                                 if(document.getElementById("description-wrapper"))
+                                     document.getElementById("description-wrapper").style.display = 'block';
+                                 
+-                                onselect_metric_fetch_type();
++                                onselect_metric_fetch_type('onload');
+                                 onselect_metric_aggregate_type();
+-                                insert_metric();
++                                insert_metric('onload');
+                         <?php endif; ?>
+                         
+                         <?php if(empty($isDefaultLabelAvailable) && $field_screen_type == 'field-create'): ?>
+@@ -429,6 +429,8 @@ if($field_id){
+ 
+                                         document.getElementById("label-wrapper").style.display = 'block';
+                                         document.getElementById("description-wrapper").style.display = 'block';
++                                        
++                                        showLimit1();
+ 				});
+ 
+ 			<?php endif;?>
+@@ -446,7 +448,7 @@ if($field_id){
+ 
+ 		});
+                 
+-                function get_existing_metrics() {
++                function get_existing_metrics(calling_type) {
+                     // var spinner_name = 'metric_list';
+                     // var page_nos = parseInt(page_no) - 1;
+                     document.getElementById('metric_autocomplete_container').innerHTML = '<img src="' + en4.core.staticBaseUrl + 'application/modules/Sitecrowdfunding/externals/images/loading.gif" />';
+@@ -468,19 +470,23 @@ if($field_id){
+                            if( responseJSON.is_selected && (responseJSON.is_selected == '1') ) {
+                                 setTimeout(function() {
+                                     document.getElementById('selected_metric_id').value = responseJSON.matrics_id;
+-                                    document.getElementById('label').value = responseJSON.matrics_label;
+-                                    document.getElementById('description').value = responseJSON.metrics_description;
+-                                    document.getElementById('hidden_label').value = responseJSON.matrics_label;
+-                                    document.getElementById('hidden_description').value = responseJSON.metrics_description;
++                                    
++                                    if( calling_type == 'call' ) {
++                                        document.getElementById('label').value = responseJSON.matrics_label;
++                                        document.getElementById('description').value = responseJSON.metrics_description;
++                                        document.getElementById('hidden_label').value = responseJSON.matrics_label;
++                                        document.getElementById('hidden_description').value = responseJSON.metrics_description;
++                                        showLimit1();
+ 
+-                                    if( document.getElementById('metric_unit') )
+-                                        document.getElementById('metric_unit').value = responseJSON.metrics_unit;
++                                        if( document.getElementById('metric_unit') )
++                                            document.getElementById('metric_unit').value = responseJSON.metrics_unit;
++                                    }
+ 
+                                     document.getElementById("label-wrapper").style.display = 'block';
+                                     document.getElementById("description-wrapper").style.display = 'block';
+                                     
+-                                    insert_metric();
+-                                }, 500);
++                                    insert_metric(calling_type);
++                                }, 100);
+                            }
+                             
+                             
+@@ -495,7 +501,7 @@ if($field_id){
+                     request.send();
+                 }
+ 
+-		function onselect_metric_fetch_type(){
++		function onselect_metric_fetch_type(calling_type){
+                         <?php if($field_screen_type == 'field-edit'):?>
+                             // var id = 'existing_metric';
+                         <?php else: ?>
+@@ -518,7 +524,12 @@ if($field_id){
+                                     document.getElementById('metric_aggregate_type-wrapper').style.display = "block";
+ 			}
+ 			else if(id=="existing_metric"){
+-                                get_existing_metrics();
++                                get_existing_metrics(calling_type);
++                                
++                                if( calling_type != 'call' ) {
++                                    if( document.getElementById('metric_fetch_type-wrapper') )
++                                        document.getElementById('metric_fetch_type-wrapper').style.display = "none";
++                                }
+                                 
+                                 if( document.getElementById('metric_create_form_container') )
+                                     document.getElementById('metric_create_form_container').style.display = "none";
+@@ -614,17 +625,25 @@ if($field_id){
+ 						console.log('debugging onRequest')
+ 					},
+ 					onSuccess: function (responseJSON) {
+-						console.log('debugging onSuccess');
+-						document.getElementById("create_metric_spinner").innerHTML = '';
+-						document.getElementById('metric_create_success').style.display = 'block';
+-                        document.getElementById('selected_metric_id').value = responseJSON.metric_id;
+-                        document.getElementById('label').value = responseJSON.metric_name;
+-                        document.getElementById('description').value = responseJSON.metric_description;
+-                        document.getElementById('hidden_label').value = responseJSON.metric_name;
+-                        document.getElementById('hidden_description').value = responseJSON.metric_description;
+-                        
+-                        document.getElementById("label-wrapper").style.display = 'block';
+-                        document.getElementById("description-wrapper").style.display = 'block';
++                                        
++                                                metrics_array[responseJSON.metric_id] = responseJSON.metric_name;
++                                        
++                                                console.log('debugging onSuccess');
++                                                document.getElementById("create_metric_spinner").innerHTML = '';
++                                                document.getElementById('metric_create_success').style.display = 'block';
++                                                document.getElementById('selected_metric_id').value = responseJSON.metric_id;
++                                                document.getElementById('label').value = responseJSON.metric_name;
++                                                document.getElementById('description').value = responseJSON.metric_description;
++                                                document.getElementById('hidden_label').value = responseJSON.metric_name;
++                                                document.getElementById('hidden_description').value = responseJSON.metric_description;
++
++                                                document.getElementById("label-wrapper").style.display = 'block';
++                                                document.getElementById("description-wrapper").style.display = 'block';
++                                                
++                                                document.getElementById("metric_fetch_type").value = 'existing_metric';
++                                                onselect_metric_fetch_type('onload');
++                                                
++                                                showLimit1();
+ 					}
+ 				});
+ 				request1.send();
+@@ -653,7 +672,7 @@ if($field_id){
+ 	}
+ 	#yndform_conditional_container #metric_fetch_type-wrapper{
+ 		 margin-right: unset !important;
+-		 display: block !important;
++		 // display: block !important;
+ 	}
+ 	#yndform_conditional_container .form-wrapper .form-label {
+ 		text-align: unset !important;
+@@ -695,7 +714,8 @@ if($field_id){
+ 	}
+ </style>
+ 
+-<script>                        
++<script> 
++    var metrics_array = JSON.parse('<?php echo json_encode($tempMetricsArray); ?>');
+     function select_metric(id, label, metricsLabel, metricsDescription, metricsUnit, metricsId) {
+         document.getElementById('selected_metric_id').value = metricsId;
+         document.getElementById('label').value = metricsLabel;
+@@ -708,18 +728,23 @@ if($field_id){
+ 
+         document.getElementById("label-wrapper").style.display = 'block';
+         document.getElementById("description-wrapper").style.display = 'block';
++        document.getElementById("metric_fetch_type-wrapper").style.display = 'none';
++        
++        showLimit1();
+     }
+     
+-    function insert_metric() {
+-        var metrics_array = JSON.parse('<?php echo json_encode($tempMetricsArray); ?>');
++    function insert_metric(calling_type) {
+         var selected_metric = document.querySelector('input[name="metric_autocomplete"]:checked').value;
+         
+         if( selected_metric && metrics_array[selected_metric] ) {
+             document.getElementById("metric_multiradio_value").value = metrics_array[selected_metric];
+-
+             document.getElementById("metric_multiradio_value-wrapper").style.display = 'block';
+             document.getElementById("metric_multiradio_value").style.display = 'block';
+-            document.getElementById("metric_autocomplete_container").style.display = 'none';
++            
++            if( calling_type == 'call' )
++                document.getElementById("metric_autocomplete_container").style.display = 'block';
++            else
++                document.getElementById("metric_autocomplete_container").style.display = 'none';
+         }
+     }
+     
+@@ -727,6 +752,7 @@ if($field_id){
+         document.getElementById("metric_multiradio_value-wrapper").style.display = 'none';
+         document.getElementById("metric_multiradio_value").style.display = 'none';
+         document.getElementById("metric_autocomplete_container").style.display = 'block';
++        document.getElementById("metric_fetch_type-wrapper").style.display = 'block';
+     }
+     
+     <?php if( $field_screen_type == 'field-edit' ):?>
+diff --git a/application/modules/Sitepage/views/scripts/manageforms/field-create.tpl b/application/modules/Sitepage/views/scripts/manageforms/field-create.tpl
+index 881e68ae..5be0bb15 100644
+--- a/application/modules/Sitepage/views/scripts/manageforms/field-create.tpl
++++ b/application/modules/Sitepage/views/scripts/manageforms/field-create.tpl
+@@ -75,6 +75,10 @@ $baseUrl = $this->layout()->staticBaseUrl;
+     var element = document.getElementById("label-label");
+     element.appendChild(tag);
+   }
++  
++  document.getElementById('label').onkeyup = function(e) {
++    showLimit1();
++  }
+ </script>
+ <style>
+   p#label-limit-err {
+diff --git a/application/modules/Sitepage/views/scripts/manageforms/field-edit.tpl b/application/modules/Sitepage/views/scripts/manageforms/field-edit.tpl
+index df038168..0cf0805b 100644
+--- a/application/modules/Sitepage/views/scripts/manageforms/field-edit.tpl
++++ b/application/modules/Sitepage/views/scripts/manageforms/field-edit.tpl
+@@ -71,6 +71,10 @@ $baseUrl = $this->layout()->staticBaseUrl;
+     var element = document.getElementById("label-label");
+     element.appendChild(tag);
+   }
++  
++  document.getElementById('label').onkeyup = function(e) {
++    showLimit1();
++  }
+ </script>
+ 
+ <style>
+diff --git a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 5f0dee95..00000000
+--- a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,17 +0,0 @@
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagealbum', 'albums', 'recent_pagealbums', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'albums', 'liked_pagealbums', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'albums', 'viewed_pagealbums', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'albums', 'commented_pagealbums', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'albums', 'featured_pagealbums', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'albums', 'random_pagealbums', 'Random', '0', '6', '24'),
+-('sitepagealbum', 'photos', 'recent_pagephotos', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'photos', 'liked_pagephotos', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'photos', 'viewed_pagephotos', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'photos', 'commented_pagephotos', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'photos', 'featured_pagephotos', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'photos', 'random_pagephotos', 'Random', '0', '6', '24');
+-
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagealbum_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_album' LIMIT 1 ;
+-
+-UPDATE `engine4_core_pages` SET `name` = 'sitepage_album_browse' WHERE `engine4_core_pages`.`name` ='sitepage_album_albumlist' LIMIT 1 ;
+\ No newline at end of file
+diff --git a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 3224903c..00000000
+--- a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,10 +0,0 @@
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagevideo_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_video' LIMIT 1 ;
+-UPDATE `engine4_core_pages` SET `name` = 'sitepagevideo_index_browse' WHERE `engine4_core_pages`.`name` ='sitepagevideo_index_videolist' LIMIT 1 ;
+-
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagevideo', 'videos', 'recent_pagevideos', 'Recent', '1', '1', '24'),
+-('sitepagevideo', 'videos', 'liked_pagevideos', 'Most Liked', '1', '2', '24'),
+-('sitepagevideo', 'videos', 'viewed_pagevideos', 'Most Viewed', '1', '3', '24'),
+-('sitepagevideo', 'videos', 'commented_pagevideos', 'Most Commented', '0', '4', '24'),
+-('sitepagevideo', 'videos', 'featured_pagevideos', 'Featured', '0', '5', '24'),
+-('sitepagevideo', 'videos', 'random_pagevideos', 'Random', '0', '6', '24');
+\ No newline at end of file
+diff --git a/application/modules/Yndynamicform/View/Helper/YndformFieldValueLoop.php b/application/modules/Yndynamicform/View/Helper/YndformFieldValueLoop.php
+index 1796d555..3324d357 100644
+--- a/application/modules/Yndynamicform/View/Helper/YndformFieldValueLoop.php
++++ b/application/modules/Yndynamicform/View/Helper/YndformFieldValueLoop.php
+@@ -70,7 +70,7 @@ class Yndynamicform_View_Helper_YndformFieldValueLoop extends Fields_View_Helper
+                             $label = '<a href="'.$metricUrl.'" target="_blank" '.$default_color.'>'.$label.'</a>';
+                         }
+                         
+-                        $tmp = @number_format($tmp);
++                        $tmp = @number_format($tmp, 2);
+                     }
+                     
+                     $tmp = $this->getFieldValueString($field, $value, $subject, $map, $partialStructure);
+@@ -113,7 +113,7 @@ EOF;
+                             $label = '<a href="'.$metricUrl.'" target="_blank" '.$default_color.'>'.$label.'</a>';
+                         }
+                         
+-                        $tmp = @number_format($tmp);
++                        $tmp = @number_format($tmp, 2);
+                     }
+                     
+                     if (in_array($field -> type, $special_section)) {
+diff --git a/application/modules/Yndynamicform/views/scripts/entries/create.tpl b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+index 6b2f7a49..89316865 100644
+--- a/application/modules/Yndynamicform/views/scripts/entries/create.tpl
++++ b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+@@ -1098,7 +1098,7 @@ if(!$this->project_id && $this->user_id){
+                             temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
+ 
+                         if( temp_label && (formula.search("field_id_" + id) >= 0) )
+-                            formula = formula.replace("field_id_" + id, temp_label);
++                            formula = formula.replaceAll("field_id_" + id, temp_label);
+                         
+                     }
+                 }
+@@ -1167,7 +1167,7 @@ if(!$this->project_id && $this->user_id){
+                             if(total && total !== null && total.value !== "" && !total.isNaN){
+                                 if( temp_metric_aggregate_type == 'own_formula' ) {
+                                     if( own_formula.search("field_id_" + id) >= 0 )
+-                                        own_formula = own_formula.replace("field_id_" + id, parseFloat(data));
++                                        own_formula = own_formula.replaceAll("field_id_" + id, parseFloat(data));
+                                 }else {
+                                     document.getElementById(current_metrics_id).value = total;
+                                 }
+@@ -1179,7 +1179,7 @@ if(!$this->project_id && $this->user_id){
+                 if( temp_metric_aggregate_type == 'own_formula' ) {
+                     var formula_value = eval(own_formula);
+                     formula_value = formula_value.toFixed(2);
+-                    document.getElementById(current_metrics_id).value = eval(formula_value);
++                    document.getElementById(current_metrics_id).value = formula_value;
+                 }
+             }
+         }
+diff --git a/application/modules/Yndynamicform/views/scripts/form/detail.tpl b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+index 93331b1e..6db7f376 100644
+--- a/application/modules/Yndynamicform/views/scripts/form/detail.tpl
++++ b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+@@ -652,7 +652,7 @@ $this->headScript()
+                             temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
+ 
+                         if( temp_label && (formula.search("field_id_" + id) >= 0) )
+-                            formula = formula.replace("field_id_" + id, temp_label);
++                            formula = formula.replaceAll("field_id_" + id, temp_label);
+                         
+                     }
+                 }
+@@ -721,7 +721,7 @@ $this->headScript()
+                             if(total && total !== null && total.value !== "" && !total.isNaN){
+                                 if( temp_metric_aggregate_type == 'own_formula' ) {
+                                     if( own_formula.search("field_id_" + id) >= 0 )
+-                                        own_formula = own_formula.replace("field_id_" + id, parseFloat(data));
++                                        own_formula = own_formula.replaceAll("field_id_" + id, parseFloat(data));
+                                 }else {
+                                     document.getElementById(current_metrics_id).value = total;
+                                 }
+@@ -733,7 +733,7 @@ $this->headScript()
+                 if( temp_metric_aggregate_type == 'own_formula' ) {
+                     var formula_value = eval(own_formula);
+                     formula_value = formula_value.toFixed(2);
+-                    document.getElementById(current_metrics_id).value = eval(formula_value);
++                    document.getElementById(current_metrics_id).value = formula_value;
+                 }
+             }
+         }

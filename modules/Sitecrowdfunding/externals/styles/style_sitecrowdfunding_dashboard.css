@@ -1,0 +1,1346 @@
+/* $Id:style_sitecrowdfunding_dashboard.css 6590 2014-01-02 00:00:00Z SocialEngineAddOns Copyright 2013-2014 BigStep Technologies Pvt. Ltd. $ */
+
+a:link
+{
+  outline: 0;
+}
+.icon_large
+{
+  font-size: 20px !important;
+}
+.sitecrowdfunding_dashboard_info .sitecrowdfunding_featured
+{
+  width: initial;
+  margin: 0;
+}
+html[dir="rtl"] .sitecrowdfunding_dashboard_info .sitecrowdfunding_sponsored
+{
+  left: 5px; 
+  top: 5px;
+  bottom: auto;
+}
+.sitecrowdfunding_dashboard_info_image
+{
+  text-align: center;
+  width: 100%;
+}
+.sitecrowdfunding_dashboard_info_image img
+{
+  border: none;
+  width: 100%;
+  display: block;
+}
+.sitecrowdfunding_dashboard_info_desc
+{
+  padding: 5px 10px;
+}
+.sitecrowdfunding_dashboard_info_desc > div, .sitecrowdfunding_dashboard_info_desc > div a
+{
+  font-size: 14px !important;
+  line-height: 30px;
+}
+.sitecrowdfunding_dashboard_info_desc > div > h4
+{
+  display: inline;
+  border-bottom: 0;
+}
+html[dir="rtl"] .sitecrowdfunding_dashboard_info_image img
+{
+  float: right;
+}
+.sitecrowdfunding_dashboard_content
+{
+  overflow: hidden;
+}
+.sitecrowdfunding_dashboard_content > h3
+{
+  margin-bottom: 5px;
+}
+.sitecrowdfunding_dashboard_header
+{
+  overflow: hidden;
+  padding: 11px 10px;
+}
+.sitecrowdfunding_dashboard_header_btn a
+{
+  margin-left: 10px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 3px 8px;
+}
+.sitecrowdfunding_dashboard_header + .global_form
+{
+  margin-top: 0;
+}
+.sitecrowdfunding_dashboard_header .sitecrowdfunding_dashboard_header_title
+{
+  font-size: 17px;
+  margin-right: 10px;
+  width: 60%;
+  line-height: 20px;
+}
+html[dir="rtl"] .sitecrowdfunding_dashboard_header .sitecrowdfunding_dashboard_header_title
+{
+  margin-right: 0px;
+  margin-left: 10px;
+}
+/*Dashboard Forms*/
+.sitecrowdfunding_dashboard_content .global_form > div
+{
+  float: none !important;
+}
+.sitecrowdfunding_dashboard_content .global_form > div > div > h3 + p, .sitecrowdfunding_dashboard_content #style-element, .sitecrowdfunding_dashboard_content #overview-element, .sitecrowdfunding_editstyle .global_form textarea + p, .sitecrowdfunding_editstyle .global_form #terms_of_use-element p
+{
+  max-width: none;
+}
+.sitecrowdfunding_dashboard_content .global_form input + label
+{
+  max-width: 450px;
+}
+.sitecrowdfunding_dashboard_content .defaultSkin table.mceLayout
+{
+  width: 450px !important;
+}
+.sitecrowdfunding_dashboard_content .defaultSkin iframe
+{
+  height: 350px !important;
+}
+/*Upload Photos */
+.sitecrowdfunding_form_upload div.form-element
+{
+  max-width: inherit !important;
+}
+.sitecrowdfunding_form_upload #file-label, .sitecrowdfunding_form_upload #submit-label
+{
+  display: none;
+}
+.sitecrowdfunding_form_upload #file-element #demo-status
+{
+  width: auto;
+}
+ul.sitecrowdfunding_edit_media
+{
+  overflow: hidden;
+}
+ul.sitecrowdfunding_edit_media > li
+{
+  clear: both;
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_project_thumb_wrapper, ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_thumb
+{
+  float: left;
+  margin-right: 30px;
+  overflow: hidden;
+}
+html[dir="rtl"] ul.sitecrowdfunding_edit_media .sitecrowdfunding_project_thumb_wrapper, html[dir="rtl"] ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_thumb
+{
+  float: right;
+  margin-left: 15px;
+  margin-right: 0px;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_thumb img
+{
+  display: block;
+  margin: 3px;
+  width: 220px;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_info
+{
+  overflow: hidden;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_info .sitecrowdfunding_edit_media_title_wrapper
+{
+  margin-bottom: 10px;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_title input, ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_caption textarea
+{
+  margin: 2px 0px 6px 0px;
+}
+html[dir="rtl"] ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_title input, ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_caption textarea
+{
+  margin: 2px 0px 6px 0px;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_options
+{
+  float: left;
+  margin-right: 15px;
+}
+html[dir="rtl"] ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_options
+{
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_options > label
+{
+  display: block;
+  float: left;
+}
+[dir="rtl"] ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_options > label
+{
+  float: right;
+}
+#lifetime-wrapper #lifetime-element ul.form-options-wrapper{
+  display: table;
+}
+.sitecrowdfunding_edit_projects_button div.form-label
+{
+  width: 190px;
+}
+.sitecrowdfunding_edit_location_form
+{
+  clear: both;
+  margin-bottom: 15px;
+}
+.sitecrowdfunding_edit_location_map, .sitecrowdfunding_edit_location_form
+{
+  border-width: 1px;
+  border-style: solid;
+  background-image: url(../images/bg2.png);
+  display: block;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 10px;
+}
+.sitecrowdfunding_edit_location_form .global_form_box, .sitecrowdfunding_edit_location_form .global_form_box .form-elements
+{
+  background: none !important;
+  border: none;
+  padding: 0px !important;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div
+{
+  overflow: auto;
+}
+.sitecrowdfunding_edit_location_form .formlocation_edit_label
+{
+  font-weight: bold !important;
+  float: left;
+  margin-right: 5px;
+}
+[dir="rtl"] .sitecrowdfunding_edit_location_form .formlocation_edit_label
+{
+  float: right;
+  margin-right: 0;
+  margin-right: 5px;
+}
+.edit_location_form .global_form_box > div .form-elements
+{
+  overflow: auto;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements > div
+{
+  float: left;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 275px;
+  box-sizing: border-box;
+  margin-right: 0;
+  padding: 10px;
+}
+[dir="rtl"] .sitecrowdfunding_edit_location_form .global_form_box > div .form-elements > div
+{
+  float: right;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements > div + div + div + div
+{
+  clear: both;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements > div + div + div + div + div
+{
+  clear: none;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements #submit-wrapper
+{
+  clear: both;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements div label
+{
+  font-size: 8pt;
+  font-weight: bold;
+  display: block;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements #submit-wrapper .form-label
+{
+  height: 0px;
+}
+.sitecrowdfunding_dashboard_content #mapCanvas
+{
+  height: 425px;
+}
+/*Edit Location Page endss here*/
+
+/*Projects tab*/
+#my-channel-projects > li, #my-channel-favourite-projects > li
+{
+  border-radius: 2px;
+  border-width: 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 85px;
+  margin: 10px 8px;
+  overflow: hidden;
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+  width: 110px;
+  position: relative;
+}
+#my-channel-projects > li a, #my-channel-favourite-projects > li a
+{
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+#my-channel-projects > li img, #my-channel-favourite-projects > li img
+{
+  height: 100%;
+  max-width: 100%;
+}
+#my-channel-projects .project_length, #my-channel-favourite-projects .project_length
+{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 15px;
+  height: 20px;
+  margin: 5px;
+  opacity: 1;
+  padding: 0 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+html[dir="rtl"] #my-channel-projects .project_length, html[dir="rtl"] #my-channel-favourite-projects .project_length
+{
+  left: 0;
+  right: auto;
+}
+#addMoreProjects, .addMoreProjects
+{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#addMoreProjects + .global_form #buttons-label
+{
+  display: none;
+}
+.sitecrowdfunding_dashboard_content .upload_new_project
+{
+  display: inline-block;
+  margin: 10px 0;
+}
+.sitecrowdfunding_dashboard_content .upload_new_project + form #buttons-label
+{
+  display: none;
+}
+/*Dashboard Info*/
+.sitecrowdfunding_dashboard_info
+{
+  border-width: 1px;
+  display: inline-block;
+  min-height: 150px;
+  position: relative;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/*Dashboard Navigation*/
+.sitecrowdfunding_side_nav
+{
+  width: 250px;
+  margin-right: 0;
+}
+.sitecrowdfunding_side_nav > ul li a
+{
+  background-image: none;
+  padding: 12px;
+}
+.sitecrowdfunding_dashboard_content .mce-container
+{
+  box-sizing: border-box;
+}
+/*Form CSS*/
+.sitecrowdfunding_dashboard_form select
+{
+  width: 205px; 
+}
+.sitecrowdfunding_dashboard_content .global_form
+{
+  margin: 0;
+  border: 0;
+}
+.sitecrowdfunding_dashboard_content .global_form > div > div > h3 + div, .sitecrowdfunding_dashboard_content .global_form > div > div > h3 + p + div
+{
+  margin-top: 0;
+  padding: 0.7em 0;
+}
+.sitecrowdfunding_create_list_form
+{
+  position: relative;
+}
+.sitecrowdfunding_create_list_form select
+{
+  width: 205px;
+}
+/*Input Type File*/
+.file-box
+{
+  margin: 15px 0;
+  padding: 5px;
+}
+#file_browse_wrapper
+{
+  width: 100px;
+  height: 35px;
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff 0%, #cccccc 100%);
+  background: -webkit-linear-gradient(top, #fff 0%, #cccccc 100%);
+  background: linear-gradient(to bottom, #fff 0%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#cccccc', GradientType=0 );
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px 0 #808080;
+  box-shadow: 0 1px 2px 0 #808080;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+#file_browse_wrapper::before
+{
+  content: "Browse";
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  bottom: 0;
+  margin: auto;
+}
+#file_browse
+{
+  margin-left: -145px;
+  cursor: pointer;
+  opacity: 0.0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.file-upload-indications legend
+{
+  font-weight: bold !important;
+  margin-bottom: 5px;
+}
+/*Edit Project Location*/
+.sitecrowdfunding_dashboard_innerbox
+{
+  padding: 20px;
+}
+.sitecrowdfunding_edit_location_form input[type="text"], .sitecrowdfunding_edit_location_form input[type="email"], .sitecrowdfunding_edit_location_form input[type="password"], .sitecrowdfunding_edit_location_form input.text, .sitecrowdfunding_edit_location_form textarea
+{
+  padding: 10px 5px;
+  -webkit-box-shadow: 0 0 10px -5px #999;
+  -moz-box-shadow: 0 0 10px -5px #999;
+  box-shadow: 0 0 10px -5px #999;
+  width: 100%;
+  border: 0px;
+}
+/*Edit Project Photos*/
+.sitecrowdfunding_edit_photos_button
+{
+  margin-top: 5px;
+}
+.sitecrowdfunding_edit_photos_button .form-label
+{
+  width: 240px !important;
+}
+#EditPhoto #preview-thumbnail img, #SignupForm #preview-thumbnail img
+{
+  border-radius: 0;
+}
+/*Announcement page*/
+.sitecrowdfunding_manage_announcements_list
+{
+  margin-top: 15px;
+  float: left;
+  width: 100%;
+}
+.sitecrowdfunding_manage_announcements_title
+{
+  box-sizing: border-box;
+  float: left;
+  padding: 6px 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+html[dir="rtl"] .sitecrowdfunding_manage_announcements_title
+{
+  float: right;
+}
+.sitecrowdfunding_manage_announcements_title span
+{
+  font-weight: bold !important;
+}
+.sitecrowdfunding_manage_announcements_option
+{
+  display: inline-block;
+  float: right;
+}
+html[dir="rtl"] .sitecrowdfunding_manage_announcements_option
+{
+  float: left;
+}
+.sitecrowdfunding_manage_announcements_option a
+{
+  margin-left: 10px;
+}
+.sitecrowdfunding_manage_announcements_body
+{
+  padding: 15px;
+  float: left;
+}
+html[dir="rtl"] .sitecrowdfunding_manage_announcements_body
+{
+  float: right;
+}
+.sitecrowdfunding_manage_announcements_dates
+{
+  margin-bottom: 10px;
+  color: #4bf;
+}
+.sitecrowdfunding_post_announcement #status-wrapper #status-element
+{
+  margin-top: 10px; 
+}
+.sitecrowdfunding_post_announcement #body-wrapper #body-element
+{
+  max-width: 600px !important;
+}
+
+/*Manage Admin Leaders*/
+.sitecrowdfunding_leaders_list
+{
+  margin-bottom: 10px;
+  position: relative;
+}
+.sitecrowdfunding_leaders_list > div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+.sitecrowdfunding_leaders_thumb
+{
+  margin-right: 10px;
+}
+.sitecrowdfunding_leaders_thumb img, .sitecrowdfunding_leaders_thumb i
+{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: inline-block;
+  background-size: cover;
+}
+.sitecrowdfunding_leaders_detail
+{
+  padding: 7px 15px;
+  font-size: 18px !important;
+}
+.sitecrowdfunding_leaders_guest
+{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input
+{
+  text-align: center;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span
+{
+  display: inline-block;
+  margin-right: 20px;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span:last-child
+{
+  margin-right: 0;
+}
+.sitecrowdfunding_leaders_cancel
+{
+  position: absolute;
+  right: 0;
+}
+.sitecrowdfunding_leaders_detail .sitecrowdfunding_link_wrap span a
+{
+  text-shadow: none !important;
+}
+/*About You*/
+#socialmedia-wrapper
+{
+  margin-bottom: 20px;
+  float: left;
+  margin-top: 20px;
+}
+html[dir="rtl"] #socialmedia-wrapper
+{
+  float: right;
+}
+.global_form div#heading-wrapper
+{
+  clear: none;
+  overflow: visible;
+  float: left;
+  width: 150px;
+}
+#socialmedia-wrapper .fa
+{
+  font-size: 18px !important;
+  margin-top: 5px;
+}
+
+/*Payment Method*/
+.global_form_desc
+{
+  padding: 0 0 7px 20px;
+}
+.global_form > div > div > h3 + p.form-description
+{
+  line-height: 22px;
+}
+/*Backers Report*/
+.search-backers
+{
+  margin: 20px 0;
+}
+.compose-exports
+{
+  text-align: right;
+  margin-bottom: 15px;
+  margin-top: -35px;
+}
+html[dir="rtl"] .compose-exports
+{
+  text-align: left;
+}
+.compose-exports a
+{
+  margin-left: 15px;
+  font-weight: bold !important;
+}
+.backers-compose
+{
+  width: 210px;
+  float: left;
+}
+html[dir="rtl"] .backers-compose
+{
+  float: right;
+  width: 160px;
+}
+.backers-search
+{
+  width: 300px;
+  float: right;
+  position: relative;
+}
+html[dir="rtl"] .backers-search
+{
+  float: left;
+}
+.backers-search button
+{
+  border-radius: 0 3px 3px 0;
+  height: 36px;
+  margin-right: 0 !important;
+  right: 3px;
+  top: 0;
+  position: absolute;
+}
+html[dir="rtl"] .backers-search button
+{
+  border-radius: 3px 0px 0px 3px;
+  left: 7px;
+  right: auto;
+}
+.backers-search ul.tag-autosuggest.seaocore-autosuggest
+{
+  position: relative;
+}
+
+/*Detail table*/
+.sitecrowdfunding_detail_table
+{
+  border: medium none;
+  width: 100%;
+  margin: 0;
+}
+.sitecrowdfunding_detail_table table
+{
+  border-width: 2px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-collapse: collapse;
+  width: 100%;
+}
+.sitecrowdfunding_detail_table tr td, .sitecrowdfunding_detail_table tr th
+{
+  display: table-cell;
+  padding: 7px 10px;
+  text-align: center;
+  vertical-align: top;
+}
+.sitecrowdfunding_detail_table tr th
+{
+  font-weight: bold !important;
+}
+.sitecrowdfunding_detail_table tr td input
+{
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+.sitecrowdfunding_detail_table table tr:last-child
+{
+  border-bottom-width: 1px;
+}
+.sitecrowdfunding_detail_table table tr + tr
+{
+  border-top-width: 1px;
+}
+/*Commission Details*/
+.commission_monthly_statement h4
+{
+  text-align: center;
+  font-size: 18px !important;
+  text-transform: uppercase;
+}
+
+/*Transaction Details*/
+.transaction-search-form #transaction_min_amount-wrapper #transaction_min_amount-element, .transaction-search-form #transaction_max_amount-wrapper #transaction_max_amount-element
+{
+  min-width: 100px;
+  max-width: 140px;
+}
+.transaction-search-form #transaction_min_amount-wrapper #transaction_min_amount-element input, .transaction-search-form #transaction_max_amount-wrapper #transaction_max_amount-element input
+{
+  width: 100px;
+}
+.transaction-search-form #transaction_min_amount-wrapper
+{
+  margin-right: 20px;
+}
+.transaction-search-form #transaction_min_amount-wrapper, .transaction-search-form #transaction_max_amount-wrapper
+{
+  display: inline-block;
+}
+.transaction-search-form #transaction_max_amount-label
+{
+  display: none;
+}
+.transaction_tip .tip
+{
+  margin-top: 0 !important;
+  margin-left: 10px;
+}
+
+/*Payment Methods*/
+#sitecrowdfunding_gateway_stripe_form{
+  padding: 20px;
+}
+html[dir="rtl"] #sitecrowdfunding_payment_info #enabled-wrapper #enabled-element ul.form-options-wrapper > li
+{
+  margin-left: 10px;
+  float: right
+}
+
+/*Transaction Page*/
+.sitecrowdfunding_project_form .sitecrowdfunding_transactions
+{
+  padding: 20px;
+}
+
+/*Transaction POP UP*/
+#global_page_sitecrowdfunding-payment-detail .payment_transaction_detail_headline
+{
+  text-align: center;
+}
+#global_page_sitecrowdfunding-payment-detail #global_content_simple
+{
+  display: block;
+}
+#global_page_sitecrowdfunding-payment-detail dl.payment_transaction_details
+{
+  width: 80%;
+  margin: 0 auto;
+}
+#global_page_sitecrowdfunding-payment-detail dl.payment_transaction_details dd
+{
+  margin-left: 1px;
+  font-weight: bold !important;
+  padding: 8px;
+  margin-right: 10px;
+}
+#global_page_sitecrowdfunding-payment-detail dl.payment_transaction_details dt
+{
+  padding: 8px;
+}
+#global_page_sitecrowdfunding-payment-detail .trans-details-btn
+{
+  margin-top: 15px;
+  border: 0 !important;
+}
+.payment_transaction_detail_headline
+{
+  padding: 0 0 10px 0 !important;
+  margin-bottom: 10px;
+}
+.commission_view
+{
+  width: 100%;
+  float: left;
+}
+.commission_view dl.payment_transaction_details
+{
+  padding: 0 !important;
+}
+.commission_view .payment_transaction_details dd, .commission_view .payment_transaction_details dt
+{
+  display: inline-block;
+}
+
+/*Payment Request Popup*/
+.invoice_order_details_wrap > ul > li
+{
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+.invoice_order_details_wrap > ul > li .invoice_order_info
+{
+  width: 150px;
+}
+/*Rewards*/
+.reward_headline
+{
+  padding: 20px 20px 0 20px;
+}
+.sitecrowdfunding_manage_rewards_list
+{
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.sitecrowdfunding_manage_rewards_list_details
+{
+  position: relative;
+  vertical-align: top;
+}
+.sitecrowdfunding_manage_rewards_list_details div
+{
+  line-height: 22px;
+}
+.sitecrowdfunding_manage_rewards_option
+{
+  position: absolute;
+  right: 10px;
+  text-align: right;
+}
+html[dir="rtl"] .sitecrowdfunding_manage_rewards_option
+{
+  text-align: left;
+  left: 0;
+  right: initial;
+}
+.sitecrowdfunding_manage_rewards_option a
+{
+  margin-left: 10px;
+}
+.sitecrowdfunding_manage_rewards_title
+{
+  font-weight: bold !important;
+  font-size: 15px !important;
+  margin-bottom: 8px;
+  width: 72%;
+}
+.sitecrowdfunding_reward_img {
+  float: left;
+  height: 150px;
+  margin-right: 20px;
+  width: 150px;
+}
+.sitecrowdfunding_manage_rewards_body, .sitecrowdfunding_manage_rewards_pledged
+{
+  margin-bottom: 8px;
+}
+.sitecrowdfunding_manage_rewards_quantity span
+{
+  margin-right: 10px;
+}
+/*Add new reward*/
+.sitecrowdfunding_project_form .global_form > div
+{
+  padding: 20px;
+}
+.sitecrowdfunding_project_form #reward_form-label, .sitecrowdfunding_project_form #buttons-element .form-label
+{
+  width: 120px !important;
+}
+.sitecrowdfunding_project_form .form-label
+{
+  width: 190px !important;
+}
+.sitecrowdfunding_project_form #delivery_date-element select
+{
+  margin-right: 10px;
+}
+html[dir="rtl"] .sitecrowdfunding_project_form #delivery_date-element select
+{
+  margin-left: 10px;
+  margin-right: 0;
+}
+.sitecrowdfunding_project_form #delivery_date-element select:last-child
+{
+  margin-right: 0;
+}
+.shipRow
+{
+  margin-top: 10px;
+}
+.shipRow .shiprow_div2 input
+{
+  display: inline-block !important;
+  width: 50% !important;
+}
+.shipRow .shiprow_div2 .cName
+{
+  margin-right: 10px;
+  width: 100px;
+  display: inline-block !important;
+}
+.shipRow span
+{
+  cursor: pointer;  
+}
+.shipRow select
+{
+  margin-right: 10px;
+}
+.shipRow select
+{
+  margin-left: 10px;
+  margin-right: 0;
+}
+.shipRow input
+{
+  width: 60% !important;
+  margin-right: 10px;
+}
+.shipRow input, .shipRow img
+{
+  display: inline-block;
+}
+.addLocationLink
+{
+  margin-top: 10px;
+  float: left;
+}
+html[dir="rtl"] .addLocationLink
+{
+  float: right;
+}
+.sitecrowdfunding_project_form #reward_form-wrapper #photo-wrapper #photo-element > img
+{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+#limit-wrapper, #quantity-wrapper
+{
+  display: inline-block;
+  vertical-align: top;
+}
+#quantity-wrapper #quantity-label
+{
+  display: none;
+}
+#limit-element
+{
+  min-width: 130px;
+  max-width: 130px;
+}
+#quantity-element
+{
+  min-width: 130px;
+  max-width: 130px;
+}
+#quantity-element input[type="text"]{
+  width: 100%;
+}
+#limit-element label, #limit-element i, #limit-element input{
+  vertical-align: middle;
+  line-height: normal;
+}
+#limit-element input{
+  margin-top: 5px;
+}
+
+/* Create project page*/
+#global_page_sitecrowdfunding-project-create div.seaocore_event_calendar table td:first-child
+{
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+#global_page_sitecrowdfunding-project-create div.seaocore_event_calendar table td
+{
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+#global_page_sitecrowdfunding-project-create div.seaocore_event_calendar table td.valid
+{
+  background-image: none;
+}
+#global_page_sitecrowdfunding-project-create div.seaocore_event_calendar table caption
+{
+  border-bottom: none;
+}
+
+
+/*Packages*/
+.sitecrowdfunding_packages_list_horizontal > li
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.sitecrowdfunding_packages_list_horizontal > li div.sitecrowdfunding_package_list_title {
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.sitecrowdfunding_packages_list_horizontal > li .sitecrowdfunding_package_list_title > h3 {
+  line-height: 2em;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+/* Responsive work */
+@media screen and (max-width:1199px) {
+.sitecrowdfunding_leaders_input span button[type="submit"]
+{
+  padding:5px 0;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span
+{
+  margin:0;
+}
+.sitecrowdfunding_leaders_input span input {
+    width: 100% !important;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input
+{
+  text-align:left;
+}
+/*Transaction detail table */
+.sitecrowdfunding_detail_table tr td, .sitecrowdfunding_detail_table tr th
+{
+  padding:7px 4px;
+}
+/*Dashboadr Rewards tab*/
+.sitecrowdfunding_manage_rewards_pledged, .sitecrowdfunding_manage_rewards_body, .sitecrowdfunding_manage_rewards_quantity
+{
+ display: table-row;
+}
+}
+
+@media screen and (max-width:960px) {
+
+/*Dashboard >> Edit info*/
+.sitecrowdfunding_dashboard_header_btn, .sitecrowdfunding_dashboard_header_btn {
+  float: left !important;
+}
+.sitecrowdfunding_dashboard_header_btn a {
+  margin-left: 0;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.sitecrowdfunding_dashboard_header .sitecrowdfunding_dashboard_header_title
+{
+  width:100%;
+  float:left;
+  overflow:visible;
+}
+.backers-compose, .backers-search
+{
+  float: none;
+}
+.backers-compose
+{
+  margin-bottom: 15px;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span
+{
+  display: block; 
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span {
+  margin-bottom:15px;
+}
+/*Transaction detail table */
+.sitecrowdfunding_detail_table
+{
+  max-width: 540px;
+  overflow-x: scroll;
+}
+/*Dashboadr Rewards tab*/
+.sitecrowdfunding_reward_img
+{
+  width: 100%;
+  height: auto;
+  float: none;
+  margin-bottom: 15px;
+}
+
+}
+/* Responsive work */
+@media screen and (max-width:768px) {
+/*Dashboard >> Photos*/
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_project_thumb_wrapper,  ul.sitecrowdfunding_edit_media div.sitecrowdfunding_edit_media_thumb
+{
+  float: none;
+}
+.sitecrowdfunding_side_nav
+{
+  width: 33%;
+}
+.sitecrowdfunding_side_nav > ul li a
+{
+  padding:7px;
+  margin-top:0;
+}
+.sitecrowdfunding_side_nav ul li
+{
+  border-bottom: 1px solid #cac9c9;
+  border-top: 1px solid #efeeee;
+  width: 100%;
+  display: block;
+}
+#channels_edit #fieldset-buttons
+{
+  margin: 0;
+}
+.sitecrowdfunding_dashboard_header .sitecrowdfunding_dashboard_header_title {
+  width: 100%;
+  font-size: 16px;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span:last-child {
+  margin-top: 15px;
+}
+.sitecrowdfunding_leaders_guest .sitecrowdfunding_leaders_input span {
+  display: inline;
+}
+.sitecrowdfunding_leaders_input span input {
+  width: 100% !important;
+  margin: 10px 0;
+}
+.sitecrowdfunding_create_list_form .form-elements div#duration-wrapper, .sitecrowdfunding_create_list_form .form-elements div#starttime-element {
+  top: 0;
+  position: static;
+  left: 0;
+}
+.sitecrowdfundingpage_layout_right, .sitecrowdfundingpage_layout_left
+{
+  width: 100%;
+}
+.sitecrowdfunding_package_page
+{
+  padding:0 !important;
+}
+.sitecrowdfunding_package_stats > span
+{
+  width: 50% !important;
+}
+.transaction-search-form .form-wrapper .form-label
+{
+  width: 100% !important;
+  float:none !important;
+}
+.sitecrowdfunding_leaders_cancel
+{
+  left:31%;
+  bottom:0;
+}
+/*Dashboard >> Edit info*/
+.sitecrowdfunding_dashboard_form select
+{
+  width: 90% !important;
+}
+.sitecrowdfunding_dashboard_form #description-wrapper #description-element textarea
+{
+  width: 210px !important;
+}
+/* About you */
+#about_you.global_form .form-elements div.form-wrapper .form-label
+{
+  width: 100%;
+}
+#about_you.global_form .form-elements div.form-wrapper .form-element
+{
+  width: 300px;
+}
+.sitecrowdfunding_detail_table
+{
+  overflow-x: scroll !important;
+}
+}
+
+@media screen and (max-width:600px) {
+/*Dashboard*/
+.sitecrowdfunding_dashboard_content
+{
+  padding: 10px;
+}
+ul.sitecrowdfunding_edit_media div.sitecrowdfunding_edit_media_thumb img
+{
+  display: inline-block;
+}
+div.sitecrowdfunding_dashboard_info_image img
+{
+  float: none;
+}
+.sitecrowdfunding_side_nav {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+.sitecrowdfunding_side_nav ul li {
+  width : 100%;
+  box-sizing: border-box;
+}
+.sitecrowdfunding_dashboard_header .sitecrowdfunding_dashboard_header_title {
+  width: 100%;
+  font-size: 16px;
+}
+.sitecrowdfunding_dashboard_header_btn a {
+  margin-left: 0;
+}
+#starttime-label {
+  display: none;
+}
+.sitecrowdfunding_dashboard_content .global_form
+{
+  padding: 20px 0;
+}
+.sitecrowdfunding_edit_location_form .global_form_box > div .form-elements > div
+{
+  width: 100%;
+}
+.global_form div#facebook_profile_url-wrapper, .global_form div#instagram_profile_url-wrapper, .global_form div#twitter_profile_url-wrapper, .global_form div#youtube_profile_url-wrapper, .global_form div#vimeo_profile_url-wrapper, .global_form div#website_url-wrapper
+{
+  width: 100%;
+  margin-left: 0;
+}
+.global_form div#facebook_profile_url-wrapper .form-label, .global_form div#twitter_profile_url-wrapper .form-label, .global_form div#youtube_profile_url-wrapper .form-label, .global_form div#vimeo_profile_url-wrapper .form-label, .global_form div#instagram_profile_url-wrapper .form-label, .global_form div#website_url-wrapper .form-label
+{
+  padding-left: 0;
+}
+.backers-compose, .backers-compose select, .backers-search input
+{
+  width: 100%;
+}
+.backers-search button
+{
+  position: relative;
+  border-radius: 3px;
+  margin-top :10px;
+  margin-left: 3px;
+}
+.compose-exports
+{
+  margin-top: 0;
+  text-align: left;
+}
+.transaction-search-form #transaction_min_amount-wrapper 
+{
+  margin-right: 0;
+}
+.transaction-search-form #transaction_min_amount-wrapper #transaction_min_amount-element, .transaction-search-form #transaction_max_amount-wrapper #transaction_max_amount-element
+{
+  max-width:110px;
+}
+/* Project profile tabs */
+#current-wrapper div img
+{
+  width: 100%;
+  box-sizing: border-box;
+}
+/*Edit Rewards*/
+.sitecrowdfunding_project_form #reward_form-wrapper #photo-wrapper #photo-element > img
+{
+  width: 80px;
+  position: relative;
+  height: 80px;
+  margin-top: 10px;
+}
+/* Manage leaders */
+.sitecrowdfunding_leaders_input span button[type="submit"]
+{
+  padding:5px 10px;
+}
+/* Package */
+.sitecrowdfunding_package_stats > span
+{
+  width: 100% !important;
+}
+}
+@media only screen and (max-width: 479px){
+/*Reward*/
+.sitecrowdfunding_manage_rewards_option
+{
+  position: relative;
+  right: 0;
+}
+.sitecrowdfunding_project_form #limit-label, .sitecrowdfunding_project_form #reward_form-label{
+  display: none;
+}
+.shipRow .shiprow_div2 .cName
+{
+  width: 100% !important;
+}
+.shipRow .shiprow_div2 input
+{
+  width: 60% !important;
+}
+/*Manage Photos*/
+ul.sitecrowdfunding_edit_media div.sitecrowdfunding_edit_media_thumb img
+{
+  width: 98% !important;
+  box-sizing: border-box;
+}
+/*Post Announcement*/
+.sitecrowdfunding_post_announcement #status-wrapper #status-element
+{
+  max-width: 90% !important;
+}
+/*Manage leaders*/
+.sitecrowdfunding_leaders_cancel
+{
+  left: 10px;
+}
+.sitecrowdfunding_leaders_list > div:first-child
+{
+  margin-bottom: 10px;
+}
+.sitecrowdfunding_leaders_list > div
+{
+  margin-bottom: 30px;
+}
+}

@@ -1,0 +1,100 @@
+/* $Id: main.css 6590 2013-04-01 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+.mtop_5{margin-top:5px;}
+.mtop10{margin-top:10px;}
+.mtop15{margin-top:15px;}
+.p15{padding:15px;}
+b, .bold{font-weight:bold;}
+o_hidden{overflow:hidden;}
+
+.icon_sitemember_admin_back{background-image:url(~/application/modules/Sitemember/externals/images/admin/back.png);}
+
+/*Mapping Table*/
+.sm_mapping_table tr{
+	width:890px;
+	float:left;
+}
+.sm_mapping_table tr th,
+.sm_mapping_table tr td{
+	width:870px;
+	float:left;
+}
+.sm_mapping_table .sm_mapping_table_name{
+	width:35%;
+}
+.sm_mapping_table .sm_mapping_table_name span{
+	float:left;
+	margin-right:5px;
+}
+.sm_mapping_table .sm_mapping_table_value{
+	width:40%;
+	min-height:10px;
+}
+.sm_mapping_table .sm_mapping_table_option{
+	width:15%;
+}
+
+/*review parameters*/
+.sm_parameters_popup{
+	margin:10px;
+}
+.sm_parameters_popup form > div > div{
+	min-height:200px;
+}
+.sm_parameters_popup .form-elements{
+	width:300px;
+}
+.sm_parameters_popup .form-label{
+	display:none !important;
+}
+.sm_parameters_popup form{
+	float:none;
+}
+.sm_parameters_popup input[type="text"]{
+	display: block;
+	margin-bottom: 5px;
+}
+.sm_parameters_popup #addOptionLink{
+	clear: both;
+	display: block;
+	font-size:11px;
+}
+
+/*Member index table*/
+#global_page_sitemember-admin-manage-index .admin_table_form {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#global_page_sitemember-admin-manage-index table.admin_table thead tr th,
+#global_page_sitemember-admin-manage-index table.admin_table tbody tr td{
+  padding:7px;
+}
+
+/*Review table*/
+#global_page_sitereview-admin-manage-index table.admin_table tbody tr td:last-child{
+	white-space:normal;
+}
+#global_page_sitereview-admin-manage-index table.admin_table thead tr th, 
+#global_page_sitereview-admin-manage-index table.admin_table tbody tr td{
+	padding:7px 2px;
+	font-size:11px;
+}
+/*.sm_admin_search > .search > form div
+{
+	margin:0px 10px 10px 0;
+}*/
+.sm_admin_search{
+	max-width:950px !important;
+}
+.sm_admin_search .cat_loader{
+	margin-top:18px;
+	display:none;
+}
+.sm_admin_search .sm_search_button{
+	clear:both;
+	margin:10px 0 0;
+}
+.sm_admin_search .search #filter_form div select {
+	max-width:150px;
+  padding: 0.5em;
+}

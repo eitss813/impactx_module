@@ -1,0 +1,104 @@
+/* $Id: mobile.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */ /*Album view page*/
+#global_page_sitealbum-album-view .layout_left,
+#global_page_sitealbum-album-view .layout_right,
+#global_page_sitealbum-album-view #global_content .sitealbum_album_options,
+#global_page_sitealbum-album-view .sitealbum_like_button,
+#global_page_sitealbum-album-view .sitealbum_buttons{
+	display:none; 	
+}
+#global_page_sitealbum-album-view #global_content h2{
+	text-align:center;
+}
+.sitealbum_buttons{
+	text-align:center;
+	margin-bottom:15px;
+}
+.sitealbum_buttons a{
+	background:#F4F4F4 url(~/application/modules/Sitealbum/externals/images/buttons-bg.png) repeat-x;
+	border: 1px solid #E4E4E4;
+	color: #444444 !important;
+	display: inline-block;
+	font-weight: normal;
+	margin: 0 !important;
+}
+.sitealbum_buttons a img{
+	margin:3px;
+	vertical-align:middle;
+}
+.sitealbum_buttons a:hover,
+.sitealbum_button_active{
+	text-decoration:none;
+	background:#e9eff5 url(~/application/modules/Sitealbum/externals/images/buttons-bg-hover.png) repeat-x !important;
+}
+.sitealbum-album-more{
+	padding:5px;
+	text-align:center;
+	clear:both;
+	border:1px solid $theme_foreground_border_color;
+	margin-bottom:15px;
+	text-align:center;
+	cursor:pointer;
+}
+.sitealbum-album-more:hover{
+	background-color:$theme_foreground_background_color;
+}
+/*albume home page*/
+.layout_sitealbum_list_photos_tabs_view ul > li > a + span{
+	color: $theme_font_color_light;
+	display: block;
+	font-size: 0.8em;
+	overflow: hidden;
+	padding-top: 4px;
+}
+/*album comment view*/
+.sitealbum_album_photos{
+	clear:both;
+}
+.sitealbum_album_photos ul.thumbs > li{
+	float:none !important;
+	height:auto !important;
+	overflow:hidden;
+	margin-bottom:10px;
+	clear:both;
+}
+.sitealbum_comment_view ul.thumbs > li + li{
+	padding-top:10px;
+	border-top-width:1px;
+}
+.sitealbum_comment_view ul.thumbs .thumbs_photo{
+	float:left;
+	margin-right:10px;
+}
+.sitealbum_comment_view ul.thumbs .thumbs_photo > img {
+	max-width: 150px;
+}
+.sitealbum_comment_view_comments{
+	overflow:auto;
+}
+.sitealbum_comment_view_comments .comments{
+	width:auto !Important;
+}
+.sitealbum_comment_view_comments .comments .comments_options {
+	text-align:left;
+}
+.sitealbum-album-more{
+	padding:5px;
+	text-align:center;
+	clear:both;
+	border:1px solid $theme_foreground_border_color;
+	margin-bottom:15px;
+	text-align:center;
+	cursor:pointer;
+}
+.sitealbum-album-more:hover{
+	background-color:$theme_foreground_background_color;
+}
+.sitealbum-album-more img{
+	vertical-align:middle;
+}
+#global_page_sitealbum-album-view .comments {
+	width:auto;
+}
+#global_page_sitealbum-album-view #global_content p, #global_page_album-photo-view #global_content > h2 + p {
+	text-align: center;
+}

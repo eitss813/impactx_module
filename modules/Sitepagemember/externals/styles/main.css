@@ -1,0 +1,39 @@
+/*Icons*/
+.notification_type_sitepage_join::before, .notification_type_sitepagemember_approve::before, .notification_type_sitepagemember_invite::before{
+	content:"\\f234";
+}
+.activity_icon_sitepage_join::before, .icon_sitepage_join::before, .icon_sitepage_join_page::before, .notification_type_sitepage_addmember::before{
+	content:"\\f0f6";
+}
+.icon_sitepage_member::before{
+	content:"\\f007";
+}
+.notification_type_sitepagemember_accepted::before, .icon_sitepage_accept::before, .icon_sitepage_accept::before{
+	content:"\\f234";
+}
+.icon_sitepage_ad_member::before{
+	content:"\\f067";
+}
+.notification_type_sitepagemember_invite::before{
+	content:"\\f0e0";
+}
+.icon_sitepage_leave::before{
+	content:"\\f00d";
+}
+.sitepage_gutter_manage_joined_members::before {
+	content:"\\f0f6";
+}
+.sitepagemember_profile_list_options_wrapper:hover .settings_icon,
+.sitepagemember_profile_list_options{
+	background-color:$theme_pulldown_contents_background_color;
+	border:1px solid $theme_pulldown_border_color;
+}
+
+#sitepagemember-sitepagemembernotificationpost, #sitepagemember-sitepagemembernotificationpostparent, #sitepagemember-sitepagejoin
+{
+    display: none;
+}
+
+label[for="sitepagemember-sitepagemembernotificationpost"] { display: none !important; }
+label[for="sitepagemember-sitepagemembernotificationpostparent"] { display: none !important; }
+label[for="sitepagemember-sitepagejoin"] { display: none !important; }

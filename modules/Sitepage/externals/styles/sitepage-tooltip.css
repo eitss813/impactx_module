@@ -1,0 +1,304 @@
+/* $Id: sitepage_tooltip.css 2011-05-05 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+/* _show_tooltip */
+.sitepage_show_tooltip {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius:3px;
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	width: 90px;
+	font-size: .8em;
+	margin-top: -25px;
+	margin-left: -35px;
+	font-weight:normal;
+}
+.sitepage_show_tooltip_wrapper:hover .sitepage_show_tooltip {
+	display: block;
+}
+.sitepage_show_tooltip_wrapper img.select_view {
+	cursor:pointer;
+	margin:0 3px;
+}
+.sitepage_show_owner_tooltip {
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: center;
+	padding: 5px 10px 5px 5px;
+	width: auto;
+	font-size: .8em;
+	margin-top:5px;
+	font-weight:normal;
+	clear:both;
+}
+.sitepage_show_owner_tooltip_wrapper:hover .sitepage_show_owner_tooltip {
+	display: block;
+}
+.sitepage_show_owner_tooltip_wrapper:hover .sitepage_show_owner_tooltip a {
+	color:#FFFFFF !important;
+}
+.sitepage_show_owner_tooltip_wrapper .sitepage_show_owner_tooltip img {
+	margin-top:-12px;
+	left: 5px;
+	position: absolute;
+}
+/*	css for tooltip start here */
+div.sitepage_tooltip {
+	position:absolute;
+	z-index:100;
+	margin-left:-84px;
+	margin-top:10px;
+}
+.sitepage_tooltip_content_outer {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius:3px;
+	display: block;
+	background: #222;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	width: 260px;
+	font-size: .8em;
+	margin:0;
+	-moz-box-shadow:3px 3px 3px #bcbcbc;
+	-webkit-box-shadow:3px 3px 3px #bcbcbc;
+	box-shadow: 3px 3px 3px #bcbcbc;
+	float:left;
+}
+.sitepage_tooltip_content_outer .sitepage_tooltip_content_inner {
+	width:250px;
+	float:left;
+	background:#FFFFFF;
+	padding:5px;
+	position:relative;
+}
+.sitepage_tooltip_arrow {
+	position:absolute;
+	width:250px;
+	text-align:center;
+	top:-18px;
+}
+.sitepage_tooltip_arrow img {
+	border:none;
+	width:13px;
+	height:9px;
+	float:none;
+}
+.sitepages_tooltip_info {
+	overflow: hidden;
+}
+.sitepages_tooltip_info .title {
+	font-weight:bold;
+	margin-bottom:1px;
+	float:left;
+	width:100%;
+	color:#5F93B4;
+}
+.sitepages_tooltip_info .title > a {
+	color:#5F93B4;
+	max-width:200px;
+	float:left;
+}
+.sitepages_tooltip_info .title a:hover {
+	color:#4e81a1;
+}
+.sitepages_tooltip_info .title span {
+	margin-left:5px;
+	margin-top:3px;
+	float:right;
+}
+.sitepages_tooltip_info_date {
+	font-size: .8em;
+	color:#999;
+}
+.sitepages_tooltip_info_date a{
+	color:#5F93B4;
+}
+.sitepages_tooltip_info_date a:hover{
+	color:#4e81a1;
+}
+/*	css for tooltip end here */
+/*	css for suggestsitepage tooltip start here */
+div.suggestsitepage_tooltip {
+	float: left;
+	margin-left: -34px;
+	margin-top: 49px;
+	position: absolute;
+	z-index: 100;
+}
+.suggestsitepage_tooltip_content_outer {
+	display: block;
+	background: #222;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	width: 260px;
+	font-size: .8em;
+	margin:0;
+	-moz-box-shadow:3px 3px 3px #bcbcbc;
+	-webkit-box-shadow:3px 3px 3px #bcbcbc;
+	box-shadow: 3px 3px 3px #bcbcbc;
+	float:left;
+}
+.suggestsitepage_tooltip_content_outer .suggestsitepage_tooltip_content_inner {
+	width:250px;
+	float:left;
+	background:#FFFFFF;
+	padding:5px;
+	position:relative;
+}
+.suggestsitepage_tooltip_arrow {
+	left: 50%;
+	margin-left: -7px;
+	position: absolute;
+	text-align: center;
+	top: -18px;
+	width: 10px;
+}
+.suggestsitepage_tooltip_arrow img {
+	border:none;
+	float:none;
+}
+.suggestsitepages_tooltip_info {
+	overflow: hidden;
+}
+.suggestsitepages_tooltip_info .title {
+	font-weight:bold;
+	margin-bottom:1px;
+	float:left;
+	width:100%;
+	color:#5F93B4;
+}
+.suggestsitepages_tooltip_info .title a {
+	color:#5F93B4;
+	max-width:200px;
+	float:left;
+}
+.suggestsitepages_tooltip_info .title a:hover {
+	color:#4e81a1;
+}
+.suggestsitepages_tooltip_info .title span {
+	margin-left:5px;
+	margin-top:3px;
+	float:right;
+}
+.suggestsitepages_tooltip_info_date {
+	font-size: .8em;
+	color: #999999;
+}
+.suggestsitepages_tooltip_info_date ul {
+	padding:0;
+}
+.suggestsitepages_tooltip_info_date ul li {
+	padding:0;
+}
+/*	css for suggstsitepagetooltip end here */
+/*Map Location Details Tooltip start hete*/
+#map_canvas {
+	clear:both;
+}
+ul.sitepages_locationdetails {
+	clear: both;
+	width:300px;
+	margin:10px;
+}
+ul.sitepages_locationdetails > li {
+	clear: both;
+	padding: 0px 0px 15px 0px;
+	overflow: hidden;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_title {
+	font-weight:bold;
+	width:100%;
+	margin-bottom:5px;
+	color:#5F93B4;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_title > a {
+	float:left;
+	max-width:250px;
+	color:#5F93B4;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_title > a:hover {
+	color:#4e81a1;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_title span {
+	float:right;
+	margin-right:5px;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_title span.sitepage_rating_star span {
+	float:left;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_photo {
+	float: left;
+	overflow: hidden;
+	margin-right: 8px;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_photo img {
+	max-width: 100px;
+	max-height:120px;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info {
+	overflow: hidden;
+}
+ul.sitepages_locationdetails .sitepages_locationdetails_info_date {
+	font-size: .8em;
+	line-height:16px;
+}
+/*Map Location Details Tooltip end hete*/
+/* offer show tooltip */
+.sitepageoffer_show_tooltip {
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	font-size:11px;
+	margin-left: 0;
+	font-weight:normal;
+	max-width:200px;
+	z-index:100;
+	margin-top:10px;
+}
+.sitepageoffer_show_tooltip img.arrow {
+	cursor: pointer;
+	float: left;
+	margin: -13px 3px 0;
+}
+.sitepageoffer_show_tooltip_wrapper:hover .sitepageoffer_show_tooltip {
+	display: block;
+}
+/* review show tooltip */
+.sitepagereview_show_tooltip {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius:3px;
+	display: none;
+	position: absolute;
+	background: #222;
+	opacity: .9;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	max-width: 200px;
+	font-size: .8em;
+	margin-top:60px;
+	font-weight:normal;
+}
+.sitepagereview_show_tooltip_wrapper:hover .sitepagereview_show_tooltip{
+	display: block;
+}
+.sitepagereview_show_tooltip_wrapper img.arrow {
+	cursor: pointer;
+	float: left;
+	margin: -13px 3px 0;
+}

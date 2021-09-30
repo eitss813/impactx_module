@@ -1,0 +1,382 @@
+.activity_icon_sitepagealbum_photo_new::before, .sitepage_icon_photos_manage::before {
+  content:"\f03e";
+}
+/*view page*/
+.sitepage_album_options{
+	display:none;
+}
+div.sitepage_photo_view {
+	margin:0 auto !important;
+	max-width: none !important;
+	min-width:50px !important;
+}
+.sitepage_photo_nav {
+	margin-top: 15px;
+	text-align: center;
+}
+.sitepage_photo_nav > div {
+	float: none !important;
+	text-align: center;
+}
+.sitepage_photo_nav > div + div {
+	font-weight: bold;
+	margin-top: 10px;
+	text-align:center !important;
+}
+.sitepage_photo_nav > div + div > a{
+	+rounded(3px);
+	display: inline-block;
+	padding: 4px 7px;
+	font-size: 11pt;
+	background-color: $theme_buttontabs_background_color;
+	color: $theme_buttontabs_font_color_hover;
+}
+.sitepage_photo_nav > div + div > a + a{margin-left:15px;}
+.sitepage_photo_info {
+	background: none repeat scroll 0 0 transparent !important;
+	border: medium none!important;
+	border-radius: 0 0 0 0!important;
+	padding: 0!important;
+}
+.sitepage_photo_container {
+	margin: 10px 0 0;
+	text-align: center;
+}
+.sitepage_photo_date,
+.sitepage_photo_tags{
+	display:none !important;
+}
+#global_page_sitepage-album-view .comments,
+#global_page_sitepage-photo-view .comments{
+	width:auto!important;
+}
+
+/*photo lightbox*/
+.sitepage_lightbox_white_content{
+	width:auto !important;
+}
+#page_lightbox_text > div{display:none !important;}
+#page_lightbox_text .page_photo_lightbox_content_middle{display:block !important;margin:0 !important;}
+#page_lightbox_text .page_photo_lightbox_content_middle .comments .comments_options{text-align:left;}
+.page_lightbox_user_right_options, .page_lightbox_user_options{display:none !important;}
+
+/*page profile*/
+/* sitepage photos tab */
+.layout_sitepage_photos_sitepage > h3 {
+	display:none;
+}
+.sitepage_profile_photos_head {
+	clear: both;
+	display: block;
+	float: left;
+	font-size: 13px;
+	margin-top: 3px;
+	width: 100%;
+}
+.sitepage_album_box {
+	padding:5px;
+	overflow:auto;
+	margin-bottom:15px;
+	border-width:1px;
+	border-style:solid;
+	clear:both;
+}
+.sitepage_profile_album_title {
+	text-align:center;
+	clear:both;
+	margin-top:5px;
+	font-weight:bold;
+	width:auto !important;
+}
+.sitepage_profile_album_stat {
+	text-align:center;
+	font-size:.8em;
+	margin-top:3px;
+	clear:both;
+	color:$theme_font_color_light;
+	width:auto !important;
+}
+.sitepage_profile_album_paging {
+	clear:both;
+	float:none !important;
+	width:100%;
+	margin-bottom:5px;
+}
+.sitepage_profile_album_paging > div {
+	padding:0 3px;
+	float:right;
+}
+.sitepage_profile_album_paging > div.paging_count {
+	font-weight:bold;
+}
+.sitepage_profile_album_paging > div.paging_count a {
+	font-weight:normal;
+}
+ul.sitepage_thumbs {
+	overflow: hidden;
+}
+ul.sitepage_thumbs > li {
+	margin: 10px 10px;
+	height: 120px;
+	text-align:center;
+}
+html[dir="rtl"] ul.sitepage_thumbs > li {
+	float: right;
+	margin: 0px 0px 0px 10px;
+}
+ul.sitepage_thumbs .thumbs_photo {
+	display: inline-block;
+	padding: 4px;
+	vertical-align: bottom;
+}
+ul.sitepage_thumbs .thumbs_photo:hover {
+	cursor: pointer;
+}
+ul.sitepage_thumbs .thumbs_photo > span {
+	display: block;
+	width: 142px;
+	height: 106px;
+	background-position: center 50%;
+	background-repeat: no-repeat;
+}
+ul.sitepage_thumbs .thumbs_info {
+	padding-top: 4px;
+	display: block;
+	font-size: .8em;
+	overflow: hidden;
+}
+ul.sitepage_thumbs .thumbs_title {
+	width:auto !important;
+	display: block;
+	font-weight: bold;
+	word-wrap: break-word;
+	max-height: 2.6em;
+	overflow: hidden;
+	text-align:;
+}
+ul.sitepage_thumbs .thumbs_nocaptions > li {
+	height: auto;
+	margin-bottom: 10px;
+}
+
+
+
+/*css for photo lightbox start here*/
+.page_lightbox{
+	display:none;
+	height:100%;
+	width:100%;
+	z-index:99;
+	position:fixed;
+	top:0;
+	left:0;
+}
+.page_black_overlay{
+	bottom: 0;
+	display: block;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	z-index:99;
+	width: 100%;
+	background:#000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+.sitepage_lightbox_white_content_wrapper{
+	left: 0%;
+	overflow-y:auto;
+	position:absolute;
+	width: 100%;
+	height:100%;
+	z-index:100;
+	display:block;
+	top:0px;
+}
+.sitepage_lightbox_white_content {
+	width: 960px;
+	z-index:101;
+	margin:0 auto;
+	position:relative;
+	border: 1px solid black;
+	border:8px solid #444444;
+	background-color:$theme_body_background_color;
+}
+.page_image_content {
+	cursor:pointer;
+	display:inline-block;
+	height:100%;
+	max-height:720px;
+	min-height:100px !important;
+	position:relative;
+	text-align:center;
+	width:100%;
+	padding:5px 0px;
+}
+.page_image_content > div#media_image_div{
+	position:relative;
+	display: inline-block;
+	vertical-align: middle;
+	max-width:90%;
+}
+.page_image_content img.lightbox_photo{
+  display:inline-block;
+  height:auto;
+  image-rendering:optimizequality;
+  max-height:100%;
+  max-width:100%;
+  vertical-align:middle;
+  width:auto;
+}
+
+#lassoMask {margin-top:-16px;}
+.page_lightbox_options{
+	position:relative;
+}
+.lightbox_loader_img{
+	margin-top:70px !important;
+	margin-bottom:70px;
+}
+.page_lightbox_options a.close{
+	position:absolute;
+	z-index:300;
+	background-position:0px 0px;
+	right:10px;
+	top:10px;
+	width:30px;
+	height:30px;
+}
+.page_lightbox_options a.nxt{
+	position:absolute;
+	z-index:300;
+	right:20px;
+	top:70px !important;
+	background-position:0px 0px;
+	width:18px;
+	height:18px;
+}
+.page_lightbox_options a.pre{
+	position:absolute;
+	z-index:300;
+	left:20px;
+	top:70px !important;
+	background-position:0px 0px;
+	width:18px;
+	height:18px;
+}
+.page_lightbox_user_options{
+  float: left;
+  left: 10px;
+  margin-top: -40px;
+  padding: 5px;
+  position: absolute;
+  width: auto;
+  z-index: 101;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.page_lightbox_user_options a{
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 0 5px;
+  padding-left: 21px;
+}
+.page_lightbox_user_options a.comment{left:180px;padding:5px;}
+.page_lightbox_user_options a.like{left:30px;padding:5px; }
+.page_lightbox_user_options a.unlike{left:30px;padding:5px;}
+
+.page_lightbox_user_right_options{
+  float: right;
+  margin-top: -40px;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  z-index: 300;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.page_lightbox_user_right_options a{
+  float: left;
+  height: 16px;
+  margin: 0 5px;
+  width: 16px;
+}
+.page_lightbox_user_right_options a.page_ccw{position:absolute;right:95px;}
+.page_lightbox_user_right_options a.page_cw{position:absolute;right:65px; }
+.page_lightbox_user_right_options a.page_horizontal{position:absolute;right: 35px;}
+.page_lightbox_user_right_options a.page_vertical{position:absolute;right:5px;}
+
+.page_photo_lightbox_content {
+	width:100%;
+	min-height:100px;
+	position:relative;
+	margin-top:4px;
+}
+.page_photo_lightbox_content > div{
+	padding:10px;
+	overflow:auto;
+	padding-bottom:20px;
+}
+.lightbox_photo_detail{
+	padding:5px 50px 5px 10px;
+}
+.lightbox_photo_detail a{
+	font-weight:bold;
+}
+.page_photo_lightbox_content_left{
+	line-height:18px;
+	width:20%;
+	float:left;
+}
+.page_photo_lightbox_content .photo_detail{
+	margin-bottom:10px;
+	padding-bottom:10px;
+	border-bottom-width:1px;
+}
+.page_photo_lightbox_content .photo_detail > span.owner{
+	display:block;
+	font-size:11px;
+}
+.page_photo_lightbox_content .photo_detail > span.album a{
+	font-weight:bold;
+}
+.photo_options a{
+	display:block;
+	font-size:11px;
+	margin-bottom:5px;
+	line-height:18px;
+}
+.page_photo_lightbox_content_middle{
+	width:98% !important;
+	margin:0 25px;
+	float:left;
+}
+.page_photo_lightbox_content_middle .comments {
+    width: 100% !important;
+}
+.page_photo_lightbox_content .lightbox_photo_description_edit_icon{
+	float:right;
+	margin-left:15px;
+}
+.page_photo_lightbox_content .lightbox_photo_description_edit_icon a{
+	height:18px;
+	width:18px;
+	display:block;
+}
+.page_photo_lightbox_content .sitepage_lightbox_photo_description{
+	overflow:hidden;
+	display:none !important;
+}
+.page_image_content .tagger_form{
+	line-height:normal !important;
+}
+.sitepage_lightbox_white_content .tag_label{
+	line-height:normal !important;
+}
+.page_lightbox_user_options a,
+.lightbox_photo_detail,
+div.comments_comment_likes_tips{z-index:100;}
+/*css for photo lightbox end here*/

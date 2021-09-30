@@ -1,0 +1,192 @@
+/* $Id: style_sitecrowdfunding_print.css 2013-09-02 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+/*-----------------PRINT INVOICE CSS START FROM HERE-----------------*/
+.fleft
+{
+  float: left;
+}
+.fright
+{
+  float: right;
+}
+.invoice_wrap
+{
+  margin: 0 auto;
+  width: 600px;
+}
+.invoice_head_wrap
+{
+  background: none repeat scroll 0 0 #EAEAEA;
+  border: 1px solid #CCCCCC;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 10px;
+}
+.invoice_head .name
+{
+  font-size: 13pt;
+  line-height: 40px;
+}
+.invoice_head .logo
+{
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+}
+.invoice_head .logo img
+{
+  max-height: 40px;
+}
+.invoice_project_name
+{
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-size: 18px !important;
+}
+.invoice_details_wrap
+{
+  border: 1px solid #CCCCCC;
+  overflow: hidden;
+}
+.invoice_add_details_wrap
+{
+  border: 1px solid #cccccc;
+  margin: 15px;
+}
+.invoice_add_details + .invoice_add_details, .backer_detail_table table tr + tr
+{
+  border-top: 1px solid #CCCCCC;
+}
+.invoice_add_details, .invoice_order_details_wrap ul
+{
+  margin: 0;
+  padding: 0;
+}
+.invoice_add_details, .invoice_order_details_wrap li, .invoice_ttlamt_box_wrap, .invoice_note_box
+{
+  padding: 10px;
+}
+.invoice_order_details_wrap
+{
+  margin: 15px;
+  border: 1px solid #ccc;
+  list-style: none;
+}
+.invoice_amount_heading 
+{
+  float: left;
+  margin: 10px 0;
+  width: 100%;
+}
+.invoice_order_details_wrap li
+{
+  list-style: none;
+  border-bottom: 1px solid #CCCCCC;
+}
+.invoice_order_details_wrap li > div
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+.backer_detail_table
+{
+  margin: 0;
+  border: none;
+  width: 100%;
+}
+.backer_detail_table table
+{
+  width: 100%;
+  border: 1px solid #CCCCCC;
+  margin-top: 1px;
+}
+.backer_detail_table_head
+{
+  background: none repeat scroll 0 0 #EAEAEA;
+}
+.sitecrowdfunding_data_table tr td, .sitecrowdfunding_data_table tr th
+{
+  padding: 7px 10px;
+}
+.backer_detail_table table td + td
+{
+  border-left: 1px solid #ccc;
+}
+.backer_detail_table .quantity, .backer_detail_table .price, .backer_detail_table .total
+{
+  width: 298px;
+}
+.backer_detail_table .product
+{
+  width: 452px;
+}
+.invoice_ttlamt_box_wrap
+{
+  background-color: #EAEAEA;
+  border: 1px solid #CCCCCC;
+  width: 96%;
+  float: left;
+  margin-bottom: 10px;
+}
+.invoice_ttlamt_box
+{
+  margin-bottom: 5px;
+}
+.invoice_ttlamt_box_wrap h2
+{
+  margin: 5px 0 0 0;
+}
+.invoice_order_info
+{
+  margin-right: 20px;
+}
+.invoice_note_box
+{
+  margin-bottom: 10px;
+  border: 1px solid #CCCCCC;
+  width: 270px;
+}
+/* Print invoice CSS Stop from here */
+/*-----------PACKING SLIP-----------*/
+span#global_content_simple
+{
+  display: list-item;
+}
+.tag_container_wrapper
+{
+  border: 1px solid #000;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px 10px 0;
+}
+.print_button
+{
+  clear: both;
+  margin-top: 20px;
+}
+
+/*======================= Responsive work for print invoice page============================= */
+
+@media only screen and (max-width:920px) {
+  /* In voice container */
+  .invoice_wrap
+  {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+  }
+  .invoice_head .logo
+  {
+    width: 60%;
+  }
+  .invoice_head .logo img
+  {
+    width: 100%;
+  }
+  .invoice_add_details_wrap, .invoice_order_details_wrap
+  {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

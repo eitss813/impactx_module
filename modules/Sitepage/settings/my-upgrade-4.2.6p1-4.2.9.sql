@@ -1,0 +1,2 @@
+INSERT IGNORE INTO `engine4_core_menuitems` (`name`, `module`, `label`, `plugin`, `params`, `menu`, `submenu`, `enabled`, `custom`, `order`) VALUES
+('sitepage_main_pinboardbrowse', 'sitepage', 'Browse Page Pinboard View', 'Sitepage_Plugin_Menus::canViewSitepages', '{"route":"sitepage_general","action":"pinboard-browse"}', 'sitepage_main', '', 1, 0, 3);

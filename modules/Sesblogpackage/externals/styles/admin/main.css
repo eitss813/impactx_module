@@ -1,0 +1,15 @@
+#custom-fields-container {
+	display: flex;
+	margin-left: 200px;
+}
+#custom-fields-container > div {
+	display: flex;
+	margin-right: 10px;
+}
+#custom-fields-container > div > div > a {
+	font-weight: bold;
+	margin-right: 5px;
+}
+#global_page_sesblogpackage-admin-package-manage-transaction .admin_table tbody tr td {
+  white-space: nowrap;
+}

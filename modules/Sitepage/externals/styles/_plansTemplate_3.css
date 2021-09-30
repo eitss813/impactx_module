@@ -1,0 +1,236 @@
+#signup
+{
+  margin: 0 auto;
+  clear: both;
+}
+.l_banner
+{
+  margin: 20px auto;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+.l_banner ul li
+{
+  list-style: initial;
+}
+.banner
+{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;/*background-color:#00A8AA;*/
+}
+.banner h1
+{
+  font-size: 35px;
+  line-height: 30px;
+  color: #707070;
+  padding: 20px 10px 10px 10px;
+}
+.banner h2
+{
+  font-size: 25px;
+  color: #707070;
+  padding: 10px 10px 20px 10px;
+  line-height: 30px;
+}
+#global_page_user-signup-index #sign_up h3
+{
+  display: none;
+}
+.container
+{
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+.row
+{
+  text-align: center;
+  position: relative;
+}
+.table1
+{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.head_section1
+{
+  padding: 20px 8px;
+  background-color: #00A8AA;
+  color: #fff;
+  text-align: center;
+}
+.head_section1 h1
+{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif;
+}
+.price1 h1
+{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+.price1 h1 sub
+{
+  color: #7c7c7c;
+}
+.price1
+{
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  text-align: center;
+}
+.button
+{
+  width: 80%;
+  background-color: #fff;
+  color: #FF7E00;
+  border: 1px solid #FF7E00;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 20px 10%;
+  cursor: pointer;
+}
+.button:hover
+{
+  background-color: #FF7E00;
+  color: #fff;
+  height: auto !important;
+}
+.table2
+{
+  width: 30%;
+  display: inline-block;
+  border: 5px solid #FF7E00;
+  text-align: center;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
+}
+.mini_head
+{
+  background-color: #00A8AA;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+.mini_head p
+{
+  padding: 10px;
+}
+.head_section2
+{
+  padding: 20px 8px;
+  background-color: #FF7E00;
+  color: #fff;
+  text-align: center;
+}
+.head_section2 h1
+{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 400 !important;
+  font-family: 'Open Sans', sans-serif;
+}
+.price2
+{
+  background-color: #fff;
+  text-align: center;
+  ;
+}
+.price2 h1
+{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+.price1 h2 sub
+{
+  color: #7c7c7c;
+}
+.button2
+{
+  width: 80%;
+  background-color: #fff;
+  color: #00A8AA;
+  border: 1px solid #00A8AA;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 20px 10%;
+  cursor: pointer;
+}
+.button2:hover
+{
+  background-color: #00A8AA;
+  color: #fff;
+  height: auto !important;
+}
+.content
+{
+  background-color: rgba(0, 168, 170, 0.1);
+}
+.content ul
+{
+  margin: 0;
+  padding: 0;
+}
+.content ul li
+{
+  color: #7c7c7c;
+  list-style: none;
+  padding: 20px 8px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+.price1, .price2
+{
+  padding: 10px 0;
+}
+.horizontalScrollbar
+{
+  clear: both;
+}
+.horizontalThumb
+{
+  background: #aaa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9px;
+  width: 15px;
+  overflow: hidden;
+}
+.horizontalTrack
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  float: left;
+  height: 9px;
+  width: 255px; /*635px; */
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}

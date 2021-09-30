@@ -1,0 +1,1112 @@
+/* $Id: main.css 6590 2014-01-02 00:00:00Z SocialEngineAddOns Copyright 2013-2014 BigStep Technologies Pvt. Ltd. $ */
+
+.common_btn
+{
+  background-color: $theme_button_background_color;
+  border: 1px solid $theme_button_border_color;
+  border-radius: 3px;
+  color: $theme_button_font_color !important;
+  font-size: 1.2em !important;
+  padding: 8px 16px !important;
+  cursor: pointer;
+  text-align: center;
+}
+html[dir="rtl"] .common_btn{
+  text-align: center;
+}
+.common_btn a
+{
+  color: $theme_button_font_color !important;
+  font-size: 1.2em;
+}
+.common_btn:hover
+{
+  background-color: $theme_button_background_color_hover;
+  color: $theme_button_font_color;
+}
+a.icon
+{
+  color: $theme_button_background_color;
+  font-size: 14px !important;
+}
+/*Project Composer Link in Advanced Activity Feed*/
+.adv_post_compose_menu #compose-sitecrowdfunding-activator::before {
+  content: "\\f155";
+  color: #2ecc71;
+  font-size: 18px !important;
+}
+#compose-sitecrowdfunding-activator::before {
+  font-family: fontawesome;
+}
+/*Project Status Widget*/
+.sitecrowdfunding_project_status
+{
+  box-sizing: border-box;
+  color: #fff;
+  padding: 8px;
+  border-radius: 3px;
+  text-align: center;
+}
+html[dir="rtl"] .sitecrowdfunding_project_status{
+  text-align: center;
+}
+.sitecrowdfunding_project_status h3
+{
+  color: #fff;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.sitecrowdfunding_project_status_ongoing
+{
+  background: #F4B600;
+  border: 1px solid #E59600;
+}
+.sitecrowdfunding_project_status_failed
+{
+  background: #f00;
+  border: 1px solid #D10003;
+}
+.sitecrowdfunding_project_status_successful
+{
+  background: #37bb6f;
+  border: 1px solid #2F954E;
+}
+.sitecrowdfunding_project_status_draft
+{
+  background: #444;
+  border: 1px solid #000;
+}
+/*Activity Feed*/
+ul.feed > li .feed_item_body .sitecrowdfunding_review_rich_content .sitecrowdfunding_activity_feed_img .aaf-feed-photo
+{
+	box-sizing: border-box;
+  margin-bottom: 15px;
+  width: 99.5%;
+}
+ul.feed > li .feed_item_body .sitecrowdfunding_review_rich_content .sitecrowdfunding_activity_feed_img .aaf-feed-photo img
+{
+	box-sizing: border-box;
+  width: 100%;
+}
+.sitecrowdfunding_activity_feed_desc
+{
+  margin-left: 10px;
+}
+.sitecrowdfunding_activity_feed_desc .backed_amount
+{
+  color: $theme_link_color;
+  font-size: 16px !important;
+}
+
+/*Create New Project*/
+.sitecrowdfunding_package_link
+{
+  margin-top: 7px;
+  float: right;  
+}
+.sitecrowdfunding_package_link > a
+{
+  padding: 5px 16px !important;
+}
+ul.sitecrowdfunding_package_list
+{
+  border: 1px solid $theme_border_medium_color;
+}
+ul.sitecrowdfunding_package_list .common_btn a
+{
+  font-size: $theme_font_size;
+}
+/* Widget Carousel */
+div.sitecrowdfunding_horizontal_carausel_nav > span
+{
+  background: $theme_button_background_color !important;
+  color: $theme_button_font_color;
+}
+.sitecrowdfunding_horizontal_carausel_nav > span:hover
+{
+  background: $theme_button_background_color_hover !important;
+}
+.sitecrowdfunding_horizontal_carausel .sitecrowdfunding_info
+{
+  border-top: 1px solid rgba(215,215,215,0.5);
+}
+.layout_sitecrowdfunding_project_carousel
+{
+  border: solid 10px #fff;
+}
+.layout_sitecrowdfunding_project_carousel h3 a
+{
+  color: $theme_link_color;
+}
+.layout_sitecrowdfunding_project_carousel .sitecrowdfunding_grid_stats
+{
+  color: #fff;
+}
+
+.sitecrowdfunding_featured_slidebox_info_title > a, .sitecrowdfunding_author_name > a
+{
+  color: #fff !important;
+}
+.sitecrowdfunding_featured_slidebox_info_title > a:hover, .sitecrowdfunding_author_name > a:hover
+{
+  color: $theme_link_color_hover !important;
+}
+.sitecrowdfunding_featured_slidebox_info
+{
+  color: #fff;
+}
+
+/* Categories navigation widget */
+.layout_sitecrowdfunding_project_categories_navigation li.level1
+{
+  background: $theme_body_background_color;
+  margin-bottom: 2px;
+}
+.layout_sitecrowdfunding_project_categories_navigation li.level0
+{
+   background: $theme_list_background_color;/*
+   border-bottom: 8px solid $theme_border_color;*/
+}
+.layout_sitecrowdfunding_project_categories_navigation li.level2
+{
+  border-bottom: solid 1px $theme_border_dark_color;
+}
+span.menu_toggle_button
+{
+   background: $theme_button_background_color;
+   color: $theme_button_font_color;
+}
+.layout_sitecrowdfunding_project_categories_navigation h3
+{
+  padding: 10px !important;
+}
+.layout_sitecrowdfunding_project_categories_navigation li.level2 a
+{
+  color: $theme_font_color_light !important;
+}
+.layout_sitecrowdfunding_project_categories_navigation a.level-top
+{
+  color: $theme_font_color;
+}
+.layout_sitecrowdfunding_project_categories_navigation li.level1 a
+{
+  color: $theme_font_color;
+}
+/* Browse project Grid view Pledge bar*/
+.sitecrowdfunding_funding_pledged_days, .funding_animation
+{
+  background: $theme_button_background_color;
+}
+.sitecrowdfunding_funding_pledged_days::before
+{
+  color: $theme_button_background_color;
+}
+.sitecrowdfunding_funding_bar
+{
+  border: 1px solid $theme_button_background_color;
+}
+.sitecrowdfunding_funding_pledged_days
+{
+  color: $theme_button_font_color;
+}
+ul.seaocore_sidebar_list li > a
+{
+  color: #fff;
+}
+.seaocore_board_list_action_links a.comment_icon:hover, .seaocore_board_list_action_links a.taf_icon:hover, .seaocore_board_list_action_links a.wishlist_icon:hover, .seaocore_board_list_action_links a.print_icon:hover, .seaocore_board_list_action_links a.like_icon:hover, .seaocore_board_list_action_links a.share_icon:hover
+{
+  color: #fff;
+}
+/* category/subcategory in grid view */
+.layout_sitecrowdfunding_project_categories_grid_view .seao_cat_gd_col_links p:before
+{
+  color: $theme_button_background_color;
+}
+/*Header start Button*/
+.layout_page_header .layout_sitecrowdfunding_create_project_link a.header_start_link{
+  color: $theme_topbar_menu_link_color;
+  padding: 4px 5px !important;
+  font-size: 14px !important;
+} 
+
+/*Main Project Information Widget*/
+.main_project_info_icon i, .main_project_info_icon img {
+  background: $theme_button_background_color;
+  color: $theme_button_font_color;
+}
+.main_project_info_like_comment .seao_share_links .social_share_wrap > a
+{
+  color: $theme_font_color;
+}
+.main_project_info_rt .main_project_owner_information
+{
+  border-top: 1px dashed $theme_border_dark_color;
+}
+.main_project_info_rt .main_project_owner_information .thumb_photo i
+{
+  border: 10px solid $theme_border_medium_color !important;
+}
+
+/* Project Profile Backers */
+.Sitecrowdfunding_title_div_wrapper h3
+{
+  color: $theme_button_background_color !important;
+}
+.layout_sitecrowdfunding_project_backers .sitecrowdfunding_thumbs .thumbs_background
+{
+  background: $theme_button_background_color;
+  color: $theme_button_font_color;
+}
+.layout_sitecrowdfunding_project_backers .sitecrowdfunding_project_backers i
+{
+  border: 10px solid $theme_button_border_color;
+}
+.layout_sitecrowdfunding_project_backers .sitecrowdfunding_project_backers .thumbs_background a
+{
+ color: $theme_button_font_color;
+}
+/*People Who Backed*/
+.people_who_backed li .people_who_backed_grid
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+  padding-bottom: 20px;
+}
+.people_who_backed li .people_who_backed_grid img
+{
+  border: 5px solid $theme_border_medium_color;
+}
+/* Project information */
+.layout_sitecrowdfunding_project_information .sitecrowdfunding_project_information_titlebox .sitecrowdfunding_project_information_title a
+{
+  color: $theme_link_color_hover;
+}
+.layout_sitecrowdfunding_project_information .sitecrowdfunding_project_information_titlebox
+{
+  border-bottom: 1px solid $theme_border_color;
+}
+.layout_sitecrowdfunding_project_owner_information .sitecrowdfunding_profile_info_host .sitecrowdfunding_profile_photo img
+{
+  border: solid 10px $theme_photo_border_color;
+}
+.sitecrowdfunding_rewards_list_box .sitecrowdfunding_rewards_list_container img, .sitecrowdfunding_rewards_listing_box .sitecrowdfunding_rewards_list_container img
+{
+  border: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_reward_info .sitecrowdfunding_reward_info_others > div > span
+{
+  color: $theme_link_color_hover;
+}
+.sitecrowdfunding_reward_info .sitecrowdfunding_reward_info_desc .sitecrowdfunding_reward_info_img > img
+{
+  max-width: 100%;
+  border: 1px solid $theme_border_dark_color;
+  padding: 2px;
+}
+.sitecrowdfunding_reward_information_delivery, .sitecrowdfunding_reward_information_shipping_amount_value
+{
+  color: $theme_link_color_hover;
+}
+.layout_sitecrowdfunding_project_information .Sitecrowdfunding_launch
+{
+  margin-bottom: 3px;
+}
+.sitecrowdfunding_reward_info .sitecrowdfunding_reward_info_desc .sitecrowdfunding_reward_info_title
+{
+  font-size: 16px !important;
+  color: $theme_link_color;
+}
+.sitecrowdfunding_reward_information_delivery
+{
+  color: $theme_button_background_color;
+}
+.sitecrowdfunding_reward_information_pledged_amount
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_reward_information_pledged_amount_value > strong
+{
+  font-size: 18px;
+}
+.sitecrowdfunding_reward_information_pledged_amount > div:last-child > span
+{
+  float: right;
+  color: $theme_font_color !important;
+}
+.reward_amount
+{
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold !important;
+  color: $theme_button_background_color;
+}
+.sitecrowdfundingpage_layout_right
+{
+  float: right;
+  width: $theme_content_columns_right_width;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+/*Photos Dashboard*/
+#global_page_sitecrowdfunding-album-editphotos .icon_photos_new
+{
+  color: $theme_button_background_color;
+}
+/*Dashboard Navigation*/
+.sitecrowdfunding_side_nav .seaocore_db_head
+{
+  background: $theme_buttontabs_background_color;
+  position: relative;
+}
+.sitecrowdfunding_side_nav .seaocore_db_head > h3
+{
+  color: $theme_link_color;
+  padding: 12px 10px;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+.sitecrowdfunding_side_nav ul li
+{
+  border-bottom: 1px solid $theme_tabs_border_color;
+}
+.sitecrowdfunding_side_nav > ul li a
+{
+  color: $theme_font_color !important;
+  background: $theme_buttontabs_background_color !important;
+}
+ .sitecrowdfunding_side_nav ul li.selected a, .sitecrowdfunding_side_nav > ul li a:hover
+{
+  color: $theme_link_color_hover !important;
+  background: $theme_buttontabs_background_color;
+}
+.sitecrowdfunding_dashboard_header
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+  background: $theme_list_background_color;
+}
+.sitecrowdfunding_dashboard_header_btn a
+{
+ color: $theme_button_font_color !important;
+ background: $theme_button_background_color;
+}
+.sitecrowdfunding_dashboard_header_btn a:hover
+{
+ color: $theme_button_font_color !important;
+}
+.sitecrowdfunding_dashboard_header_title
+{
+  color: $theme_link_color_hover !important;
+}
+.sitecrowdfunding_dashboard_header_title a
+{
+  color: $theme_link_color_hover !important;
+}
+.sitecrowdfunding_user_profile_projects ul li a, .sitecrowdfunding_user_profile_projects ul li a:before
+{
+  color: $theme_link_color_hover;
+}
+.sitecrowdfunding_user_profile_projects ul li a
+{
+  padding-bottom: 8px;
+  line-height: 36px;
+}
+.sitecrowdfunding_user_profile_projects ul li
+{
+ border-bottom: 1px solid $theme_border_dark_color;
+}
+.sitecrowdfunding_user_profile_photo img.thumb_profile
+{
+  border: 8px solid #fff;
+}
+.sitecrowdfunding_user_profile_photo
+{
+  border-right: 2px dashed $theme_border_medium_color;
+}
+html[dir="rtl"] .sitecrowdfunding_user_profile_photo
+{
+  border-left: 2px dashed $theme_border_medium_color;
+  border-right: 0;
+}
+/*Dashboard Info*/
+.sitecrowdfunding_dashboard_info_desc
+{
+  background: $theme_button_background_color;
+}
+.sitecrowdfunding_dashboard_info_desc > div, .sitecrowdfunding_dashboard_info_desc > div a
+{
+  color: $theme_topbar_menu_link_color;
+}
+.sitecrowdfunding_dashboard_info_desc > div > h4
+{
+  color: $theme_headline_color;
+}
+#smoothbox_window #global_page_sitecrowdfunding-backer-view, #smoothbox_window #global_page_sitecrowdfunding-payment-detail
+{
+  background: #f4f4f4 !important;
+}
+#global_page_sitecrowdfunding-payment-detail #global_content_simple, #global_page_sitecrowdfunding-backer-view #global_content_simple
+{
+  display: block !important;
+  width: 100%;
+}
+.backers-report-view-img
+{
+  text-align: center;
+  margin: 0 10px 0 0;
+  float: left;
+}
+.backers-report-view-img img
+{
+  border: 1px solid $theme_border_medium_color;
+  max-width: 100%;
+  width: 110px;
+}
+.backers-report-view-row span, .backers-report-view-row h3
+{
+  display: block;
+  margin-bottom: 8px;
+}
+.backers-report-view-second-row, .backers-report-view-pledged
+{
+  margin-bottom: 8px;
+}
+.backers-report-view-third-row
+{
+  line-height: 25px;
+}
+.commission_view dl.payment_transaction_details dd
+{
+  padding: 4px 15px 4px 0;
+}
+.commission_view dl.payment_transaction_details dd span
+{
+  font-weight: bold;
+  float: right;
+}
+.sitecrowdfunding_myprojects_top_links, .layout_sitecrowdfunding_browse_projects .sitecrowdfunding_browse_lists_view_options, .tabs_parent_sitecrowdfunding_home, .sitecrowdfunding_location_top_links
+{
+  background: $theme_list_background_color_alt;
+  border-top: 1px solid $theme_border_color;
+  border-bottom: 1px solid $theme_border_color;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sitecrowdfunding_myprojects_top_links a
+{
+  color: $theme_font_color;
+  border-color: $theme_border_medium_color;
+}
+.sitecrowdfunding_myprojects_top_filter_links .active, .seaocore_tab_icon.active
+{
+  color:$theme_link_color_hover;
+}
+.tab_icon_list_view.active, .tab_icon_grid_view.active, .sitecrowdfunding_myprojects_top_links a.active
+{
+  color: $$theme_link_color_hover;
+}
+.layout_sitecrowdfunding_project_categories_landingpage ul.sitecrowdfunding_cat_gd li .sitecrowdfunding_cat_title:hover, .layout_sitecrowdfunding_project_categories_landingpage ul.sitecrowdfunding_cat_gd li:hover .sitecrowdfunding_cat_title:after
+{
+  color: $theme_link_color_hover;
+}
+.seaocore_profile_coverinfo_status .sitecrowdfunding_listings_stats .sitecrowdfunding_created_by a:hover
+{
+  color: $theme_link_color_hover !important;
+}
+#global_page_sitecrowdfunding-project-compose a.popup_close
+{
+  top: 10px !important;
+  right: 0 !important;
+}
+/*Horizonatl Search Form*/
+.sitecrowdfunding-project-search-box .form-elements
+{
+  border: 1px solid $theme_border_medium_color;
+}
+/*Advance Search Form*/
+.sitecrowdfunding_advanced_search_form .field_search_criteria ul
+{
+  background: $theme_body_background_color;
+  border: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_advanced_search_form #fieldset-grp2
+{
+  background: $theme_input_background_color;
+  border: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_advanced_search_form #fieldset-grp2:before
+{
+  border: 15px solid rgba(223, 223, 223, 1);
+  border-color: rgba(223, 223, 223, 1) transparent transparent transparent;
+}
+.sitecrowdfunding_advanced_search_form #fieldset-grp2:after
+{
+  border: 15px solid $theme_border_color;
+  border-color: #f4f4f4 transparent transparent transparent;
+}
+.sitecrowdfunding_advanced_search_form #fieldset-grp3 .description
+{
+  color: $theme_font_color;
+}
+/*Package details*/
+.sitecrowdfunding_package_stats
+{
+  background: $theme_body_background_color;
+  border: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_left div:last-child
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_left_text
+{
+  border-left: 1px solid $theme_border_medium_color;
+  border-top: 1px solid $theme_border_medium_color;
+}
+html[dir="rtl"] .sitecrowdfunding_packages_vertical_left_text
+{
+  border-left: 0;
+  border-right: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_right
+{
+  border-right: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_right:first-child
+{
+  border-left: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_right_heading
+{
+  background-color: $theme_button_background_color;
+}
+.sitecrowdfunding_packages_vertical_right_heading a
+{
+  color: $theme_button_font_color;
+}
+.sitecrowdfunding_packages_vertical_right_heading a:hover
+{
+  color: $theme_button_font_color;
+}
+.sitecrowdfunding_packages_vertical_right .change_package_column
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+}
+.sitecrowdfunding_packages_vertical_right .change_package_column .change_package_btn a
+{
+  background-color: $theme_body_background_color;
+  border-color: $theme_border_color $theme_border_color $theme_border_dark_color;
+  border-style: solid;
+  border-width: 1px;
+  color: $theme_link_color;
+}
+.sitecrowdfunding_packages_vertical_right_text
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+}
+/*Best Project*/
+.best_projects li a
+{
+  background: #fff;
+}
+.best_projects li a:hover
+{
+  background: $theme_button_background_color;
+  color: $theme_button_font_color;
+}
+.best_projects li a:hover i
+{
+  color: $theme_button_font_color;
+}
+.best_projects li a.active
+{
+  background: $theme_button_background_color;
+  color: $theme_button_font_color;
+}
+.best_projects li.active::after
+{
+  color: $theme_button_background_color;
+  border-color: transparent transparent transparent $theme_button_background_color;
+}
+.best_projects li.active > span
+{
+  color: $theme_button_background_color;
+}
+/*Rewards Listing*/
+.layout_sitecrowdfunding_rewards_listing div.featured_slidebox
+{
+   background: $theme_body_background_color;
+   border: 1px solid $theme_border_medium_color;
+}
+.layout_sitecrowdfunding_rewards_listing .featured_slideshow_option_bar
+{
+  background: $theme_tabs_background_color;
+  border: 1px solid $theme_tabs_border_color
+}
+.layout_sitecrowdfunding_rewards_listing .sitecrowdfunding_rewards_listing_info > div > span
+{
+  color: $theme_link_color;
+}
+.sitecrowdfunding_rewards_list_hover_content a
+{
+  color: $theme_link_color;
+}
+.layout_sitecrowdfunding_project_overview .seaocore_add, .layout_sitecrowdfunding_project_discussion .seaocore_add
+{
+  border-bottom: 1px solid $theme_border_color;
+}
+/*Home Features*/
+.sitecrowdfunding_home_featured_navigations span::before
+{
+  color: #151515;
+}
+/*Grid & List View*/
+.sitecrowdfunding_thumb_wrapper
+{
+  background-color: #f1f1f1;
+}
+.sitecrowdfunding_grid_view .sitecrowdfunding_grid_thumb
+{
+  background-color: #fff;
+}
+.sitecrowdfunding_grid_view > div > a > span
+{
+  background-color: #444;
+}
+.sitecrowdfunding_projects_grid_view .sitecrowdfunding_thumb_wrapper, .sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_thumb_wrapper
+{
+  border: 10px solid #fff;
+  background: $theme_list_background_color_alt;
+}
+.sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_thumb_wrapper
+{
+  border: 5px solid #fff;
+}
+.sitecrowdfunding_hover_info span, .sitecrowdfunding_list_hover_info span
+{
+  color: #fff;
+}
+.sitecrowdfunding_cat_grid_view .sitecrowdfunding_cat_gd li, .sitecrowdfunding_cat_grid_view .sitecrowdfunding_cat_gd li div.box
+{
+  border: 10px solid #fff;
+  background: #dfdfdf;
+}
+ul.projects_manage.sitecrowdfunding_projects_list_view > li
+{
+ background: $theme_list_background_color_alt;
+ border-top: 1px solid $theme_border_color;
+ border-bottom: 1px solid $theme_border_color;
+}
+.sitecrowdfunding_list_project_info
+{
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.sitecrowdfunding_listing_style .sitecrowdfunding_listing_style_details > *:first-child > *
+{
+  border-bottom: 2px solid #fff;
+}
+.sitecrowdfunding_listing_style .sitecrowdfunding_listing_style_details > * > *:first-child
+{
+  border-right: 2px solid #fff;
+}
+html[dir="rtl"] .sitecrowdfunding_listing_style .sitecrowdfunding_listing_style_details > * > *:first-child
+{
+  border-left: 2px solid #fff;
+  border-right: 0;
+}
+.sitecrowdfunding_listing_style_box_title small, .sitecrowdfunding_listing_style_box_title span
+{
+ color: $theme_font_color;
+}
+.goal_amount_container
+{
+ color: $theme_button_background_color;
+}
+.layout_sitecrowdfunding_project_categories_grid_view, .layout_sitecrowdfunding_project_categories_withicon_grid_view, .layout_sitecrowdfunding_project_carousel
+{
+  background-color: #f4f4f4 !important;
+  border: solid 10px #fff;
+}
+.effect2:before, .effect2:after
+{
+  background: #ccc;
+}
+.sitecrowdfunding_thumb_wrapper:hover .sitecrowdfunding_grid_stats, .sitecrowdfunding_list_thumb:hover .sitecrowdfunding_grid_stats
+{
+ border-bottom: solid 1px $theme_border_medium_color;
+}
+.sitecrowdfunding_stats div.seao_share_links a
+{
+  color: #000 !important;
+  background: #fff;
+}
+/*Side Project*/
+.sitecrowdfunding_profile_side_project > li
+{
+ background: $theme_body_background_color;
+ border: 1px solid $theme_border_medium_color;
+}
+/*Popular Projects*/
+.sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_info .sitecrowdfunding_bottom_info, .sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_info .sitecrowdfunding_bottom_info h3, .sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_info .sitecrowdfunding_bottom_info h3 a, .sitecrowdfunding_popular_projects_grid_view .sitecrowdfunding_info .sitecrowdfunding_bottom_info span
+{
+  color: #fff;
+}
+/*Pop Up Common Class*/
+.sitecrowdfunding_popup
+{
+  border: 1px solid $theme_border_medium_color;
+  padding: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*Transaction Details Pop Up*/
+.payment_transaction_detail_headline
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+}
+
+/*Backers details Popup*/
+.backers-report-view
+{
+  border-bottom: 1px solid $theme_border_medium_color;
+  padding: 10px 0;
+}
+.backers-report-view:last-child
+{
+  border-bottom: 0 !important;
+}
+/*Sitecrowdfunding Options*/
+.sitecrowdfunding_options .dot
+{
+  background: #000;
+}
+.sitecrowdfunding_options .settings
+{
+ color: $theme_button_background_color;
+}
+.sitecrowdfunding_options .sitecrowdfunding_options_dropdown
+{
+  background: #ffffff none repeat scroll 0 0;
+}
+/*Featured sponsored labels */
+.sitecrowdfunding_featured, .sitecrowdfunding_sponsored
+{
+  color: #ffffff;
+}
+.site_crowdfunding_sponsored > span, .site_crowdfunding_featured > span
+{
+  color: #ffffff;
+}
+/*Pinboard View*/
+
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_action_links a:hover
+{
+ background-color: $theme_button_background_color;
+ color: $theme_button_font_color !important;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_action_links a
+{
+  background-color: #fff;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_action_links a
+{
+ color: $theme_link_color !important;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list
+{
+  border: solid 10px #fff;
+  background: $theme_body_background_color;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_title
+{
+ background: $theme_button_background_color;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_title > a, .layout_sitecrowdfunding_pinboard_browse_projects .seaocore_title:hover > a
+{
+ color: $theme_button_font_color;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_btm > a, .layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_btm > img, .layout_sitecrowdfunding_pinboard_browse_projects .seaocore_board_list_btm > a img
+{
+ border: 8px solid $theme_border_medium_color;
+}
+.layout_sitecrowdfunding_pinboard_browse_projects .sitecrowdfunding_bottom_info_likes, .layout_sitecrowdfunding_pinboard_browse_projects .sitecrowdfunding_bottom_info_comment
+{
+  color: #fff;
+}
+#sitecrowdfunding_packages_panel .horizontalThumb
+{
+  background: #aaa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 7px;
+  width: 15px;
+  overflow: hidden;
+}
+#sitecrowdfunding_packages_panel .horizontalTrack
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  float: left;
+  height: 7px;
+  width: 255px;
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}
+#sitecrowdfunding_packages_panel .horizontalScrollbar
+{
+  clear: both;
+}
+/*Map*/
+.list_map_container_list
+{
+ border: 1px solid $theme_border_color;
+  border-top: 0;
+}
+.sitecrowdfunding_map_info_tip_top
+{
+ color: $theme_link_color;
+}
+.sitecrowdfunding_map_info_tip_title
+{
+ color: $theme_link_color;
+}
+.sitecrowdfunding_map_info_tip_top > a:hover
+{
+ color: $theme_link_color_hover;
+}
+.sitecrowdfunding_map_info_tip_info_date
+{
+ color: $theme_font_color;
+}
+.sitecrowdfunding_map_info_tip_info_date a
+{
+ color: $theme_link_color;
+}
+.sitecrowdfunding_map_info_tip_info_date a:hover
+{
+ color: $theme_link_color_hover;
+}
+.sitecrowdfunding_reward_final_information
+{
+ background: $theme_body_background_color;
+}
+.sitecrowdfunding_likes_comment
+{
+  color: #fff;
+}
+/*Featured Funraisers*/
+.layout_sitecrowdfunding_featured_fundraiser .sitecrowdfunding_funding_bar
+{
+ border: solid 1px $theme_button_border_color;
+}
+.layout_sitecrowdfunding_featured_fundraiser .featured_slidshow_content i
+{
+  border: 10px solid #fff;
+}
+.layout_sitecrowdfunding_featured_fundraiser .featured_slidshow_content_text .sitecrowdfunding_author_name > a
+{
+ color: $theme_link_color !important;
+}
+.layout_sitecrowdfunding_featured_fundraiser .featured_slidshow_content_text .sitecrowdfunding_author_name > a:hover
+{
+ color: $theme_link_color_hover !important;
+}
+.layout_sitecrowdfunding_featured_fundraiser .featured_slidshow_content_text
+{
+  background: $theme_border_medium_color;
+  color: $theme_headline_color;
+}
+/*Landing Page*/
+.layout_sitecrowdfunding_project_categories_landingpage .sitecrowdfunding_cat_title > a, .layout_sitecrowdfunding_project_categories_landingpage .sitecrowdfunding_cat_title
+{
+  color: #fff;
+}
+.layout_sitecrowdfunding_tagcloud_sitecrowdfunding_project sup
+{
+  background: $theme_border_medium_color;
+}
+
+/*---Project categories image slideshow---*/
+.sitecrowdfunding_categories_banner_text
+{
+  background: #fff;
+}
+.sitecrowdfunding_categories_banner_text_container
+{
+  background: #c8d7dc;
+  box-shadow: 0 0 4px #85a4ae inset;
+}
+/*category Slide*/
+.sitecrowdfunding_cat_slide_nav span.inactive
+{
+  background: #fff;
+}
+.sitecrowdfunding_cat_slide_nav span.active
+{
+ background: $theme_button_background_color !important;
+}
+.project_views_innercontent
+{
+  border-right: solid 2px $theme_border_dark_color;
+  padding-right: 3px;
+}
+
+/*Thanks Page of Payment*/
+.sitecrowdfunding_payment_success_message .payment_backing_id
+{
+  color: $theme_button_background_color;
+}
+
+/*Subcategory*/
+.sitecrowdfunding_cat_gd .seao_cat_gd_col_links .view-all a, .sitecrowdfunding_cat_gd .seao_cat_gd_col_links .view-all a:hover
+{
+  text-shadow: none; 
+}
+/*Location Page*/
+.sitecrowdfunding_map_info_tip_photo img
+{
+  border: 1px solid $theme_border_medium_color;
+  padding: 3px;
+}
+/*Dashboard*/
+.sitecrowdfunding_dashboard_info_desc > div > h4
+{
+  color: $theme_headline_color;
+}
+ul.sitecrowdfunding_edit_media .sitecrowdfunding_edit_media_thumb img
+{
+ border: 3px solid $theme_button_background_color;
+}
+.sitecrowdfunding_featured_block
+{
+  border: solid 8px #fff;
+}
+.sitecrowdfunding_edit_location_form
+{
+  background: rgba(0,0,0,0.03);
+}
+.sitecrowdfunding_manage_announcements_list
+{
+ border: 1px solid $theme_border_color;
+}
+.sitecrowdfunding_manage_announcements_title
+{
+ background: $theme_list_background_color;
+}
+.sitecrowdfunding_leaders_thumb img
+{
+ border: 3px solid $theme_button_background_color;
+}
+.sitecrowdfunding_leaders_detail
+{
+ background: $theme_button_background_color;
+ border: 1px solid $theme_button_border_color;
+}
+.sitecrowdfunding_leaders_detail a:hover
+{
+  color: $theme_button_font_color;
+}
+.sitecrowdfunding_leaders_detail .sitecrowdfunding_link_wrap a:hover
+{
+  color: $theme_link_color_hover;
+}
+.sitecrowdfunding_leaders_guest
+{
+  background: rgba(0,0,0,0.06);
+  border: 1px solid $theme_border_color;
+}
+.sitecrowdfunding_detail_table_head
+{
+  background: rgba(0,0,0,0.06);
+}
+.sitecrowdfunding_detail_table tr td, .sitecrowdfunding_detail_table tr th
+{
+  border-right: 1px solid $theme_border_color;
+}
+.sitecrowdfunding_dashboard_table
+{
+  border: 3px solid $theme_border_medium_color !important;
+  margin: 20px 0 !important;
+}
+.sitecrowdfunding_paybill_link i
+{
+  color: $theme_button_background_color;
+  font-size: 16px !important;
+  margin-right: 5px;
+}
+.sitecrowdfunding_request_form
+{
+  border: 1px solid $theme_border_medium_color;
+  margin: 10px 0;
+}
+#lassoImg, #lassoMask, div.preview-thumbnail
+{
+  border: 3px solid $theme_button_background_color !important;
+}
+#lassoImg, #lassoMask
+{
+  margin: 10px 0;
+}
+div.preview-thumbnail{
+  border-radius: 50%;
+}
+.sitecrowdfunding_manage_rewards_list
+{
+  background: rgba(0,0,0,0.04);
+  border: 1px solid $theme_border_color;
+}
+.sitecrowdfunding_manage_rewards_title
+{
+  color: $theme_link_color;
+}
+.sitecrowdfunding_reward_img > img
+{
+  max-width: 100%;
+  border: 1px solid $theme_border_dark_color;
+  padding: 2px;
+}
+.sitecrowdfunding_project_form .global_form > div
+{
+  background: rgba(0,0,0,0.06);
+ border: 1px solid $theme_border_color;
+}
+.addLocationLink
+{
+ color: $theme_link_color;
+}
+/*Settings*/
+#profile_cover-wrapper #profile_cover-element p
+{
+  color: $theme_font_color !important;
+}
+form#choose-project .form-elements .form-wrapper .form-element{
+  max-width: 650px;
+}
+form#choose-project .form-elements .form-wrapper .form-element .tag{
+  display: table;
+  margin: 8px 10px 5px 0;
+  float: none;
+}
+html[dir="rtl"] #messages_compose div.form-label
+{
+  text-align: right !important;
+}
+.main_project_info_setting > ul
+{
+  background: $theme_foreground_background_color;
+}
+.main_project_info_rt .main_project_info_share_btns,
+.main_project_info_rt .main_project_info_followers_or_join{
+  border-top: 1px dashed $theme_border_dark_color;
+}
+
+.followers_or_join .members{
+  border-left: 1px solid $theme_button_background_color;
+}

@@ -1,0 +1,232 @@
+#plan_subscriptions_row
+{
+  margin: 20px auto 0;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.l_banner
+{
+  margin: 20px auto;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+}
+.l_banner ul li
+{
+  list-style: initial;/*text-align:center;*/
+}
+.plan_container
+{
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+.plan_row
+{
+  background: #A9A9A9;
+  padding: 20px 8px;
+  height: 220px;
+}
+.plan_row h1
+{
+  margin: 0 0 15px 0;
+  font-size: 48px;
+  font-style: italic;
+  color: #fff;
+  font-weight: 700 !important;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 50px;
+}
+.plan_row p
+{
+  width: 65%;
+  margin: auto;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+.plan_subscriptions_row
+{
+  text-align: center;
+  /*margin-top: -80px;*/
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan_subscriptions_col1
+{
+  width: 30%;
+  display: inline-block;
+  box-shadow: 0 0 20px #333;
+  text-align: center;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  vertical-align: top;
+}
+.plan_subscriptions_header
+{
+  padding: 20px 8px;
+  text-align: center;
+}
+.plan_subscriptions_header h2
+{
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-weight: 700 !important;
+  font-family: 'Open Sans', sans-serif;
+}
+.free
+{
+  margin-right: -5px;
+}
+.basic
+{
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.free, .basic
+{
+  background: #fff;
+  z-index: 0;
+}
+.free .plan_subscriptions_price_box, .basic .plan_subscriptions_price_box
+{
+  background: #e5e5e5;
+}
+.plan_subscriptions_price_box
+{
+  padding: 20px 8px;
+  position: relative;
+  font-size: 50px !important;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #0dadf6;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 1px #fff;
+  text-align: center;
+  line-height: 35px;
+}
+.plan_subscriptions_price_box span
+{
+  display: block;
+  font-size: 16px;
+}
+.plan_subscriptions_details ul
+{
+  margin: 0;
+  padding: 0;
+}
+.plan_subscriptions_details ul li
+{
+  list-style: none;
+  padding: 20px 8px;
+  border-bottom: 1px solid #D8D8D8;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+.classic
+{
+  background: #fcbc92 !important;
+  border: 5px solid #ff8739;
+  box-shadow: 0 0 20px #333;
+  z-index: 1;
+}
+.classic .plan_subscriptions_header .popular_package
+{
+  margin: 0 0 5px 0;
+  font-size: 17px;
+  color: #333;
+}
+.classic .plan_subscriptions_price_box
+{
+  background: #ff8739;
+  color: #fff;
+  text-shadow: 1px 1px 1px #ea5c00;
+}
+.classic .plan_subscriptions_details ul
+{
+  border-bottom: 1px solid #fbc7a4 !important;
+}
+.classic .plan_subscriptions_details ul li
+{
+  border-bottom: 1px solid #fbc7a4 !important;
+  border-top: 1px solid #f8a56f !important;
+}
+.classic .plan_subscriptions_details ul li:last-child
+{
+  border-bottom: 0 !important;
+}
+.classic .plan_subscriptions_button
+{
+  border-top: 1px solid #f8a56f !important;
+}
+.plan_subscriptions_button
+{
+  padding: 20px 8px;
+  text-align: center;
+}
+.plan_subscriptions_button button
+{
+  background: #03a9f4;
+  background: -moz-linear-gradient(top, #03a9f4 0%, #3bc2ff 100%);
+  background: -webkit-linear-gradient(top, #03a9f4 0%, #3bc2ff 100%);
+  background: linear-gradient(to bottom, #03a9f4 0%, #3bc2ff 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03a9f4', endColorstr='#3bc2ff', GradientType=0 );
+  color: #fff;
+  border: 0;
+  padding: 10px 25px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+.classic .plan_subscriptions_button button
+{
+  background: #ff6a20;
+  background: -moz-linear-gradient(top, #ff6a20 0%, #fd8c42 100%);
+  background: -webkit-linear-gradient(top, #ff6a20 0%, #fd8c42 100%);
+  background: linear-gradient(to bottom, #ff6a20 0%, #fd8c42 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6a20', endColorstr='#fd8c42', GradientType=0 );
+  color: #fff;
+}
+#list-scroll-areas
+{
+  overflow-x: hidden;
+}
+.horizontalScrollbar
+{
+  clear: both;
+}
+.horizontalThumb
+{
+  background: #aaa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9px;
+  width: 15px;
+  overflow: hidden;
+}
+.horizontalTrack
+{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  float: left;
+  height: 9px;
+  width: 255px; /*635px; */
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}
+.horizontalThumb
+{
+  background-color: #03a9f4;
+}

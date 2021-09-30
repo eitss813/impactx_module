@@ -1,0 +1,3 @@
+UPDATE `engine4_core_pages` SET `displayname` = 'SNS - Advanced Blog - Package Page' WHERE `engine4_core_pages`.`name` = 'sesblogpackage_index_blog';
+UPDATE `engine4_core_pages` SET `displayname` = 'SNS - Advanced Blog - Manage Package Page' WHERE `engine4_core_pages`.`name` = 'sesblog_index_package';
+UPDATE `engine4_core_pages` SET `displayname` = 'SNS - Advanced Blog - Package Transactions Page' WHERE `engine4_core_pages`.`name` = 'sesblog_index_transactions';

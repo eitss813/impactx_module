@@ -1,0 +1,29 @@
+.sesblog_packages_main{
+	background-color:$theme_list_background_color_hover;
+}
+.sesblog_packages_table_item > section,
+.sesblog_packages_list_item > section{
+	background-color:$theme_list_background_color;
+}
+.sesblog_packages_table_item ._title span,
+.sesblog_packages_list_item ._top ._price span{
+	color:$theme_button_background_color;
+}
+.sesblog_packages_create_btn,
+.sesblog_payment_btn,
+.sesblog_packages_list_item ._top ._title h5,
+.sesblog_dashboard_menu_list .sesblog_package_details *{
+	background-color:$theme_button_background_color;
+	color:$theme_button_font_color !important;
+}
+.sesblog_packages_create_btn:hover,
+.sesblog_payment_btn:hover{
+	background-color:$theme_button_background_color_hover;
+}
+.sesblog_packages_table_item.active > section,
+.sesblog_packages_list_item.active > section{
+	border:4px solid $theme_button_background_color;
+}
+.sesblog_dashboard_menu_list .sesblog_package_details{
+	background-color:$theme_button_background_color;
+}

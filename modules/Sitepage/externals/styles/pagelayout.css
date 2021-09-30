@@ -1,0 +1,191 @@
+/* $Id: pagelayout.css 2011-05-05 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+#pagelayout_cms_wrapper{overflow:hidden;margin-top:10px;}
+div.pagelayout_layoutbox_wrapper{float:left;overflow:hidden;}
+html[dir="rtl"] div.pagelayout_layoutbox_wrapper{float:right;}
+div.pagelayout_layoutbox{border:1px solid #aaa;background:#eee;height:440px;width:700px;padding-right:5px;padding-left:5px;overflow-x:hidden;overflow-y:auto;}
+.pagelayout_layoutbox_footnotes{font-size:.8em;margin-top:5px;}
+/* menu above layout box */
+div.pagelayout_layoutbox_menu{overflow:hidden;margin-bottom:10px;}
+div.pagelayout_layoutbox_menu > ul > li,
+ul.pagelayout_layoutbox_menu_left,
+ul.pagelayout_layoutbox_menu_left > li{float:left;overflow:hidden;}
+html[dir="rtl"] div.pagelayout_layoutbox_menu > ul > li,
+html[dir="rtl"] ul.pagelayout_layoutbox_menu_left,
+html[dir="rtl"] ul.pagelayout_layoutbox_menu_left > li{float:right;}
+ul.pagelayout_layoutbox_menu_right{overflow:hidden;}
+ul.pagelayout_layoutbox_menu_right > li{float:right;overflow:hidden;}
+html[dir="rtl"] ul.pagelayout_layoutbox_menu_right > li{float:left;}
+.pagelayout_layoutbox_sub_menu{overflow:hidden;}
+.pagelayout_layoutbox_sub_menu h3{float:left;margin-bottom:0px;font-size:1em;padding:5px 0 0;letter-spacing:0;background:none;}
+html[dir="rtl"] .pagelayout_layoutbox_sub_menu h3{float:right;}
+.pagelayout_layoutbox_sub_menu > ul{float:right;}
+html[dir="rtl"] .pagelayout_layoutbox_sub_menu > ul{float:left;}
+.pagelayout_layoutbox_sub_menu > ul > li{float:left;}
+html[dir="rtl"] .pagelayout_layoutbox_sub_menu > ul > li{float:right;}
+.pagelayout_layoutbox_sub_menu > ul > li > a{padding-top:8px;}
+.pagelayout_layoutbox_menu_generic > a,
+.pagelayout_layoutbox_menu li > a,
+.pagelayout_layoutbox_sub_menu li > a{display:inline-block;font-weight:bold;padding:9px 8px 8px 30px;background-repeat:no-repeat;background-position:8px 8px;outline:none;font-size:.8em;}
+html[dir="rtl"] .pagelayout_layoutbox_menu_generic > a,
+html[dir="rtl"] .pagelayout_layoutbox_menu li > a,
+html[dir="rtl"] .pagelayout_layoutbox_sub_menu li > a{padding:9px 30px 8px 8px;background-position:95% 50%;}
+.pagelayout_layoutbox_menu li.active > a,
+.pagelayout_layoutbox_sub_menu li.active > a{+rounded(4px, false, false, true, true);background-color:#8197ab;color:#fff;text-decoration:none;}
+div.pagelayout_layoutbox_menu li#pagelayout_layoutbox_menu_openpage.active > a{color:#fff;}
+/* popup for opening a page */
+.pagelayout_layoutbox_menu_pages_wrapper{display:none;+rounded(5px, true, false, false, false);overflow:hidden;position:absolute;width:250px;padding:6px;background-color:#8197ab;z-index:99999999;margin-top:28px;}
+ul.pagelayout_layoutbox_menu_pages{overflow:hidden;overflow-y:scroll;max-height:500px;background:#fff;}
+ul.pagelayout_layoutbox_menu_pages > li{padding:5px;font-size:.8em;-moz-user-select:none;-webkit-user-select:none;}
+ul.pagelayout_layoutbox_menu_pages > li + li{border-top:1px solid #eee;}
+ul.pagelayout_layoutbox_menu_pages > li:hover{background-color:#f2f2f2;cursor:pointer;}
+
+/* popup for making a new blank page */
+.pagelayout_layoutbox_menu_makepage_wrapper{display:none;+rounded(5px, true, false, false, false);overflow:hidden;position:absolute;width:400px;padding:6px;background-color:#8197ab;z-index:99999999;margin-top:28px;}
+.pagelayout_layoutbox_menu_makepage{overflow:hidden;height:150px;background:#fff;}
+.pagelayout_layoutbox_menu_makepage_form{padding:10px;}
+.pagelayout_layoutbox_menu_makepage_form input[type=text]{width:250px;}
+.pagelayout_layoutbox_menu_makepage_form button{margin-right:5px;}
+html[dir="rtl"] .pagelayout_layoutbox_menu_makepage_form button{margin-right:0px;margin-left:5px;}
+.pagelayout_layoutbox_menu_makepage_form_name{margin:10px 0px 10px 0px;}
+.pagelayout_layoutbox_menu_makepage_form_name span{display:block;font-weight:bold;margin-bottom:4px;}
+
+/* popup for editing the current page info */
+.pagelayout_layoutbox_menu_editinfo_wrapper{display:none;+rounded(5px, true, false, false, false);overflow:hidden;position:absolute;padding:6px;background-color:#8197ab;z-index:99;margin-top:28px;max-width:500px;}
+.pagelayout_layoutbox_menu_editinfo_wrapper .description{font-size:.7em;margin-top:5px;max-width:300px;color:#999;}
+.pagelayout_layoutbox_menu_editinfo{overflow:hidden;background:#fff;}
+.pagelayout_layoutbox_menu_editinfo_form{padding:10px;}
+.pagelayout_layoutbox_menu_editinfo_form li + li{margin-top:15px;}
+.pagelayout_layoutbox_menu_editinfo_form li > span{display:block;margin-bottom:4px;font-size:.7em;text-transform:uppercase;font-weight:bold;color:#666;}
+.pagelayout_layoutbox_menu_editinfo_form li > span > label{font-weight:bold;color:#666;}
+.pagelayout_layoutbox_menu_editinfo_form li > span > span,
+.pagelayout_layoutbox_menu_editinfo_form li > span > label > span{font-weight:normal;text-transform:none;color:#666;}
+.pagelayout_layoutbox_menu_editinfo_form li input[type=text]{width:300px;}
+.pagelayout_layoutbox_menu_editinfo_form li button{margin-right:5px;}
+.pagelayout_layoutbox_menu_editinfo_form li textarea{width:300px;height:3.5em;}
+.pagelayout_layoutbox_menu_editinfo_submit{padding:5px 10px 10px 10px;color:#666;}
+.pagelayout_layoutbox_menu_editinfo_submit a{color:#4587C0;}
+.pagelayout_layoutbox_menu_editinfo_submit button{margin-right:3px;}
+html[dir="rtl"] .pagelayout_layoutbox_menu_editinfo_submit button{margin-right:0px;margin-left:3px;}
+/* popup for editing the columns on the current page */
+.pagelayout_layoutbox_menu_columnchoices_wrapper{display:none;+rounded(5px, true, false, false, false);overflow:hidden;position:absolute;padding:6px;background-color:#8197ab;z-index:99999999;margin-top:28px;}
+.pagelayout_layoutbox_menu_columnchoices{overflow:hidden;background:#fff;padding:10px;}
+.pagelayout_layoutbox_menu_columnchoices_instructions{margin-bottom:10px;color:#666;}
+ul.pagelayout_layoutbox_menu_columnchoices_thumbs{overflow:hidden;}
+ul.pagelayout_layoutbox_menu_columnchoices_thumbs > li{float:left;overflow:hidden;margin:0px 6px 6px 0px;}
+html[dir="rtl"] ul.pagelayout_layoutbox_menu_columnchoices_thumbs > li{float:right;margin:0px 0px 6px 6px;}
+ul.pagelayout_layoutbox_menu_columnchoices_thumbs > li:last-child{margin-right:0px;}
+html[dir="rtl"] ul.pagelayout_layoutbox_menu_columnchoices_thumbs > li:last-child{margin-left:0px;}
+ul.pagelayout_layoutbox_menu_columnchoices_thumbs img{display:block;border:1px solid transparent;}
+ul.pagelayout_layoutbox_menu_columnchoices_thumbs img:hover{display:block;border:1px solid #777;}
+.pagelayout_layoutbox_menu_columnchoices_cancel{margin-top:3px;color:#666;}
+.pagelayout_layoutbox_menu_columnchoices_cancel a{color:#4587C0;}
+.pagelayout_layoutbox_menu_columnchoices img{cursor:pointer;}
+/* page designer */
+div.pagelayout_layoutbox table{width:100%;}
+div.pagelayout_layoutbox_header{margin-bottom:5px;}
+div.pagelayout_layoutbox_header,
+div.pagelayout_layoutbox_footer{overflow:hidden;border:1px solid #bbb;margin-top:5px;}
+div.pagelayout_layoutbox_header > span,
+div.pagelayout_layoutbox_footer > span{display:inline-block;background-color:#fff;opacity:.8;padding:5px;font-size:.7em;margin:10px;+rounded(3px);color:#000;}
+div.pagelayout_layoutbox_header a,
+div.pagelayout_layoutbox_footer a{outline:none;}
+/* top/bottom area styles */
+.pagelayout_content_container_top .pagelayout_content_container_middle,
+.pagelayout_content_container_bottom .pagelayout_content_container_middle,
+.pagelayout_content_container_top .pagelayout_content_container_middle ul,
+.pagelayout_content_container_bottom .pagelayout_content_container_middle ul{min-height:60px;}
+.pagelayout_content_container_top .pagelayout_content_container_middle ul,
+.pagelayout_content_container_bottom .pagelayout_content_container_middle ul{padding-bottom:10px;}
+.pagelayout_content_container_top .pagelayout_content_container_middle{border-bottom:5px solid #EEEEEE;}
+.pagelayout_content_container_bottom .pagelayout_content_container_middle{border-top:5px solid #EEEEEE;}
+/* main area styles */
+.pagelayout_content_container_left{width:150px;border-right:5px solid #eee;}
+html[dir="rtl"] .pagelayout_content_container_left{border-right:none;border-left:5px solid #eee;}
+.pagelayout_content_container_middle{}
+.pagelayout_content_container_right{width:150px;border-left:5px solid #eee;}
+html[dir="rtl"] .pagelayout_content_container_right{border-left:none;border-right:5px solid #eee;}
+td.pagelayout_content_column,
+td.pagelayout_content_column_headerfooter{min-height:300px;background:#fff;vertical-align:top;}
+td.pagelayout_content_column ul{min-height:300px;}
+table.pagelayout_content_block_headerfooter{margin-top:5px;}
+td.pagelayout_content_column_headerfooter ul{min-height:70px;}
+/* all blocks, placed or not yet placed */
+ul.pagelayout_content_sortable li.pagelayout_content_draggable,
+ul.pagelayout_content_sortable li.special{+rounded(2px);-moz-box-shadow:2px 2px 2px #eee;position:relative;border:1px solid #c3dca0;background-repeat:repeat-y;font-size:7pt;margin:5px 0px 5px 0px;cursor:move;line-height:12px;padding:4px 4px 4px 10px;color:#666;}
+html[dir="rtl"] ul.pagelayout_content_sortable li.pagelayout_content_draggable,
+html[dir="rtl"] ul.pagelayout_content_sortable li.special{padding:4px 10px 4px 4px;}
+/* blocks that have been placed on the page */
+div.pagelayout_layoutbox .pagelayout_content_column li,
+div.pagelayout_layoutbox .pagelayout_content_column_headerfooter li{margin:5px;}
+/* Turn the li into a target drop marker */
+#pagelayout_cms_wrapper li.pagelayout_content_dragging{height:5px;overflow:hidden;background-color:#ccc;background-image:none;border:none;padding:0;margin:0px 5px 0px 5px;line-height:0px;font-size:0px;}
+/* Disable user select */
+#pagelayout_cms_wrapper .pagelayout_content_sortable li{-moz-user-select:none;-webkit-user-select:none;}
+ul.boxy li:hover{cursor:cross;}
+div.pagelayout_layoutbox_pool_wrapper{overflow:hidden;padding-left:20px;}
+html[dir="rtl"] div.pagelayout_layoutbox_pool_wrapper{padding-left:0px;padding-right:20px;}
+div.pagelayout_layoutbox_pool_wrapper h3{font-size:1em;margin-top:5px;margin-bottom:8px;letter-spacing:0;padding:0px;background:none;}
+div.pagelayout_layoutbox_pool{background:#f2f2f2;overflow-y:auto;max-height:440px;border:1px solid #aaa;}
+div.pagelayout_layoutbox_pool_category_wrapper{background-color:#959595;overflow:hidden;}
+div.pagelayout_layoutbox_pool_category{overflow:hidden;border-top:1px solid #bbb;}
+div.pagelayout_layoutbox_pool_category_label{overflow:hidden;color:#fff;font-weight:bold;font-size:.8em;padding:6px 7px 6px 7px;}
+div.pagelayout_layoutbox_pool_category_hide{float:right;overflow:hidden;background-repeat:no-repeat;background-position:center right;width:16px;height:16px;font-size:1px;padding:4px;margin-right:5px;margin-top:1px;cursor:pointer;}
+div.pagelayout_layoutbox_pool_category_show{float:right;overflow:hidden;background-repeat:no-repeat;background-position:center right;width:16px;height:16px;font-size:1px;padding:4px;margin-right:5px;margin-top:1px;cursor:pointer;display:none;}
+html[dir="rtl"] div.pagelayout_layoutbox_pool_category_hide{float:left;background-position:center left;margin-right:0px;margin-left:5px;}
+div.pagelayout_layoutbox_pool > ul ul{padding:2px 7px 2px 7px;}
+div.pagelayout_layoutbox_sortable span{display:none;}
+div.pagelayout_layoutbox_feature{border:1px solid #ccc;padding:5px 3px 5px 6px;font-weight:bold;font-size:8pt;margin-bottom:5px;}
+html[dir="rtl"] div.pagelayout_layoutbox_feature{padding:5px 6px 5px 3px;}
+div.pagelayout_layoutbox_feature:hover{cursor:pointer;}
+div.pagelayout_layoutbox_thumbs{width:200px;}
+div.pagelayout_layoutbox_thumbs img{float:left;margin:0px 8px 8px 0px;}
+html[dir="rtl"] div.pagelayout_layoutbox_thumbs img{float:right;margin:0px 0px 8px 8px;}
+div.pagelayout_layoutbox_thumbs img:hover{cursor:pointer;}
+div.pagelayout_layoutbox_thumbs2 img:hover{cursor:pointer;}
+div.pagelayout_layoutbox_center_placeholder{overflow:hidden;height:100px;border:1px solid #bbb;margin-top:5px;}
+div.pagelayout_layoutbox_center_placeholder > span{display:inline-block;background-color:#fff;opacity:.8;padding:5px;font-size:.7em;margin:10px;+rounded(3px);color:#000;}
+div.pagelayout_layoutbox li.pagelayout_layoutbox_widget_tabbed_wrapper{+rounded(2px);-moz-box-shadow:2px 2px 2px #eee;margin:5px;background-color:#fcefcc;border:1px solid #dccca0;}
+li.pagelayout_layoutbox_widget_tabbed_wrapper .pagelayout_layoutbox_widget_tabbed_top{display:block;font-size:7pt;padding:5px 5px 2px 0px;}
+html[dir="rtl"] li.pagelayout_layoutbox_widget_tabbed_wrapper .pagelayout_layoutbox_widget_tabbed_top{padding:5px 0px 2px 5px;}
+li.pagelayout_layoutbox_widget_tabbed_wrapper ul.pagelayout_layoutbox_widget_tabbed_contents{min-height:20px;margin:2px;background:#fff;border:1px solid #dccca0;padding:18px 7px 10px 7px;cursor:default;}
+li.pagelayout_layoutbox_widget_tabbed_wrapper .pagelayout_layoutbox_widget_tabbed{overflow:hidden;}
+li.pagelayout_layoutbox_widget_tabbed_wrapper span.pagelayout_layoutbox_widget_tabbed_overtext{position:absolute;padding-top:10px;padding-left:10px;font-size:1em;color:#aaa;}
+html[dir="rtl"] li.pagelayout_layoutbox_widget_tabbed_wrapper span.pagelayout_layoutbox_widget_tabbed_overtext{padding-left:0px;padding-right:10px;}
+.pagelayout_layoutbox_note{display:block;font-size:.7em;margin:7px;}
+li.pagelayout_content_cell > span.open{color:#ccc;}
+li.pagelayout_content_cell > span.remove{float:right;display:block;}
+html[dir="rtl"] li.pagelayout_content_cell > span.remove{float:left;}
+li.pagelayout_content_cell > span.remove a{padding:0px 5px;}
+ul#column_stock li > ul > li > span.remove,
+ul#column_stock li > ul > li > span.open{display:none;visibility:hidden;}
+/* TOOLTIPS */
+.tip-wrap{+rounded;}
+.tip-top{color:#fff;width:139px;z-index:13000;}
+.tip-title{font-weight:bold;font-size:11px;margin:0px;padding:10px 13px 5px 13px;background:#faf3c6;border-bottom:1px solid #fff;color:#666;}
+.tip-text{font-size:11px;padding:5px 13px 10px 13px;background:#faf3c6;max-width:170px;color:#666;}
+.tip-text a{color:#069;}
+.tip-loading{width:30px;height:30px;margin:0px auto;color:#666;}
+#pagelayout_cms_wrapper .pagelayout_content_modifications_active > a {
+    font-style: italic;
+}
+.sitepagelayoutnote{
+	font-size: 0.8em;margin-top: 5px;
+}
+
+/* ================================= Responsive work =============================== */
+@media only screen and (max-width:920px){
+   /* Dashboard edit layout page */
+#global_page_sitepage-layout-layout #global_content{box-sizing: border-box;padding: 8px;}
+/* Layout left block */
+div.pagelayout_layoutbox_wrapper {width: 70%;}	
+div.pagelayout_layoutbox {box-sizing: border-box;width: 100%;overflow-x:auto;}
+	
+}
+
+@media only screen and (max-width:600px){
+/*Layout left block */
+div.pagelayout_layoutbox_wrapper {width: 50%;}	
+	
+}
+
+

@@ -1,0 +1,31 @@
+.activity_icon_sitepagevideo_new::before, .icon_type_sitepagevideo::before {
+	content: "\\f03d";
+}
+/*view page*/
+div.sitepagevideo_view{
+	text-align:center;
+}
+.sitepagevideo_view h3{
+	 text-align:center;
+}
+.sitepagevideo_date{
+	text-align:center;
+	color:$theme_font_color_light;
+}
+.sitepagevideo_view .video_desc{
+	text-align:center;
+}
+.sitepage_video_options{
+	display:none;
+}
+div.sitepagevideo_view .rating {
+	display: inline-block;
+	margin-top: 7px;
+}
+#global_page_sitepagevideo-index-view .comments {
+    width: auto;
+}
+/*page profile tab*/
+.sitepagevideo_profile_options{
+	display:none;
+}

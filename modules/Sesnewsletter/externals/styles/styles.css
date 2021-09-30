@@ -1,0 +1,31 @@
+/* Newsletter Widget */
+.sesnewsletter_newsletter_wrapper_inner {
+	clear: both;
+	float: left;
+}
+.sesnewsletter_newsletter_wrapper_inner .input-box input,.sesnewsletter_newsletter_wrapper_inner .input-box button{
+	height: 35px;
+	padding: 5px 10px;
+}
+.sesnewsletter_newsletter_wrapper_inner .input-box input{
+	min-width:180px;
+}
+/* Newsletter Verification/Unsubscribe Message Page */
+.sesnewsletter_verify_page {
+	position: relative;
+	padding:20px;
+	text-align:center;
+	border-radius: 4px;
+  font-weight: bold;
+	background:url(../images/transprant-bg.png);
+}
+.sesnewsletter_verify_page a {
+	padding: 10px 15px;
+	margin-top: 10px;
+	font-weight:bold;
+	display: inline-block;
+	transition:all .5s ease;
+}
+.sesnewsletter_verify_page a:hover{
+	transition:all .5s ease;
+}

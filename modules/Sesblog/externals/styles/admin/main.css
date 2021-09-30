@@ -1,0 +1,158 @@
+/* $Id:main.css 2016-07-23 00:00:00 socialnetworking.solutions $*/
+
+/*Review Add Parameter Popup*/
+.sesblog_review_parameter_popup{
+  width:450px;
+}
+.sesblog_review_parameter_popup .settings .form-wrapper{
+  padding: 0;
+}
+.sesblog_review_parameter_popup .form-label{
+  display:none;
+}
+.sesblog_review_parameter_popup .reviewparameter{
+  margin:0 10px 10px 0;
+}
+.sesblog_review_parameter_popup .sesmember_added_parameter{
+  margin-right: 10px;
+}
+.sesblog_review_parameter_popup .fa:before{
+  margin-right:5px;
+}
+.sesblog_review_parameter_popup a.fa:hover{
+  text-decoration:none;
+}
+.sesblog_view_stats_popup {
+	padding: 20px;
+	width:600px;
+}
+.sesblog_view_popup_con .sesblog_popup_img_blog{
+	overflow: hidden;
+	display: block;
+	margin-bottom:10px;
+	border-bottom-width: 1px;
+	padding-bottom: 10px;
+}
+.sesblog_view_popup_con .sesblog_popup_img_blog p.popup_img img{
+	margin-right: 15px;
+	float: left;
+	width: 130px;
+}
+.sesblog_view_popup_con .sesblog_popup_img_blog p.popup_title{
+	font-size: 15px;
+	font-weight: bold;
+	margin-bottom:8px;
+}
+.sesblog_view_popup_con .sesblog_popup_img_blog p.owner_title{
+		margin-bottom:8px;
+}
+.sesblog_view_popup_con .sesblog_popup_img_blog p.owner_title b{
+	font-weight:bold;
+	min-width:100px;
+	display:inline-block;
+}
+.sesblog_view_popup_con .sesblog_popup_owner_blog p.owner_title{
+	margin-bottom:8px;
+}
+.sesblog_view_popup_con .sesblog_popup_owner_blog p.owner_title b{
+	font-weight:bold;
+}
+.sesblog_view_popup_con .sesblog_popup_owner_blog p.owner_des{
+	text-align:justify;
+}
+/*Clain Request Status Form*/
+.sesblog_claim_approve_form{
+	padding:15px;
+}
+.sesblog_claim_approve_form  #admin_comment-wrapper #admin_comment-label{
+	margin-bottom:5px;
+}
+.sesblog_claim_approve_form  #approve-wrapper #approve-label{
+	display:none;
+}
+.sesblog_claim_approve_form  #approve-wrapper #approve-element{
+	margin-top:5px;
+}
+/*Import Music*/
+button.sesblog_import_button{
+  background-color: #83b64e;
+  background-image: url(~/application/modules/Sesblog/externals/images/admin/import.png);
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  border: medium none;
+  border-radius: 0;
+  font-size: 17px;
+  font-weight: normal;
+  padding: 10px 10px 10px 35px;
+  text-shadow: inherit;
+}
+button.sesblog_import_button:hover{
+  background-color: #78a946;
+}
+.sesblog_import_msg span{
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 17px;
+  padding: 10px 10px 10px 35px;
+}
+.sesblog_import_loading span{
+  background-color: #6fbbde;
+  background-image: url(~/application/modules/Sesblog/externals/images/admin/loading.GIF);
+}
+.sesblog_import_success span{
+  background-color: #83b64e;
+  background-image: url(~/application/modules/Sesblog/externals/images/admin/success.png);
+}
+.sesblog_import_error span{
+  background-color: #c12e2a;
+  background-image: url(~/application/modules/Sesblog/externals/images/admin/error.png);
+}
+
+/*Import Blogs*/
+.sesblog_import_buttons{
+  text-align:center;
+}
+.sesblog_import_buttons a{
+  border:2px solid #0DC7F1;
+  padding:10px;
+  display:inline-block;
+  width:230px;
+  text-decoration:none !important;
+  font-size:15px;
+  line-height:16px;
+  margin:0 3px;
+}
+.sesblog_import_buttons a:before{
+  display:inline-block;
+  height:16px;
+  width:16px;
+  content:"";
+  margin-right:5px;
+  vertical-align:middle;
+}
+.sesblog_import_buttons a:hover{
+  opacity:.8;
+}
+.sesblog_download:before{background-image:url(~/application/modules/Sesblog/externals/images/download.png);}
+.sesblog_import:before{background-image:url(~/application/modules/Sesblogs/externals/images/import.png);}
+.sesblog_admin_manage_table tbody tr{
+  cursor:move;
+}
+#global_page_core-admin-content-widget ul > li{
+	display:block !important;
+}
+div.event_calendar_container button.event_calendar {
+  margin-top: 0;
+}
+#global_page_sesblog-admin-review-oftheday #remove-wrapper {
+  display: none;
+}
+#global_page_sesblogpackage-admin-package-manage-transaction .admin_table tbody tr td {
+  white-space: nowrap;
+}
+td.text-center {
+  text-align:center;
+}

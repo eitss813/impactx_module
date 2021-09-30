@@ -1,0 +1,47 @@
+/*ADMIN FAQ PAGES START HERE*/
+.siteuseravatar_faq_tabs ul li a {
+	font-size:11px !important;
+}
+.admin_siteuseravatar_files_wrapper {
+ +rounded;
+	background: #e9f4fa;
+	padding: 10px;
+}
+.admin_siteuseravatar_files {
+ +rounded;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow-y: auto;
+	list-style:decimal !important;
+	padding-left:10px;
+}
+.admin_siteuseravatar_files > li {
+	margin-left: 20px;
+	padding: 7px 12px 7px 1px;
+}
+.admin_siteuseravatar_files > li + li {
+	border-top: 1px solid #eee;
+}
+.siteuseravatar_faq li > div {
+	clear:both;
+	border-left:3px solid #ccc;
+	padding:5px 5px 5px 10px;
+	margin:5px;
+	font-family:arial;
+	line-height:18px;
+}
+.siteuseravatar_faq li > div b {
+	font-weight:bold;
+}
+.siteuseravatar_faq li div ul li ul {
+	list-style: circle;
+	padding-left: 10px;
+	margin-left:5px;
+}
+.siteuseravatar_faq li div ul {
+	list-style: disc;
+	padding-left: 10px;
+}
+
+/*ADMIN FAQ PAGES END HERE*/

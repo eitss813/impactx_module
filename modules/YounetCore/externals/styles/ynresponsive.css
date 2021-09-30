@@ -1,0 +1,70 @@
+/*fontwaesome*/
+=fontawesome {
+	display: inline-block;
+	font-family:FontAwesome;
+	font-size:inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/*bdradius*/
+=bdradius($radius=12px){
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+/* Mixins */
+=blkcont{
+	padding:$theme_blkcont_padding;
+	background: $theme_container_background;
+	border-radius: 8px;
+	margin-bottom:15px;
+	border:1px solid $theme_blkcont_border_color;
+}
+=blkcont_clear{
+	padding: 0;
+	border:none 0;
+	margin-bottom: 0;
+	background-color: transparent;
+	border-radius:0;
+}
+=buttonlink{
+	background-color:$theme_link_color;
+	background-image:none;
+	color:#fff;
+	font-weight: bold;
+	text-align:center;
+	text-transform:uppercase;
+	padding:6px 8px;
+	display:inline-block;
+	+hovereffect;
+	&:hover{
+		background-color:$theme_link_color_hover;
+		color:#fff;
+	}
+}
+
+=yn-clearfix(){
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@constants
+{
+	/*
+	GENERAL MAIN COLORS OF YOUBOOTSTRAP THEME
+	*/
+	theme_main_color_scheme: #02baf2;
+	theme_main_color_scheme_hover: #009dcd;
+	theme_container_background: #fff;
+}
+
+@scan "application/modules" "externals/styles/ynresponsive1.css" "YounetCore";

@@ -1,0 +1,44 @@
+/* $Id:main.css 2015-12-31 00:00:00 SocialEngineSolutions $*/
+
+.sesmultipleform_icon_download{
+  background-image:url(~/application/modules/Sesmultipleform/externals/images/download.png);
+}
+/*Message Reply Form Popup*/
+.sesmultipleform_reply_form{
+  width:600px;
+}
+.sesmultipleform_reply_form div.form-label{
+	width:100px;
+}
+/*Message View Popup*/
+.sesmultipleform_message_view{
+  margin:15px 0 0 15px;
+	width:500px;
+}
+div.sesmultipleform_message_view > h3{
+	margin-bottom:5px;
+}
+.sesmultipleform_message_view > ul{
+	border-width:1px;
+	padding:10px;
+	margin-bottom:10px;
+}
+.sesmultipleform_message_view ul li{
+	clear:both;
+}
+.sesmultipleform_message_view ul li span span{
+	padding:5px;
+}
+.sesmultipleform_message_view ul li span span:first-child{
+	color:#999;
+	font-size:12px;
+  font-weight:bold;
+	float:left;
+	margin-right:5px;
+	width:120px;
+}
+.sesmultipleform_message_view ul li span span:last-child{
+	font-size:13px;
+	display:block;
+	overflow:hidden;
+}

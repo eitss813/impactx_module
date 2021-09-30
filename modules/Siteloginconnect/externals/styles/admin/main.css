@@ -1,0 +1,25 @@
+.form-wrapper-heading label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#global_page_siteloginconnect-admin-settings-map .form-wrapper-heading > .form-label{ overflow: visible; line-height: 0; } 
+#global_page_siteloginconnect-admin-settings-map .form-wrapper-heading > .form-label > label{ font-weight:bold!important; }
+#global_page_siteloginconnect-admin-settings-map .form-wrapper-heading { margin-top: 0; }
+#global_page_siteloginconnect-admin-settings-map .form-wrapper-heading ~ #Select_1-wrapper{ padding:0; }
+#global_page_siteloginconnect-admin-settings-map .form-wrapper > .form-label{ display: inline-block; width: 12%; padding-top: 7px; }
+#global_page_siteloginconnect-admin-settings-map .form-wrapper > select{ display: inline-block; width: 15%; }
+#dummy_option_type_5-wrapper > .form-label,#dummy_option_type_6-wrapper > .form-label, #dummy_option_type_7-wrapper > .form-label, #dummy_option_type_8-wrapper > .form-label, #dummy_option_type_9-wrapper > .form-label, #dummy_option_type_10-wrapper > .form-label, #dummy_option_type_11-wrapper > .form-label, #dummy_option_type_12-wrapper > .form-label,
+#dummy_option_type_13-wrapper > .form-label, #dummy_option_type_14-wrapper > .form-label, #dummy_option_type_15-wrapper > .form-label, #dummy_option_type_16-wrapper > .form-label, #dummy_option_type_17-wrapper > .form-label
+{ width: 90%!important;  margin-left: 30px;}
+#dummy_profile_type_1_14-wrapper > .form-label, #submitsave-wrapper ~ .form-label { width:auto!important; }
+.accordion:after{margin-right:40px; margin-top: -13px; font-size: 22px;}
+.accordion{ border-bottom: 1px solid #ddd!important }
+#field_1_15-wrapper, #field_1_16-wrapper, #field_1_17-wrapper, #field_1_18-wrapper, #field_1_19-wrapper,#field_1_20-wrapper, #field_1_21-wrapper, #field_1_22-wrapper, #field_1_23-wrapper, #field_1_24-wrapper,
+#field_1_25-wrapper, #field_1_26-wrapper, #field_1_27-wrapper, #field_1_28-wrapper, #field_1_29-wrapper{ margin-left: 30px; }
+
+#global_page_siteloginconnect-admin-settings-map #Select_4-wrapper{ padding:0!important; }
+#global_page_siteloginconnect-admin-settings-index .form-elements > .form-wrapper > .form-element > p.description{ max-width: 600px!important; }
+#global_page_siteloginconnect-admin-settings-map .form-elements > .form-wrapper > .form-element > p.description{ max-width: 600px!important; }
+#global_page_siteloginconnect-admin-settings-map #submitsave-label{ display: none;}
+#social_site-wrapper > #social_site-label{padding-top:2px!important;}

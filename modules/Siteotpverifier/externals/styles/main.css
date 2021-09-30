@@ -1,0 +1,642 @@
+/* Common and general CSS for OTP pages */
+#global_content_simple {
+  width: 100%;
+}
+.clr, .clear             {clear:both !important;}
+.dnone                   {display:none !important;}
+.dblock                  {display:block !important;}
+
+.global_form input[type=text]::placeholder,
+.global_form input[type=email]::placeholder,
+.global_form input[type=password]::placeholder {
+  color: $theme_font_color_light;
+}
+.otp_email_link {
+  margin-top: 10px;
+}
+.otpverifier_email_icon::before {
+  content: "\\f0e0";
+  font-family: 'Font Awesome 5 Free','fontawesome';
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 6px;
+}
+[dir="rtl"] .otpverifier_email_icon::before {
+  margin-left: 6px;
+  margin-right: 0;
+}
+.otpverifier_email_icon:hover::before {
+  text-decoration: none;
+}
+#linkfor_testmode_mobile-label {
+  display:none;
+}
+/*.layout_page_siteotpverifier_auth_verification .layout_top + .layout_main,
+#siteotpverifier_signupform_verify .layout_top + .layout_main,
+#siteotpverifier_form_verify .layout_top + .layout_main,
+#siteotpverifier_login_form_verify {
+  +foreground;
+  padding: 15px;
+  overflow: hidden;
+}*/
+
+/* OTP page for Sign up and Sign in process */
+#siteotpverifier_signupform_verify,
+#siteotpverifier_form_verify {
+  margin-top: 0;
+}
+#siteotpverifier_signupform_verify .form-description,
+#siteotpverifier_form_verify .form-description {
+  line-height: 24px;
+}
+#siteotpverifier_signupform_verify .form-description b,
+#siteotpverifier_form_verify .form-description b {
+  font-weight: bold !important;
+}
+#login_via_siteotp_otp_mobile {
+	display: inline-block;
+}
+/*#login_via_siteotp_otp_mobile,
+#login_via_siteotp_otp_email {
+ width: 30px;
+  height: 30px;
+ text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+}*/
+/*#login_via_siteotp_otp_mobile::before,
+#login_via_siteotp_otp_email::before {
+  font-family: 'Font Awesome 5 Free','fontawesome';
+  font-size: 20px !important;
+  font-weight: normal;
+  line-height: 30px;
+}*/
+/*#login_via_siteotp_otp_email {
+  margin-left: 2px;
+  border: 1px solid #dd5347;
+}
+[dir="rtl"] #login_via_siteotp_otp_email {
+  margin-right: 2px;
+  margin-left: 0;
+}
+#login_via_siteotp_otp_email::before {
+  content: "\\f003";
+  color: #dd5347;
+}*/
+/*#login_via_siteotp_otp_mobile {
+  border: 1px solid #2196F3;
+}
+#login_via_siteotp_otp_mobile::before {
+  content: "\\f10b";
+  color: #2196F3;
+}*/
+#phoneno-element #country_code {
+  margin-right: 5px;
+  width: 75px !important;
+	max-width: 75px !important;
+}
+[dir="rtl"] #phoneno-element #country_code {
+  margin-right: 0;
+  margin-left: 5px;
+  padding: 6px 1px 6px 0;
+}
+
+/* Sign in widget with OTP popup */
+.layout_siteotpverifier_social_login_signup #sendotp {
+  margin-top: 15px;
+}
+#smoothbox_window #global_page_siteotpverifier-verifier-loginwithotp {
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: auto!important;
+  min-height: auto!important;
+}
+#smoothbox_window #global_page_siteotpverifier-verifier-loginwithotp .form-elements {
+  margin-top: 0;
+}
+#smoothbox_window #global_page_siteotpverifier-verifier-loginwithotp #buttons-element {
+  margin-bottom: 0;
+}
+#smoothbox_window #siteotpverifier_form_verify {
+  padding: 10px;
+}
+#smoothbox_window #siteotpverifier_form_verify #code {
+  padding: 5px;
+}
+#smoothbox_window #siteotpverifier_form_verify #code-wrapper {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#smoothbox_window #siteotpverifier_form_verify #code-label {
+  width: auto;
+}
+#smoothbox_window #siteotpverifier_form_verify #code-element {
+  width: 250px;
+}
+#smoothbox_window #siteotpverifier_form_verify .form-errors {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* Sign in widget page */
+.otp_form_submission {
+  margin-top: 5px;
+}
+.siteotp_login_global_form p.form-description,
+.otp_form_submission p.form-description {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  line-height: 24px;
+}
+.login_via_siteotp_active b {
+  font-weight: bold !important;
+}
+/*.siteotp_login_global_form #password-wrapper {
+  float: left;
+}
+[dir="rtl"] .siteotp_login_global_form #password-wrapper {
+  float: right;
+}*/
+/*.global_form.siteotp_login_global_form div.login_via_siteotp_otp_or-wrapper,
+.global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper {
+  float: left;
+}*/
+/*[dir="rtl"] .global_form.siteotp_login_global_form div.login_via_siteotp_otp_or-wrapper,
+[dir="rtl"] .global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper {
+  float: right;
+}*/
+.login_via_siteotp_wappper,
+.login_via_siteotp_active form {
+  display: none;
+}
+.login_via_siteotp_wappper i {
+  margin-right: 4px;
+}
+[dir="rtl"] .login_via_siteotp_wappper i {
+  margin-left: 4px;
+  margin-right: 0;
+}
+.login_via_siteotp_otp_or-wrapper {
+	display: none;
+}
+.login_via_siteotp_active form#siteotpverifier_login_form_verify,
+.login_via_siteotp_active .login_via_siteotp_wappper {
+  display: block;
+}
+.siteotp_login_global_form  #password-wrapper,
+[dir="rtl"] .siteotp_login_global_form #password-wrapper {
+  float: none;
+}
+.otp_signin_options {
+  margin-left: 5px;
+  margin-bottom: 10px;
+	text-align: right;
+}
+[dir="rtl"] .otp_signin_options {
+  margin-right: 5px;
+  margin-left: 0;
+}
+.otp_signin_options > span {
+  margin-right: 3px;
+  display: inline-block;
+  color: $theme_font_color_light;
+}
+[dir="rtl"] .otp_signin_options > span {
+  margin-right: 0;
+  margin-left: 3px;
+}
+.otp_signin_options a:link {
+  outline: none;
+  color: $theme_link_color;
+}
+.otp_signin_options a:hover {
+  text-decoration: underline;
+}
+.siteotp_login_global_form .form-elements {
+  margin-top: 20px;
+  padding: .7em;
+}
+.sent_loading_button {
+  vertical-align: middle;
+}
+#sent_loading_button {
+  display: inline-block;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+[dir="rtl"] #sent_loading_button {
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+/* Phone no. setting page */
+.otp_phone_block_content {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.otp_phone_block_content .fa-shield {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 20px;
+}
+[dir="rtl"] .otp_phone_block_content .fa-shield {
+  margin-left: 20px;
+  margin-right: 0;
+}
+.otp_lock_content {
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+}
+.otp_lock_content h2 {
+  font-size: 1.1em;
+  letter-spacing: normal;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.otp_lock_content h2 + p {
+  margin-top: 4px;
+}
+.otp_lock_content .otp_enabled,
+.otp_lock_content .otp_disabled {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+[dir="rtl"] .otp_lock_content .otp_enabled,
+[dir="rtl"] .otp_lock_content .otp_disabled {
+  margin-right: 15px;
+  margin-left: 0;
+}
+.otp_enabled a,
+.otp_disabled a {
+  display: block;
+}
+.otp_enabled i {
+  color: #50D667;
+}
+.otp_action_links {
+  border-bottom: 1px solid $theme_border_color;
+  max-width: 600px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+.otp_action_links span {
+  color: $theme_form_label_font_color;
+  font-size: 13px;
+}
+.otp_action_links_item  a {
+  padding-left: 21px;
+  display: inline-block;
+}
+[dir="rtl"] .otp_action_links_item  a {
+  padding-right: 21px;
+  padding-left: 0;
+}
+.otp_action_links i {
+  margin-right: 4px;
+}
+[dir="rtl"] .otp_action_links i {
+  margin-left: 4px;
+  margin-right: 0;
+}
+
+/* Virtual OTP as mobile view coming in browser */
+.siteotp_sms_cards {
+  width: 233px;
+  display: block;
+  margin: 0 auto;
+  padding: 81px 20px 77px 20px;
+  background-image: url(~/application/modules/Siteotpverifier/externals/images/Iphone-White.png);
+  background-size: cover;
+  background-position: center center;
+}
+.siteotp_sms_cards h2 {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 0;
+  padding: 12px !important;
+  font-weight: normal;
+  font-size: 18px ;
+}
+.siteotp_sms_cards > div {
+  +foreground;
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.siteotp_sms {
+  padding: 10px;
+}
+.siteotp_sms .tip > span {
+  margin-bottom: 0;
+}
+.siteotp_sms > div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.siteotp_sms > div:last-child {
+  margin-bottom: 0;
+}
+.siteotp_phone {
+  float: left;
+}
+.siteotp_time {
+  float: right;
+  color: $theme_font_color_light;
+  font-style: italic;
+}
+.siteotp_phone,
+.siteotp_time {
+  font-size: 11px !important;
+}
+.siteotp_sms p {
+  margin-top: 5px;
+  float: left;
+  width: 100%;
+  font-size: 13px !important;
+}
+
+/* Phone no. edit popup */
+#smoothbox_window #global_page_siteotpverifier-auth-edit-number {
+  padding: 15px;
+}
+#smoothbox_window #siteotpverifier_form_addmobile {
+  margin-top: 0;
+}
+#smoothbox_window #siteotpverifier_form_addmobile .form-elements {
+  margin-top: 10px;
+  padding: 0;
+}
+#smoothbox_window #siteotpverifier_form_addmobile .form-label {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+[dir="rtl"] #siteotpverifier_form_addmobile .form-label {
+  text-align: right;
+}
+
+/* Phone no. OTP popup when adding no.*/
+#global_page_siteotpverifier-auth-code-verification {
+  padding: 15px;
+}
+
+/* Integration with Homepage background video */
+#sitehomepagevideo_showSignupForm #siteotp_choice_wapper span a {
+  color: #fff;
+  text-decoration: underline;
+}
+#sitehomepagevideo_showSignupForm #phoneno-element select {
+  padding: 5px !important;
+}
+#sitehomepagevideo_showSignupForm #phoneno-element #phoneno {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.sitehomepagevideo_left .siteotp_login_global_form p.form-description,
+.sitehomepagevideo_left .otp_form_submission p.form-description,
+.sitehomepagevideo_left .login_via_siteotp_wappper > a {
+  color: #ccc;
+  padding-left: 0;
+  padding-right: 0;
+}
+.sitehomepagevideo_left .otp_form_submission #code-element input {
+  padding-left: 6px !important;
+}
+.sitehomepagevideo_left #phoneno-wrapper #phoneno-element::before,
+#sitehomepagevideo_showSignupForm #siteotp_choice_wapper .form-element::before {
+  content: " " !important;
+}
+.sitehomepagevideo_left #login_via_siteotp_otp_mobile,
+.sitehomepagevideo_left #login_via_siteotp_otp_email,
+.sitehomepagevideo_left .otp_signin_options > span {
+  color: #ccc;
+}
+/*.sitehomepagevideo_left .siteotp_login_global_form #password-wrapper {
+  width: 72%;
+}*/
+.sitehomepagevideo_left div.login_via_siteotp_otp_or-wrapper,
+.sitehomepagevideo_left div#login_via_siteotp_otp-wrapper {
+  margin-bottom: 10px;
+  float: right;
+}
+.sitehomepagevideo_left .siteotp_login_errors.form-errors {
+  color: #ccc;
+}
+.sitehomepagevideo_left .siteotp_login_errors.form-errors {
+  display: inline-block;
+}
+.sitehomepagevideo_left #login_via_siteotp_otp_email,
+.sitehomepagevideo_left #login_via_siteotp_otp_mobile {
+  border-color: transparent;
+  background: rgba(0, 0, 0, .4);
+}
+.sitehomepagevideo_left #login_via_siteotp_otp_mobile::before,
+.sitehomepagevideo_left #login_via_siteotp_otp_email::before {
+  color: #fff;
+}
+
+/* Integration with Sitelogin */
+#global_page_siteotpverifier-auth-login .login_via_siteotp_wappper {
+  padding: 20px;
+}
+
+/* Integration Advanced menu */
+/*.sitemenu_lightbox .siteotp_login_global_form  #password-wrapper,
+[dir="rtl"] .sitemenu_lightbox .siteotp_login_global_form #password-wrapper {
+  float: none;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp-wrapper {
+  width: 100%;
+  text-align: center;
+}*/
+/*.sitemenu_lightbox .otp_signin_options {
+  margin: -35px 0 10px 0;
+  text-align: center;
+  position: relative;
+}*/
+/*.sitemenu_lightbox .otp_signin_options > span {
+  font-size: 16px;
+  position: absolute;
+
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  right: 0;
+  margin: auto;
+  display: inline-block;
+  color: $theme_font_color_light;
+}*/
+/*.sitemenu_lightbox .global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper {
+	float: none;
+}*/
+/*.sitemenu_lightbox .global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper .otp_signin_options {
+	text-align: right;
+	margin-bottom: 0;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp_mobile {
+	border: none;
+	width: auto;
+	height: auto;
+	border-radius: 0;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp_mobile:hover{
+	text-decoration: underline;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp_mobile::before {
+	content: "Login with OTP";
+	font-family: $theme_font_family;
+	color: $theme_font_color;
+	font-size: $theme_font_size !important;
+	font-weight: bold;
+	text-transform: capitalize;
+	line-height: normal;
+}*/
+.sitemenu_seaolightbox_signup #phoneno-element #country_code {
+	/*background-color: #eee;*/
+	margin-right: 0;
+	border-radius: 2px;
+	padding: 7px 8px;
+}
+.sitemenu_seaolightbox_signup #phoneno-element #phoneno {
+	padding-left: 5px;
+}
+/*.sitemenu_lightbox .otp_signin_options:before,
+.sitemenu_lightbox .otp_signin_options:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  width: 45%;
+  top: 50%;
+  border: none;
+  background-color: $theme_border_medium_color;
+}
+.sitemenu_lightbox .otp_signin_options:before {
+  left: 0;
+}
+.sitemenu_lightbox .otp_signin_options:after {
+  right: 0;
+  left: auto;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp_mobile,
+.sitemenu_lightbox #login_via_siteotp_otp_email {
+  margin-top: 100px;
+}*/
+/*.sitemenu_lightbox #login_via_siteotp_otp_email {
+  margin-left: 5px;
+}*/
+/*[dir="rtl"] .sitemenu_lightbox #login_via_siteotp_otp_email {
+  margin-left: 0;
+  margin-right: 5px;
+}*/
+.sitemenu_lightbox .siteotp_login_errors {
+  display: inline-block;
+	margin: 10px 0;
+}
+.sitemenu_lightbox .login_via_siteotp_active form#siteotpverifier_login_form_verify,
+.sitemenu_lightbox .login_via_siteotp_active .login_via_siteotp_wappper,
+.sitemenu_lightbox .siteotp_login_global_form p.form-description,
+.sitemenu_lightbox .otp_form_submission p.form-description,
+#TB_window.signup_login_popup_wrapper .siteotp_login_global_form .form-elements {
+  padding: 0;
+}
+.sitemenu_lightbox .otp_form_submission #buttons-wrapper,
+#TB_window.signup_login_popup_wrapper .otp_form_submission #buttons-wrapper {
+  padding-top: 0;
+  margin-top: 0;
+}
+.sitemenu_lightbox #code-wrapper {
+  margin-top: 10px;
+}
+.sitemenu_lightbox #code-label {
+  text-align: right;
+}
+[dir="rtl"] .sitemenu_lightbox #code-label {
+  text-align: left;
+}
+#TB_window.signup_login_popup_wrapper #login_via_siteotp_otp-label {
+  display: block !important;
+}
+.siteotp_login_errors {clear: both;}
+#Siteotpverifier_form_auth_forgot #email-label {
+	display: none;
+}
+#Siteotpverifier_form_auth_forgot p.description {
+	max-width: 100%;
+	margin-top: 0;
+}
+/***** Responsive CSS *****/
+@media only screen and (max-width: 767px) {
+	/* Forgot password and choose reset option page */
+	#Siteotpverifier_form_auth_forgot #buttons-label,
+	#Siteotpverifier_form_auth_forgot #email-label,
+	#Siteotpverifier_form_auth_choose #option-label,
+	#Siteotpverifier_form_auth_choose #buttons-label {display: none;}
+}
+@media only screen and (max-width: 600px) {
+	/* Signin and Sign up popups */
+	.sitemenu_lightbox #code-label {text-align: left;}
+	#code-wrapper + #buttons-wrapper #buttons-label {display: none;}
+	/* Signin and Sign up page */
+/*	.siteotp_login_global_form #password-wrapper {float: none;}*/
+	#global_page_siteotpverifier-auth-login .login_via_siteotp_wappper {padding: 0;}
+	.global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper {
+		margin-bottom: 15px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	/* 2 Step verification phone setting page */
+	.otp_action_links > span {display: block; margin-bottom: 5px;}
+	.otp_action_links_item a {padding-left: 0; padding-right: 21px;}
+	[dir="rtl"] .otp_action_links_item a {padding-left: 21px; padding-right: 0;}
+	.otp_phone_block_content .fa-shield {margin-right: 0; display: block; text-align: center; margin-bottom: 5px;}
+	.otp_lock_content .otp_enabled, .otp_lock_content .otp_disabled {float: right;}
+	[dir="rtl"] .otp_lock_content .otp_enabled, [dir="rtl"] .otp_lock_content .otp_disabled {float: left;}
+	.otp_lock_content {width: 100%;}
+}
+/*@media only screen and (min-width: 601px) {
+.siteotp_login_global_form  #password-wrapper,
+[dir="rtl"] .siteotp_login_global_form #password-wrapper {
+	width: 60%;
+	display: inline-block;
+	vertical-align: middle;
+}
+	.global_form.siteotp_login_global_form div#login_via_siteotp_otp-wrapper {
+	width: 38%;
+	display: inline-block;
+	vertical-align: middle;
+}
+}*/
+@media only screen and (min-width: 768px) {
+        #siteotpverifier_form_verify #code-element {
+          width: 350px;
+          margin-right: 10px;
+        }
+}
+
+a.siteotp_choice{color:$theme_signin_color!important;}
+#global_page_siteotpverifier-auth-code-verification #siteotpverifier_form_verify > div > div > .form-elements{ margin:0!important; padding: 0!important  }
+#siteotpverifier_form_verify > div > div > h3 + p{ padding: 0!important; }
+/*#TB_iframeContent{ height: 420px!important; }*/
+#linkfor_testmode_mobile-element{ margin-bottom: 0!important; }
+

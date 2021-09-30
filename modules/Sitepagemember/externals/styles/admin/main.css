@@ -1,0 +1,37 @@
+/*Icons*/
+.icon_sitepagemember_leave{
+	background-image: url(~/application/modules/Sitepagemember/externals/images/member/leave.png);
+}
+.importlisting_elements{
+	margin-bottom:20px;
+}
+.sitepagemember_category_popup form > div > div{
+	width:400px;
+}
+.sitepagemember_category_popup div.form-label{
+	width:150px;		
+}
+/*Mapping Table*/
+.sitepagemember_role_table tr{
+	width:890px;
+	float:left;
+}
+.sitepagemember_role_table tr th,
+.sitepagemember_role_table tr td{
+	width:870px;
+	float:left;
+}
+.sitepagemember_role_table .sitepagemember_role_table_name{
+	width:35%;
+}
+.sitepagemember_role_table .sitepagemember_role_table_name span{
+	float:left;
+	margin-right:5px;
+}
+.sitepagemember_role_table .sitepagemember_role_table_value{
+	width:40%;
+	min-height:10px;
+}
+.sitepagemember_role_table .sitepagemember_role_table_option{
+	width:15%;
+}

@@ -1,0 +1,1544 @@
+/* $Id: main.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */ 
+/* VIDEO IFRAMES */
+.vimeo_iframe_big {
+    width: 640px;
+    height: 360px;
+}
+.vimeo_iframe_small {
+    width: 400px;
+    height: 230px;
+}
+.youtube_iframe_big {
+    width: 560px;
+    height: 340px;
+}
+.youtube_iframe_small {
+    width: 425px;
+    height: 344px;
+}
+.dailymotion_iframe_big {
+    width: 560px;
+    height: 340px;
+} 
+.dailymotion_iframe_small {
+    width: 425px;
+    height: 344px;
+}
+.video_object {
+    display: none;
+}
+/*Notification Icons*/
+.notification_type_sitevideo_channel_subscribe::before, .notification_type_sitevideo_subscribed_channel_liked::before {
+    content:"\\f09e";
+}
+.notification_type_favourited::before {
+    content:"\\f004";
+    color:#e5322c;
+}
+.notification_type_sitevideo_rate::before {
+    content:"\\f005";
+    color:#f4d13c;
+}
+.notification_type_sitevideo_discussion_new::before {
+    content:"\\f0e5";
+}
+.notification_type_sitevideo_discussion_response::before, .notification_type_sitevideo_discussion_new::before {
+    content:"\\f0e6";
+}
+.notification_type_sitevideo_processed::before {
+    content:"\\f110";
+}
+.notification_type_sitevideo_video_new::before {
+    content: "\\f008";
+}
+/*Channelview Page append icons*/
+
+/*
+ACTIVITY FEED COMPOSER VIDEO
+Used for the attachment composer above the main feed.
+*/
+#compose-sitevideo-activator::before, #compose-sitevideo-menu span::before {
+    content: "\\f008";
+    color: #ff5722;
+    font-family: fontawesome;
+}
+#compose-video-activator::before, #compose-video-menu span::before {
+    content: "\\f008";
+    color: #ff5722;
+    font-family: fontawesome;
+}
+#compose-video-form-input {
+    width: 300px;
+    margin-top: 5px;
+}
+#compose-video-body #compose-video-form-type {
+   display: block;
+}
+#compose-video-form-submit {
+    margin-top: 5px;
+    clear: both;
+}
+.sitevideo_icon_link::before {
+    content:"\\f0c1";
+}
+.sitevideo_profile_edit::before {
+	content: "\\f044";
+}
+.sitevideo_profile_delete::before {
+	content: "\\f056";
+}
+.sitevideo_profile_share::before {
+	content: "\\f064";
+}
+.sitevideo_icon_message::before {
+    content:"\\f0e0";
+}
+.sitevideo_icon_badge_create::before {
+    content:"\\f0a3";
+}
+.sitevideo_icon_map_search::before {
+    content:"\\f002";
+}
+.sitevideo_profile_add::before {
+    content:"\\f093";
+}
+.sitevideo_profile_manage::before {
+    content:"\\f013";
+}
+.item_icon_video::before {
+    content: "\\f03d";
+}
+.item_icon_music::before {
+	content: "\\f001";
+}
+.sitevideo-channel-more {
+    border: 1px solid $theme_foreground_border_color;
+}
+.sitevideo-channel-more:hover {
+    background-color: $theme_foreground_background_color;
+}
+/*.sitevideo_popular_locations,*/ 
+.sitevideo_featured_channel_slider, .sitevideo_browse_side_category {
+    +foreground;
+}
+/*.sitevideo_popular_locations li + li, */
+.sitevideo_quick_specs ul li + li {
+    border-color: $theme_foreground_border_color !important;
+}
+ul.sitevideo_browse_side_category li .cat, ul.sitevideo_browse_side_category li .subcat a, ul.sitevideo_browse_side_category li {
+    border-color: $theme_foreground_border_color_light;
+}
+.sitevideo_side_widget, .sitevideo_sponsored_categories {
+    +foreground;
+    +rounded;
+}
+/*For search*/
+.sitevideo-search-box .form-elements {
+    background-color: $theme_body_background_color;
+    border: 1px solid $theme_border_medium_color;
+}
+.sitevideo_profile_loading_image {
+    background-image: url(~/application/modules/Seaocore/externals/images/loading.gif);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sitevideo-search-box #ajaxcategory_id-wrapper,
+.sitevideo-search-box #locationSearch-wrapper,
+.sitevideo-search-box #locationmilesSearch-wrapper {
+    border-left:1px solid $theme_border_medium_color;
+}
+html[dir="rtl"] .sitevideo-search-box #ajaxcategory_id-wrapper,
+html[dir="rtl"] .sitevideo-search-box #locationSearch-wrapper,
+html[dir="rtl"] .sitevideo-search-box #locationmilesSearch-wrapper {
+    border-left: 0;
+    border-right:1px solid $theme_border_medium_color;
+}
+/*Videos edit playlist popup outline*/
+#smoothbox_window #global_page_sitevideo-playlist-edit .global_form{
+     margin: 18px 18px 0 18px;
+}
+/*CSS for home page widgets start here*/
+.layout_sitevideo_user_ratings, .layout_sitevideo_make_featured_link, .layout_sitevideo_profile_options, .layout_sitevideo_top_content_of_channel, .layout_sitevideo_profile_breadcrumb, .layout_sitevideo_information_sitevideo, .layout_sitevideo_browse_channels_sitevideo, .layout_sitevideo_search_sitevideo, .layout_sitevideo_browse_channels_sitevideo, .layout_sitevideo_browse_breadcrumb_sitevideo, .layout_sitevideo_navigation, .layout_sitevideo_featured_videos_slideshow, .layout_sitevideo_featured_channels_slideshow, .layout_sitevideo_post_new_video, .layout_sitevideo_create_new_channel, .layout_sitevideo_video_categories_navigation, .layout_sitevideo_search_video_sitevideo, .layout_sitevideo_browse_videos_sitevideo, .layout_sitevideo_recently_view_random_sitevideo, .layout_sitevideo_searchbox_sitevideo, .layout_sitevideo_channels_slideshow, .layout_sitevideo_my_channels_sitevideo, .layout_sitevideo_playlist_search, .layout_sitevideo_browse_playlist, .layout_sitevideo_video_categories_withicon_grid_view, .layout_sitevideo_video_carousel, .layout_sitevideo_video_categorybanner_slideshow, .layout_sitevideo_channel_carousel, .layout_sitevideo_channel_categorybanner_slideshow, .layout_sitevideo_pinboard_browse_videos_sitevideo, .layout_sitevideo_pinboard_browse_channels_sitevideo, .layout_sitevideo_people_who_like, .layout_sitevideo_people_who_favourite, .layout_sitevideo_your_stuff, .layout_sitevideo_channel_photos, .layout_sitevideo_channel_view, .layout_sitevideo_information_sitevideo, .layout_sitevideo_share_via_badge, .layout_sitevideo_list_popular_videos, .layout_sitevideo_my_videos_sitevideo {
+    margin-bottom: 15px;
+}
+.layout_sitevideo_featured_videos_slideshow,
+.layout_sitevideo_featured_channels_slideshow,
+.layout_sitevideo_featured_videos_slideshow h3,
+.layout_sitevideo_featured_channels_slideshow h3 {
+    padding: 0 !important;
+}
+.sitevideo_featured_channel_slider {
+    padding: 10px 0;
+}
+ul.sitevideo_thumbs > li {
+    position: relative;
+    float: none;
+    display: inline-block;
+}
+ul.sitevideo_thumbs> li a {
+    padding: 0!important;
+}
+ul.sitevideo_thumbs .show_video_des, .featured_thumb_video .show_video_des {
+    opacity: 0;
+    color: #FFFFFF;
+    font-size:$theme_font_size;
+    transition: opacity 200ms linear 0s;
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    padding-top: 28px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: repeat;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* Standard syntax */
+}
+ul.sitevideo_thumbs .show_video_des div {
+    color: #fff;
+    padding: 2px 10px 10px;
+    overflow: hidden;
+}
+ul.sitevideo_thumbs .show_video_des .video_title, .featured_thumb_video .show_video_des .video_title {
+    font-size: 16px;
+    padding: 0 10px;
+}
+ul.sitevideo_thumbs .show_video_des .video_title a {
+    font-weight: bold;
+}
+ul.sitevideo_thumbs .show_video_des .video_owner, .featured_thumb_video .show_video_des .video_owner {
+    font-size: 12px;
+    width: 55%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+ul.sitevideo_thumbs .show_video_des .video_like, ul.sitevideo_thumbs .show_video_des .video_comment {
+    margin-left: 5px;
+}
+html[dir="rtl"] ul.sitevideo_thumbs .show_video_des .video_like, html[dir="rtl"] ul.sitevideo_thumbs .show_video_des .video_comment {
+    margin-left: 0;
+    margin-right: 5px;
+}
+ul.sitevideo_thumbs .show_video_des a, .featured_thumb_video .show_video_des a {
+    color: #fff;
+}
+ul.thumbs > li .show_video_des a, .featured_thumb_video .show_video_des a {
+    text-decoration: none !important;
+}
+.featured_thumb_video .show_video_des a:hover {
+    text-decoration: underline !important;
+}
+/*.Sitevideo_SlideItMoo_VideoList div.featured_thumb_video .show_video_des a, */
+ul.thumbs> li .show_video_des a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+/*.Sitevideo_SlideItMoo_VideoList div.featured_thumb_video:hover .show_video_des, */
+ul.sitevideo_thumbs > li:hover .show_video_des {
+    opacity: 1;
+}
+.layout_sitevideo_channel_of_the_day .thumbs_nocaptions img, .layout_sitevideo_video_of_the_day .thumbs_nocaptions img {
+    max-width: 99%;
+    margin: 0 auto;
+}
+.layout_sitevideo_channel_of_the_day .thumbs_nocaptions a, .layout_sitevideo_video_of_the_day .thumbs_nocaptions a {
+    margin: 0px;
+    padding: 0px;
+}
+.thumbs_nocaptions img {
+    display: inline !important;
+}
+.layout_sitemember_recently_popular_random_sitemember {
+    clear: both;
+}
+/*Categories Banner images*/
+.sitevideo_browse_banner img {
+    width: 100%;
+}
+/*Edit Location Popup & compose message popup*/
+/*#global_page_sitevideo-index-edit-location .global_form div.form-label, #messages_compose div.form-label {
+    width: 70px;
+}*/
+#messages_compose .compose-content {
+    width: 290px;
+}
+.layout_sitevideo_listtypes_categories .seaocore_navigation_h .seaocore_menu_h > li {
+    border-right:1px solid $theme_border_dark_color;
+}
+html[dir="rtl"] .layout_sitevideo_listtypes_categories .seaocore_navigation_h .seaocore_menu_h > li {
+    border-right:0px solid $theme_border_dark_color;
+    border-left:1px solid $theme_border_dark_color;
+}
+/*top-content-of-channel widget*/
+/*Left Block: checkinshowlocation*/
+.sitevideo_topcontent_optblock_left .seaocheckinshowlocation > span {
+    margin-top: 0;
+    padding: 5px 10px;
+    margin-left: 3px;
+}
+html[dir="rtl"] .sitevideo_topcontent_optblock_left .seaocheckinshowlocation > span {
+    margin-left: 0;
+    margin-right: 3px;
+}
+.sitevideo_topcontent_optblock_left .seaocheckinshowlocation > span a {
+    line-height: normal;
+    padding-left: 10px;
+    background: none;
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+    height: 14px !important;
+}
+html[dir="rtl"] .sitevideo_topcontent_optblock_left .seaocheckinshowlocation > span a {
+    padding-left: 0;
+    padding-right: 10px;
+}
+.sitevideo_topcontent_optblock_left .seaocheckinshowlocation > span a:hover {
+    text-decoration: none !important;
+}
+.sitevideo_topcontent_optblock_left #sitetagcheckin_edit_location_link a:hover {
+    background-position: center -20px !important;
+}
+.sitevideo_topcontent_optblock_left #filter_form_sitetagcheckin_location span {
+    border: 0px;
+}
+.sitevideo_topcontent_optblock_left #filter_form_sitetagcheckin_location span a {
+    padding: 0;
+}
+/*Like button*/
+.layout_sitevideo_top_content_of_channel .sitevideo_like_button {
+    float: left;
+}
+html[dir="rtl"] .layout_sitevideo_top_content_of_channel .sitevideo_like_button {
+    float: right;
+}
+.layout_sitevideo_top_content_of_channel .sitevideo_like_button a {
+    padding: 5px 10px;
+    margin-top: -1px;
+}
+/*Right Block*/
+.sitevideo_topcontent_optblock {
+    float: right;
+}
+html[dir="rtl"] .sitevideo_topcontent_optblock {
+    float: left;
+}
+.sitevideo_topcontent_optblock span, .sitevideo_topcontent_optblock_left span, .sitevideo_viewmedia_leftblock span, .sitevideo_viewmedia_rightblock span {
+    background-image: url(~/application/modules/Seaocore/externals/images/like/like_button_bg.png) !important;
+    background-color: #fff;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    outline: medium none;
+}
+.sitevideo_topcontent_optblock span a:hover, .sitevideo_topcontent_optblock_left #display_current_location:hover, .sitevideo_topcontent_optblock_left #sitetagcheckin_add_location_link:hover, .sitevideo_viewmedia_leftblock span a:hover, .sitevideo_viewmedia_rightblock span a:hover {
+    background-image: url(~/application/modules/Seaocore/externals/images/like/like_button_hover_bg.png) !important;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+}
+.sitevideo_topcontent_optblock a, .sitevideo_topcontent_optblock_left a, .sitevideo_viewmedia_leftblock a, .sitevideo_viewmedia_rightblock a {
+    color: #333333 !important;
+}
+.sitevideo_topcontent_optblock a:hover, .sitevideo_viewmedia_leftblock a:hover, .sitevideo_viewmedia_rightblock a:hover {
+    text-decoration: none;
+}
+.sitevideo_topcontent_optblock a {
+    vertical-align: middle;
+    padding: 5px 10px;
+    display: table-cell;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.sitevideo_topcontent_optblock a + a, .sitevideo_viewmedia_leftblock a + a, .sitevideo_viewmedia_rightblock a + a {
+    border-left:1px solid $theme_border_dark_color;
+}
+html[dir="rtl"] .sitevideo_topcontent_optblock a + a, html[dir="rtl"] .sitevideo_viewmedia_leftblock a + a, html[dir="rtl"] .sitevideo_viewmedia_rightblock a + a {
+    border-left:0px solid $theme_border_dark_color;
+    border-right:1px solid $theme_border_dark_color;
+}
+.sitevideo_topcontent_optblock ul {
+    position: absolute;
+    padding: 5px;
+    border:1px solid $theme_border_dark_color;
+    border-radius: 3px;
+    background-color: #fff;
+    z-index: 1;
+}
+.sitevideo_topcontent_optblock ul li {
+    padding: 0 3px;
+}
+.sitevideo_topcontent_optblock ul li:hover {
+    background-color: #eee;
+}
+.sitevideo_topcontent_optblock ul li a {
+    display: inline-block;
+    font-weight: normal;
+    background-position: left center;
+}
+html[dir="rtl"] .sitevideo_topcontent_optblock ul li a {
+    background-position: right center;
+}
+.sitevideo_topcontent_optblock span i {
+    background-size: 12px auto;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+}
+.sitevideo_topcontent_optblock span + span > a:hover {
+    text-decoration: none;
+}
+.sitevideo_topcontent_optblock .icon_cog {
+    background-image: url(~/application/modules/Sitevideo/externals/images/cog.png);
+}
+.sitevideo_topcontent_optblock .icon_down {
+    background-image: url(~/application/modules/Sitevideo/externals/images/down.png);
+}
+.sitevideo_videoTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0px;
+}
+.sitevideo_videoAction {
+    color:$theme_font_color_light;
+    font-size: 12px;
+    line-height: 20px;
+}
+.sitevideo_headerDescription {
+    width: 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 18px;
+    font-size: 13px;
+    margin: 0 auto;
+}
+/*Edit button in Video Lightbox*/
+.sitevideo_lightbox_editlocation {
+    margin-top: 10px;
+}
+.sitevideo_lightbox_editlocation a.buttonlink {
+    height: 16px;
+    margin-left: 5px;
+}
+html[dir="rtl"] .sitevideo_lightbox_editlocation a.buttonlink {
+    margin-right: 5px;
+    margin-left: 0;
+}
+/*sitevideo-video-move-to-other-channel Pop up*/
+#global_page_sitevideo-video-move-to-other-channel .global_form div.form-label {
+    width: 200px;
+}
+/*Manage Videos*/
+.layout_page_sitevideo_channel_editvideos form + .pages {
+    margin-top: 15px;
+}
+/*Album View on hover information*/
+.sitevideo_view_onhover > li {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.sitevideo_view_onhover .seao_share_links {
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    z-index: 1;
+    opacity: 0;
+}
+html[dir="rtl"] .sitevideo_view_onhover .seao_share_links {
+    left: 5px;
+    right: auto;
+}
+.sitevideo_view_onhover li:hover .seao_share_links {
+    opacity: 1;
+    top: 5px;
+    transition: all 0.35s ease-in-out 0s;
+}
+.sitevideo_view_onhover .social_share_wrap {
+    display: inline-block;
+}
+.sitevideo_view_onhover .social_share_wrap > a {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    padding: 9px 13px !important;
+    float: left;
+    margin: 1px;
+}
+div.seao_share_links .social_share_wrap > a {
+    border-radius: 11px;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    margin: 1px;
+    padding: 5px 8px !important;/*
+    line-height: normal;*/
+    border: 0;
+}
+html[dir="rtl"] .sitevideo_view_onhover .social_share_wrap > a, html[dir="rtl"] div.seao_share_links .social_share_wrap > a {
+    float: right;
+}
+.social_share_wrap > a.seao_icon_facebook {
+    background: #3b5998;
+}
+.social_share_wrap > a.seao_icon_twitter {
+    background: #00aced;
+}
+.social_share_wrap > a.seao_icon_linkedin {
+    background: #0077b5;
+}
+.social_share_wrap > a.seao_icon_google_plus {
+    background: #d34836;
+}
+.social_share_wrap a:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+.sitevideo_view_onhover .seao_share_links .social_share_wrap a::before {
+    font-size: 18px;
+}
+div.seao_share_links .social_share_wrap a::before {
+    font-size: 15px;
+}
+.sitevideo_view_onhover .social_share_wrap > a.seao_icon_facebook:hover {
+    background: #3b5998 !important;
+}
+.sitevideo_view_onhover .social_share_wrap > a.seao_icon_twitter:hover {
+    background: #00aced !important;
+}
+.sitevideo_view_onhover .social_share_wrap > a.seao_icon_linkedin:hover {
+    background: #0077b5 !important;
+}
+.sitevideo_view_onhover .social_share_wrap > a.seao_icon_google_plus:hover {
+    background: #d34836 !important;
+}
+/*Font-Icons*/
+ul.sitevideo_thumbs .show_video_des .sitevideo_video_count span::before, .seao_share_links .social_share_wrap a::before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: 14px;
+}
+ul.sitevideo_thumbs .show_video_des .video_like::before {
+    content: "\\f004";
+}
+ul.sitevideo_thumbs .show_video_des .video_comment::before {
+    content: "\\f075";
+}
+/*Manage videos page*/
+ul.channels_editvideos {
+    width: 100%;
+}
+ul.channels_editvideos > li {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    padding: 2%;
+    width: 50%;
+    box-sizing: border-box;
+    clear: none;
+}
+html[dir="rtl"] ul.channels_editvideos > li {
+    float: right;
+}
+ul.channels_editvideos > li .channels_editvideos_video img {
+    max-width: 170px;
+    max-height: 157px;
+}
+.channels_editvideos_info input[type="text"], .channels_editvideos_info textarea {
+    box-sizing: border-box;
+    width: 100% !important;
+}
+.channels_editvideos + #submit-wrapper {
+    clear: both;
+}
+/* Channel Onhover view for Sidebar widgets */
+.thumbs_nocaptions.sitevideo_view_onhover > li {
+    position: relative;
+    overflow: hidden;
+}
+/*
+VIEW MY CHANNELS
+Styles for the member's own channels
+management page.
+*/
+ul.channels_manage {
+    clear: both;
+    overflow: hidden;
+}
+ul.channels_manage > li {
+    overflow: hidden;
+}
+ul.channels_manage > li + li {
+    padding-top: 10px;
+    border-top-width: 1px;
+    margin-top: 10px;
+}
+ul.channels_manage .channels_manage_video {
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+}
+html[dir="rtl"] ul.channels_manage .channels_manage_video {
+    float: right;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+ul.channels_manage .channels_manage_video img {
+    width: 170px;
+    margin: 3px;
+    display: block;
+}
+ul.channels_manage .channels_manage_info {
+    overflow: hidden;
+}
+ul.channels_manage .channels_manage_info > a {
+    font-weight: bold;
+}
+ul.channels_manage .channels_manage_info_videos {
+    font-size: .8em;
+    color: $theme_font_color_light;
+}
+ul.channels_manage .channels_manage_info_desc {
+    margin-top: 3px;
+}
+ul.channels_manage .channels_manage_options {
+    float: right;
+    overflow: hidden;
+    padding-left: 20px;
+}
+html[dir="rtl"] ul.channels_manage .channels_manage_options {
+    float: left;
+    padding-right: 20px;
+    padding-left: 0px;
+}
+ul.channels_manage .channels_manage_options > a {
+    clear: both;
+    display: block;
+    font-size: 0.8em;
+    margin: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+/* Video Tab icon */
+/* My videos page top links active class */
+.sitevideo_myvideos_top_filter_links .active, .sitevideo_link_wrap a.active, .sitevideo_myvideos_top_filter_views a.active, .seaocore_tab_icon.active {
+    color:$theme_link_color_hover;
+}
+.sitevideo_myvideos_top_filter_links a + a::before {
+    background-color: $theme_link_color;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    margin: 0 8px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 1px;
+}
+.sitevideo_tab_video_icon {
+    background:$theme_link_color;
+}
+.sitevideo_tab_video_icon:hover, .sitevideo_tab_video_icon.active {
+    background:$theme_link_color_hover;
+}
+.sitevideo_myvideos_top_links {
+	background: $theme_body_background_color none repeat scroll 0 0;
+}
+/* Video view Edit dots color */
+.sitevideo_options .dot {
+    background:$theme_font_color_light;
+}
+/* video view default - channel image */
+.sitevideo_default_author {
+    background:$theme_link_color;
+}
+/* Playlist bottom border color */
+.sitevideo_playlist_items .sitevideo_url, .sitevideo_options_dropdown > li:first-child {
+    border-color:$theme_border_medium_color;
+}
+.sitevideo_playlist_items .sitevideo_url:nth-child(1) a {
+    color: $theme_link_color_hover;
+}
+/* Watch Now btn */
+.watch_now_btn {
+    color:#fff;
+    border-color:#fff;
+}
+/* Sitevideo stats icons color */
+.sitevideo_bottom_info_comment, .sitevideo_bottom_info_likes, .sitevideo_bottom_info_views, .sitevideo_bottom_info_subscribers, .sitevideo_playlist_count {
+    color:$theme_font_color_light;
+}
+/* List description */
+.sitevideo_list_video_info .sitevideo_list_desc {
+    color:$theme_font_color_light;
+}
+/* Channel categories banner middle container */
+.sitevideo_categories_banner_container {
+    width:$theme_topbar_width;
+}
+/* Title hover color */
+.sitevideo_categories_banner_title > a:hover, .sitevideo_category_icon_text_inner > a:hover {
+    color:$theme_link_color_hover;
+}
+/* channel home page slideshow and next previous btns border */
+.sitevideo_slideshow_container, .sitevideo_channel_carausel_navigations .featured_slideshow_controllers {
+    border-color:$theme_border_medium_color;
+}
+/* Videos profile page links border and subscription count border and more drop down link border */
+.sitevideo_view_options, .sitevideo_view_author_left span.subscription_text, .sitevideo_more_drop_down > a {
+    border-color:$theme_border_medium_color;
+}
+/* add to playlist btn color and more btn color */
+.sitevideo_view_addlist > span, .sitevideo_view_more.sitevideo_options > span {
+    color:$theme_link_color;
+}
+/* Edit vodeos form */
+#video_edit.global_form {
+    margin-top: 0;
+}
+/* Video Profile page add to playlist text border and create new playlist btn and Message tip border and show more btn border, playlist details page links border and borderof playlist detail page blocks and horizontal blocks carausel */
+.sitevideo_options_addtoplaylist_head, .sitevideo_create_playlist, .sitevideo_view_msg_tip, .sitevideo_video_view_showmore, .sitevideo_playlist_view_options > a, .sitevideo_playlist_view_bottom ul.videos_manage.siteevideo_list_view > li, .sitevideo_featured_block {
+    border-color:$theme_border_medium_color;
+}
+ul.videos_manage.siteevideo_list_view > li + li {
+    border-top: 1px solid $theme_border_medium_color;
+}
+/* Carausel horizontal duratoin color */
+.sitevideo_featured_slidebox_info .video_length {
+    color:$theme_button_background_color;
+}
+.layout_sitevideo_channel_carousel h3 a, .layout_sitevideo_video_carousel h3 a, h3.channel_slide_cat_title > a:last-child {
+    font-size: $theme_font_size;
+    margin-left: 10px;
+}
+html[dir="rtl"] .layout_sitevideo_channel_carousel h3 a, html[dir="rtl"] .layout_sitevideo_video_carousel h3 a, html[dir="rtl"] h3.channel_slide_cat_title > a:last-child {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+/*Create Channel form*/
+#channel_url-element input {
+    float: left;
+    width: auto;
+}
+html[dir="rtl"] #channel_url-element input {
+    float: right;
+}
+#channel_url-element a.check_availability_button {
+    font-size: 12px;
+    padding: 5px !important;
+    margin-left: 10px;
+    margin-top: 2px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:$theme_button_background_color;
+    color: $theme_button_font_color !important;
+    border:1px solid $theme_button_border_color;
+    font-weight: bold;
+}
+html[dir="rtl"] #channel_url-element a.check_availability_button {
+    float: right;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+#channel_url-element a.check_availability_button:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+/* Browse playlists */
+.sitevideo_playlist_like .seao_share_links .social_share_wrap > a {
+    color: $theme_font_color;
+    border-color:$theme_border_medium_color;
+}
+/*Post New Video, Channel categories banner slideshow, Explore btn, video profile page over theme border,
+Create new playlist & social share links */
+.layout_sitevideo_post_new_video .button, div.sitevideo_cat_slide_nav .active, .sitevideo_categories_banner_explorebtn > a, .sitevideo_view_options::after, .site_video_create_playlist, .sitevideo_unlike_icon, .sitevideo_unfavourite_icon, .sitevideo_remove_watch_later, .sitevideo_home_featured_watch_later .sitevideo_remove_watch_later::before, .sitevideo_home_featured_slidebox .sitevideo_unsubscribe_icon::before, a.sitevideo_unsubscribe_icon {
+    background-color:	$theme_button_background_color !important;
+}
+.sitevideo_home_featured_watch_later .sitevideo_remove_watch_later, .sitevideo_home_featured_slidebox .sitevideo_unsubscribe_icon {
+    background-color: transparent !important;
+}
+/* Channels home border right color */
+.sitevideo_slideshow_container .featured_slidshow_img {
+    border-color:$theme_border_medium_color;
+}
+/*Channel home slideshow*/
+.sitevideo_slide_title h4 {
+    font-size: $theme_headline_size_medium;
+}
+/*UI of Password Protection box*/
+.photo_lightbox_cont .video_viewer_video_content {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
+.global_form#sitevideo_check_password_protection {
+    border: 3px solid $theme_button_background_color;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+#sitevideo_check_password_protection > div > div {
+    padding: 20px;
+}
+#sitevideo_check_password_protection .form-elements {
+    padding: 0;
+}
+#sitevideo_check_password_protection .form-wrapper > div {
+    text-align: left;
+    width: 100%;
+}
+#sitevideo_check_password_protection #submitForm-label {
+    display: none;
+}
+/* =========================== Post New Video and Create new Channel Widget ============================ */
+.layout_sitevideo_post_new_video .button, .layout_sitevideo_create_new_channel .seaocore_icon_add, .layout_sitevideo_share_via_badge .button {
+    background-image: none;
+    display: inline-block;
+    min-width: 180px;
+    padding: 10px !important;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: normal !important;
+    line-height: normal;
+}
+.layout_sitevideo_post_new_video .sitevideos_video_new::before {
+    content: "\\f093";
+}
+.layout_sitevideo_post_new_video .sitevideos_video_new::before, .layout_sitevideo_create_new_channel .seaocore_icon_add::before {
+    font-family: FontAwesome;
+    margin-right: 7px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+html[dir="rtl"] .layout_sitevideo_post_new_video .sitevideos_video_new::before, html[dir="rtl"] .layout_sitevideo_create_new_channel .seaocore_icon_add::before {
+    margin-left: 7px;
+}
+.layout_left .layout_sitevideo_post_new_video .sitevideos_video_new, .layout_left .layout_sitevideo_create_new_channel .seaocore_icon_add, .layout_left .layout_sitevideo_share_via_badge .seaocore_icon_share, .layout_right .layout_sitevideo_post_new_video .sitevideos_video_new, .layout_right .layout_sitevideo_create_new_channel .seaocore_icon_add, .layout_right .layout_sitevideo_share_via_badge .seaocore_icon_share, .sitevideo_dashboard_info + div .sitevideos_video_new {
+    width: 100%;
+}
+/*Post New Video Widget in header*/
+.layout_page_header .layout_sitevideo_post_new_video {
+    float: left;
+    margin-bottom: 0;
+}
+html[dir="rtl"] .layout_page_header .layout_sitevideo_post_new_video {
+    float: right;
+}
+.layout_page_header .layout_sitevideo_post_new_video .button {
+    font-size: $theme_font_size;
+    font-weight: normal !important;
+    margin: 10px 14px 0 !important;
+    min-width: inherit;
+    padding: 5px 10px !important;
+}
+/*Advanced vidos in feed*/
+.sitevideo_thumb_wrapper{
+	background-color:$theme_foreground_background_color;
+	box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.feed_item_attachments .sitevideo_thumb_wrapper {
+    box-shadow: none;
+    float: none;
+    position: relative;
+    background-color: #000;
+    text-align: center;
+    box-sizing: border-box;
+}
+.feed_item_attachments .video_length {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    bottom: 5px;
+    z-index: 2;
+    margin: 0;
+    padding: 2px 4px;
+    right: 5px;
+    transition: all 0.4s ease-in;
+    line-height: normal;
+    position: absolute;
+    color: #fff;
+    border-radius: 2px;
+}
+html[dir="rtl"] .feed_item_attachments .video_length {
+    left: 5px;
+    right: auto;
+}
+.feed_item_attachments .video_overlay {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.feed_item_attachments .play_icon {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    border-radius: 50%;
+    float: left;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    min-height: 50px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+html[dir="rtl"] .feed_item_attachments .play_icon {
+    float: right;
+    right: 50%;
+    left: auto;
+    margin-right: -25px;
+    margin-left: 0px;
+}
+.feed_item_attachments .play_icon::before {
+    color: #ffffff;
+    content: "\\f04b";
+    font-family: FontAwesome;
+    font-size: 24px;
+    left: 19px;
+    position: absolute;
+    top: 15px;
+}
+html[dir="rtl"] .feed_item_attachments .play_icon::before {
+    right: 19px;
+    left: auto;
+}
+.feed_item_attachments .video_thumb_wrapper {
+    border-width: 2px;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    width: 250px;
+}
+.feed_item_attachments .item_photo_video {
+    height: 100%;
+    width: 100%;
+/*    display: list-item;*/
+    border-radius: 0;
+    max-width: 100%;
+    max-height: 400px;
+    box-sizing: border-box;
+    border-width: 0;
+    object-fit: contain;
+    margin-bottom: -5px;
+}
+.feed_item_attachments .bg_item_photo_video {
+    height: 400px;
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    max-width: 100%;
+    border-width: 0;
+    background-position: center center;
+    background-size: inherit;
+}
+.feed_item_attachments > [id*="video_thumb_"] {
+    float: left;
+}
+html[dir="rtl"] .feed_item_attachments > [id*="video_thumb_"] {
+    float: right;
+}
+.feed_item_attachments > .Sitevideo_thumb[id*="video_thumb_"] {
+    float: none;
+}
+#compose-video-preview-image {
+    width: 263px;
+}
+#compose-video-preview-info {
+    padding-left: 0;
+}
+html[dir="rtl"] #compose-video-preview-info {
+    padding-right: 0;
+}
+.feed_item_attachments .video_info {
+    clear: both;
+    display: inline-block;
+    margin-top: 10px;
+    overflow: hidden;
+}
+/*Button*/
+span.button {
+    margin: 0;
+    padding: 0;
+}
+span.button a, a.button {
+    +rounded;
+    padding: 6px 8px;
+    font-weight: bold !important;
+    border: none;
+    background-color: $theme_button_background_color;
+    border: 1px solid $theme_button_border_color;
+    color: $theme_button_font_color !important;
+   /* background-image: url(~/application/modules/Seaocore/externals/images/buttonbg.png);
+    background-repeat: repeat-x;
+    background-position: 0px 1px;*/
+}
+span.button a:hover, a.button:hover {
+    background-color: $theme_button_background_color_hover;
+    cursor: pointer;
+    text-decoration: none;
+    color: $theme_button_font_color;
+}
+/*Videos Badge page*/
+/*.layout_page_sitevideo_badge_create .layout_core_content {
+    background: transparent !important;
+    padding: 0 !important;
+}*/
+/*Post New Video Lightbox*/
+.seao_add_video_lightbox {
+    box-sizing: border-box;
+    height: 100% !important;
+    margin: 0 !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+	max-width: 100%;
+    width: 100% !important;
+}
+.seao_add_video_lightbox .layout_main {
+    width: 100%;
+}
+#se-main .seao_add_video_lightbox .layout_main {
+    float: right;
+    margin-top: 5%;
+    width: 80%;
+}
+.seao_add_video_lightbox_header {
+    border-bottom-width: 1px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+.sitevideo_add_video_content {
+	padding: 0;
+}
+/*#sitevideo_add_video_content .global_form {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}*/
+#sitevideo_add_video_content .global_form #video_upload_form_left {
+    border-right-width: 1px;
+    box-sizing: border-box;
+    float: left;
+    padding: 15px;
+    width: 50%;
+}
+html[dir="rtl"] #sitevideo_add_video_content .global_form #video_upload_form_left {
+    float: right;
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+#sitevideo_add_video_content .global_form #video_upload_form_left > div, #sitevideo_add_video_content .global_form #video_upload_form_right > div {
+    background: transparent;
+    border: 0 none;
+    padding: 0;
+}
+#createChannel-wrapper.form-wrapper, #channel-wrapper.form-wrapper {
+    clear: none;
+    float: left;
+    margin-right: 10px;
+}
+html[dir="rtl"] #createChannel-wrapper.form-wrapper, html[dir="rtl"] #channel-wrapper.form-wrapper {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+/*.global_form #video_upload_form_left div.form-element {
+    width: auto;
+    max-width: 450px;
+}*/
+#createChannel-wrapper.form-wrapper .form-label, #sitevideo_add_video_content .global_form #video_upload_form_right .form-label#upload-label,#sitevideo_add_video_content #search-label{
+    display: none;
+}
+#sitevideo_add_video_content .global_form #video_upload_form_right {
+    float: left;
+    margin-left: 5%;
+    width: 45%;
+    padding: 0;
+    box-sizing: border-box;
+}
+html[dir="rtl"] #sitevideo_add_video_content .global_form #video_upload_form_right {
+    float: right;
+    margin-right: 5%;
+    margin-left: 0px;
+}
+#sitevideo_add_video_content .global_form #video_upload_form_right .form-label {
+    font-size: 16px !important;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+html[dir="rtl"] #sitevideo_add_video_content .global_form #video_upload_form_right .form-label {
+    text-align: right;
+}
+/*.global_form #video_upload_form_left select {
+    min-width: 218px;
+    max-width: 218px;
+}*/
+#video_upload_form_right_content ul.form-options-wrapper {
+    border-width: 1px;
+    padding: 10px;
+}
+#video_upload_form_right_content ul.form-options-wrapper li {
+    box-sizing: border-box;
+    display: inline-block;
+    /*height: 45px;*/
+    margin: 15px 10px;
+    vertical-align: middle;
+    width: 100%;
+}
+#createChannel-wrapper.form-wrapper #createChannel-element > button {
+    font-size: 14px;
+    padding: 4px 8px;
+}
+#video_upload_form_right_content ul.form-options-wrapper li input[type="radio"] {
+    margin-top: 16px;
+    float: left;
+}
+#video_upload_form_right_content ul.form-options-wrapper li input[type="radio"] + label {
+    float: none;
+    display: block;
+}
+#video_upload_form_right_content ul.form-options-wrapper li i {
+    display: inline-block;
+    height: 45px;
+    vertical-align: middle;
+    width: 180px;
+    border-width: 2px;
+}
+.sitevideo_icon_youtube {
+    background: url(~/application/modules/Sitevideo/externals/images/youtube.png) no-repeat;
+}
+.sitevideo_icon_vimeo {
+    background: url(~/application/modules/Sitevideo/externals/images/vimeo.png) no-repeat;
+}
+.sitevideo_icon_dailymotion {
+    background: url(~/application/modules/Sitevideo/externals/images/dailymotion.png) no-repeat;
+}
+.sitevideo_icon_externalsites {
+    background: url(~/application/modules/Sitevideo/externals/images/external_Sites.png) no-repeat;
+}
+.sitevideo_icon_embed {
+    background: url(~/application/modules/Sitevideo/externals/images/embed_code.png) no-repeat;
+}
+.sitevideo_icon_mysystem {
+    background-color: #00a9ec;
+    color: #fff;
+    display: table-cell;
+    font-size: 17px;
+    font-weight: bold !important;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 180px;
+}
+.sitevideo_icon_mysystem::before {
+    font-family: fontawesome;
+    content: "\\f093";
+    font-size: 20px;
+    margin-right: 6px;
+}
+html[dir="rtl"] .sitevideo_icon_mysystem::before {
+    margin-left: 6px;
+    margin-right: 0px;
+}
+#video_upload_form_right #url-element > input[type="text"] {
+    width: 300px;
+}
+.seao_add_video_lightbox_header #cancel {
+    display: none;
+}
+.seao_add_video_lightbox .seao_add_video_lightbox_header #cancel {
+    display: block;
+}
+/*buttons*/
+button.sitevideo_buttonlink, a.sitevideo_buttonlink {
+    background-image: none;
+    background-color:$theme_button_background_color;
+    border:1px solid $theme_button_border_color;
+    color:$theme_button_font_color !important;
+    border-radius: 2px;
+    text-shadow: inherit;
+    padding: 6px 12px;
+    border: none;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+}
+a.sitevideo_buttonlink:hover {
+    background-color:$theme_button_background_color_hover;
+    cursor: pointer;
+    text-decoration: none;
+}
+#sitevideo_video_embed > video {
+/*    height: 100%;*/
+    width: 100%;
+}
+/*Rating*/
+.sitevideo_ratings .seao_icon_strip::before, .sitevideo_ratings .seao_rating_star_generic::before, .sitevideo_ratings .seao_listings_stats i.seao_icon_strip::before {
+    font-size: 13px;
+}
+.sitevideo_ratings .seao_rating_star_generic {
+    width: 13px;
+}
+/* Play all start*/
+.sitevideo_playall_container {
+    width: 850px;
+    height: auto;
+    float: left;
+}
+.video_loader {
+    background-repeat:no-repeat;
+    background-color:#000;
+    background-position:50% center;
+}
+.sitevideo_playlist {
+    float: right;
+    width: 300px;
+    margin-left: 20px;
+}
+.play_list_name {
+    font-size: 18px !important;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: $theme_headline_color;
+}
+.sitevideo_playlist ul li {
+    width: 100%;
+    float: left;
+    margin-bottom: 1px;
+    padding: 5px;
+    cursor: pointer;
+    clear: both;
+    background: #e2e3e3;
+    border-bottom:1px solid $theme_border_dark_color;
+    box-sizing: border-box;
+}
+.sitevideo_playlist ul li:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+.sitevideo_playlist ul li:hover, .sitevideo_playlist ul li.active {
+    background: #fff;
+}
+.sitevideo_list_thumb {
+    width: 30%;
+    float: left;
+    margin-right: 5px;
+    height: 50px;
+}
+.sitevideo_list_thumb .item_photo_video {
+    width: 100%;
+    height: 100%;
+}
+.user_play_listname {
+    float: left;
+    font-size: 11px !important;
+}
+.sitevideo_viewer_container {
+    padding: 0px;
+    margin: 0;
+    position: relative;
+}
+.sitevideo_author_section {
+    width: 100%;
+    display: inline-block;
+    clear: both;
+}
+.sitevideo_author {
+    float: left;
+}
+.video_viewers {
+    float: right;
+    margin-top: 33px;
+}
+.sitevideo_author > a.author_img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+.author_name {
+    float: left;
+    font-size: 16px;
+    margin: 10px;
+}
+.playlist_heading {
+    width: 100%;
+    border-bottom:1px solid $theme_border_dark_color;
+}
+.playlist_heading > div {
+    margin-bottom: 5px;
+    font-size: 11px !important;
+}
+.playlist_heading > div:first-child {
+    margin-right: 10px;
+    text-transform: capitalize;
+    font-size: 15px !important;
+    color:$theme_headline_color;
+    font-weight: bold !important;
+    margin-bottom: 5px;
+}
+.sitevideo_playlist ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#site_video_title {
+    margin: 15px 0;
+    padding: 0 5px;
+    font-size: 16px !important;
+}
+.sitevideo_bottom_container {
+    width: 100%;
+    box-sizing: border-box;
+    background: #eeeeee;
+    padding: 10px;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
+}
+.icons_right {
+    text-align: right;
+}
+.icons_right a.sitevideo_bottom_info_likes {
+    cursor: pointer;
+    margin-right: 0;
+}
+.icons_left {
+    text-align: left;
+}
+.sitevideo_bottom_info_views, .sitevideo_bottom_info_likes, .sitevideo_bottom_info_comment {
+    margin-right: 15px;
+    font-size: 15px !important;
+    /*color: #000;*/
+}
+.sitevideo_bottom_info_views:before {
+    content: "\\f06e";
+    font-family: fontawesome;
+    margin-right: 6px;
+}
+.sitevideo_bottom_info_likes:before {
+    content: "\\f164";
+    font-family: fontawesome;
+    margin-right: 6px;
+}
+.sitevideo_bottom_info_comment:before {
+    content: "\\f075";
+    font-family: fontawesome;
+    margin-right: 6px;
+}
+.sitevideo_view_author_detail {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    clear: both;
+}
+#postedOn {
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: bold !important;
+    margin-bottom: 10px;
+}
+.sitevideo_playlist ul li span {
+    float: left;
+    margin: 15px 8px 0 2px;
+    font-size: 13px;
+    font-weight: normal !important;
+}
+.sitevideo_bottom_info {
+    overflow: hidden;
+}
+.sitevideo_bottom_info p {
+    margin: 0;
+}
+.sitevideo_bottom_info p:first-child {
+    font-size: 12px;
+}
+.sitevideo_bottom_info p:last-child {
+    font-size: 11px;
+}
+.blue_line {
+    width: 20%;
+    padding: 1px;
+    position: absolute;
+    top: 92px;
+    right: 0;
+    background:#777;
+}
+.vedio_play_count {
+    font-size: 13px !important;
+}
+/*Start Embed Video*/
+.embed_video_playlist_heading{
+    font-size:15px !important;
+    color:#282832;
+    border-top:1px solid $theme_border_dark_color;
+    border-bottom:1px solid $theme_border_dark_color;
+    padding:10px 0 5px 0;
+}
+.embed_video_playlist_heading > span {
+    font-size: 11px;
+    color: #f00;
+	display:block;
+	margin-top:-3px;
+}
+ul.embed_video_playlist li {
+    background: #e2e3e3;;
+    border-bottom: 1px solid $theme_border_dark_color;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 1px;
+    padding: 5px;
+    width: 100%;	
+}
+/*End Embed Video*/
+/**/
+.layout_sitevideo_navigation {
+    /*width:$theme_content_width;*/
+    max-width:$theme_content_width;
+    margin:0 auto;
+}
+
+#youtube_channel_url-element > div a, #youtube_channel_keyword-element > div a{
+    font-size: 12px;
+    padding: 5px !important;
+    margin-left: 10px;
+    margin-top: 2px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:$theme_button_background_color;
+    color: $theme_button_font_color !important;
+    border:1px solid $theme_button_border_color;
+    font-weight: bold;
+}
+#sitevideovideo_rating #sitevideo_rating_text.rating_text {
+    float: none;
+}
+
+/****Popup****/
+#channel_list > li > span {
+    background: $theme_button_background_color;
+	color: $theme_button_font_color;
+}
+
+/*Pinboard View*/
+.seaocore_board_list_action_links a:hover   {background-color: $theme_button_background_color;}
+
+/*====================================== Responsive work start =====================================*/
+@media only screen and (max-width: 1199px) {
+    /*Play all*/
+    .sitevideo_playall_container {
+        width: 74%;
+    }
+    .sitevideo_playlist {
+        width: 23%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    /*Video login*/
+    .sitevideo_testmembers { width: 22.5%; height:215px; }
+}
+
+/*Channel Plugin*/
+@media only screen and (max-width: 920px) {
+    .sitevideo_browse_banner img, .sitevideo_categories_banner_container {
+        width: 100%;
+    }
+    html div.layout_page_header .layout_sitevideo_post_new_video .button {
+        font-size: 0;
+        padding: 3px 0 0 8px !important;
+    }
+    #sitevideo_add_video_content .global_form #video_upload_form_left {
+        width: 100%;
+    }
+    #sitevideo_add_video_content .global_form #video_upload_form_right {
+        width: 100%;
+        margin-left: 0;
+    }
+    html[dir="rtl"] #sitevideo_add_video_content .global_form #video_upload_form_right {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /*Play all*/
+    .sitevideo_playall_container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sitevideo_playlist {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+    .sitevideo_list_thumb {
+        width: 14%;
+    }
+    .sitevideo_list_thumb .item_photo_video {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /*Edit video info*/
+    ul.channels_editvideos > li .channels_editvideos_info {
+        clear: both;
+    }
+    /*Video Lightbox*/
+    .photo_lightbox_cont .video_viewer_video_content {
+        width: 100%;
+    }
+    /*Play all*/
+    .sitevideo_list_thumb {
+        width: 18%;
+    }
+}
+/*============For Pintrest videos===========*/
+
+.video_embed > span {width:100% !important; max-width:100% !important;}
+/*Play all page*/
+#flvPlayerDiv > span {width:100%; max-width:100%;  padding: 0;}
+#flvPlayerDiv > span > span {height:100%; padding:0 !important;}
+#flvPlayerDiv > span > span > span { height:100%; padding:0;}
+#flvPlayerDiv > span > span > span:first-child > span:first-child {padding:0 !important; height:100%;}
+/*Lightbox view*/
+#siteviewvideo_lightbox_left,
+#siteviewvideo_lightbox_left .video_view_container,
+#siteviewvideo_lightbox_left .video_embed > span > span,
+#siteviewvideo_lightbox_left .video_embed > span > span > span,
+#siteviewvideo_lightbox_left .photo_lightbox_image {height:100%;}
+#siteviewvideo_lightbox_left .video_embed {margin:0; height:100%;}
+#siteviewvideo_lightbox_left .video_embed > iframe{height:100%;}
+#siteviewvideo_lightbox_left .video_embed > span {box-shadow:none; border-radius:0; padding:0 !important; background-color:transparent; height:100%;}
+#siteviewvideo_lightbox_left .video_embed >  span > span > span:first-child > span:first-child {padding:0 !important; height:100%;}
+/*Video view page*/
+.sitevideo_video_view_top {background-color: $theme_body_background_color;}
+div.sitevideo_video_view_top .video_embed > span {padding:0; border-radius:0; background:transparent;}
+div.sitevideo_video_view_top .video_embed > span > span:first-child {height:100%;}
+div.sitevideo_video_view_top .video_embed > span > span > span {padding:0 !important; height:100%;}
+.sitevideo_video_view_info {border-top: 1px solid $theme_border_color;}
+.sitevideo_options .sitevideo_options_dropdown {
+	background-color: $theme_body_background_color;
+}
+
+ 
+ 
+ 
+ 
+ 
+
+ 

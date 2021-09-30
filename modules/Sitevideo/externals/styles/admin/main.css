@@ -1,0 +1,263 @@
+/* $Id: main.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+.incomplete{
+	color:red;
+}
+.sitevideo_table_img img{
+	max-width:90px;
+}
+.sitevideo_list_highlighted{
+	background-color:#E9F4FA !important;
+}
+#global_content_simple {
+	overflow:hidden;
+}
+
+/*Categories Page*/
+.sitevideo_categories_left{
+	border-right-width:2px;
+	float:left;
+	margin-right:-2px;
+	width:340px;
+}
+html[dir="rtl"] .sitevideo_categories_left{
+	border-left-width:2px;
+	border-right-width:0;
+	float:right;
+	margin-left:-2px;
+	margin-right:0;
+}
+.sitevideo_cat_list_wrapper{
+	border-top-width:1px;
+	margin-top:10px;
+	padding-top:10px;
+}
+.sitevideo_cat_list{
+	margin-bottom:10px;
+}
+.sitevideo_cat_handle{
+	float:left;
+	cursor: move;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+html[dir="rtl"] .sitevideo_cat_handle{
+	float:right;
+	margin-left: 5px;
+	margin-right: 0;
+}
+.sitevideo_cat_det{
+	overflow:hidden;
+	font-size:12px;
+}
+.sitevideo_cat_det_name{
+	display: list-item;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.sitevideo_cat_det_options{
+	float:right;
+	margin-right:10px;
+	margin-left:5px;
+}
+html[dir="rtl"] .sitevideo_cat_det_options{
+	float:left;
+	margin-left:10px;
+	margin-right:5px;
+}
+.sitevideo_cat_icon{
+	display:inline-block;
+	height:16px;
+	vertical-align:middle;
+	width:16px;
+	text-indent:-999px;
+}
+.sitevideo_cat_showhide{
+	vertical-align:middle;
+	float:left;
+	margin-right:5px;
+}
+html[dir="rtl"] .sitevideo_cat_showhide{
+	margin-left:5px;
+	margin-right: 0;
+	float: right;
+} 
+.sitevideo_cat_new{
+	font-size:11px;
+	margin-top:5px;
+	padding-left: 20px;
+}
+.sitevideo_cat{
+	font-size:12px;
+}
+.sitevideo_cat_selected{
+	background-color:#CFF7FF;
+	font-weight:bold;
+}
+.sitevideo_sub_cat_wrapper{
+	margin-top: 10px;
+	padding-left: 20px;
+}
+html[dir="rtl"] .sitevideo_cat_new,
+html[dir="rtl"] .sitevideo_sub_cat_wrapper{
+	padding-right: 20px;
+	padding-left: 0;
+}
+.sitevideo_sub_cat_wrapper .sitevideo_sub_cat_wrapper{
+	padding-left:30px;
+}
+html[dir="rtl"] .sitevideo_sub_cat_wrapper .sitevideo_sub_cat_wrapper{
+	padding-right:30px;
+	padding-left:0;
+} 
+.sitevideo_categories_right{
+	border-left-width:2px;
+	overflow:hidden;
+	padding-left:10px;
+}
+html[dir="rtl"] .sitevideo_categories_right{
+	border-left-width:0;
+	border-right-width:2px;
+	padding-left:0;
+	padding-right:10px;
+}
+.sitevideo_categories_right .settings form > div{
+	padding:20px;
+}
+.sitevideo_categories_right .settings .form-label{
+	width:100px;
+}
+.sitevideo_categories_right .settings .form-element{
+	max-width:420px;
+}
+.sitevideo_categories_icon{
+	max-width:24px;
+}
+.sitevideo_categories_banner_img{
+	max-width:300px;
+}
+.mtop10{
+	margin-top:10px;
+}
+/*Mapping Popup*/
+#global_page_sitevideo-admin-profilemaps-edit .settings .form-label{
+	width:150px;
+}
+/*Mapping Table*/
+.sitevideo_mapping_table tr{
+	width:890px;
+	float:left;
+}
+.sitevideo_mapping_table tr th,
+.sitevideo_mapping_table tr td{
+	width:870px;
+	float:left;
+}
+html[dir="rtl"] .sitevideo_mapping_table tr,
+html[dir="rtl"] .sitevideo_mapping_table tr th,
+html[dir="rtl"] .sitevideo_mapping_table tr td {
+	float:right;
+}
+.sitevideo_mapping_table .sitevideo_mapping_table_name{
+	width:35%;
+}
+.sitevideo_mapping_table .sitevideo_mapping_table_name span{
+	float:left;
+	margin-right:5px;
+}
+html[dir="rtl"] .sitevideo_mapping_table .sitevideo_mapping_table_name span{
+	float:right;
+	margin-right:0;
+	margin-left:5px;
+}
+.sitevideo_mapping_table .sitevideo_mapping_table_value{
+	width:40%;
+	min-height:10px;
+}
+.sitevideo_mapping_table .sitevideo_mapping_table_option{
+	width:15%;
+}
+
+/*Edit Popup*/
+.seaocore_edit_popup.settings .form-label{
+	width: 110px;
+}
+.seaocore_edit_popup.settings .form-element .description{
+	min-width:inherit;
+}	
+
+/*Manage Channels*/
+.sitevideo_admin_channel_search{
+	max-width:inherit;
+}
+.sitevideo_admin_video_search .search form > div {
+	margin-left: 6px;
+}
+html[dir="rtl"] .sitevideo_admin_video_search .search form > div {
+	margin-left: 0px;
+	margin-right: 6px;
+}
+.sitevideo_admin_channel_search .search form > div{
+	margin:0px 10px 10px 0;
+}
+html[dir="rtl"] .sitevideo_admin_channel_search .search form > div{
+	margin:0px 0 10px 10px;
+}
+.sitevideo_admin_channel_search .search form label{
+	margin-bottom:3px;
+}
+.sitevideo_admin_channel_search .search div div{
+	margin:0;
+}
+.sitevideo_admin_channel_search .search div input,
+.sitevideo_admin_channel_search div select{
+	padding:3px;
+	max-width:150px;
+	margin:0;
+}
+.sitevideo_admin_channel_search .search div input{
+	padding:4px;
+}
+.sitevideo_manage_msg{
+	width:450px;
+}
+p.sitevideo_description{
+	font-size: 11px;
+	margin-top: 3px;
+}
+
+
+/* small icons */
+.rating_star_generic{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-repeat: no-repeat;
+	font-size: 1px;
+	cursor: default;
+}
+.rating_star,
+.rating_star_half{
+	background-image: url(~/application/modules/Seaocore/externals/images/star.png);
+}
+.rating_star_disabled{
+	background-image: url(~/application/modules/Seaocore/externals/images/star_disabled.png);
+}
+.rating_star_half{
+	background-image: url(~/application/modules/Seaocore/externals/images/star_half.png);
+	width: 4px;
+}
+html[dir="rtl"] .rating_star_half{
+	background-image: url(~/application/modules/Seaocore/externals/images/star_half_rtl.png);
+}
+
+/*profilemaps map*/
+#global_page_sitevideo-admin-profilemaps-map #warning_message-label{
+	display:none;
+}
+
+.icon_sitevideo_log{
+	background-image: url(~/application/modules/Sitevideo/externals/images/log_clear.png);
+}
+.icon_sitevideo_log{
+	background-image: url(~/application/modules/Sitevideo/externals/images/import.png);
+}

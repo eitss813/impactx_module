@@ -1,0 +1,1 @@
+INSERT IGNORE INTO `engine4_core_modules` (`name`, `title`, `description`, `version`, `enabled`, `type`) VALUES  ('cbcore', 'Consecutive Bytes Core Module', 'CB Core Module is required for our all themes and plugin to work. ', '4.8.7', 1, 'extra') ;

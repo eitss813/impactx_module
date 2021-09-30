@@ -1,0 +1,1239 @@
+/* $Id: style_rating.css 6590 2013-04-01 00:00:00Z SocialEngineAddOns Copyright 2012-2013 BigStep Technologies Pvt. Ltd. $ */
+
+
+.sm_icon_link::before,
+.icon_sitemembers_mail::before{ 
+	font-family: 'Font Awesome 5 Free','fontawesome';
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	margin-right: 7px;
+}
+a.sm_icon_link::before 						{content: "\f0c1";}
+a.icon_sitemembers_mail::before 	{content: "\f0e0";}
+/* User Rating*/
+.sm_ug_rating{
+	background-image:url(../images/rating/stars-y.png);
+	background-repeat:no-repeat;
+	width:95px;
+	height:17px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	position:relative;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.sm_ug_rating.nostar 		{background-position:0 0}
+.sm_ug_rating.onestar 	{background-position:0 -17px;}
+.sm_ug_rating.twostar 	{background-position:0 -34px;}
+.sm_ug_rating.threestar {background-position:0 -51px;}
+.sm_ug_rating.fourstar 	{background-position:0 -68px;}
+.sm_ug_rating.fivestar 	{background-position:0 -85px }
+.sm_ug_rating.sixstar 	{background-position:0 -102px;}
+.sm_ug_rating.sevenstar {background-position:0 -119px;}
+.sm_ug_rating.eightstar {background-position:0 -136px;}
+.sm_ug_rating.ninestar 	{background-position:0 -153px;}
+.sm_ug_rating.tenstar 	{background-position:0 -170px;}
+ul.sm_ug_rating li {
+	cursor: pointer;
+ /*ie5 mac doesn't like it if the list is floated\*/
+	float:left;
+	/* end hide*/
+	text-indent:-999em;
+}
+html[dir='rtl'] ul.sm_ug_rating li {
+	float: right;
+	text-indent: 999em;
+}
+ul.sm_ug_rating li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:19px;
+	height:17px;
+	text-decoration:none;
+	z-index: 200;
+}
+html[dir='rtl'] ul.sm_ug_rating li a {
+	left:auto;
+	right:0;
+}
+ul.sm_ug_rating li.one a 		{left:0;}
+ul.sm_ug_rating li.two a 		{left:19px;}
+ul.sm_ug_rating li.three a 	{left:38px;}
+ul.sm_ug_rating li.four a 	{left:57px;}
+ul.sm_ug_rating li.five a 	{left:76px;}
+ul.sm_ug_rating li.six a 		{left:95px;}
+ul.sm_ug_rating li.seven a 	{left:114px;}
+ul.sm_ug_rating li.eight a 	{left:133px;}
+ul.sm_ug_rating li.nine a 	{left:152px;}
+ul.sm_ug_rating li.ten a 		{left:171px;}
+html[dir='rtl'] ul.sm_ug_rating li.one a 		{left:auto; right:0;}
+html[dir='rtl'] ul.sm_ug_rating li.two a 		{left:auto; right:19px;}
+html[dir='rtl'] ul.sm_ug_rating li.three a 	{left:auto; right:38px;}
+html[dir='rtl'] ul.sm_ug_rating li.four a 	{left:auto; right:57px;}
+html[dir='rtl'] ul.sm_ug_rating li.five a 	{left:auto; right:76px;}
+html[dir='rtl'] ul.sm_ug_rating li.six a 		{left:auto; right:95px;}
+html[dir='rtl'] ul.sm_ug_rating li.seven a 	{left:auto; right:114px;}
+html[dir='rtl'] ul.sm_ug_rating li.eight a 	{left:auto; right:133px;}
+html[dir='rtl'] ul.sm_ug_rating li.nine a 	{left:auto; right:152px;}
+html[dir='rtl'] ul.sm_ug_rating li.ten a 		{left:auto; right:171px;}
+ul.sm_ug_rating li a:hover {
+	background-image: url(../images/rating/stars-y.png);
+	z-index:2;
+	height:17px;
+	overflow:hidden;
+	left:0;	
+	width:95px;
+}
+html[dir='rtl'] ul.sm_ug_rating li a:hover {
+	left: auto;
+	right: 0;
+}
+ul.sm_ug_rating li.one a:hover 		{background-position:0 -17px;}
+ul.sm_ug_rating li.two a:hover 		{background-position:0 -34px;}
+ul.sm_ug_rating li.three a:hover 	{background-position:0 -51px;}
+ul.sm_ug_rating li.four a:hover 	{background-position:0 -68px;}
+ul.sm_ug_rating li.five a:hover 	{background-position:0 -85px;}
+ul.sm_ug_rating li.six a:hover 		{background-position:0 -102px;}
+ul.sm_ug_rating li.seven a:hover 	{background-position:0 -119px;}
+ul.sm_ug_rating li.eight a:hover 	{background-position:0 -136px;}
+ul.sm_ug_rating li.nine a:hover 	{background-position:0 -153px;}
+ul.sm_ug_rating li.ten a:hover 		{background-position:0 -170px;}
+/*Show User Rating*/
+.sm_us_rating{
+	background-image:url(../images/rating/show-stars-y.png);
+	background-repeat:no-repeat;
+	width:95px;
+	height:17px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	position:relative;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.sm_us_rating.nostar 				{background-position:0 0;}
+.sm_us_rating.halfstar 			{background-position:0 -17px;}
+.sm_us_rating.onestar 			{background-position:0 -34px;}
+.sm_us_rating.onehalfstar 	{background-position:0 -51px;}
+.sm_us_rating.twostar 			{background-position:0 -68px;}
+.sm_us_rating.twohalfstar		{background-position:0 -85px;}
+.sm_us_rating.threestar 		{background-position:0 -102px;}
+.sm_us_rating.threehalfstar {background-position:0 -119px;}
+.sm_us_rating.fourstar 			{background-position:0 -136px;}
+.sm_us_rating.fourhalfstar 	{background-position:0 -153px;}
+.sm_us_rating.fivestar 			{background-position:0 -170px;}
+.sm_us_rating.fivehalfstar 	{background-position:0 -187px;}
+.sm_us_rating.sixstar 			{background-position:0 -204px;}
+.sm_us_rating.sixhalfstar 	{background-position:0 -221px;}
+.sm_us_rating.sevenstar 		{background-position:0 -238px;}
+.sm_us_rating.sevevhalfstar {background-position:0 -255px;}
+.sm_us_rating.eightstar 		{background-position:0 -272px;}
+.sm_us_rating.eighthalfstar {background-position:0 -289px;}
+.sm_us_rating.ninestar 			{background-position:0 -306px;}
+.sm_us_rating.ninehalfstar 	{background-position:0 -323px;}
+.sm_us_rating.tenstar 			{background-position:0 -340px;}
+ul.sm_us_rating li {
+	cursor: pointer;
+	float:left;
+	margin:0 3px;
+	text-indent:-999em;
+	clear:none !important;
+	width:3px;
+}
+html[dir='rtl'] ul.sm_us_rating li {
+	float: right;
+	text-indent: 999em;
+}
+/*Show Average Rating*/
+.sm_as_rating{
+	background-image:url(../images/rating/show-stars-b.png);
+	background-repeat:no-repeat;
+	width:95px;
+	height:17px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	position:relative;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.sm_as_rating.nostar 				{background-position:0 0;}
+.sm_as_rating.halfstar 			{background-position:0 -17px;}
+.sm_as_rating.onestar 			{background-position:0 -34px;}
+.sm_as_rating.onehalfstar 	{background-position:0 -51px;}
+.sm_as_rating.twostar 			{background-position:0 -68px;}
+.sm_as_rating.twohalfstar		{background-position:0 -85px;}
+.sm_as_rating.threestar 		{background-position:0 -102px;}
+.sm_as_rating.threehalfstar {background-position:0 -119px;}
+.sm_as_rating.fourstar			{background-position:0 -136px;}
+.sm_as_rating.fourhalfstar	{background-position:0 -153px;}
+.sm_as_rating.fivestar 			{background-position:0 -170px;}
+ul.sm_as_rating li {
+	cursor: pointer;
+	float:left;
+	margin:0 3px;
+	text-indent:-999em;
+	clear:none !important;
+}
+html[dir='rtl'] ul.sm_as_rating li {
+	float: right;
+	text-indent: 999em;
+}
+/*Rating Parameters*/
+.sm-es-box	{background-image: url(../images/rating/rating-blocks-r.png);}
+.sm-us-box	{background-image: url(../images/rating/rating-blocks.png);}
+.rating-box {
+	width:130px;
+	height:10px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	background-repeat:no-repeat;
+	margin:0;
+	position:relative;
+}
+/* add these classes to the ul to effect the change to the correct number of stars */
+.nostar-box			{background-position:0 0;}
+.onestar-box 		{background-position:0 -12px;}
+.twostar-box 		{background-position:0 -24px;}
+.threestar-box 	{background-position:0 -36px;}
+.fourstar-box 	{background-position:0 -48px;}
+.fivestar-box 	{background-position:0 -60px;}
+ul.rating-box li {
+	cursor: pointer;
+	float:left;
+	margin:0 3px;
+	text-indent:-999em;
+	clear:none !important;
+}
+html[dir='rtl'] ul.rating-box li {
+	float: right;
+	text-indent: 999em;
+}
+ul.rating-box li a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:24px;
+	height:10px;
+	text-decoration:none;
+	z-index: 200;
+}
+html[dir='rtl'] ul.rating-box li a {
+	left: auto;
+	right: 0;
+}
+ul.rating-box li.one a 		{left:0px;}
+ul.rating-box li.two a 		{left:27px;}
+ul.rating-box li.three a 	{left:53px;}
+ul.rating-box li.four a 	{left:79px;}
+ul.rating-box li.five a 	{left:106px;}
+html[dir='rtl'] ul.rating-box li.one a 		{left:auto; right:0px;}
+html[dir='rtl'] ul.rating-box li.two a 		{left:auto; right:27px;}
+html[dir='rtl'] ul.rating-box li.three a 	{left:auto; right:53px;}
+html[dir='rtl'] ul.rating-box li.four a 	{left:auto; right:79px;}
+html[dir='rtl'] ul.rating-box li.five a 	{left:auto; right:106px;}
+.sm-es-box li a:hover 		{background-image: url(../images/rating/rating-blocks-r.png);}
+.sm-us-box li a:hover 		{background-image: url(../images/rating/rating-blocks.png);}
+ul.rating-box li a:hover {
+	z-index:2;
+	width:130px;
+	height:10px;
+	overflow:hidden;
+	left:0;
+}
+html[dir='rtl'] ul.rating-box li a:hover {
+	left: auto;
+	right: 0;
+}
+ul.rating-box li.one a:hover 		{background-position:0 -12px;}
+ul.rating-box li.two a:hover 		{background-position:0 -24px;}
+ul.rating-box li.three a:hover 	{background-position:0 -36px;}
+ul.rating-box li.four a:hover 	{background-position:0 -48px;}
+ul.rating-box li.five a:hover 	{background-position:0 -60px;}
+ul.rating-box li.six a:hover 		{background-position:0 -72px;}
+ul.rating-box li.seven a:hover 	{background-position:0 -84px;}
+ul.rating-box li.eight a:hover	{background-position:0 -96px;}
+ul.rating-box li.nine a:hover 	{background-position:0 -108px;}
+ul.rating-box li.ten a:hover 		{background-position:0 -120px;}
+
+/*show rating*/
+.sm-as-box-small								{background-image: url(../images/rating/rating-blocks-small-b.png);}
+.sm-es-box-small								{background-image: url(../images/rating/rating-blocks-small-r.png);}
+.sm-us-box-small								{background-image: url(../images/rating/rating-blocks-small.png);}	
+.sm-rating-box-small {
+	width:63px;
+	height:5px;
+	padding:0;
+	list-style:none;
+	clear:both;
+	background-repeat:no-repeat;
+	margin:3px auto;
+}
+.sm-rating-box-small li {
+	cursor: pointer;
+	float:left;
+	text-indent:-999em;
+	clear:none !important;
+	padding:0px !important;
+	font-size:0px;
+}
+html[dir='rtl'] .sm-rating-box-small li {
+	float: right;
+	text-indent: 999em;
+}
+.nostar-small-box 				{background-position:0 0;}
+.halfstar-small-box 			{background-position:0 -6px;}
+.onestar-small-box 				{background-position:0 -12px;}
+.onehalfstar-small-box 		{background-position:0 -18px;}
+.twostar-small-box 				{background-position:0 -24px;}
+.twohalfstar-small-box 		{background-position:0 -30px;}
+.threestar-small-box 			{background-position:0 -36px;}
+.threehalfstar-small-box 	{background-position:0 -42px;}
+.fourstar-small-box 			{background-position:0 -48px;}
+.fourhalfstar-small-box 	{background-position:0 -54px;}
+.fivestar-small-box 			{background-position:0 -60px;}
+.fivehalfstar-small-box 	{background-position:0 -66px;}
+.sixstar-small-box 				{background-position:0 -72px;}
+.sixsmallstar-small-box 	{background-position:0 -78px;}
+.sevenstar-small-box 			{background-position:0 -84px;}
+.sevenhalfstar-small-box 	{background-position:0 -90px;}
+.eightstar-small-box 			{background-position:0 -96px;}
+.eighthalfstar-small-box 	{background-position:0 -102px;}
+.ninestar-small-box 			{background-position:0 -108px;}
+.ninehalfstar-small-box 	{background-position:0 -114px;}
+.tenstar-small-box 				{background-position:0 -120px;}
+
+/*stars*/
+.sm_rating_star_big_generic{
+  float: left;
+  display: inline-block;
+  width: 19px;
+  height: 17px;
+  background-repeat: no-repeat;
+  font-size: 1px;
+  cursor: pointer;
+}
+html[dir='rtl'] .sm_rating_star_big_generic{
+	float: right;
+}
+.sm_rating_star_big						{background-image: url(../images/rating/star_big_y.png);}
+.sm_rating_star_big_half			{background-image: url(../images/rating/star_big_half_y.png);}
+.sm_rating_star_big_disabled	{background-image: url(../images/rating/star_big_disable.png);}
+/*Rating Parameters*/
+.sm_profile_rating_parameters{
+  display:block;
+}
+.sm_profile_rating_parameters > div{
+  clear:both;
+  padding:0 0 5px;
+}
+.sm_profile_rating_parameters .parameter_title{
+  float:left;
+  width:100px;
+  padding-right:10px;
+  font-size:11px;
+}
+html[dir='rtl'] .sm_profile_rating_parameters .parameter_title{
+  float:right;
+	padding-left:10px;
+}
+.sm_profile_rating_parameters .parameter_value{
+  float:left;
+}
+html[dir='rtl'] .sm_profile_rating_parameters .parameter_value{
+  float:right;
+}
+.sm_profile_rating_parameters .parameter_count{
+  float:left;
+  padding-left:10px;
+  font-size:11px;
+}
+html[dir='rtl'] .sm_profile_rating_parameters .parameter_count{
+  float:right;
+  padding-right:10px;
+}
+.sm_profile_rating_parameters .parameter_value > ul.rating-box-small{
+  margin:5px 0 0;
+}
+/*Rating Breakdown*/
+.sm_rating_breakdowns,
+.sm_rating_breakdowns > ul{
+  display:block;
+}
+.sm_rating_breakdowns > ul > li{
+  clear:both;
+  float:left;
+  margin:4px 0;
+  overflow:hidden;
+  width:100%;
+}
+html[dir='rtl'] .sm_rating_breakdowns > ul > li{
+	float: right;
+}
+.sm_rating_breakdowns > ul > li div{
+  font-size:11px !important;
+  font-weight:normal;
+}
+.sm_rating_breakdowns > ul > li div.left{
+  width: 45px;
+  float:left;
+  margin-right: 5px;
+}
+html[dir='rtl'] .sm_rating_breakdowns > ul > li div.left{
+  float: right;
+  margin-right: 0;
+  margin-left: 5px;
+}
+.sm_rating_breakdowns > ul > li div.count{
+  float:right;
+  width:25px;
+  text-align:right;
+}
+html[dir='rtl'] .sm_rating_breakdowns > ul > li div.count{
+	float:left;
+	text-align:left;
+}
+.sm_rating_breakdowns > ul > li .rate_bar{
+  border-radius:3px;
+  box-shadow:0 1px 2px #DCDCDC inset, 0 1px 0 rgba(253, 253, 253, 0.2);
+  margin: 7px 0 0 5px;
+  overflow:hidden;
+}
+.sm_rating_breakdowns > ul > li .rate_bar span{
+  background:#f0b61a url(../images/rate_bg.png) repeat-x;
+  border-radius:3px 3px 3px 3px;
+  border-top:1px solid #f0b61a;
+  border-bottom:1px solid #f0b61a;
+  box-shadow:0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  display:block;
+  height:6px;
+}
+/*Rating & Parameters Box*/
+.sm_ur_bdown_box_wrapper_right, 
+.sm_ur_bdown_box_wrapper{
+  box-shadow:-1px -1px 18px rgba(50, 50, 50, 0.18);
+  border-style:solid;
+  border-width:1px;
+  padding:0 !important;
+  margin-left:4px;
+  margin-top:-37px;
+  display:none;
+  position:absolute;
+  width:220px;
+  z-index:100;
+}
+html[dir='rtl'] .sm_ur_bdown_box_wrapper_right, 
+html[dir='rtl'] .sm_ur_bdown_box_wrapper{
+	margin-right:4px;
+	margin-left:auto;
+}
+.sm_ur_bdown_box_wrapper_right{
+  float:right;
+  margin:-37px 0 0 86px;
+}
+html[dir='rtl'] .sm_ur_bdown_box_wrapper_right{
+  float:left;
+  margin:-37px 86px 0 0;
+}
+.sm_ur_bdown_box{
+  position:relative;
+  padding:10px;
+}
+/*Overall Rating*/
+.sm_up_overall_rating{}
+.sm_up_overall_rating_title{
+	font-weight:bold;
+	margin-bottom:4px;
+}
+.sm_up_overall_rating_stat{
+	font-size:12px;
+	margin-bottom:4px;
+}
+.sm_up_overall_rating_paramerers > div{
+	clear:both;
+	padding:0 0 5px;
+}
+.sm_up_overall_rating_paramerers .parameter_title{
+	font-size:11px;
+	overflow:hidden;
+}
+.sm_up_overall_rating_paramerers .parameter_count{
+	float:right;
+	font-size:11px;
+	text-align:right;
+	width:20px;
+}
+html[dir='rtl'] .sm_up_overall_rating_paramerers .parameter_count{
+	text-align:left;
+	float: left;
+}	
+.sm_up_overall_rating_paramerers .parameter_value{
+	float:right;
+	margin-left:10px;
+}
+html[dir='rtl'] .sm_up_overall_rating_paramerers .parameter_value{
+	float:left;
+	margin-left:0;
+	margin-right:10px;
+}
+.sm_up_overall_rating_paramerers .parameter_value > ul{
+	margin:5px 0px 0;
+}
+.sm_up_overall_rating_sep{
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	padding-top:10px;
+	margin-bottom:10px;
+}
+/*Profile review*/
+.sm_profile_review_left{
+  float:left;
+  width:50%;
+  margin-bottom:10px;
+}
+.sm_profile_review_right{
+  float:left;
+  width:250px;
+}
+html[dir='rtl'] .sm_profile_review_right,
+html[dir='rtl'] .sm_profile_review_left{
+  float:right;
+}
+.sm_profile_review_user{
+  float:left !important;
+  margin:0 0 0 10px;
+  width:60%;
+}
+html[dir='rtl'] .sm_profile_review_user{
+  float:right !important;
+  margin:0 10px 0 0;
+}
+.sm_profile_review_user div.t_right{
+  text-align:left;
+}
+html[dir='rtl'] .sm_profile_review_user div.t_right{
+  text-align:right;
+}
+.sm_profile_review_stars{
+  float:left !important;
+}
+html[dir='rtl'] .sm_profile_review_stars{
+  float:right !important;
+}
+.sm_up_overall_rating_more_link{
+  float:right!important;
+	font-size: 12px;
+	margin-right:5px;
+}
+html[dir='rtl'] .sm_up_overall_rating_more_link{
+  float: left !important;
+	margin-right: 0;
+	margin-left: 5px;
+}
+  
+/*overall rating block*/
+.sm_profile_review_top{
+	margin-bottom:15px;
+}
+.sm_profile_review_top_title{
+	font-size:20px;
+	margin-bottom:5px;
+}
+.sm_profile_review{
+	border-radius:5px;
+	margin-bottom:15px;
+	padding:10px 0;
+	overflow:hidden;
+}
+.sm_profile_review_title{
+	font-size:17px;
+	margin:0 0 5px;
+}
+/*.sm_profile_review_left{
+	float:left;
+	width:320px;
+}
+html[dir='rtl'] .sm_profile_review_left{
+	float:right;
+}*/
+.sm_profile_review_left > div{
+	padding:0 0 0 15px;
+}
+html[dir='rtl'] .sm_profile_review_left > div{
+	padding:0 15px 0 0;
+}
+.sm_profile_review_stars ul{
+	margin:0 0 5px;
+}
+.sm_profile_review_stat{
+	line-height:18px;
+	font-size:11px;
+}
+.sm_profile_review_right{
+	float:right;
+	width:45%;
+}
+html[dir='rtl'] .sm_profile_review_right{
+	float:left;
+}
+.sm_profile_review_right .sm_rating_breakdowns{
+	float:right;
+	margin-right:15px;
+	width:90%;
+	max-width:450px;
+}
+html[dir='rtl'] .sm_profile_review_right .sm_rating_breakdowns{
+	margin-left:15px;
+	margin-right:0;
+	float:left;
+}
+.sm_profile_review_user{
+	width:250px;
+	margin-right:15px;
+}
+html[dir='rtl'] .sm_profile_review_user{
+	margin-left:15px;
+	margin-right:0;
+}
+.sm_profile_review_user div.t_right{
+	text-align:right;
+}
+html[dir='rtl'] .sm_profile_review_user div.t_right{
+	text-align:left;
+}
+.sm_profile_review_middle{
+	overflow:hidden;
+	text-align:center;
+}
+.sm_profile_review_middle div{
+	text-align:center;
+	font-size:11px;
+}
+
+/*User Review Sitemember*/
+.sm_browse_lists_view_options{
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+  margin-bottom:10px;
+  padding:5px;
+  overflow:hidden;
+}
+.sm_browse_lists_view_options > div{
+	font-size:11px;
+}
+.sm_browse_lists_view_options_head{
+	border:none;
+	display: inline;
+	margin-bottom: 5px;
+	padding: 0 5px 5px 0;
+	font-size:17px;
+}
+html[dir='rtl'] .sm_browse_lists_view_options_head{
+	padding: 0 0 5px 5px;
+}
+/*Reviews Listing*/
+.sm_reviews_listing{
+  margin-bottom:15px;
+  overflow:hidden;
+}
+.sm_reviews_listing > li{
+  padding:0 10px;
+  clear:both;
+  overflow:hidden;
+}
+.sm_reviews_listing > li + li{
+  padding-top:15px;
+  margin-top:15px;
+  border-top-width:1px;
+  border-top-style:solid;
+}
+.sm_reviews_listing .sm_reviews_listing_photo{
+  float:left;
+  margin-right:10px;
+  width:50px;
+}
+html[dir='rtl'] .sm_reviews_listing .sm_reviews_listing_photo {
+	float:right;
+  margin-left:10px;
+	margin-right:0;
+}
+.sm_reviews_listing .sm_reviews_listing_info{
+  overflow:hidden;
+}
+.sm_reviews_listing_title{
+  margin-bottom:5px;
+}
+.sm_ur_show_rating_star{
+  float:right;
+  margin-left:5px;
+}
+html[dir='rtl'] .sm_ur_show_rating_star{
+  float:left;
+  margin-left:0;
+	margin-right:5px;
+}
+i.arrow_btm{
+  background-image:url(../images/arrow-btm.png);
+  display:block;
+  float:right;
+  height:3px;
+  margin:8px 0 0 5px;
+  width:6px;
+}
+html[dir='rtl'] i.arrow_btm{
+	float:left;
+	margin:8px 5px 0 0;
+}
+.sm_ur_show_rating{
+  box-shadow:-1px -1px 18px rgba(50, 50, 50, 0.18);
+  border-style:solid;
+  border-width:1px;
+  padding:0 !important;
+  margin-left:-121px;
+  margin-top:-11px;
+  display:none;
+  position:absolute;
+  width:230px;
+  z-index:100;
+  background-color:#f1f1f1;
+}
+html[dir='rtl'] .sm_ur_show_rating{
+	margin-left:0;
+	margin-right:-121px;
+}
+.sm_ur_show_rating_box{
+  padding:10px;
+}
+.sm_ur_show_rating_box_title{
+  font-weight:bold;
+  font-size:11px;
+  margin-bottom:5px;
+}
+.sm_ur_show_rating_star:hover .sm_ur_show_rating{
+  display:block;
+}
+.sm_reviews_listing_title > a,
+.sm_reviews_listing_title > .sm_review_title{
+  font-size:17px;
+  font-weight:bold;
+  overflow:hidden;
+  padding-right:5px;
+}
+html[dir='rtl'] .sm_reviews_listing_title > a,
+html[dir='rtl'] .sm_reviews_listing_title > .sm_review_title{
+	padding-left:5px;
+	padding-right:0;
+}
+.sm_icon{
+  height:16px;
+  width:16px; 
+}
+.sm_reviews_listing_title .sm_icon{
+  margin-top:2px;
+}
+.sm_reviews_listing_stat{
+  font-size:11px;
+  margin-bottom:10px;
+  line-height:22px;
+}
+.sm_reviews_listing_stat .sm_icon{
+  margin:2px 0 0 5px;
+}
+html[dir='rtl'] .sm_reviews_listing_stat .sm_icon{
+  margin:2px 5px 0 0;
+}
+.sm_reviews_listing_date{
+  font-size:11px;
+  margin-bottom:1px;
+}
+.sm_reviews_listing_recommended{
+  float:right;
+}
+html[dir='rtl'] .sm_reviews_listing_recommended{
+  float:left;
+}
+.sm_reviews_listing_recommended span{
+  float:left;
+}
+html[dir='rtl'] .sm_reviews_listing_recommended span{
+  float:right;
+}
+.sm_reviews_listing_recommended span + span{
+  float:right;
+  margin-left:5px;
+  margin-top:3px;
+}
+html[dir='rtl'] .sm_reviews_listing_recommended span + span{
+	float:left;
+  margin-left:0;
+  margin-right:5px;
+}
+.sm_reviews_listing_proscons{
+  margin-bottom:10px;
+  /*overflow:hidden;*/
+}
+.sm_reviews_listing_proscons > b{
+  margin-right:5px;
+}
+html[dir='rtl'] .sm_reviews_listing_proscons > b{
+  margin-left:5px;
+	margin-right:0;
+}
+.sm_reviews_listing_content{
+  border-width:1px;
+  border-style:solid;
+  padding:10px;
+  margin-top:10px;
+}
+.sm_reviews_listing_option {
+  border-top-width:1px;
+  border-top-style:dashed;
+  margin-top:15px;
+  padding-top:10px;
+  clear:both;
+  overflow:hidden;
+}
+.sm_reviews_listing_option ul li {
+  display:block;
+  float:left;
+  margin:0 0 5px;
+  padding-right:10px;
+}
+html[dir='rtl'] .sm_reviews_listing_option ul li{
+	float:right;
+  padding-right:0;
+  padding-left:10px;
+}
+.sm_reviews_listing_option .reply::before{
+	font-family: 'Font Awesome 5 Free','fontawesome';
+	margin-right: 6px;
+}
+.sm_reviews_listing_option ul li .thumbup, 
+.sm_reviews_listing_option ul li .thumbdown{
+  background-image:url(../images/thumbs.png);
+  background-repeat:no-repeat;
+  margin-right:5px;
+  padding:2px 16px 4px 0;
+}
+html[dir='rtl'] .sm_reviews_listing_option ul li .thumbup, 
+html[dir='rtl'] .sm_reviews_listing_option ul li .thumbdown{
+	margin-right:0;
+	margin-left:5px;
+  padding:2px 0 4px 16px;
+}
+.sm_reviews_listing_option ul li .thumbup {
+  background-position:right 2px;
+  padding-bottom:0;
+}
+.sm_reviews_listing_option ul li .thumbdown{
+  background-position:0 -17px;
+  clear:both;
+}
+.sm_reviews_listing_option .action_link {
+  float:right;
+  margin:3px 0 0;
+}
+html[dir='rtl'] .sm_reviews_listing_option .action_link {
+  float:left;
+}
+.sm_reviews_listing_option .action_link a {
+  background-repeat:no-repeat;
+  background-repeat:center;
+  display:block;
+  float:right;
+  height:16px;
+  margin:0 0 0 10px;
+  overflow:hidden;
+  /*text-indent:-9999px;*/
+  width:16px;
+}
+html[dir='rtl'] .sm_reviews_listing_option .action_link a {
+	float:left;
+	margin:0 10px 0 0;
+	text-indent: 9999px;
+}
+/*Thankyou Message Popup*/
+ul.sr_reply_thankyou_msg_links{
+  border-width:1px;
+  padding:5px 20px;
+  list-style:disc outside none; 
+}
+.sm_reply_thankyou_msg{
+  width:450px;
+}
+.sm_reply_thankyou_msg h4{
+  margin-bottom:10px;
+}
+.sm_reply_thankyou_msg h4 i{
+  vertical-align:middle;
+}
+.sm_reply_thankyou_msg p{
+  padding:0px;
+}
+.sm_reply_thankyou_msg_links{
+  padding-left:26px;
+  margin-bottom:15px;
+}
+html[dir='rtl'] .sm_reply_thankyou_msg_links{
+  padding-left:0;
+	padding-right:26px;
+}
+.sm_reply_thankyou_msg_links li{
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:5px;
+  list-style:disc;
+}
+.sm_reply_thankyou_msg_links li a{
+  text-decoration:underline;
+}
+/*User/Profile Review*/
+.sitemember_profile_info_des_update{
+  border-radius:5px;
+  margin:10px 30px 0;
+  padding:10px;
+  overflow:hidden;
+}
+.sitemember_profile_info_des_update > div + div{
+  margin-top:10px;
+  padding-top:10px;
+  border-top-width:1px;
+  border-top-style:dashed;
+}
+.sitemember_profile_info_des_update_date {
+  padding:0 0 5px;
+  font-weight:bold;
+}
+.sm_profile_userreview_filters{
+	border-style:solid;
+	border-width:1px;
+	border-radius:5px;
+	font-weight:bold;
+	height:28px;
+	line-height:28px !important;
+	list-style-type:none;
+	margin-bottom:15px;
+	padding-left:10px;
+}
+html[dir='rtl'] .sm_profile_userreview_filters{
+	padding-left:0;
+	padding-right:10px;
+}
+.sm_profile_userreview_filters ul{
+	float:left;
+}
+html[dir='rtl'] .sm_profile_userreview_filters ul{
+	float:right;
+}
+.sm_profile_userreview_filters li{
+	border-right:1px solid #E2E2E2;
+	box-shadow:1px 0 0 #FFFFFF;
+	color:#6C7073;
+	float:left;
+	font-size:11px;
+	font-weight:bold;
+	height:28px;
+	line-height:1.133em;
+	padding:0 10px;
+}
+html[dir='rtl'] .sm_profile_userreview_filters li{
+	border-left:1px solid #E2E2E2;
+	border-right:none;
+	float:right;
+}
+.sm_profile_userreview_filters li.filter_lebel{
+	font-weight:normal;
+	padding-right:15px;
+}
+[dir="rtl"] .sm_profile_userreview_filters li.filter_lebel{
+	padding-left:15px;
+	margin-right:0;
+}
+.sm_profile_userreview_filters li.filter_lebel:hover{
+	background:none;
+	cursor:default;
+	height:28px;
+	position:relative;
+	text-decoration:none;
+}
+.sm_profile_userreview_filters li.onView{
+	background-image:url(../images/bg2.png);
+	cursor:default;
+	position:relative;
+	text-decoration:none;
+}
+.sm_profile_userreview_filters li:hover{
+	background-image:url(../images/bg1.png);
+	cursor:pointer;
+	position:relative;
+	text-decoration:none;
+}
+.sm_profile_userreview_filters li span,
+.sm_profile_userreview_filters li a{
+	position:relative;
+	top:8px;
+	outline:none;
+}
+.sm_profile_userreview_filters li a:hover{
+	cursor:pointer;
+	text-decoration:none;
+}
+.sm_profile_userreview_filters li.first a{
+	padding-left:0;
+}
+html[dir='rtl'].sm_profile_userreview_filters li.first a{
+	padding-right:0;
+}
+.sm_profile_userreview_filters_options{
+	float:right;
+	margin-right:10px;
+}
+html[dir='rtl'] .sm_profile_userreview_filters_options{
+	float:left;
+	margin-left:10px;
+	margin-right:0;
+}
+.sm_profile_userreview_filters_options label{
+	color:#6C7073;
+	float:left;
+	font-size:11px;
+	line-height:10px;
+	margin:8px 10px 0 0;
+}
+html[dir='rtl'] .sm_profile_userreview_filters_options label{
+	float:right;
+	margin:8px 0 0 10px;
+}
+.sm_review_block{
+	background-image:url(~/application/modules/Sitemember/externals/images/bg2.png);
+	border-style:solid;
+	border-width:1px;
+}
+a.sm_buttonlink{
+  padding:5px;
+  font-weight:bold;
+  border:none;
+	display:block;
+	font-size:11px;
+}
+a.sm_buttonlink:hover{
+  cursor:pointer;
+	text-decoration:none;
+}
+.sm_ur_form #overall_rating .form-label,
+.sm_ur_form #rating-box .form-label,
+.sm_ur_form #overall_my_rating .form-label,
+.sm_ur_form #rating-my-edit-box .form-label{
+  float:left;
+  margin-right:15px;
+  width:180px;
+}
+html[dir='rtl'] .sm_ur_form #overall_rating .form-label,
+html[dir='rtl'] .sm_ur_form #rating-box .form-label,
+html[dir='rtl'] .sm_ur_form #overall_my_rating .form-label,
+html[dir='rtl'] .sm_ur_form #rating-my-edit-box .form-label{
+	float:right;
+  margin-right:0;
+	margin-left:15px;
+}
+.sm_ur_form #overall_rating .form-element,
+.sm_ur_form #rating-box .form-element,
+.sm_ur_form #overall_my_rating .form-element,
+.sm_ur_form #rating-my-edit-box .form-element{
+  clear:none;
+  float:left;
+}
+html[dir='rtl'] .sm_ur_form #overall_rating .form-element,
+html[dir='rtl'] .sm_ur_form #rating-box .form-element,
+html[dir='rtl'] .sm_ur_form #overall_my_rating .form-element,
+html[dir='rtl'] .sm_ur_form #rating-my-edit-box .form-element{
+	float: right;
+}
+#overall_my_rating .form-element ul.rating-box,
+#rating-my-edit-box .form-element ul.rating-box{
+  margin-top:5px;
+}
+.sm_review_form{
+  clear:both;
+}
+.sm_review_form > div{
+  float:none;
+}
+.sm_review_form > div > div > h3 + p{
+  max-width:none;
+}
+.sm_review_form div.form-label{
+  font-weight:bold;
+}
+.sm_review_form div.form-element{
+  max-width:278px;
+}
+.sm_review_form div.form-element .sm-us-box.rating-box{
+  margin-top:7px; 
+}
+.sm_review_form #pros-element textarea,
+.sm_review_form #cons-element textarea,
+.sm_review_form #title-element textarea{
+  min-height:45px;
+}
+.sm_review_form div.form-element textarea{
+  resize:vertical;
+  max-width:265px;
+}
+.sm_review_form p.description{
+  margin-bottom:5px;
+}
+.sm_review_form div.form-element .sm_eg_rating,
+.sm_review_form div.form-element .sm_ug_rating{
+  margin-top:2px;
+}
+.sm_review_form .defaultSkin iframe {
+  height:300px !important;
+  width:600px !important;
+}
+.review_error {
+  color:#FF0000;
+  display:block;
+  font-size:11px;
+  padding-top:5px;
+}
+.sm_editor_review_form textarea{
+  max-width:inherit;
+  width:592px;
+}
+.sm_icon_tick::before {content:"\f00c"; color:#5FA556; font-family: 'Font Awesome 5 Free','fontawesome';}
+.activity_icon_review_sitemember::before {content:"\f040";}
+.icon_sitemembers_comment::before {content:"\f0e5";}
+.sm_icon_link											{background-image:none !important;}
+.sm_listing_breadcrumb{
+  font-size:11px;
+  margin-bottom:10px;
+}
+.sm_listing_breadcrumb .brd-sep{
+  margin:0 3px;
+}
+/*.sm_review_button{
+  font-size:14px;
+  padding:5px 10px;
+}*/
+.sm_view_top{
+  padding-bottom:5px;
+  overflow:auto;
+  margin-bottom:10px;
+}
+.sm_view_top h2{
+  font-size:17px;
+  letter-spacing:normal;
+  overflow:hidden;
+  margin-bottom:5px;
+}
+.sm_view_top > a{
+  float:left;
+}
+html[dir='rtl'] .sm_view_top > a{
+  float:right;
+}
+.sm_view_top img{
+  float:left;
+  margin-right:5px;
+}
+html[dir='rtl'] .sm_view_top img{
+  float:right;
+  margin-left:5px;
+	margin-right: 0;
+}
+.sm_review_view_right{
+  float:right;
+}
+html[dir='rtl'] .sm_review_view_right{
+  float:left;
+}
+.sm_review_view_right div{
+  text-align:center
+}
+.sm_reviews_breakdowns{
+  margin-bottom:15px;
+}
+.sm_reviews_breakdowns li{
+  font-size:11px;
+  margin:3px 0;
+  padding:0 !important;
+}
+.sm_profile_side_listing_info .list_rating_star,
+.seaocore_sidebar_list_info .list_rating_star,
+.featured_slidshow_info .list_rating_star{
+  margin:3px 0 2px;
+  float:left;
+}
+html[dir='rtl'] .sm_profile_side_listing_info .list_rating_star,
+html[dir='rtl'] .seaocore_sidebar_list_info .list_rating_star,
+html[dir='rtl'] .featured_slidshow_info .list_rating_star{
+	float:right;
+}
+.sm_profile_side_listing{
+	padding:5px;
+	clear:both;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+.sm_profile_side_listing > li{
+	clear:both;
+	padding:0px 5px 0;
+	overflow:hidden;
+}
+.sm_profile_side_listing > li + li{
+	clear:both;
+	margin-top:10px;
+}
+.sm_profile_side_listing li > a{
+	float:left;
+	margin-right:10px;
+}
+html[dir='rtl'] .sm_profile_side_listing li > a{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+.sm_profile_side_listing_info{
+	overflow:hidden;
+}
+.sm_profile_side_listing_title{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.sm_profile_side_listing_stats{
+	font-size:11px;
+}
+.sm_profile_side_listing_btn{
+	margin-top:4px;
+}
+
+/*Top Rated Member widget Css Start from here*/
+.seao_rating_breakdown, .seao_rating_info{
+ width:25%; 
+}
+.seao_rating_stat_review, .seao_rating_stat_recommend{
+ width:20%;
+}
+
+/*-----------------------------Responsive css--------------------------*/
+@media only screen and (max-width: 920px) {
+	.sm_browse_lists_view_options {clear:both;}
+	/* Review and ratings rating breakdown */
+	.sm_profile_review .sm_profile_review_right .sm_rating_breakdowns {max-width:none;width: 92%;margin-top:10px;}
+	/*Top rated member widget*/
+	.seao_rating_breakdown, .seao_rating_info {width: 34%;margin: 0 !important;}
+	.seao_rating_stat_review, 
+	.seao_rating_stat_recommend {display: inline-block;float: none !important; margin-left: 0 !important;width: 34%;}
+	.seao_rating_stat_recommend {display: table-cell;float: none !important;}
+}
+@media only screen and (max-width: 600px) {
+	.sm_profile_review .sm_profile_review_right {width:100%;}	
+}
+@media only screen and (max-width: 468px) {
+	.sm_ur_show_rating_star, .sm_reviews_listing_recommended {float: left;width: 100%;}
+	.sm_ur_show_rating {margin-left: auto;right: 10px;}
+	.sm_reviews_listing_recommended span + span {float: left;}
+	.sm_reviews_listing_title > .sm_review_title {clear: both;}
+}

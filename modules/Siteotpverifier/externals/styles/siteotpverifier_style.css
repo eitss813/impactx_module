@@ -1,0 +1,6 @@
+/* This CSS is added in this file because Calc property was being applied in main.css file */
+#phoneno-element #phoneno {
+width: -webkit- calc(100% - 80px) !important;
+width: -moz- calc(100% - 80px) !important;
+width:  calc(100% - 80px) !important;
+}

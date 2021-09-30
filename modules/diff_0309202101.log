@@ -1,0 +1,361 @@
+diff --git a/application/modules/Fields/Form/Standard.php b/application/modules/Fields/Form/Standard.php
+index 7d7e4cc9..1c8e4034 100755
+--- a/application/modules/Fields/Form/Standard.php
++++ b/application/modules/Fields/Form/Standard.php
+@@ -482,6 +482,7 @@ class Fields_Form_Standard extends Engine_Form
+         $valid = $element->isValid($data[$key], $data) && $valid;
+       }
+     }
++    
+     $this->_processedValues = $selected;
+     // Done changing
+ 
+@@ -493,7 +494,7 @@ class Fields_Form_Standard extends Engine_Form
+         $valid = $form->isValid($data) && $valid;
+       }
+     }
+-
++    
+     $this->_errorsExist = !$valid;
+     return $valid;
+   }
+diff --git a/application/modules/Sitepage/controllers/ManageformsController.php b/application/modules/Sitepage/controllers/ManageformsController.php
+index 3bc8860d..e5a89978 100644
+--- a/application/modules/Sitepage/controllers/ManageformsController.php
++++ b/application/modules/Sitepage/controllers/ManageformsController.php
+@@ -3443,6 +3443,30 @@ class Sitepage_ManageformsController extends Core_Controller_Action_Standard
+         $this->view->form_submitted_paginator = $form_submitted_paginator = Engine_Api::_()->impactx()->getAllSubmittedEntries($form_id);
+ 
+     }
++    
++    /*
++     * Change the publish status for the entry
++     */
++    public function validateFormFieldsAction()
++    {
++//        $post_val = @json_decode($_POST['post_val']);
++//        
++//        echo '<pre>'; 
++//        print_R($post_val); die;
++//        die;
++//        
++//        $status = $_POST['status'];
++//
++//        $status = ($status == "true")? 1: 0;
++//        $packageTable = Engine_Api::_()->getDbtable('entries', 'yndynamicform');
++//
++//        // Update default
++//        $packageTable->update(array(
++//            'publish' =>  $status ,
++//        ), array(
++//            'entry_id = ?' => $entry_id,
++//        ));
++    }
+ 
+ }
+ 
+diff --git a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 5f0dee95..00000000
+--- a/application/modules/Sitepagealbum/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,17 +0,0 @@
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagealbum', 'albums', 'recent_pagealbums', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'albums', 'liked_pagealbums', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'albums', 'viewed_pagealbums', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'albums', 'commented_pagealbums', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'albums', 'featured_pagealbums', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'albums', 'random_pagealbums', 'Random', '0', '6', '24'),
+-('sitepagealbum', 'photos', 'recent_pagephotos', 'Recent', '1', '1', '24'),
+-('sitepagealbum', 'photos', 'liked_pagephotos', 'Most Liked', '1', '2', '24'),
+-('sitepagealbum', 'photos', 'viewed_pagephotos', 'Most Viewed', '1', '3', '24'),
+-('sitepagealbum', 'photos', 'commented_pagephotos', 'Most Commented', '0', '4', '24'),
+-('sitepagealbum', 'photos', 'featured_pagephotos', 'Featured', '0', '5', '24'),
+-('sitepagealbum', 'photos', 'random_pagephotos', 'Random', '0', '6', '24');
+-
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagealbum_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_album' LIMIT 1 ;
+-
+-UPDATE `engine4_core_pages` SET `name` = 'sitepage_album_browse' WHERE `engine4_core_pages`.`name` ='sitepage_album_albumlist' LIMIT 1 ;
+\ No newline at end of file
+diff --git a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql b/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql
+deleted file mode 100644
+index 3224903c..00000000
+--- a/application/modules/Sitepagevideo/settings/ my-upgrade-4.2.0-4.2.1.sql	
++++ /dev/null
+@@ -1,10 +0,0 @@
+-UPDATE `engine4_core_menuitems` SET `params` = '{"route":"sitepagevideo_home","action":"home"}' WHERE `engine4_core_menuitems`.`name` = 'sitepage_main_video' LIMIT 1 ;
+-UPDATE `engine4_core_pages` SET `name` = 'sitepagevideo_index_browse' WHERE `engine4_core_pages`.`name` ='sitepagevideo_index_videolist' LIMIT 1 ;
+-
+-INSERT IGNORE INTO `engine4_seaocore_tabs` (`module` ,`type` ,`name` ,`title` ,`enabled` ,`order` ,`limit`)VALUES
+-('sitepagevideo', 'videos', 'recent_pagevideos', 'Recent', '1', '1', '24'),
+-('sitepagevideo', 'videos', 'liked_pagevideos', 'Most Liked', '1', '2', '24'),
+-('sitepagevideo', 'videos', 'viewed_pagevideos', 'Most Viewed', '1', '3', '24'),
+-('sitepagevideo', 'videos', 'commented_pagevideos', 'Most Commented', '0', '4', '24'),
+-('sitepagevideo', 'videos', 'featured_pagevideos', 'Featured', '0', '5', '24'),
+-('sitepagevideo', 'videos', 'random_pagevideos', 'Random', '0', '6', '24');
+\ No newline at end of file
+diff --git a/application/modules/Yndynamicform/Form/Standard.php b/application/modules/Yndynamicform/Form/Standard.php
+index 7328bd90..ab2272e1 100644
+--- a/application/modules/Yndynamicform/Form/Standard.php
++++ b/application/modules/Yndynamicform/Form/Standard.php
+@@ -20,6 +20,9 @@
+ class Yndynamicform_Form_Standard extends Fields_Form_Standard
+ {
+     protected $_mode;
++    
++    public $ajaxValidation = true;
++    
+     public function setMode($mode)
+     {
+         $this -> _mode = $mode;
+diff --git a/application/modules/Yndynamicform/controllers/EntriesController.php b/application/modules/Yndynamicform/controllers/EntriesController.php
+index 1b421e79..16f0a080 100644
+--- a/application/modules/Yndynamicform/controllers/EntriesController.php
++++ b/application/modules/Yndynamicform/controllers/EntriesController.php
+@@ -1135,9 +1135,11 @@ class Yndynamicform_EntriesController extends Core_Controller_Action_Standard
+             $isSiteAdmins = $viewer->isAdmin();
+         }
+         
+-        $getUserAssiginedCountByFormId = Engine_Api::_()->getDbTable('projectforms', 'sitepage')->getUserAssiginedCountByFormId($form_id, $user_id);
+-        if( empty($isPageAdmins) && empty($isSiteAdmins) && empty($getUserAssiginedCountByFormId) )
+-            return $this->_forward('requireauth', 'error', 'core');
++        if( !empty($form_id) && !empty($user_id) ) {
++            $getUserAssiginedCountByFormId = Engine_Api::_()->getDbTable('projectforms', 'sitepage')->getUserAssiginedCountByFormId($form_id, $user_id);
++            if( empty($isPageAdmins) && empty($isSiteAdmins) && empty($getUserAssiginedCountByFormId) )
++                return $this->_forward('requireauth', 'error', 'core');
++        }
+         
+         if($project_id && !$user_id){
+             $tableEntries = Engine_Api::_()->getDbTable('entries', 'yndynamicform')->getEntryIDByProjectIdAndFormId($form_id, $project_id);
+@@ -2205,6 +2207,14 @@ class Yndynamicform_EntriesController extends Core_Controller_Action_Standard
+                     }
+                 }
+             }
++            
++            if( $this->getRequest()->getPost() ) {
++                $abc = $this->getRequest()->getPost();
++//                $xyz = $new_entry_form->getMarkupListStart();
++//                $xyz = $new_entry_form->isValid($abc);
++//                return;
++//                print_R($xyz); die;
++            }
+ 
+             // check the number fields and its values
+             if($this->getRequest()->isPost() && $new_entry_form->isValid($this->getRequest()->getPost())) {
+diff --git a/application/modules/Yndynamicform/controllers/FormController.php b/application/modules/Yndynamicform/controllers/FormController.php
+index 9baf9e69..8ef7ab77 100644
+--- a/application/modules/Yndynamicform/controllers/FormController.php
++++ b/application/modules/Yndynamicform/controllers/FormController.php
+@@ -411,12 +411,12 @@ class Yndynamicform_FormController extends Core_Controller_Action_Standard
+                 if(isset($config->min_value)){
+                     $min_value = $config->min_value;
+                     if($min_value > 0)
+-                        $labelss = $labelss . ' ( Minimums: '. $min_value.')';
++                        $labelss = $labelss . ' ( Minimum: '. $min_value.')';
+                 }
+                 if(isset($config->max_value)){
+                     $max_value = $config->max_value;
+                     if($max_value > 0)
+-                        $labelss = $labelss . ' ( Maximums: '. $max_value.')';
++                        $labelss = $labelss . ' ( Maximum: '. $max_value.')';
+                 }
+                 if(isset($config->default_value)){
+                     $default_value = $config->default_value;
+diff --git a/application/modules/Yndynamicform/views/scripts/entries/create.tpl b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+index 89316865..4397b1f1 100644
+--- a/application/modules/Yndynamicform/views/scripts/entries/create.tpl
++++ b/application/modules/Yndynamicform/views/scripts/entries/create.tpl
+@@ -60,7 +60,7 @@ if(!$this->project_id && $this->user_id){
+ <?php if(!$this->flag && $noerrmsg == true): ?>
+ <div class="layout_page_yndynamicform_form_detail" id="edit-form">
+ 
+-    <div class=">
++    <div class="">
+         <div class="">
+             <div class="">
+                 <div class="title" style="display: flex;justify-content: center">
+@@ -199,6 +199,26 @@ if(!$this->project_id && $this->user_id){
+                 <?php endif; ?>
+ 
+                 <script type="text/javascript">
++                    /*
++                    function validateFormFields() {
++                        var url = en4.core.baseUrl + 'organizations/manageforms/validate-form-fields';
++                        var request = new Request.HTML({
++                            url: url,
++                            method: 'POST',
++                            data: {
++                                format: 'html',
++                                'post_val': '<?php echo json_encode($_POST); ?>'
++                            },
++                            onSuccess: function (responseTree, responseElements, responseHTML, responseJavaScript) {
++                                alert(responseHTML);
++                            }
++                        });
++                        request.send();
++                        alert("CALL METHOD");
++
++                    }
++                    */
++                   
+                     document.addEvent('domready', function() {
+                     <?php if(!$this -> viewer -> getIdentity() && !$this -> form -> require_login): ?>
+                         guestSubmit();
+@@ -208,6 +228,9 @@ if(!$this->project_id && $this->user_id){
+                     var clickSubmit = false;
+ 
+                     function validate_form() {
++                    
++                        // validateFormFields();
++                    
+                         if (totalPageBreak) {
+                             if (!validateRequiredFieldInPage(totalPageBreak + 1))
+                                 return false;
+@@ -401,7 +424,7 @@ if(!$this->project_id && $this->user_id){
+                                                     }
+                                                 }
+                                             } else {
+-                                                alert("No results found");
++                                                // alert("No results found");
+                                             }
+ 
+                                             // Pass value
+@@ -1083,9 +1106,9 @@ if(!$this->project_id && $this->user_id){
+             var elements = document.getElementById("form_detail").elements;
+             
+             try {
+-                for (i = 0; i < elements.length; i++ ) {
+-                    if( elements[i] )
+-                        var element = elements[i];
++                for (update_formula_flag = 0; update_formula_flag < elements.length; update_formula_flag++ ) {
++                    if( elements[update_formula_flag] )
++                        var element = elements[update_formula_flag];
+ 
+                     if( element && element.id ) {
+                         var id = element.id;
+@@ -1094,8 +1117,21 @@ if(!$this->project_id && $this->user_id){
+                         id = id[id.length - 1];
+ 
+                         var temp_label = ''
+-                        if( document.getElementById(full_id + '-label').childNodes[0].innerHTML )
++                        if( document.getElementById(full_id + '-label').childNodes[0].innerHTML ) {
+                             temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
++                        }
++
++                        // Exclude ( Maximum) from the string
++                        var temp_label_max_array = temp_label.split("( Maximum");
++                        
++                        if( temp_label_max_array[0] )
++                            var temp_label_min_array = temp_label_max_array[0].split("( Minimum");
++                            
++                        if( temp_label_min_array[0] )
++                            temp_label = temp_label_min_array[0];
++                            
++                        // Trim the label
++                        temp_label = temp_label.trim();
+ 
+                         if( temp_label && (formula.search("field_id_" + id) >= 0) )
+                             formula = formula.replaceAll("field_id_" + id, temp_label);
+diff --git a/application/modules/Yndynamicform/views/scripts/form/detail.tpl b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+index 6db7f376..5b7b9b63 100644
+--- a/application/modules/Yndynamicform/views/scripts/form/detail.tpl
++++ b/application/modules/Yndynamicform/views/scripts/form/detail.tpl
+@@ -476,7 +476,7 @@ $this->headScript()
+                                     }
+                                 }
+                             } else {
+-                                alert("No results found");
++                                // alert("No results found");
+                             }
+ 
+                             // Pass value
+@@ -591,9 +591,9 @@ $this->headScript()
+         var metrics_field_id_array_flag = 0;
+         for (var i = 0, element; element = elements[i++];) {
+             var metrics_aggregate_type = element.getAttribute("metric_aggregate_type");
++            matrics_aggregation_element_id = element.id;
+             if(metrics_aggregate_type=="metric_sum"){
+                 matrics_aggregation_element = element;
+-                matrics_aggregation_element_id = element.id;
+                 
+                 // Add multiple metrics in the array
+                 metrics_field_id_array[metrics_field_id_array_flag++] = matrics_aggregation_element_id;
+@@ -610,7 +610,6 @@ $this->headScript()
+             if(metrics_aggregate_type=="own_formula"){
+                 // alert(element.getAttribute("own_formula_input"));
+                 matrics_aggregation_element = element;
+-                matrics_aggregation_element_id = element.id;
+                 var metrics_label = document.getElementById(matrics_aggregation_element_id+'-label').innerHTML;
+                 
+                 var own_formula_by_id = document.getElementById(matrics_aggregation_element_id).getAttribute("own_formula_by_id");
+@@ -625,6 +624,9 @@ $this->headScript()
+                 matrics_aggregation_field_ids = element.getAttribute("metric_aggregate_fields");
+                 matrics_aggregation_field_ids = matrics_aggregation_field_ids.split(" ");
+             }
++            
++            // Convert plain text links to clickable links
++            document.getElementById(matrics_aggregation_element_id+'-label').innerHTML = linkify(document.getElementById(matrics_aggregation_element_id+'-label').innerHTML);
+         }
+ 
+         var form = document.getElementById("form_detail");
+@@ -632,14 +634,33 @@ $this->headScript()
+             calculateTheMetricsValue();
+         });
+         
++        // Convert plain text links to clickable links
++        function linkify(inputText) {
++            var replacedText, replacePattern1, replacePattern2, replacePattern3;
++
++            //URLs starting with http://, https://, or ftp://
++            replacePattern1 = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
++            replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
++
++            //URLs starting with "www." (without // before it, or it'd re-link the ones done above).
++            replacePattern2 = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
++            replacedText = replacedText.replace(replacePattern2, '$1<a href="http://$2" target="_blank">$2</a>');
++
++            //Change email addresses to mailto:: links.
++            replacePattern3 = /(([a-zA-Z0-9\-\_\.])+@[a-zA-Z\_]+?(\.[a-zA-Z]{2,6})+)/gim;
++            replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
++
++            return replacedText;
++        }
++        
+         // Get the number form fields label.
+         function getUpdatedFormula(formula) {
+             var elements = document.getElementById("form_detail").elements;
+             
+             try {
+-                for (i = 0; i < elements.length; i++ ) {
+-                    if( elements[i] )
+-                        var element = elements[i];
++                for (update_formula_flag = 0; update_formula_flag < elements.length; update_formula_flag++ ) {
++                    if( elements[update_formula_flag] )
++                        var element = elements[update_formula_flag];
+ 
+                     if( element && element.id ) {
+                         var id = element.id;
+@@ -648,8 +669,21 @@ $this->headScript()
+                         id = id[id.length - 1];
+ 
+                         var temp_label = ''
+-                        if( document.getElementById(full_id + '-label').childNodes[0].innerHTML )
++                        if( document.getElementById(full_id + '-label').childNodes[0].innerHTML ) {
+                             temp_label = document.getElementById(full_id + '-label').childNodes[0].innerHTML;
++                        }
++
++                        // Exclude ( Maximum) from the string
++                        var temp_label_max_array = temp_label.split("( Maximum");
++                        
++                        if( temp_label_max_array[0] )
++                            var temp_label_min_array = temp_label_max_array[0].split("( Minimum");
++                            
++                        if( temp_label_min_array[0] )
++                            temp_label = temp_label_min_array[0];
++                            
++                        // Trim the label
++                        temp_label = temp_label.trim();
+ 
+                         if( temp_label && (formula.search("field_id_" + id) >= 0) )
+                             formula = formula.replaceAll("field_id_" + id, temp_label);

@@ -1,0 +1,141 @@
+.layout_page_core_error_requireuser > .social-loginpopup-column-2 {
+display:none !important;
+}
+.sitelogin_social_services_wapper {
+  border: 1px solid #F5F5F5;
+}
+.sitelogin_social_services_wapper .sitelogin_social_services_statistics {
+  position: relative;
+  display: block;
+}
+.sitelogin_social_services_statistics_graph_c {
+  border-bottom: 1px solid #F5F5F5;
+  padding: 20px 100px;
+}
+.sitelogin_social_services_statistics > div {
+  padding: 10px;
+}
+.sitelogin_social_services_statistics_graph {
+  width: 100%;
+  height: 400px;
+}
+.sitelogin_social_services_statistics .total_heading {
+  font-size: 16px;
+  border-bottom: 1px solid #F5F5F5;
+  background-color: #FDFDFD;
+}
+.sitelogin_social_services_statistics ul {
+}
+.sitelogin_social_services_statistics ul li{
+  display: inline-block;
+  width: 24%;
+  padding: 5px;
+  margin: 3px;
+  border-left: 15px solid;
+  box-sizing: border-box;
+  border-bottom: 2px solid;
+}
+
+.sitelogin_social_services_statistics ul li span:last-child {
+  float: right;
+  font-weight: 700;
+}
+
+/*ADMIN FAQ PAGES START HERE*/
+.sitelogin_faq_tabs ul li a {
+  font-size:11px !important;
+}
+.admin_sitelogin_files_wrapper {
+ +rounded;
+  background: #e9f4fa;
+  padding: 10px;
+}
+.admin_sitelogin_files {
+ +rounded;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  list-style:decimal !important;
+  padding-left:10px;
+}
+.admin_sitelogin_files > li {
+  margin-left: 20px;
+  padding: 7px 12px 7px 1px;
+}
+.admin_sitelogin_files > li + li {
+  border-top: 1px solid #eee;
+}
+.sitelogin_faq li > div {
+  clear:both;
+  border-left:3px solid #ccc;
+  padding:5px 5px 5px 10px;
+  margin:5px;
+  font-family:arial;
+  line-height:18px;
+}
+.sitelogin_faq li > div b {
+  font-weight:bold;
+}
+.sitelogin_faq li div ul li ul {
+  list-style: circle;
+  padding-left: 10px;
+  margin-left:5px;
+}
+.sitelogin_faq li div ul {
+  list-style: disc;
+  padding-left: 10px;
+}
+
+/*ADMIN FAQ PAGES END HERE*/
+
+.sitelogin_icon_view{
+  background-image: url(~/application/modules/Sitelogin/externals/images/eye.png);
+}
+.sitelogin_icon_view{
+  display:inline-block;
+  height:16px;
+  vertical-align:bottom;
+  width:16px;
+}
+.sitelogin_tip {
+  overflow: hidden;
+  clear: both;
+}
+.sitelogin_tip > span {
+ +rounded;
+ +shadow(0px, 1px, 5px, 0px, #ddd);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 6px 6px;
+  padding: 6px 6px 6px 27px;
+  background-color: #da5252;
+  border:1px solid #cd4545;
+  color:#FFFFFF;
+  float: left;
+  margin-bottom: 15px;
+  background-image: url(~/application/modules/Sitelogin/externals/images/tip.png);
+}
+.sitelogin_tip > span a {
+  color:#FFFFFF;
+  text-decoration:underline;
+}
+/*ADMIN SETTING FORM CSS START HERE*/
+.sitelogin_settings_form {
+  clear:both;
+}
+.sitelogin_settings_form .settings form {
+  float: none !important;
+  width:auto !important;
+}
+.sitelogin_settings_form .settings .form-description {
+  max-width: none !important;
+  width:auto !important;
+}
+.sitelogin_settings_form .settings .form-element, .sitelogin_settings_form .settings .form-element .description {
+  max-width: 680px !important;
+}
+.sitelogin_settings_form .settings .form-element .description > a {
+  cursor: pointer;
+}
+/*ADMIN SETTING FORM CSS END HERE*/

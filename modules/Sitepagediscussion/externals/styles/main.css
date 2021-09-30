@@ -1,0 +1,6 @@
+/*#sitepagediscussion-sitepagediscussioncreate
+{
+    display: none;
+}*/
+
+label[for="sitepagediscussion-sitepagediscussioncreate"] { display: none !important; }

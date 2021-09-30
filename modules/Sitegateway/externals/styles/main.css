@@ -1,0 +1,10 @@
+/* $Id: main.css 2015-09-10 00:00:00Z SocialEngineAddOns Copyright 2015-2016 BigStep Technologies Pvt. Ltd. $ */
+
+.stripe_connect_button {
+    background-image: url(~/application/modules/Sitegateway/externals/images/stripe-connect.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 33px;
+    width: 200px;
+    background-size: contain;
+}

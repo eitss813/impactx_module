@@ -1,0 +1,413 @@
+
+
+/*Blog Packages Table Start Here*/
+.sesblog_packages_main{
+	padding:50px 20px;
+	margin-bottom:40px;
+}
+.sesblog_packages_main_header{
+	text-align:center;
+	margin-bottom:25px;
+}
+.sesblog_packages_main_header h2{
+	font-size:30px;
+	font-weight:bold;
+	letter-spacing:normal;
+	margin:10px;
+	padding:0;
+}
+.sesblog_packages_main_header p{
+	font-size:17px;
+	margin-top:10px;
+}
+.sesblog_packages_transactions_btn{
+	text-align:right;
+}
+.sesblog_packages_transactions_btn a{
+	display:inline-block;
+	padding:13px 30px;
+	text-align:center;
+	border-radius:5px;
+	font-size:13px;
+	font-weight:600;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.sesblog_packages_table{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+.sesblog_packages_table_item{
+	width:25%;
+	padding:0 10px;
+	margin:10px 0;
+}
+.sesblog_packages_table_item > section{
+	border-radius: 10px;
+	border-bottom-width: 2px;
+	height: 100%;
+	border-width: 1px;
+	display: flex;
+	flex-direction: column;
+}
+.sesblog_packages_table_item.active > section{
+	transform:scale(1.02);
+}
+.sesblog_packages_table_item ._title{
+	padding:15px;
+}
+.sesblog_packages_table_item ._title h5{
+	font-size:20px;
+	line-height:30px;
+	margin-bottom:0;
+	font-weight:normal;
+	text-align:center;
+}
+.sesblog_packages_table_item ._title span{
+	display:block;
+	font-size:20px;
+	line-height:30px;
+	margin-bottom:0;
+	font-weight:700;
+	text-align:center;
+}
+.sesblog_packages_table_item ._btn{
+	padding:10px 10px 10px;
+	margin-top:auto;
+}
+.sesblog_packages_table_item ._btn a{
+	display:block;
+	padding:15px;
+	text-align:center;
+	border-radius:5px;
+	font-size:13px;
+	font-weight:600;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.sesblog_packages_table_item ._cont{
+	border-top-width:1px;
+	padding:10px;
+}
+.sesblog_packages_table_item .package_capabilities li{
+	border-bottom-width:1px;
+	padding-bottom:10px;
+	margin-bottom:10px;
+}
+.sesblog_packages_table_item .package_capabilities li span._label{
+	float:left;
+}
+.sesblog_packages_table_item .package_capabilities li span._value{
+	float:right;
+}
+.sesblog_packages_table_item .package_capabilities li span._value ._icon{
+	display:inline-block;
+	height:16px;
+	width:16px;
+}
+.sesblog_packages_table_item .package_capabilities li span._value ._yes{
+	background-image:url(../images/tick-green.png);
+}
+.sesblog_packages_table_item .package_capabilities li span._value ._no{
+	background-image:url(../images/cross.png);
+}
+.sesblog_packages_table_item .package_des{
+	font-style:italic;
+	text-align:center;
+}
+@media only screen and (max-width:900px) and (min-width:768px){
+	.sesblog_packages_table_item{width:33.33%;}
+}
+@media only screen and (max-width:767px){
+	.sesblog_packages_main_header{margin-bottom:10px;}
+	.sesblog_packages_main_header h2{font-size:20px;}
+	.sesblog_packages_main_header p{font-size:14px;}
+	.sesblog_packages_table_item{width:50%;}
+}
+@media only screen and (max-width:540px){
+	.sesblog_packages_table_item{width:100%;}
+}
+/*Packages Horrizonal List*/
+.sesblog_packages_list{
+	display:flex;
+	flex-wrap:wrap;	
+}
+.sesblog_packages_list_item{
+	width:100%;
+	margin-top:20px;
+}
+.sesblog_packages_list_item > section{
+	border-radius:3px;
+	border-bottom-width:2px;
+}
+.sesblog_packages_list_item ._top{
+	padding:0 20px 25px;
+}
+.sesblog_packages_list_item ._top ._title{
+	float:left;
+}
+.sesblog_packages_list_item ._top ._title h5{
+	font-size:20px;
+	line-height:50px;
+	padding:0 30px;
+	min-width:150px;
+	text-align:center;
+}
+.sesblog_packages_list_item ._top ._price{
+	float:right;
+	padding-top:10px;
+}
+.sesblog_packages_list_item ._top ._price span{
+	font-size:30px;
+	margin-bottom:0;
+	vertical-align:middle;
+}
+.sesblog_packages_list_item ._cont{
+	padding:0 20px 10px;
+	display:table;
+	width:100%;
+}
+.sesblog_packages_list_item ._cont ._features{
+	display:table-cell;
+}
+.sesblog_packages_list_item .package_capabilities > div{
+	float:left;
+	margin-bottom:10px;
+	width:33.33%;
+	padding-right:20px;
+}
+.sesblog_packages_list_item .package_capabilities > div > div{
+	height:30px;
+	overflow:hidden;
+	border-bottom-width:1px;
+	padding-bottom:10px;
+}
+.sesblog_packages_list_item .package_capabilities > div:nth-last-child(1){
+	border-bottom-width:0;
+}
+.sesblog_packages_list_item .package_capabilities span._label{
+	float:left;
+}
+.sesblog_packages_list_item .package_capabilities span._value{
+	float:right;
+}
+.sesblog_packages_list_item .package_capabilities span._value ._icon{
+	display:inline-block;
+	height:16px;
+	width:16px;
+}
+.sesblog_packages_list_item .package_capabilities span._value ._yes{
+	background-image:url(../images/tick-green.png);
+}
+.sesblog_packages_list_item .package_capabilities span._value ._no{
+	background-image:url(../images/cross.png);
+}
+.sesblog_packages_list_item ._cont ._des{
+	display:table-cell;
+	width:25%;
+	padding:15px;
+	background-color:rgba(0, 0, 0, .05);
+	line-height:22px;
+	vertical-align:top;
+}
+.sesblog_packages_list_item ._btns{
+	padding:10px 20px;
+	text-align:right;
+	border-top-width:1px;
+}
+.sesblog_packages_list_item ._btns a{
+	display:inline-block;
+	padding:13px 30px;
+	text-align:center;
+	border-radius:5px;
+	font-size:13px;
+	font-weight:600;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.sesblog_packages_list_item ._btns ._left{
+	float:left;
+}
+.sesblog_packages_cancel_btn{
+	background-color:#ca1616;
+	color:#fff !important;
+}
+.sesblog_packages_list_item ._btns ._left > a{
+	margin-right:10px;
+}
+.sesblog_packages_list_item ._btns ._left span{
+	display:inline-block;
+	vertical-align:middle;
+}
+.sesblog_packages_list_item ._btns ._right{
+	float:right;
+}
+/*Upgrade Section*/
+.sesblog_packages_upgrade .sesblog_packages_main_header{
+	margin-bottom:0;
+	text-align:left;
+}
+.sesblog_packages_upgrade div + .sesblog_packages_main_header{
+	margin-top:40px;
+}
+.sesblog_packages_upgrade .sesblog_packages_main_header h2{
+	margin:0;
+	font-size:20px;
+}
+@media only screen and (max-width:900px) and (min-width:768px){
+	.sesblog_packages_list_item .package_capabilities > div{
+		width:50%;
+	}
+	.sesblog_packages_list_item ._cont ._des{
+		width:33.33%;
+	}
+}
+@media only screen and (max-width:767px){
+	.sesblog_packages_list_item .package_capabilities > div{
+		width:50%;
+	}
+	.sesblog_packages_list_item .package_capabilities > div:nth-child(even){
+		padding-right:0;
+	}
+	.sesblog_packages_list_item .package_capabilities,
+	.sesblog_packages_list_item ._cont ._des{
+    display:block !important;
+    width:100%;
+    clear:both;
+	}
+}
+@media only screen and (max-width:540px){
+	.sesblog_packages_list_item ._top ._title,
+	.sesblog_packages_list_item ._top ._price,
+	.sesblog_packages_list_item ._btns a{
+		text-align:center;
+		width:100%;
+	}
+	.sesblog_packages_list_item .package_capabilities > div{
+		padding:0;
+		width:100%;
+	}
+}
+/*Blog Packages Table End Here*/
+/*Payment Complete Message Start Here*/
+.sesblogpackage_payment_process{
+	border-width: 1px;
+	padding: 15px;
+}
+.sesblogpackage_payment_process ._des{
+	font-weight:bold;
+	padding-bottom:15px;
+}
+.sesblogpackage_payment_process #buttons-wrapper button,
+.sesblogpackage_payment_process #buttons-wrapper span{
+	margin-right:10px;
+}
+[dir="rtl"] .sesblogpackage_payment_process #buttons-wrapper button,
+[dir="rtl"] .sesblogpackage_payment_process #buttons-wrapper span{
+	margin-left:10px;
+	margin-right:0;
+}
+.sesblogpackage_payment_process_complete_page{
+	padding:40px 0;
+}
+.sesblogpackage_payment_process_complete{
+	text-align:center;
+}
+.sesblogpackage_payment_process_complete i{
+	margin:0 auto;
+}
+.sesblogpackage_payment_process_complete ._text{
+	font-size:25px;
+	display:block;
+	color:#44a72d;
+	margin:10px 0;
+}
+.sesblogpackage_payment_process_complete ._error{
+	color:#f00;
+}
+.sesblogpackage_payment_process_complete ._wait{
+	color:#F90;
+}
+.sesblogpackage_payment_process_complete_btn{
+	text-align:center;
+	padding-top:20px;
+}
+.sesblogpackage_payment_process_complete_btn > button{
+	display:inline-block;
+	float:none;
+	padding:10px 20px;
+	margin:0 5px;
+}
+/*Payment Complete Message End Here*/
+/*All Transactions List Start*/
+.sesblog_packages_transactions_header{
+	margin-bottom:10px;
+}
+.sesblog_packages_transactions_header h3{
+	font-weight:bold;
+	font-size:17px;
+}
+.sesblog_packages_transactions_header a{
+	padding:5px 10px;
+}
+.sesblog_packages_transactions_header a:before{
+	margin-right:5px;
+}
+.sesblog_packages_transactions_table table{
+	border-width:1px;
+	width:100%;
+}
+.sesblog_packages_transactions_table table th,
+.sesblog_packages_transactions_table table td{
+	padding:10px;
+}
+.sesblog_packages_transactions_table table th{
+	background-image:url(../images/t-img-light.png);
+}
+.sesblog_packages_transactions_table table td{
+	border-top-width:1px;
+}
+.sesblog_packages_transactions_table table th + th,
+.sesblog_packages_transactions_table table td + td{
+	border-left-width:1px;
+}
+/*All Transactions End Start*/
+.sesblog_package_details{
+	padding:10px;
+	border-width:1px;
+	margin-bottom:15px;
+}
+.sesblog_package_details > div{
+	padding:5px 0;
+	font-size:12px;
+}
+.sesblog_package_details > div > span:nth-child(1){
+	float:left;
+	margin-right:10px;
+	font-weight:bold;
+}
+.sesblog_package_details > div > span:nth-last-child(1){
+	overflow:hidden;
+	display:block;
+	text-align:right;
+}
+.sesblog_payment_btn{
+	border-radius:20px;
+	display:block;
+	padding:10px;
+	text-align:center;
+	font-size:15px;
+	font-weight:600;
+}
+.sesblog_payment_btn i{
+	margin-right:10px;
+}
+[dir="rtl"] .sesblog_payment_btn i{
+	margin-right:0;
+	margin-left:10px;
+}
+.sesblog_dashboard_menu_list .sesblog_payment_btn{
+	border-radius:4px;
+  background:none !important;
+}

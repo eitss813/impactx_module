@@ -1,0 +1,17 @@
+
+/*Notification Icons*/
+.notification_type_sitepage_join::before, .notification_type_sitepagemember_approve::before, .notification_type_sitepagemember_invite::before{
+	content:"\f234";
+}
+.notification_type_sitepage_addmember::before{
+	content:"\f0f6";
+}
+.notification_type_sitepagemember_accepted::before{
+	content:"\f234";
+}
+.notification_type_sitepagemember_invite::before{
+	content:"\f0e0";
+}
+.sitepage_gutter_manage_joined_members::before {
+	content:"\f0f6";
+}

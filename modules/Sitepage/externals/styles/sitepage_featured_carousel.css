@@ -1,0 +1,137 @@
+/* $Id: Sitepagecontent_featured_carousel.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+/*IMAGE SLIDER*/
+.Sitepagecontent_featured_slider {
+	padding: 10px 0;
+	margin-bottom:15px;
+}
+.Sitepagecontent_SlideItMoo_outer{
+	display:block; 
+	overflow:hidden;
+	position:relative;
+	margin:0 auto;
+}
+/* create custom forward-backward buttons for horizontal container */
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward_disable,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back_disable{
+	display:block; 
+	cursor:pointer; 
+	width:30px; 
+	float:left;
+	margin:auto;
+	height:37px;
+}
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward img,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward_disable img,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back img,
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back_disable img{
+	margin-top:-21px;
+	top:50%;
+	margin-left:5px;
+	position:absolute;
+}
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_loding{
+  margin-top:-8px!important;
+}
+/* create custom up-down buttons for vertical container */
+.Sitepagecontent_SlideItMoo_outer_vertical .Sitepagecontent_SlideItMoo_forward,
+.Sitepagecontent_SlideItMoo_outer_vertical .Sitepagecontent_SlideItMoo_forward_disable,
+.Sitepagecontent_SlideItMoo_outer_vertical .Sitepagecontent_SlideItMoo_back,
+.Sitepagecontent_SlideItMoo_outer_vertical .Sitepagecontent_SlideItMoo_back_disable{
+  display:block;
+  cursor:pointer;
+  width:100%;
+  clear:both;
+  height:20px;
+	padding:3px 0;
+  bottom:0px;
+  margin:0 auto;
+  text-align:center;
+}
+.Sitepagecontent_SlideItMoo_outer_vertical .Sitepagecontent_SlideItMoo_loding{
+  margin-top:2px!important;
+}
+.Sitepagecontent_SlideItMoo_inner{
+	margin:0;
+	padding:0;
+	float:left;
+	overflow:hidden;
+}
+.Sitepagecontent_SlideItMoo_items {
+	display:block;
+  overflow: hidden;
+}
+.Sitepagecontent_SlideItMoo_items div.Sitepagecontent_SlideItMoo_element {
+	display:block; 
+	position:relative; 
+	float:left; 
+	margin:0px 
+	font-size:11px; 
+	text-align:center; 
+	color:#FFFFFF; 
+}
+.Sitepagecontent_SlideItMoo_contentList {
+	clear:both;
+	display:block;
+	margin:0px 0 10px;
+	width:100%;
+  overflow:hidden;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content {
+	width:140px;
+	height:140px;
+	overflow:hidden;
+	margin:3px;
+	float:left;
+	position:relative;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content a.thumb_video{
+	height:136px;
+	width:136px;
+	border-width:1px;
+	display:block;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content a.thumb_video .sitepagevideo_thumb_wrapper{
+	margin:16px 2px 2px;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content a.thumb_img{
+	padding:2px;
+	border-width:1px;
+	display:inline-block;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content a.thumb_img img{
+	max-height:134px;
+	max-width:134px;
+	position:relative;
+	border:none;
+	vertical-align:middle;
+	line-height:134px;
+}
+.Sitepagecontent_SlideItMoo_contentList div.featured_thumb_content a.thumb_img span{
+	height:134px;
+	width:134px;
+	float:left;
+	line-height:134px;
+	position:relative;
+	background-position:center;
+	background-repeat:no-repeat;
+	text-align:center;
+}
+/*==================================Responsive Css work for Site-Page Plugin====================================*/
+
+@media only screen and (max-width: 920px) {
+	/* Sitepage featured carausel */
+	.Sitepagecontent_SlideItMoo_outer{width:100% !important;}
+	.Sitepagecontent_SlideItMoo_inner{width:90% !important;overflow-x:visible;}
+	.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward_disable, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back_disable{width:5%;}
+  .Sitepagecontent_SlideItMoo_items{overflow-x:visible;}
+}
+
+@media only screen and (max-width:600px){
+/* Sitepage featured carausel */
+.Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_forward_disable, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back, .Sitepagecontent_SlideItMoo_outer_horizontal .Sitepagecontent_SlideItMoo_back_disable{width:8%;}
+.Sitepagecontent_SlideItMoo_inner{width:84% !important;}	
+	
+}
+

@@ -1,0 +1,330 @@
+/*icons*/
+.icon_sitepage_cancel::before, .icon_sitepage_reject::before {
+	content:"\f235";
+}
+.icon_sitepage_notification::before {
+	content:"\f0f3";
+}
+/*Profile Tab*/
+.sitepage_member_see_waiting {
+	border: 1px solid #EAEAEA;
+	padding:0.5em;
+}
+.sitepage_list_filter_last {
+	float:right;
+	padding-top:3px;
+}
+.sitepage_list_filter_last a {
+	margin-right:10px;
+}
+.sitepagemember_profile_list_header {
+	padding:5px;
+	border-bottom-width:1px;
+	margin-bottom:10px;
+	text-align:right;
+}
+.sitepagemember_profile_list {
+	clear:both;
+	padding-bottom:150px;
+	overflow:hidden;
+}
+/*Page Profile Member Tab*/
+.sitepagemember_profile_top_links{
+	float:right;
+	margin-bottom:8px;
+}
+.sitepagemember_profile_top_links a {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 17px;
+	margin:0 0 0 10px;
+}
+.sitepagemember_profile_filters .sitepage_list_filter_field{
+	width:33% !important;
+}
+.sitepagemember_profile_filters input,
+.sitepagemember_profile_filters select{
+	width:150px;
+}
+.sitepagemember_profile_list ul li {
+  border-width: 0 !important;
+  border-radius: 0;
+	float:left;
+	height:105px;
+	padding:5px;
+	margin:2px;
+	width:30%;
+	position:relative;
+}
+.sitepagemember_profile_list .seaocore_list_featured_label{
+	left:5px;
+	top:5px;
+	z-index:0;
+}
+.sitepagemember_profile_list_photo {
+	border-width:1px;
+	float:left;
+	height:100px;
+	margin-right:10px;
+	position:relative;
+	overflow:hidden;
+	width:100px;
+}
+.sitepagemember_profile_list_photo table{
+	width:100%;
+	height:100%;
+}
+.sitepagemember_profile_list_photo table td{
+	text-align:center;
+	text-align:left\0;
+}
+.sitepagemember_profile_list_photo a img {
+	border:none;
+	max-height:100%;
+	max-width:100px;
+}
+.sitepagemember_profile_list_photo span {
+	position:absolute;
+	top:3px;
+	right:3px;
+}
+.sitepagemember_profile_list_info {
+	display:table-cell;
+	word-break:break-all;
+}
+.sitepagemember_profile_list_title {
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.sitepagemember_profile_list_stats {
+	font-size:0.8em;
+	margin-bottom:2px;
+}
+.sitepagemember_profile_list_info input {
+	width:100px;
+}
+.sitepagemember_profile_list_options_wrapper {
+	clear:both;
+	float:left;
+	margin-top:5px;
+}
+.sitepagemember_profile_list_options_wrapper .settings_icon {
+	padding:5px;
+	display:block;
+	cursor:pointer;
+}
+.sitepagemember_profile_list_options_wrapper .settings_icon i {
+	height:10px;
+	display:block;
+	width:10px;
+}
+.sitepagemember_profile_list_options_wrapper .settings_icon i::before {
+	content:"\f013";
+	font-family: fontawesome;
+	font-style: normal;
+}
+.sitepagemember_profile_list_options_wrapper:hover .settings_icon{
+	background-color:#e6e6e6;
+	border-bottom:none;
+	-moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	padding:4px 4px 5px;
+}
+.sitepagemember_profile_list_options {
+	display:none;
+	position:absolute;
+	padding:5px;
+	width:140px;
+	-moz-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	box-shadow:0 3px 8px 0 rgba(0, 0, 0, 0.3);
+	z-index:99;
+}
+.sitepagemember_profile_list_options a {
+	clear:both;
+	padding-top:3px;
+	padding-bottom:3px;
+	margin:3px 0;
+	font-size:11px;
+	font-weight:normal;
+	display:block;
+}
+.sitepagemember_profile_list_options_wrapper:hover .sitepagemember_profile_list_options {
+	display:block;
+}
+/*Compose Member Popup*/
+.sitepagemember_message_popup {
+	width:600px;
+}
+.sitepagemember_message_popup .global_form div.form-label {
+	width:100px;
+}
+.sitepagemember_message_popup .global_form div.form-element {
+	max-width:445px;
+}
+.sitepagemember_message_popup .global_form input[type="radio"], .sitepagemember_message_popup .global_form input + label {
+	display:inline;
+	float:none;
+}
+.sitepagemember_message_popup #messages_compose #submit-element {
+	float:left;
+}
+/*join popup and edit popup, join more pages popup*/
+.sitepagemember_member_popup{
+	width:360px;
+	min-height:250px;
+}
+.sitepagemember_member_popup h3,
+.sitepagemember_join_more_pages_popup h3 {
+	margin-bottom: 5px;
+}
+.sitepagemember_member_popup .form-label{
+	font-weight:bold;
+	margin-bottom:3px;
+}
+.sitepagemember_member_popup #addmonth-wrapper,
+.sitepagemember_member_popup #addday-wrapper{
+	margin-top: 5px;
+}
+.sitepagemember_member_popup #date-wrapper{
+	margin-top:10px;
+	clear:both;
+}
+.sitepagemember_member_popup #title-wrapper #title-label,
+.sitepagemember_member_popup #year-wrapper #year-label,
+.sitepagemember_member_popup #category_id-label{
+	padding:10px 0 2px;
+	font-weight:bold;
+}
+.sitepagemember_join_more_pages_popup #title-label{
+	padding:10px 0 2px;
+}
+.sitepagemember_member_popup #year-wrapper{
+	float:left;
+}
+
+.sitepagemember_member_popup #addmonth-wrapper,
+.sitepagemember_member_popup #month-wrapper,
+.sitepagemember_member_popup #day-wrapper,
+.sitepagemember_member_popup #addday-wrapper{
+	float:left;
+	padding-left: 10px;
+}
+.sitepagemember_member_popup #year-label,
+.sitepagemember_member_popup #addmonth-label,
+.sitepagemember_member_popup #addday-label,
+.sitepagemember_member_popup #month-label, 
+.sitepagemember_member_popup #day-label{
+	display:none;
+}
+.sitepagemember_member_popup #buttons-wrapper{
+	margin-top: 20px;
+	float:left;
+	clear:both;
+}
+/*add people popup*/
+.sitepage_add_members_popup {
+	min-height:250px ;
+	width:400px ;
+}
+.sitepage_add_members_popup h3 {
+	margin-bottom: 5px;
+}
+.sitepage_add_members_popup .form-wrapper{
+	overflow:hidden;	
+}
+.sitepage_add_members_popup #user_ids-label {
+	padding:0;
+	text-align:left;
+	margin: 20px 0 5px;
+}
+.sitepage_add_members_popup #user_ids-element input[type="text"] {
+	width:350px;
+	float:left;
+}
+.sitepage_add_members_popup button{
+	margin-top:20px;
+}
+.sitepage_add_members_popup ul.tag-autosuggest {
+	margin-top: 22px;
+	max-height: 100px;
+	overflow-y: auto !important;
+}
+/*NOtification Setting Popup*/
+.sitepagemember_notification_setting .global_form div.form-label{
+	display:none;
+}
+/* sitepage members browse page*/
+.sitepage_member_browse_head{
+	padding-bottom: 5px;
+}
+h3.sitepage_member_browse_head > h3.sitepage_member_browse_head{
+	margin-top:20px;
+}
+/*sitepage members browse page*/
+
+/*Show tooltip */
+.sitepagemember_show_tooltip {
+	display: none;
+	position: absolute;
+	background: #333;
+	opacity: .8;
+	color: #fff;
+	text-align: left;
+	padding: 5px;
+	max-width: 225px;
+	margin-top: 5px;
+	*margin-top: 10px;
+	left:0;
+	font-weight:normal;
+	font-size:11px !important;
+	line-height:17px;
+	z-index:1000;
+	white-space:nowrap;
+}
+.sitepagemember_show_tooltip img {
+	margin-top:-13px;
+	position:absolute;
+	left:10px;
+}
+.sitepagemember_show_tooltip_wrapper {
+	position:relative;
+}
+.sitepagemember_show_tooltip_wrapper:hover .sitepagemember_show_tooltip{
+	display: block;
+}
+
+/*==================================Responsive Css work for page Plugin====================================*/
+
+@media only screen and (max-width: 920px) {
+/* Members profile list */
+.sitepagemember_profile_list ul li {margin: 1%;width: 48%;box-sizing:border-box;}
+}
+
+@media only screen and (max-width: 768px) {
+.sitepagemember_profile_filters .sitepage_list_filter_field{width:100% !important;margin:10px 0 0;}
+/* member filter form */
+.sitepagemember_profile_filters .sitepage_list_filter_field select, .sitepagemember_profile_filters .sitepage_list_filter_field input {box-sizing: border-box;padding: 4px 3px;width: 100% !important;}
+}
+
+@media only screen and (max-width: 480px) {
+/* Members profile list */
+.sitepagemember_profile_list ul li {width: 100%;margin:2% 0;}
+/* Become a member popup on the profile page */
+.sitepagemember_member_popup{width:100%;}
+}
+
+
+@media (max-width: 767px) {
+	#messages_compose > div {
+		width: 85% !important;
+	}
+	.sitepage_add_members_popup #user_ids-element input[type="text"] {
+		width: 100% !important;
+		float: left;
+	}
+	.sitepagemember_message_popup {
+		width: 100% !important;
+	}
+}

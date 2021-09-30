@@ -1,0 +1,285 @@
+/* $Id:style_sitevideo_dashboard.css 6590 2014-01-02 00:00:00Z SocialEngineAddOns Copyright 2013-2014 BigStep Technologies Pvt. Ltd. $ */
+
+/*#channels_edit #fieldset-buttons {
+  margin-left: 175px;
+}
+html[dir="rtl"] #channels_edit #fieldset-buttons {
+  margin-right: 175px;
+	margin-left: 0;
+}*/
+.sitevideo_video_form #channels_edit #search-label {
+	display: none;
+}
+.sitevideo_dashboard_info .sitevideo_featured {
+	width:initial;
+	margin: 0;
+}
+.sitevideo_dashboard_info_image{
+	text-align:center;
+	width: 200px;
+}
+.sitevideo_dashboard_info_image img{
+	float: left;
+  border:none;
+	width:100%;
+}
+html[dir="rtl"] .sitevideo_dashboard_info_image img{
+	float: right;
+}
+.sitevideo_dashboard_content{
+	overflow:hidden;
+}
+.sitevideo_dashboard_content > h3{
+	margin-bottom:5px;
+}
+.sitevideo_dashboard_header{
+	overflow:hidden;
+	padding:0 5px 5px;
+	margin-bottom:5px;
+}
+.sitevideo_dashboard_header + .global_form {
+	margin-top: 0;
+}
+.sitevideo_dashboard_header .sitevideo_dashboard_header_title{
+	font-size:17px;
+	margin-right:10px;
+}
+html[dir="rtl"] .sitevideo_dashboard_header .sitevideo_dashboard_header_title{
+	margin-right:0px;
+	margin-left:10px;
+}
+
+/*Dashboard Forms*/
+.sitevideo_dashboard_content .global_form > div{
+	float:none !important;
+}
+.sitevideo_dashboard_content .global_form > div > div > h3 + p,
+.sitevideo_dashboard_content #style-element,
+.sitevideo_dashboard_content #overview-element,
+.sitevideo_editstyle .global_form textarea + p, 
+.sitevideo_editstyle .global_form #terms_of_use-element p{
+	max-width:100%;
+}
+.sitevideo_dashboard_content .global_form div.form-element{
+	max-width:500px;
+	min-width:300px;
+}
+.sitevideo_dashboard_content .global_form input + label{
+	max-width:450px;
+}
+.sitevideo_dashboard_content .defaultSkin table.mceLayout{
+	width:450px !important;
+}
+.sitevideo_dashboard_content .mce-container {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+.sitevideo_dashboard_content .defaultSkin iframe{
+	height:350px !important;
+}
+.sitevideo_editstyle .global_form textarea{
+	width:600px;
+	max-width:none;
+	height:150px;
+	max-height:170px;
+}
+.sitevideo_editstyle #submit-label{
+	display:none;
+}
+.sitevideo_editstyle .global_form #submit-element{
+	clear:both;
+}
+.sitevideo_status_icon{
+	margin-right:5px;
+	float:left;
+}
+html[dir="rtl"] .sitevideo_status_icon{
+	float:right;
+}
+
+/*Edit & Upload Media*/
+/*Upload Photos */
+.sitevideo_form_upload div.form-element{
+  max-width: inherit !important;
+}
+.sitevideo_form_upload #file-label, 
+.sitevideo_form_upload #submit-label{
+	display:none;
+}
+.sitevideo_form_upload #file-element #demo-status{
+	width:auto;
+}
+ul.sitevideo_edit_media{
+	overflow:hidden;
+}
+ul.sitevideo_edit_media > li{
+	clear:both;
+	overflow:hidden;
+	padding-bottom:15px;
+	padding-top:15px;
+}
+ul.sitevideo_edit_media .sitevideo_video_thumb_wrapper,
+ul.sitevideo_edit_media .sitevideo_edit_media_thumb{
+	float:left;
+	margin-right:15px;
+	overflow:hidden;
+}
+html[dir="rtl"] ul.sitevideo_edit_media .sitevideo_video_thumb_wrapper,
+html[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_thumb{
+	float:right;
+	margin-left:15px;
+	margin-right:0px;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_thumb img{
+	display:block;
+	margin:3px;
+	width:170px;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_info{
+	overflow:hidden;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_title input{
+ margin:2px 0px 6px 0px;
+ width:25em;
+}
+html[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_title input{
+	margin:2px 6px 6px 0px;	
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_caption textarea{
+	margin:2px 0px 6px 0px;
+	width:25em;
+	height:3em;
+	min-height:0px;
+}
+html[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_caption textarea{
+	margin:2px 6px 6px 0px;	
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_options{
+	float:left;
+	margin-right:15px;
+}
+html[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_options{
+	float:right;
+	margin-left:15px;
+	margin-right:0;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_options_label{
+	float:left;
+}
+[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_options_label{
+	float:right;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_options_check{
+	float:left;
+}
+ul.sitevideo_edit_media .sitevideo_edit_media_options > label{
+	display:block;
+	float:left;
+}
+[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_options_check,
+[dir="rtl"] ul.sitevideo_edit_media .sitevideo_edit_media_options > label{
+	float:right;
+}
+.sitevideo_edit_videos_button div.form-label{
+  width: 190px;
+}
+
+
+/*Videos tab*/
+#my-channel-videos > li,
+#my-channel-favourite-videos > li {
+	border-radius: 2px;
+	border-width: 1px;
+	box-sizing: border-box;
+	display: inline-block;
+	height: 85px;
+	margin: 10px 8px;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	vertical-align: top;
+	width: 110px;
+	position: relative;
+}
+#my-channel-videos > li a, #my-channel-favourite-videos > li a {
+	background-color: rgba(0, 0, 0, 0.8);
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+#my-channel-videos > li img,
+#my-channel-favourite-videos > li img {
+	height: 100%;
+	max-width: 100%;
+}
+#my-channel-videos .video_length,
+#my-channel-favourite-videos .video_length {
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 15px;
+	height: 20px;
+	margin: 5px;
+	opacity: 1;
+	padding: 0 8px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+html[dir="rtl"] #my-channel-videos .video_length,
+html[dir="rtl"] #my-channel-favourite-videos .video_length {
+	left: 0;
+	right: auto;	
+}
+
+#addMoreVideos,
+.addMoreVideos {
+	margin-top:40px;
+	margin-bottom: 20px;
+}
+#addMoreVideos + .global_form #buttons-label{
+	display: none;
+}
+.sitevideo_dashboard_content .upload_new_video {
+	display: inline-block;
+	margin: 10px 0;
+}
+.sitevideo_dashboard_content .upload_new_video + form #buttons-label {
+	display: none;
+}
+
+/*Dashboard Info*/
+.sitevideo_dashboard_info {
+	border-width: 1px;
+	display: inline-block;
+	min-height: 150px;
+	position: relative;
+}
+
+/* Responsive work */
+@media screen and (max-width:920px){
+
+}
+@media screen and (max-width:768px){
+	/*Dashboard >> Photos*/
+	ul.sitevideo_edit_media .sitevideo_video_thumb_wrapper, 
+	ul.sitevideo_edit_media div.sitevideo_edit_media_thumb {float: none;}
+	/*Dashboard >> Edit info*/
+	#channels_edit #fieldset-buttons {margin: 0;}
+	div.sitevideo_video_view_top .video_embed .vimeo_iframe_big, .video_embed iframe, .video_embed > span {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+@media screen and (max-width:600px){
+	/*Dashboard*/
+	.sitevideo_dashboard_content {padding: 10px;}
+	.sitevideo_dashboard_content .global_form div.form-element {max-width: 100% !important; min-width: 100% !important;}
+	.sitevideo_dashboard_content .global_form div.form-element, div img.thumb_profile_edit {max-width: 100% !important; min-width: 100%;}
+	ul.sitevideo_edit_media div.sitevideo_edit_media_thumb img {display:inline-block;}
+	div.sitevideo_dashboard_info_image img{float:none;}
+}

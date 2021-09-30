@@ -1,0 +1,12 @@
+.sesnewsletter_verify_page {
+	position: relative;
+	padding: 20px;
+}
+.sesnewsletter_verify_page a{
+	color:$theme_button_font_color !important;
+	background:$theme_button_background_color;
+}
+.sesnewsletter_verify_page a:hover{
+	background:$theme_button_font_color;
+	color:$theme_button_background_color !important;
+}

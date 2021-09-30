@@ -1,0 +1,906 @@
+/* $Id: main.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+/*Albumview Page append icons*/
+.sitealbum_icon_link::before {
+  content:"\\f0c1";
+}
+.sitealbum_icon_message::before {
+  content:"\\f0e0";
+}
+.sitealbum_icon_badge_create::before {
+  content:"\\f0a3";
+}
+.sitealbum_icon_map_search::before {
+  content:"\\f002";
+}
+.layout_sitealbum_browse_menu_quick .quicklinks ul li a::before {
+	font-family: 'Font Awesome 5 Free','fontawesome';
+	margin-right: 7px;
+}
+[dir="rtl"] .layout_sitealbum_browse_menu_quick .quicklinks ul li a::before {
+	margin-right: auto;
+	margin-left: 7px;
+}
+.sitealbum-album-more {
+  border: 1px solid $theme_foreground_border_color;
+}
+.sitealbum-album-more:hover {
+  background-color: $theme_foreground_background_color;
+}
+.sitealbum_thumb_info p {
+	color: $theme_font_color_light;
+}
+
+/*Featured Photos Carousel*/
+.Sitealbum_SlideItMoo_PhotoList div.featured_thumb_photo a.thumb_img {
+  border: 1px solid $theme_photo_border_color;
+  background-color: $theme_body_background_color;
+}
+ul.sitealbum_sidebar .thumbs_photo {
+  border: 1px solid $theme_photo_border_color;
+}
+.Sitealbum_SlideItMoo_PhotoList div.featured_thumb_photo a.thumb_img:hover,
+ul.sitealbum_sidebar .thumbs_photo:hover {
+  border: 1px solid $theme_photo_border_color_hover;
+}
+.sitealbum_popular_locations,
+.sitealbum_featured_album_slider,
+.sitealbum_browse_side_category {
+  +foreground;
+}
+.sitealbum_popular_locations li + li,
+.sitealbum_quick_specs ul li + li {
+  border-color: $theme_foreground_border_color !important;
+}
+ul.sitealbum_browse_side_category li .cat, 
+ul.sitealbum_browse_side_category li .subcat a, 
+ul.sitealbum_browse_side_category li {
+  border-color: $theme_foreground_border_color_light;
+}
+.sitealbum_side_widget,
+.sitealbum_sponsored_categories {
+  +foreground;
+  +rounded;
+}
+
+/*for search*/
+.sitealbum-search-box .form-elements {
+  background-color: $theme_body_background_color;
+}
+.sitealbum-search-box .form-elements input[type='text'],
+.sitealbum-search-box .form-elements select {
+  border: 1px solid $theme_border_medium_color;
+}
+.sitealbum_profile_loading_image{
+  background-image:url(~/application/modules/Seaocore/externals/images/loading.gif);
+  width:100%;
+  height:150px;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+/*css for home page widgets start here*/
+.layout_sitealbum_categories_grid_view, 
+.layout_sitealbum_inthis_album, 
+.layout_sitealbum_friends_photo_albums, 
+.layout_sitealbum_you_and_owner, 
+.layout_sitealbum_featured_photos_carousel, 
+.layout_sitealbum_featured_albums_slideshow, 
+.layout_sitealbum_search_albums_form, 
+.layout_sitealbum_album_of_the_day, 
+.layout_sitealbum_list_photos_tabs_view, 
+.layout_sitealbum_list_albums_tabs_view, 
+.layout_sitealbum_list_popular_photos,
+.layout_sitealbum_list_popular_albums,
+.layout_sitealbum_photo_of_the_day,
+.layout_sitealbum_tagcloud_sitealbum,
+.layout_sitealbum_popularlocation_sitealbum,
+.layout_sitealbum_pinboard_albums_sitealbum,
+.layout_sitealbum_categories_sponsored,
+.layout_sitealbum_html_block_albums_photos,
+.layout_sitealbum_upload_photo_sitealbum,
+.layout_sitealbum_featured_photos{
+  margin-bottom:15px;
+}
+.sitealbum_featured_album_slider{
+  padding:10px 0;
+}
+ul.sitealbum_thumbs > li{
+  position:relative;
+  float: none;
+  display: inline-block;
+}
+ul.sitealbum_thumbs > li + li {
+    margin-top: 5px;
+}
+ul.sitealbum_thumbs> li a{
+  padding:0!important;
+}
+ul.sitealbum_thumbs .show_photo_des,
+.featured_thumb_photo .show_photo_des,
+div.sitealbum_thumbs .show_photo_des{
+  opacity:0;
+  color:#FFFFFF;
+  font-size:$theme_font_size;
+  transition: opacity 200ms linear 0s;
+  position:absolute;
+  color:#fff;
+  bottom:0;
+  padding-top:28px;
+  left:0;
+  right:0;
+  background-color:rgba(0, 0, 0, 0);
+	background-repeat:repeat;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 65%); /* Standard syntax */
+	/*background:-moz-linear-gradient(center top , rgba(22, 24, 27, 0), rgba(22, 24, 27, 0.3) 28px, rgba(22, 24, 27, 0.8)) scroll 0 0 ;*/
+}
+ul.sitealbum_thumbs .show_photo_des div,
+div.sitealbum_thumbs .show_photo_des div{
+	color:#fff;
+	padding: 2px 10px 10px;
+	overflow:hidden;
+}
+ul.sitealbum_thumbs .show_photo_des .photo_title,
+div.sitealbum_thumbs .show_photo_des .photo_title,
+.featured_thumb_photo .show_photo_des .photo_title{
+	font-size:16px;
+	padding: 0 10px;
+}
+ul.sitealbum_thumbs .show_photo_des .photo_title a,
+div.sitealbum_thumbs .show_photo_des .photo_title a {
+	font-weight: bold;
+}
+ul.sitealbum_thumbs .show_photo_des .photo_owner,
+div.sitealbum_thumbs .show_photo_des .photo_owner,
+.featured_thumb_photo .show_photo_des .photo_owner{
+	font-size: 12px;
+	width:55%;
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis; 
+	display:block;
+}
+ul.sitealbum_thumbs .show_photo_des .photo_like,
+ul.sitealbum_thumbs .show_photo_des .photo_comment,
+div.sitealbum_thumbs .show_photo_des .photo_like,
+div.sitealbum_thumbs .show_photo_des .photo_comment{
+/*	background-size:13px;
+	background-repeat: no-repeat;
+  padding-left: 16px;*/
+	margin-left:5px;
+}
+html[dir="rtl"] ul.sitealbum_thumbs .show_photo_des .photo_like,
+html[dir="rtl"] ul.sitealbum_thumbs .show_photo_des .photo_comment,
+html[dir="rtl"] div.sitealbum_thumbs .show_photo_des .photo_like,
+html[dir="rtl"] div.sitealbum_thumbs .show_photo_des .photo_comment {
+/*	padding-left: 0;
+	padding-right: 16px;*/
+	margin-left: 0;
+	margin-right: 5px;
+}
+ul.sitealbum_thumbs .show_photo_des a,
+div.sitealbum_thumbs .show_photo_des a,
+.featured_thumb_photo .show_photo_des a{
+  color:#fff;
+}
+ul.thumbs > li .show_photo_des a,
+.featured_thumb_photo .show_photo_des a{
+  text-decoration:none !important; 
+}
+.featured_thumb_photo .show_photo_des a:hover{
+	text-decoration:underline !important; 
+}
+.Sitealbum_SlideItMoo_PhotoList div.featured_thumb_photo .show_photo_des a,
+ul.thumbs> li .show_photo_des a{
+  color:#FFFFFF;
+  text-decoration:underline;
+}
+.Sitealbum_SlideItMoo_PhotoList div.featured_thumb_photo:hover .show_photo_des,
+ul.sitealbum_thumbs > li:hover .show_photo_des,
+div.sitealbum_thumbs > div:hover .show_photo_des{
+  opacity: 1;
+}
+.layout_sitealbum_album_of_the_day .thumbs_nocaptions img,
+.layout_sitealbum_photo_of_the_day .thumbs_nocaptions img{
+  max-width:99%;
+  margin:0 auto;
+}
+.layout_sitealbum_album_of_the_day .thumbs_nocaptions a,
+.layout_sitealbum_photo_of_the_day .thumbs_nocaptions a{
+  margin:0px;
+  padding:0px;
+}
+.thumbs_nocaptions img{
+  display:inline !important;
+}
+.layout_sitemember_recently_popular_random_sitemember{
+	clear:both;
+}
+/*Categories Banner images*/
+.sitealbum_browse_banner img {
+  width: 100%;
+}
+
+/*Edit Location Popup*/
+#global_page_sitealbum-index-edit-location .global_form div.form-label{
+  width:70px;
+} 
+/*compose message popup*/
+/*#messages_compose div.form-label{
+  width:70px;
+}*/
+#messages_compose .compose-content{
+  width:290px;
+}
+.layout_sitealbum_listtypes_categories .seaocore_navigation_h .seaocore_menu_h > li{
+ border-right:1px solid $theme_border_dark_color;
+}
+html[dir="rtl"]  .layout_sitealbum_listtypes_categories .seaocore_navigation_h .seaocore_menu_h > li{
+ border-right:0px solid $theme_border_dark_color;
+ border-left:1px solid $theme_border_dark_color;
+}
+
+/*top-content-of-album widget*/
+/*Left Block: checkinshowlocation*/
+.sitealbum_topcontent_optblock_left .seaocheckinshowlocation > span{
+	margin-top:0;
+	padding:5px 10px;
+	margin-left:3px;
+}
+html[dir="rtl"]  .sitealbum_topcontent_optblock_left .seaocheckinshowlocation > span {
+	margin-left:0;
+	margin-right:3px;
+}
+.sitealbum_topcontent_optblock_left .seaocheckinshowlocation > span a{
+	line-height:normal;
+	padding-left:10px;
+	background:none;
+	display:inline-block;
+	padding:0;
+	vertical-align:top;
+	height:14px !important;
+}
+html[dir="rtl"] .sitealbum_topcontent_optblock_left .seaocheckinshowlocation > span a {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.sitealbum_topcontent_optblock_left .seaocheckinshowlocation > span a:hover{
+	text-decoration:none !important;
+}
+.sitealbum_topcontent_optblock_left #sitetagcheckin_edit_location_link a:hover{
+	 background-position: center -20px !important;
+}
+.sitealbum_topcontent_optblock_left #filter_form_sitetagcheckin_location span{
+	border:0px;
+}
+.sitealbum_topcontent_optblock_left #filter_form_sitetagcheckin_location span a{
+	padding:0;
+}
+/*Like button*/
+.layout_sitealbum_top_content_of_album .sitealbum_like_button{
+	float:left;
+}
+html[dir="rtl"]  .layout_sitealbum_top_content_of_album .sitealbum_like_button{
+	float:right;
+}
+.layout_sitealbum_top_content_of_album .sitealbum_like_button a{
+	padding:5px 10px;
+	margin-top:-1px;
+}
+/*Right Block*/
+.sitealbum_topcontent_optblock{
+	float:right;
+}
+html[dir="rtl"] .sitealbum_topcontent_optblock {
+	float: left;
+}
+.sitealbum_topcontent_optblock span, .sitealbum_topcontent_optblock_left span,
+.sitealbum_viewmedia_leftblock span, .sitealbum_viewmedia_rightblock span{
+	background-image:url(~/application/modules/Seaocore/externals/images/like/like_button_bg.png) !important;
+  background-color: #FFFFFF;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  border: 1px solid #CECECE;
+	border-radius:3px;
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.05);
+	display:inline-block;
+	font-size: 12px;
+  font-weight: bold;
+  outline: medium none;
+}
+.sitealbum_topcontent_optblock span a:hover, .sitealbum_topcontent_optblock_left #display_current_location:hover, .sitealbum_topcontent_optblock_left #sitetagcheckin_add_location_link:hover,
+.sitealbum_viewmedia_leftblock span a:hover, .sitealbum_viewmedia_rightblock span a:hover{
+  background-image:url(~/application/modules/Seaocore/externals/images/like/like_button_hover_bg.png) !important;
+	background-position: bottom center;
+  background-repeat: repeat-x;
+}
+.sitealbum_topcontent_optblock a, .sitealbum_topcontent_optblock_left a, .sitealbum_viewmedia_leftblock a, .sitealbum_viewmedia_rightblock a{
+	color:#333333 !important;
+}
+.sitealbum_topcontent_optblock a:hover, .sitealbum_viewmedia_leftblock a:hover, .sitealbum_viewmedia_rightblock a:hover{
+	text-decoration:none;
+}
+.sitealbum_topcontent_optblock a{
+	vertical-align: middle;
+	padding:5px 10px;
+	display:table-cell;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+.sitealbum_topcontent_optblock a + a, .sitealbum_viewmedia_leftblock a + a, .sitealbum_viewmedia_rightblock a + a{
+	border-left:1px solid $theme_border_dark_color;
+}
+.sitealbum_topcontent_optblock ul{
+	position:absolute;
+	padding:5px;
+	border:1px solid $theme_border_dark_color; 
+	border-radius:3px;
+	background-color:#fff;
+  z-index:1;
+}
+.sitealbum_topcontent_optblock ul li{
+	padding:0 3px;
+}
+.sitealbum_topcontent_optblock ul li:hover{
+	background-color:#eee;
+}
+.sitealbum_topcontent_optblock ul li a{
+	display:inline;
+	font-weight:normal;
+}
+.sitealbum_topcontent_optblock span i{
+	background-size: 12px auto;
+	height:12px;
+	width:12px;
+	display: inline-block;
+}
+.sitealbum_topcontent_optblock span + span > a:hover{
+	text-decoration:none;
+}
+.sitealbum_topcontent_optblock .icon_cog {
+  background-image:url(~/application/modules/Sitealbum/externals/images/cog.png);
+}
+.sitealbum_topcontent_optblock .icon_down{
+	background-image:url(~/application/modules/Sitealbum/externals/images/down.png);
+}
+.sitealbum_photoTitle{
+	font-size:18px;
+	font-weight:700;
+	margin:5px 0px;
+}
+.sitealbum_photoAction{
+	color:$theme_font_color_light;
+	font-size:12px;
+	line-height:20px;
+}
+.sitealbum_headerDescription{
+	width:450px;
+	padding-top:20px;
+	padding-bottom:20px;
+	line-height:18px;
+	font-size:13px;
+	margin:0 auto;
+}
+
+/*Edit button in Photo Lightbox*/
+.sitealbum_lightbox_editlocation{
+	margin-top: 10px;
+}
+.sitealbum_lightbox_editlocation a.buttonlink{
+	height: 16px;
+  margin-left: 5px;
+}
+/*sitealbum-photo-move-to-other-album Pop up*/
+#global_page_sitealbum-photo-move-to-other-album .global_form div.form-label{
+	width:200px;
+}
+/*Manage Photos*/
+.layout_page_sitealbum_album_editphotos form + .pages {margin-top: 15px;}
+
+
+/*Albm View on hover information*/
+.sitealbum_view_onhover > li {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.sitealbum_view_onhover .sitealbum_thumb_info {
+    box-sizing: border-box;
+    height: 30%;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+		background-color:rgba(0, 0, 0, 0);
+		background-repeat:repeat;
+		background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 95%); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 95%); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 95%); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 95%); /* Standard syntax */
+		transition: all 0.35s ease 0s;
+}
+.sitealbum_view_onhover li:hover .sitealbum_thumb_info {
+	  height: 100%;
+		padding-top: 40px;
+		background-color:rgba(0, 0, 0, 0);
+		background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 1%); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 1%); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 1%); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35) 1%); /* Standard syntax */
+}
+.sitealbum_view_onhover .sitealbum_thumb_info > div.thumbs_info {
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    padding: 10px !important;
+    position: absolute;
+		border: 0;
+		width: 100%;
+		box-sizing: border-box;
+}
+.sitealbum_view_onhover li:hover .sitealbum_thumb_info > div.thumbs_info {
+    bottom: auto;
+		padding-bottom: 0 !important;
+    position: relative;
+}
+.sitealbum_view_onhover .sitealbum_thumb_info .thumbs_title > a {
+    color: #fff;
+		display: inline-block;
+    width: 100%;
+}
+.sitealbum_view_onhover .sitealbum_thumb_info > div.seao_listings_stats {
+    border: 0;
+		bottom: 0;
+    box-sizing: border-box;
+    padding: 1% 10px !important;
+    position: absolute;
+    width: 100%;
+		color: #fff;
+		opacity:0;
+}
+.sitealbum_view_onhover li:hover .sitealbum_thumb_info > div.seao_listings_stats {
+    opacity: 1;
+		bottom: auto;
+		position: relative;
+}
+.sitealbum_view_onhover .sitealbum_thumb_info > div.thumbs_info span, 
+.sitealbum_view_onhover .sitealbum_thumb_info > div.thumbs_info span a,
+.sitealbum_view_onhover .sitealbum_thumb_info > div.seao_listings_stats i.seao_icon::before,
+.sitealbum_view_onhover .sitealbum_thumb_info > div.seao_listings_stats div, 
+.sitealbum_view_onhover .sitealbum_thumb_info > div.seao_listings_stats div a {
+    color: #fff;
+}
+.sitealbum_view_onhover .seao_share_links {
+	  position: absolute;
+    right: 5px;
+    top: -5px;
+		z-index: 1;
+		opacity: 0;
+}
+.sitealbum_view_onhover li:hover .seao_share_links {
+		opacity: 1;
+		top: 5px;
+		transition: all 0.35s ease-in-out 0s;
+}
+.sitealbum_view_onhover .social_share_wrap {
+		display:inline-block;
+}
+.sitealbum_view_onhover .social_share_wrap > a {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    padding: 9px 13px !important;
+		float: left;
+    margin: 1px;
+}
+.seao_share_links .social_share_wrap > a {
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    margin: 1px;
+    padding: 7px 10px !important;
+}
+.social_share_wrap > a.seao_icon_facebook 																{background: #3b5998;}
+.social_share_wrap > a.seao_icon_twitter 																	{background: #00aced;}
+.social_share_wrap > a.seao_icon_linkedin 																{background: #0077b5;}
+.social_share_wrap > a.seao_icon_google_plus 															{background: #d34836;}
+.social_share_wrap a:hover 																							  {opacity: 0.9; text-decoration:none;}
+.sitealbum_view_onhover .seao_share_links .social_share_wrap a::before 	  {font-size: 18px;}
+div.seao_share_links .social_share_wrap a::before 											  {font-size: 15px;}
+.sitealbum_view_onhover .social_share_wrap > a.seao_icon_facebook:hover   {background: #3b5998 !important;}
+.sitealbum_view_onhover .social_share_wrap > a.seao_icon_twitter:hover    {background: #00aced !important;}
+.sitealbum_view_onhover .social_share_wrap > a.seao_icon_linkedin:hover   {background: #0077b5 !important;}
+.sitealbum_view_onhover .social_share_wrap > a.seao_icon_google_plus:hover{background: #d34836 !important;}
+
+/*Font-Icons*/
+ul.sitealbum_thumbs .show_photo_des .sitealbum_photo_count span::before,
+div.sitealbum_thumbs .show_photo_des .sitealbum_photo_count span::before,
+.seao_share_links .social_share_wrap a::before{
+	font-family: 'Font Awesome 5 Free','fontawesome';
+	font-style: normal;
+	font-size: 14px;
+}
+
+ul.sitealbum_thumbs .show_photo_des .photo_like::before,
+div.sitealbum_thumbs .show_photo_des .photo_like::before {content: "\\f164";}
+ul.sitealbum_thumbs .show_photo_des .photo_comment::before,
+div.sitealbum_thumbs .show_photo_des .photo_comment::before {content: "\\f075";}
+/*Manage photos page*/
+ul.albums_editphotos {
+	width: 100%;
+}
+ul.albums_editphotos > li {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	padding: 2%;
+	width: 50%;
+	box-sizing: border-box;
+	clear:none;
+}
+ul.albums_editphotos > li .albums_editphotos_photo img {
+	max-width: 170px;
+	max-height: 157px;
+}
+.albums_editphotos_info input[type="text"], .albums_editphotos_info textarea {
+	box-sizing: border-box;
+	width: 100% !important;
+}
+.albums_editphotos + #submit-wrapper {
+  clear: both;
+}
+
+/*Album Onhover view for Sidebar widgets*/
+.thumbs_nocaptions.sitealbum_view_onhover > li {
+	position: relative;
+	overflow: hidden;
+}
+.thumbs_nocaptions.sitealbum_view_onhover li:hover .sitealbum_thumb_info {
+  padding-top: 0;
+}
+
+/*.layout_sitealbum_upload_photo_sitealbum {
+    float:left;
+}*/
+
+/*Add photos lightbox*/
+.seao_add_photo_lightbox{ 
+  width: 100% !important;
+  max-width: 100%;
+  height: 100% !important;
+  margin:0 !important;
+  box-sizing: border-box;
+}
+.seao_add_photo_lightbox .layout_main {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#se-main .seao_add_photo_lightbox .layout_main{
+	float: right;
+    margin-top: 5%;
+    width: 80%;
+}
+.seao_add_photo_lightbox .global_form div.form-label {
+  width: 100%;
+  text-align: left;
+}
+.seao_add_photo_lightbox_header .seaocore_button > a{
+	background-color: $theme_button_background_color ;
+	color: $theme_button_font_color;
+	border-color: $theme_button_border_color;
+	background-image: none !important; 
+}
+.seao_add_photo_lightbox_header .seaocore_button > a:hover {
+	opacity: 0.8;
+	background-image: none !important;
+	background-color:$theme_button_background_color !important;
+}
+.seao_add_photo_lightbox #search-label, .seao_add_photo_lightbox #submitForm-label {
+  display: none;
+}
+
+.seao_smoothbox_lightbox_content .layout_sitealbum_navigation{
+	display:none;
+}
+/*Manage photos Page*/
+ul.albums_editphotos > li .albums_editphotos_label {
+	margin-right: 8px;
+}
+
+ul.albums_editphotos > li .photo-delete-wrapper {
+  margin-right: 8px;
+}
+
+.albums_editphotos_info > .media_option_add_date {
+	padding: 5px 0;
+	position: absolute;
+}
+.albums_editphotos_info > .media_option_add_date > select {
+	float: left;
+	margin: 2px;
+}
+.albums_editphotos_info > .media_option_add_date > a {
+	margin: 10px;
+	float: left;
+}
+/*Html block albums photos*/
+.layout_sitealbum_html_block_albums_photos .html_block_buttons {
+  padding: 10px 0;
+}
+.layout_sitealbum_html_block_albums_photos .html_block_buttons .button {
+	+rounded;
+	display: inline-block;
+	font-size: 17px;
+	margin: 7px;
+	padding: 10px 60px;
+	font-weight: bold !important;
+	background-color: $theme_button_background_color;
+	border: 1px solid $theme_button_border_color;
+	color: $theme_button_font_color !important;
+	background-image: none;
+}
+.layout_sitealbum_html_block_albums_photos .html_block_buttons .button:hover {
+  opacity: 0.8;
+}
+
+/*Featured Photos Widget CSS*/
+.layout_sitealbum_featured_photos {
+	padding: 0 !important;
+	overflow: hidden;
+}
+.layout_sitealbum_featured_photos .featuredimage-text { 
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	width:100%;
+	display: table;
+	z-index:1;
+}
+.layout_sitealbum_featured_photos .featuredimage-text > div {
+	color: #fff;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;	
+}
+.layout_sitealbum_featured_photos .featuredimage-text h1 {
+	font-size: 36px;
+	line-height: 50px;
+}
+.layout_sitealbum_featured_photos .featuredimage-text article{
+	font-size: 18px;
+	line-height: 25px;
+}
+.sitealbum_featured_photos_albums li {
+	margin: 0 !important;
+	width: 33.32%;
+	height: 150px !important;
+	position: relative;
+	border-width: 1px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.3);
+} 
+.sitealbum_featured_photos_albums ul.thumbs .thumbs_photo {
+	box-sizing: border-box;
+	padding: 0;
+	width: 100%;
+}
+.sitealbum_featured_photos_albums ul.thumbs .thumbs_photo > span {
+	width:100%;
+	height: 150px;
+	background-size: cover;
+}
+.sitealbum_featured_photos_albums ul.thumbs .thumbs_info{
+	position: absolute;
+	top: 0;
+	color: #fff;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+}
+.sitealbum_featured_photos_albums .thumbs_info .thumbs_title {
+	height: 150px;
+	max-height: 100%;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	font-weight: normal;
+}
+.sitealbum_featured_photos_albums .thumbs_info .thumbs_title > span {
+	color: #fff;
+	display: table-cell;
+	font-size: 24px;
+	height: 150px;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	transition: height 0.15s ease-in-out 0s;
+	vertical-align: middle;
+	width: 24%;
+}
+.sitealbum_featured_photos_albums .thumbs_info .thumbs_title a{
+	color: #fff;
+    line-height:24px;
+}
+.sitealbum_featured_photos_albums li:hover .thumbs_info .thumbs_title > span {
+	height: 145px;
+}
+.sitealbum_featured_photos_albums .thumbs_info .thumbs_title > span > span {
+	font-size: 16px;
+	display: none;
+}
+.sitealbum_featured_photos_albums li:hover .thumbs_info .thumbs_title > span > span {
+	display: block;
+}
+.slideblok_image > a {
+	bottom: 15px;
+	color: #fff !important;
+	line-height: normal;
+	padding: 1px 4px;
+	position: absolute;
+	right: 10px;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+.slideblok_image > a:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.slideblok_image img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.featuredimage-text .featuredimage-album-counts {
+	bottom: 15px;
+	color: #fff;
+	position: absolute;
+	width: 100%;
+}
+.featuredimage-album-counts > span {
+	font-size: 13px;
+	margin: 0 8px;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.featuredimage-album-counts i {
+	font-size: 25px;
+	font-style: normal;
+	vertical-align: top;
+	font-weight: bold !important;
+}
+.featuredimage_search {
+	margin: 28px auto;
+	text-align: center;
+	display: inline-block;
+}
+.featuredimage_search .sitealbum-search-box .form-elements input[type="text"] {
+	font-size: 18px !important;
+	padding: 10px;
+}
+.featuredimage_search ul.seaocore-autosuggest li.autocompleter-choices img {
+	position: relative !important;
+}
+.featuredimage_search .sitealbum-search-box #submitButton-element {
+	margin: 0;
+	position: relative;
+}
+.featuredimage_search .sitealbum-search-box #submitButton-element button {
+	border-radius: 0 3px 3px 0;
+	height: 45px;
+	margin: -1px -1px -1px 0;
+	width: 45px;
+}
+.featuredimage_search .sitealbum-search-box #submitButton-element button::after {
+	width: 45px;
+	height: 45px;
+	background-repeat: no-repeat;
+}
+
+/*Add new Photos Widget*/
+.layout_sitealbum_upload_photo_sitealbum a.button{
+	+rounded;
+	display: inline-block;
+	font-weight: normal !important;
+	padding: 10px;
+	background-image: none;
+	background-color: $theme_button_background_color;
+	border: 1px solid $theme_button_border_color;
+	color: $theme_button_font_color !important;
+	width: 100%;
+	box-sizing: border-box;
+	text-align:center;
+	line-height: normal;
+}
+.layout_sitealbum_upload_photo_sitealbum a.button::before,
+.layout_sitealbum_upload_photo_sitealbum .album_quick_upload:before {
+	font-family: 'Font Awesome 5 Free','fontawesome';
+	font-style: normal;
+	content: "\\f093";
+	margin-right: 7px;
+}
+/*Add New Photos Widget in header*/
+.layout_page_header .layout_sitealbum_upload_photo_sitealbum {
+	float: left;
+	margin-bottom:0;
+}
+.layout_page_header .layout_sitealbum_upload_photo_sitealbum .button {
+	font-size: 14px;
+	margin: 10px;
+	padding: 5px;
+}
+.layout_page_header .layout_sitealbum_upload_photo_sitealbum .album_quick_upload {
+	display: inline-block;
+	margin: 10px;
+	padding: 5px;
+}
+.layout_right .layout_sitealbum_upload_photo_sitealbum .seaocore_button,
+.layout_left .layout_sitealbum_upload_photo_sitealbum .seaocore_button,
+.layout_page_header .layout_sitealbum_upload_photo_sitealbum .seaocore_button {
+	display: inline-block;
+	vertical-align: middle;
+}
+.layout_right .layout_sitealbum_upload_photo_sitealbum .album_quick_upload,
+.layout_left .layout_sitealbum_upload_photo_sitealbum .album_quick_upload, 
+.layout_page_header .layout_sitealbum_upload_photo_sitealbum .album_quick_upload {
+	border: 0;
+	padding: 0;
+	background-image: none !important;
+}
+.seaocore_profile_coverinfo_buttons .layout_sitealbum_upload_photo_sitealbum {
+	margin:0;
+}
+/*Edit Album Form*/
+/*#albums_edit #buttons-wrapper #fieldset-buttons {
+  margin-left: 175px;
+}*/
+
+/*UI of Password Protection box*/
+.layout_page_header .global_form {
+	border: 3px solid $theme_button_background_color;
+	border-radius: 10px;
+	margin: 0;
+	padding: 0;
+}
+#sitealbum_check_password_protection > div > div {
+	padding: 20px;
+} 
+#sitealbum_check_password_protection .form-elements {
+	padding: 0;
+}
+#sitealbum_check_password_protection .form-wrapper > div {
+	text-align: left;
+	width: 100%;
+}
+#sitealbum_check_password_protection #submitForm-label {
+	display: none;
+}
+.layout_sitealbum_list_photos_tabs_view #sitelbum_photos_tabs .sitealbum_thumbs a img.item_photo_album_photo {
+	width: 100%;
+}
+
+/*Responsive work start for Album Plugin*/
+@media only screen and (max-width: 920px){
+	.sitealbum_browse_banner img {width: 100%;}
+	ul.albums_editphotos > li .albums_editphotos_photo {min-height: 157px;}
+    /*Featured Photos Widget CSS*/
+    .layout_sitealbum_featured_photos .slideblok_image > a {bottom: 50px; right: 0; width: 100%; text-align: center; box-sizing: border-box;}
+}
+@media only screen and (min-width:600px) and (max-width:920px) { 
+	ul.albums_editphotos > li .albums_editphotos_photo img {max-width: 100px;}
+}
+@media only screen and (max-width: 600px) {
+    /*Edit photo info*/
+    ul.albums_editphotos > li .albums_editphotos_info{clear:both;}
+    /*Album share by Badge*/
+    .sitealbum_badge_right, .sitealbum_badge_left {width: 100% !important;}
+    /*Tell a Friend Popup*/
+    .sitealbum_tellafriend_popup {margin: 1% !important;width: 98% !important;}
+    .sitealbum_tellafriend_popup .global_form > div > div {width: 100% !important;}
+    /*Tag this photo*/
+    .tagger_form {top: -5px !important;}
+    /*Edit Album form*/
+    #albums_edit #buttons-wrapper #fieldset-buttons {margin-left: 0;}
+    /*Featured Photos Widget CSS*/
+    .sitealbum_featured_photos_albums li {width:100%;}
+}

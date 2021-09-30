@@ -1,0 +1,112 @@
+/* $Id: mobile.css 2011-08-026 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */ /*Channel view page*/
+#global_page_sitevideo-channel-view .layout_left,
+#global_page_sitevideo-channel-view .layout_right,
+#global_page_sitevideo-channel-view #global_content .sitevideo_channel_options,
+#global_page_sitevideo-channel-view .sitevideo_like_button,
+#global_page_sitevideo-channel-view .sitevideo_buttons{
+    display:none; 	
+}
+#global_page_sitevideo-channel-view #global_content h2{
+    text-align:center;
+}
+.sitevideo_buttons{
+    text-align:center;
+    margin-bottom:15px;
+}
+.sitevideo_buttons a{
+    background:#F4F4F4 url(~/application/modules/Sitevideo/externals/images/buttons-bg.png) repeat-x;
+    border: 1px solid #E4E4E4;
+    color: #444444 !important;
+    display: inline-block;
+    font-weight: normal;
+    margin: 0 !important;
+}
+.sitevideo_buttons a img{
+    margin:3px;
+    vertical-align:middle;
+}
+.sitevideo_buttons a:hover,
+.sitevideo_button_active{
+    text-decoration:none;
+    background:#e9eff5 url(~/application/modules/Sitevideo/externals/images/buttons-bg-hover.png) repeat-x !important;
+}
+.sitevideo-channel-more{
+    padding:5px;
+    text-align:center;
+    clear:both;
+    border:1px solid $theme_foreground_border_color;
+    margin-bottom:15px;
+    text-align:center;
+    cursor:pointer;
+}
+.sitevideo-channel-more:hover{
+    background-color:$theme_foreground_background_color;
+}
+/*channele home page*/
+.layout_sitevideo_list_videos_tabs_view ul > li > a + span{
+    color: $theme_font_color_light;
+    display: block;
+    font-size: 0.8em;
+    overflow: hidden;
+    padding-top: 4px;
+}
+/*channel comment view*/
+.sitevideo_sitevideo_videos{
+    clear:both;
+}
+.sitevideo_sitevideo_videos ul.thumbs > li{
+    float:none !important;
+    height:auto !important;
+    overflow:hidden;
+    margin-bottom:10px;
+    clear:both;
+}
+.sitevideo_comment_view ul.thumbs > li + li{
+    padding-top:10px;
+    border-top-width:1px;
+}
+.sitevideo_comment_view ul.thumbs .thumbs_video{
+    float:left;
+    margin-right:10px;
+}
+html[dir="rtl"] .sitevideo_comment_view ul.thumbs .thumbs_video{
+	float:right;
+	margin-right:0px;
+	margin-left:10px;	
+}
+.sitevideo_comment_view ul.thumbs .thumbs_video > img {
+    max-width: 150px;
+}
+.sitevideo_comment_view_comments{
+    overflow:auto;
+}
+.sitevideo_comment_view_comments .comments{
+    width:auto !Important;
+}
+.sitevideo_comment_view_comments .comments .comments_options {
+    text-align:left;
+}
+html[dir="rtl"] .sitevideo_comment_view_comments .comments .comments_options {
+    text-align:right;
+}
+.sitevideo-channel-more{
+    padding:5px;
+    text-align:center;
+    clear:both;
+    border:1px solid $theme_foreground_border_color;
+    margin-bottom:15px;
+    text-align:center;
+    cursor:pointer;
+}
+.sitevideo-channel-more:hover{
+    background-color:$theme_foreground_background_color;
+}
+.sitevideo-channel-more img{
+    vertical-align:middle;
+}
+#global_page_sitevideo-channel-view .comments {
+    width:auto;
+}
+#global_page_sitevideo-channel-view #global_content p, #global_page_channel-video-view #global_content > h2 + p {
+    text-align: center;
+}

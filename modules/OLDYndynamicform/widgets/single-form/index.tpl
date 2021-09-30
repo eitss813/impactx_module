@@ -1,0 +1,1 @@
+<?php echo $this->partial('_formItem.tpl', 'yndynamicform', array('item' => $this -> form, 'mode_view' => 'list', 'category' => $this -> category)); ?>

@@ -1,0 +1,276 @@
+/* $Id:styles.css 2015-12-31 00:00:00 SocialEngineSolutions $*/
+
+/*BANNER WIDGET CSS START HERE*/
+.layout_sesmultipleform_banner{
+	background-color:transparent !important;border-width:0  !important;
+	box-shadow:none !important;
+	padding:0 !important;
+	margin:0 0 15px !important;
+}
+.layout_sesspectromedia_banner + .generic_layout_container{
+	margin-top:15px !important;
+}
+.sesmultipleform_banner_container{
+	position:relative;
+}
+.sesmultipleform_banner_container_wrapper.isfull_width .sesmultipleform_banner_container{
+	position:absolute;
+	left:0;
+	right:0;
+}
+.sesmultipleform_banner_img_container{
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+}
+.sesmultipleform_banner_img_container img{
+	height:100%;
+	object-fit:cover;
+	width:100%;
+	z-index:1;
+}
+.sesmultipleform_banner_content{
+	background-color:rgba(0, 0, 0, .2);
+	background-image:url(../images/pattern.png);
+	display:table;
+	margin:0 auto;
+	height:100%;
+	padding:0 200px;
+	width:100%;
+	top:0;
+	position:absolute;
+	z-index:2;
+}
+.sesmultipleform_banner_content_inner{
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+}
+[dir="rtl"] .sesmultipleform_banner_content_inner{
+	text-align:center;
+}
+.sesmultipleform_banner_title, 
+.sesmultipleform_banner_des{
+	margin:10px 0;
+	clear:both;
+}
+.sesmultipleform_banner_title{
+	font-size:45px;
+  font-weight: bold;
+}
+.sesmultipleform_banner_des{
+	font-size:25px;
+}
+.sesmultipleform_banner_btns{
+	margin:25px 0 20px;
+	text-align:center;
+}
+.sesmultipleform_banner_btns a{
+  font-size:15px;
+  margin:0 5px;
+  padding:8px 15px;
+  display: inline-block;
+}
+.sesmultipleform_banner_btns a:hover{
+	text-decoration:none;
+}
+/*Pleaced on Left - Right Column*/
+.layout_left .sesmultipleform_banner_content,
+.layout_right .sesmultipleform_banner_content{
+  	padding:0 10px;
+}
+.layout_left .sesmultipleform_banner_btns a,
+.layout_right .sesmultipleform_banner_btns a{
+  padding:5px 10px;
+  margin: 2px;
+  font-size: 13px;
+}
+.layout_left .sesmultipleform_banner_title,
+.layout_right .sesmultipleform_banner_title{
+	font-size:25px;
+}
+.layout_left .sesmultipleform_banner_des,
+.layout_right .sesmultipleform_banner_des{
+	font-size:15px;
+}
+@media only screen and (max-width:768px){
+  .sesmultipleform_banner_content{
+    padding:0 20px;
+  }
+  .sesmultipleform_banner_btns a{
+    padding:5px 10px;
+    margin: 2px;
+    font-size: 13px;
+  }
+  .sesmultipleform_banner_title{
+    font-size:25px;
+  }
+  .sesmultipleform_banner_des{
+    font-size:15px;
+  }
+}
+/*BANNER WIDGET CSS END HERE*/
+/*MAP WIDGET CSS START HERE*/
+.sesmultipleform_map_container{
+	border-width:2px;
+	border-style:solid;
+	position:relative;	
+	overflow:hidden;
+}
+.sesmultipleform_map_info_box{
+	box-shadow:0 0 10px rgba(0, 0, 0, .1);
+	background-color:rgba(255,255,255,0.95);
+	position:absolute;
+	bottom:40px;
+	left:115px;
+	padding:20px;
+	width:300px;
+}
+[dir='rtl'] .sesmultipleform_map_info_box{
+	left:inherit;
+	right:115px;
+}
+.sesmultipleform_map_info li + li{
+	margin-top:10px;
+}
+.sesmultipleform_map_info_field > i{
+	float:left;
+	margin-right:5px;
+	padding-top:3px;
+	text-align:center;
+	width:20px;
+}
+.sesmultipleform_map_info_field > i:before{
+	font-size:16px;
+}
+.sesmultipleform_map_info_field > i.fa-mobile:before{
+	font-size:19px;
+}
+.sesmultipleform_map_info_field > div{
+	overflow:hidden;
+}
+.sesmultipleform_map_info li span{
+	font-size:11px;
+	font-weight:bold;
+}
+.sesmultipleform_map_info li p{
+	margin-top:2px;
+}
+.sesmultipleform_map_info li .socialicons a{
+	float:left;
+}
+[dir='rtl'] .sesmultipleform_map_info li .socialicons a{
+	float:right;
+}
+.sesmultipleform_map_info li .socialicons a:hover{
+	text-decoration:none;
+}
+.sesmultipleform_map_info li .socialicons a + a{
+	margin-left:4px;
+}
+[dir='rtl'] .sesmultipleform_map_info li .socialicons a + a{
+	margin-left:0;
+	margin-right:4px;
+}
+.sesmultipleform_map_info li .socialicons i{
+	display:block;
+}
+.sesmultipleform_map_info li .socialicons i:before{
+	font-size:25px;
+}
+.sesmultipleform_map_info li .socialicons a:hover i:before{
+	opacity:.9;
+}
+.sesmultipleform_map_info li .socialicons i.fa-facebook-square:before{
+	color:#3b5997;
+}
+.sesmultipleform_map_info li .socialicons i.fa-twitter-square:before{
+	color:#00baf0;
+}
+.sesmultipleform_map_info li .socialicons i.fa-youtube-square:before{
+	color:#cc291f;
+}
+.sesmultipleform_map_info li .socialicons i.fa-linkedin-square:before{
+	color:#006599;
+}
+.sesmultipleform_map_info li .socialicons i.fa-google-plus-square:before{
+	color:#ca2c24;
+}
+.sesmultipleform_map_info li .socialicons i.fa-rss-square:before{
+	color:#f18425;
+}
+.sesmultipleform_map_info li .socialicons i.fa-pinterest-square:before{
+	color:#c7151a;
+}
+.layout_left .sesmultipleform_map_info_box, 
+.layout_right .sesmultipleform_map_info_box{
+	display:none;
+}
+/*MAP WIDGET CSS END HERE*/
+/*KEY CONTACTS CSS START HERE*/
+/*List View*/
+.sesmultipleform_keycontact_list{
+	padding:5px;
+}
+.sesmultipleform_keycontact_list li{
+	clear:both;
+	overflow:hidden;
+	padding:3px 5px;
+}
+.sesmultipleform_keycontact_list a.keymembers_thumb{
+	float:left;
+	margin-right:10px;
+}
+[dir="rtl"] .sesmultipleform_keycontact_list a.keymembers_thumb{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+.sesmultipleform_keycontact_list a.keymembers_thumb > img{
+	display:block;
+}
+/*Block List*/
+.sesmultipleform_keycontact_block_list{
+	clear:both;
+	overflow:hidden;
+	padding:5px;
+}
+.sesmultipleform_keycontact_block_list > li{
+	display:inline-block;
+	margin:0 10px 10px 0;
+	vertical-align:top;
+}
+[dir="rtl"] .sesmultipleform_keycontact_block_list > li{
+	margin:0 0 10px 10px;
+}
+.sesmultipleform_keycontact_block_list .keymembers_thumb{
+	border-width:1px;
+	float:left;
+	height:100px;
+	margin-right:10px;
+	overflow:hidden;
+	width:100px;
+}
+[dir="rtl"] .sesmultipleform_keycontact_block_list .keymembers_thumb{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+.sesmultipleform_keycontact_block_list .keymembers_thumb img{
+	height:100%;
+	object-fit:cover;
+	width:100%;
+}
+/*Key Members Info*/
+.sesmultipleform_keymembers_info{
+	overflow:hidden;
+}
+.sesmultipleform_keymembers_name{
+	font-weight:bold;
+}
+.sesmultipleform_keymembers_stat{
+	font-size:.8em;
+	margin-top:5px;
+}
+/*KEY CONTACTS CSS END HERE*/

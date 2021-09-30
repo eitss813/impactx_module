@@ -1,0 +1,197 @@
+/* $Id:main.css 2015-12-31 00:00:00 SocialEngineSolutions $*/
+
+/*GENERIC LAYOUT CONTAINER CSS START HERE*/
+[class*='layout_sesmultipleform_'], [id^='global_page_sesmultipleform-'] .layout_core_content{
+  clear:both;
+  margin-bottom:15px;
+}
+[class*='layout_sesmultipleform_']:after, [id^='global_page_sesmultipleform-'] .layout_core_content:after{
+  clear:both;
+  content:'';
+  display:block;
+}
+[class*='tab_layout_sesmultipleform_']{
+  margin:0;
+  clear:none;
+}
+.layout_sesmultipleform_popup{
+  margin: 0 !important;
+}
+/*GENERIC LAYOUT CONTAINER CSS END HERE*/
+
+/*SIDE BUTTON CSS START HERE*/
+.sesmultipleform_button{
+	text-decoration:none;
+	width:100%;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.sesmultipleform_button:hover{
+	text-decoration:none;
+}
+.sesmultipleform_side_button{
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:1px;
+  line-height:36px;
+  height:36px;
+	padding:0 10px;
+	position:fixed !important;
+	top:30%;
+	text-align:center;
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Chrome, Safari, Opera */
+	transform:rotate(-90deg);
+	width:150px;
+	z-index:99;
+}
+.sesmultipleform_button{
+  +rounded;
+  display:block;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:normal;
+	padding:10px;
+	text-align:center;
+	z-index:99;
+}
+.sesmultipleform_right_side_button{
+	right:-60px;
+}
+.sesmultipleform_left_side_button{
+	left:-60px;
+}
+/*SIDE BUTTON CSS END HERE*/
+/*FORM CSS START HERE*/
+.sesmultipleform_form{
+  position:relative;
+}
+.sesmultipleform_form div.form-label label.required:after{
+	content:" *";
+	color:#f00;
+}
+.sesmultipleform_form .global_form, 
+.sesmultipleform_form .global_form > div, 
+.sesmultipleform_form .global_form > div > div {
+  float:none;
+}
+.sesmultipleform_form .global_form > div > div p{
+  max-width:inherit !important;
+}
+.sesmultipleform_form .global_form div.form-label{
+  text-align:left;
+}
+[dir="rtl"] .sesmultipleform_form .global_form div.form-label{
+  text-align:right;
+}
+.sesmultipleform_form .global_form div.form-element{
+  float:none !important;
+  overflow:hidden;
+}
+.sesmultipleform_form #captcha-element img{
+   float:left;
+   margin-bottom:5px;
+}
+.sesmultipleform_form #captcha-element input[type="text"]{
+   clear:both;
+   float:left;
+}
+.sesmultipleform_form .global_form input + label{
+  float:none !important;
+  overflow:hidden;
+}
+.sesmultipleform_success_message,
+.sesmultipleform_error_message{
+  padding:10px;
+  margin:0 0 10px;
+}
+.sesmultipleform_success_message i,
+.sesmultipleform_error_message i{
+  float:left;
+  margin-right:5px;
+}
+[dir="rtl"] .sesmultipleform_success_message i,
+[dir="rtl"] .sesmultipleform_error_message i{
+  float:right;
+  margin-left:5px;
+  margin-right:0;
+}
+.sesmultipleform_success_message span,
+.sesmultipleform_error_message span{
+  display:block;
+  overflow:hidden;
+}
+.sesmultipleform_success_message i:before,
+.sesmultipleform_error_message i:before{
+  font-size:17px;
+}
+.sesmultipleform_success_message{
+  background-color:#e3f2e1;
+  border:1px solid #d2e5cf;
+  color:#546d50;
+}
+.sesmultipleform_success_message i:before{
+  color:#546d50;
+}
+.sesmultipleform_error_message{
+  background-color:#e47c7c;
+  border:1px solid #cd6262;
+  color:#fff;
+}
+.sesmultipleform_error_message i:before{
+  color:#fff;
+}
+/*Form Placed in Smoothbox*/
+.sessmoothbox_main .sesmultipleform_form{
+	width:700px;
+}
+.sessmoothbox_main .sesmultipleform_form .global_form{
+  margin:10px;
+}
+.sessmoothbox_main .sesmultipleform_success_message,
+.sessmoothbox_main .sesmultipleform_error_message{
+  margin:20px 10px;
+}
+@media only screen and (max-width:768px){
+ .sessmoothbox_main .sesmultipleform_form{
+    min-width:450px;
+		width:100%;
+  }
+}
+@media only screen and (max-width:480px){
+ .sessmoothbox_main .sesmultipleform_form{
+    min-width:0;
+  }
+}
+/*Form Placed in Left - Right Column */
+.layout_left .sesmultipleform_form div.form-wrapper + div.form-wrapper,
+.layout_right .sesmultipleform_form div.form-wrapper + div.form-wrapper{
+  margin-top:5px;
+}
+.layout_left .sesmultipleform_form div.form-label,
+.layout_right .sesmultipleform_form div.form-label,
+.layout_left .sesmultipleform_form div.form-element,
+.layout_right .sesmultipleform_form div.form-element{
+  clear:both;
+  margin:0 0 5px;
+  text-align:left;
+  width:100%;
+}
+.layout_left .sesmultipleform_form div.form-element *,
+.layout_right .sesmultipleform_form div.form-element *{
+  max-width:99%;
+}
+.layout_left .sesmultipleform_form .form-elements,
+.layout_right .sesmultipleform_form .form-elements{
+  margin: 0 !important;
+}
+.layout_left .sesmultipleform_form .global_form #submit-label,
+.layout_right .sesmultipleform_form .global_form #submit-right{
+  display:none;
+}
+.layout_left .sesmultipleform_form .global_form > div > div p,
+.layout_right .sesmultipleform_form .global_form > div > div p{
+  padding: 0;
+}
+/*FORM CSS END HERE*/

@@ -1,0 +1,1036 @@
+/* $Id: style_sitepage_dashboard.css 2011-05-05 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+
+/* dashboard content left side css start here */
+.dashboard_left_column {
+	width:200px;
+	float:left;
+	margin-right:20px;
+}
+html[dir="rtl"] .dashboard_left_column {
+	float:right;
+	margin-left:20px;
+}
+.dashboard_info {
+	padding:8px;
+	border-width:3px;
+	clear:both;
+}
+.dashboard_info > .dashboard_info_image {
+	max-width:95%;
+	margin:0 auto;
+	text-align:center;
+}
+html[dir="rtl"] .dashboard_info > .dashboard_info_image {
+	text-align:center;
+}
+.dashboard_info > .dashboard_info_image img {
+	width:100%;
+	max-height:800px;
+}
+.db_payment_link{
+	width:100px;
+	margin:0 auto !important;
+	float:none !important;
+}
+/* dashboard content left side css end here */
+/* dashboard content right side css start here */
+#global_page_sitepage-index-edit select:disabled {
+  background:#eee;
+  color:#ccc;
+}
+.sitepage_edit_content {
+	overflow:hidden;
+}
+.sitepage_edit_content > tip{
+	margin-bottom:5px;
+	margin-top:5px;
+}
+.sitepage_edit_content > tip span{
+	margin:0 auto;
+	float:none;
+}
+.sitepage_edit_header {
+	overflow:hidden;
+	padding:0 5px 10px;
+}
+.sitepage_edit_header > h3 {
+	background: none;
+	font-weight: bold;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+.sitepage_edit_header > a {
+	float:right;
+}
+html[dir="rtl"]  .sitepage_edit_header > a {
+	float:left;
+}
+.sitepage_edit_content .global_form > div {
+	float:none !important;
+}
+.sitepage_edit_content .global_form > div > p {
+	max-width:600px !important;
+}
+.sitepage_edit_content p.form-description {
+	max-width:none !important;
+	padding:2px;
+	margin-top:2px;
+}
+.sitepage_edit_content .global_form div.form-element {
+	max-width:none !important;
+	float: none;
+	clear: none;
+	width: auto;
+}
+.sitepage_edit_content button.event_calendar{
+	padding:0px;
+}
+.sitepage_edit_content .global_form div.form-element input + label{
+	max-width:475px !important;
+}
+#action_notification-element ul.form-options-wrapper{
+	padding-left:25px;
+}
+html[dir="rtl"] #action_notification-element ul.form-options-wrapper{
+	padding-right:25px;
+	padding-left:0px;
+}
+/*sitepage get started start here*/
+.sitepage_getstarted_upload {
+	clear:both;
+	margin-top:10px;
+}
+.sitepage_getstarted_upload_options {
+	float:left;
+	margin:0px 0 0 50px;
+	line-height:150px;
+	font-size:18px;
+	font-weight:bold;
+}
+html[dir="rtl"] .sitepage_getstarted_upload_options{
+	float:right;
+	margin:0px 50px 0 0;
+}
+.sitepage_getstarted_head {
+	clear:both;
+	padding:5px;
+	font-weight:bold;
+}
+.sitepage_getstarted {
+	clear:both;
+	overflow:hidden;
+}
+.sitepage_getstarted li {
+	clear:both;
+	padding:10px;
+	border-top-width:1px;
+}
+.sitepage_getstarted .sitepage_getstarted_num {
+	float:left;
+	margin:0 20px;
+	padding-top:3px;
+}
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_num{
+	float:right;
+}
+.sitepage_getstarted .sitepage_getstarted_num div {
+	line-height:40px;
+	text-align:center;
+	font-size:17px;
+	font-weight:bold;
+	width:40px;
+}
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_num div{
+	text-align:center;
+}
+.sitepage_getstarted .sitepage_getstarted_num i{
+	background-position:center;
+	background-repeat:no-repeat;
+	display:block;
+	height:48px;
+	width:48px;
+}
+.my_chart {
+    height: 450px;
+    margin: 20px;
+}
+#loading {
+    width: inherit;
+    height: inherit;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    background-image: url(../../../Core/externals/images/large-loading.gif);
+}
+.sitepage_getstarted .sitepage_getstarted_des {
+	overflow:hidden;
+}
+.sitepage_getstarted .sitepage_getstarted_des b {
+	font-weight:bold;
+	margin-bottom:8px;
+	float:left;
+}
+.sitepage_getstarted .sitepage_getstarted_des p {
+	float:left;
+	clear:both;
+	max-width:none !important;
+}
+.sitepage_getstarted .sitepage_getstarted_des .sitepage_getstarted_btn {
+	overflow:auto;
+	float:left;
+	clear:both;
+	margin-top:12px;
+}
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_des b,
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_des p,
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_des .sitepage_getstarted_btn{
+	float:right;
+}
+.sitepage_getstarted .sitepage_getstarted_des .sitepage_getstarted_btn a {
+	float:left;
+	margin-right:10px;
+}
+html[dir="rtl"] .sitepage_getstarted .sitepage_getstarted_des .sitepage_getstarted_btn a{
+	float:right;
+	margin-left:10px;
+	margin-right:0px;
+}
+/*App Content Icons*/
+.icon_app_photo{background-image:url(../images/app_photo.png);}
+.icon_app_invite{background-image:url(../images/app_invite.png);}
+.icon_app_poll{background-image:url(../images/app_poll.png);}
+.icon_app_document{background-image:url(../images/app_document.png);}
+.icon_app_offer{background-image:url(../images/app_offer.png);}
+.icon_app_question{background-image:url(../images/app_question.png);}
+.icon_app_video{background-image:url(../images/app_video.png);}
+.icon_app_event{background-image:url(../images/app_event.png);}
+.icon_app_note{background-image:url(../images/app_note.png);}
+.icon_app_topic{background-image:url(../images/app_topic.png);}
+.icon_app_music{background-image:url(../images/app_music.png);}
+.icon_app_product{background-image:url(../images/app_product.png);}
+
+/*edit overview*/
+.sitepage_overview_editor .defaultSkin iframe,
+.sitepage_post_announcement .defaultSkin iframe{
+  height:350px !important;
+}
+/*Edit Location Page starts here*/
+.sitepage_editlocation_wrapper{
+	border-top-width:1px;
+	padding-top:10px;
+	padding-bottom: 160px;
+}
+.sitepage_editlocation_wrapper > h4{
+	border:0px;
+	padding:0px;
+	margin:0 0 5px;
+}
+#global_page_sitepage-index-editlocation .layout_middle {
+	margin:0px;
+	padding:5px;
+}
+.edit_form {
+	clear:both;
+	margin-bottom:15px;
+}
+.edit_form .global_form_box {
+	display:block;
+	overflow:auto;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	border:none;
+}
+.edit_form .global_form_box > div {
+	padding:10px;
+	overflow:auto;
+}
+.edit_form .global_form_box > div .formlocation_edit_label {
+	font-weight:bold;
+	float:left;
+	margin-right:5px;
+}
+html[dir="rtl"] .edit_form .global_form_box > div .formlocation_edit_label{
+	float:right;
+	margin-left:5px;
+	margin-left:0;
+}
+.edit_form .global_form_box > div .formlocation_add {
+	overflow:hidden;
+}
+.edit_form .global_form_box > div .form-elements {
+	overflow:auto;
+}
+.edit_form .global_form_box > div .form-elements > div {
+	float:left;
+	overflow:hidden;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+html[dir="rtl"] .edit_form .global_form_box > div .form-elements > div{
+	float:right;
+}
+.edit_form .global_form_box > div .form-elements > div + div + div + div {
+	clear:both;
+}
+.edit_form .global_form_box > div .form-elements > div + div + div + div + div {
+	clear:none;
+}
+.edit_form .global_form_box > div .form-elements #submit-wrapper {
+	clear:both;
+}
+.edit_form .global_form_box > div .form-elements div label {
+	font-size:8pt;
+	font-weight:bold;
+	display:block;
+}
+.edit_form .global_form_box > div .form-elements #submit-wrapper .form-label {
+	height:0px;
+}
+.sitepage_editlocation_wrapper #mapCanvas{
+	width:auto;
+	padding:0px;
+	height:425px;
+}
+/*Edit Location Page endss here*/
+
+/*manage admins*/
+.sitepage_manageadmins {
+	overflow:auto;
+}
+.sitepage_manageadmins_list {
+	clear:both;
+	padding:10px 70px;
+	overflow:auto;
+}
+.sitepage_manageadmins > div {
+	border-bottom-width:1px;
+}
+.sitepage_manageadmins_thumb {
+	margin-right:10px;
+	float:left;
+}
+html[dir="rtl"] .sitepage_manageadmins_thumb{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+.sitepage_manageadmins .sitepage_manageadmins_detail {
+	overflow:hidden;
+}
+.sitepage_manageadmins .sitepage_manageadmins_detail span {
+	font-weight:bold;
+	overflow:hidden;
+}
+.sitepage_manageadmins_cancel {
+	float:right;
+	margin-left:10px;
+}
+html[dir="rtl"] .sitepage_manageadmins_cancel{
+	float:left;
+	margin-right:10px;
+	margin-left:0;
+}
+.sitepage_manageadmins_cancel a{
+	margin-top:5px;
+}
+.sitepage_featuredadmins_list {
+	overflow:auto;
+	display:block;
+	margin:5px 0 0;
+}
+.sitepage_manageadmins_input{
+	float:left;
+	margin:0px 10px 0 70px;
+}
+html[dir="rtl"] .sitepage_manageadmins_input{
+	float:right;
+	margin:0px 70px 0 10px;
+}
+.sitepage_manageadmins_input input{
+	margin-top:5px;
+	width:250px !important;
+}
+.sitepage_manageadmins_button{
+	margin-top:27px;
+	float:left;
+}
+html[dir="rtl"] .sitepage_manageadmins_button{
+	float:right;
+}
+.sitepage_manageadmins_button button{
+	 margin-top:0px !important;
+}
+.sitepage_featuredadmins_thumb {
+	float:left;
+	margin-right:10px;
+	width:70px;
+	height:100px;
+	text-align:center;
+	overflow:hidden;
+}
+html[dir="rtl"] .sitepage_featuredadmins_thumb{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+.sitepage_featuredadmins_count {
+	font-size:11px;
+	margin:5px 0 15px;
+}
+.sitepage_featuredadmins_add {
+	margin:10px 0;
+	float:left;
+}
+html[dir="rtl"] .sitepage_featuredadmins_add{
+	float:right;
+}
+.sitepage_featuredadmins_add_list {
+	max-height:200px;
+	overflow:auto;
+	margin:20px 0;
+}
+.sitepage_featuredadmins_add_list td {
+	padding:3px;
+	font-weight:bold;
+}
+/*manage announcements start*/
+.sitepage_manage_announcements_list {
+	clear:both;
+	overflow:hidden;
+	border-top-width:1px;
+	padding-top:10px;
+	margin-top:10px;
+}
+.sitepage_manage_announcements_option {
+	float:right;
+	margin-left:10px;
+}
+.sitepage_manage_announcements_option a{
+	margin-left:10px;
+	line-height:normal;
+	font-weight: normal;
+}
+.sitepage_manage_announcements_title,
+.sitepage_manage_announcements_dates{
+	overflow:hidden;
+	margin-bottom:5px;
+	font-weight: normal;
+}
+.sitepage_manage_announcements_option img{
+	float:left;
+}
+.sitepage_manage_announcements_title span{
+	font-weight:normal;
+	font-size:15px;
+}
+/*End manage announcements*/
+/*marketting*/
+.sitepage_marketing {
+	clear:both;
+}
+.sitepage_marketing div > div a {
+	clear:both;
+	float:left;
+	margin-top:5px;
+}
+html[dir="rtl"] .sitepage_marketing div > div a{
+	float:right;
+}
+.sitepage_marketing > ul > li {
+	border-top-width:0px;
+}
+.sitepage_marketing > ul > li + li {
+	border-top-width:1px;
+}
+
+/*Badge Request*/
+.sitepage_badgerequest{
+	clear:both;
+}
+.sitepage_badgerequest li{
+	float:left;
+	clear:both;
+	width:100%;
+	padding-bottom:10px;
+}
+.badge_input{
+	float:left;
+	padding:0 5px;
+}
+html[dir="rtl"] .sitepage_badgerequest li,
+html[dir="rtl"] .badge_input{
+	float:right;
+}
+.sitepage_badgerequest_img{
+	float:left;
+	margin-right:10px;
+	width:165px;
+}
+html[dir="rtl"] .sitepage_badgerequest_img{
+	float:right;
+	margin-left:10px;
+	margin-right:0px;
+}
+.sitepage_badgerequest_img img{
+	max-width:165px;
+}
+.sitepage_badgerequest_detail{
+	overflow:hidden;
+}
+.sitepage_badgerequest_detail b.title{
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:5px;
+	float:left;
+	width:100%;
+}
+html[dir="rtl"] .sitepage_badgerequest_detail b.title{
+	float:right;
+}
+.sitepage_badgerequest_detail p.des{
+	clear:both;
+}
+.sitepage_badge_buttons{
+	clear:both;
+	margin-bottom:15px;
+	overflow:auto;
+	display:block;
+}
+.sitepage_badge_buttons a{
+	float:left;
+	margin-right:10px;
+}
+html[dir="rtl"] .sitepage_badge_buttons a{
+	float:right;
+	margin-left:10px;
+	margin-right:0;
+}
+/*sitepage insides*/
+.sitepage_edit_insights_table {
+	clear:both;
+	float:left;
+	width:100%;
+	margin-bottom:10px;
+	border-top-width:1px;
+	padding-top:10px;
+}
+html[dir="rtl"] .sitepage_edit_insights_table{
+	float:right;
+}
+.sitepage_edit_insights_table table th {
+	padding:0px 10px;
+	font-size:11px;
+	font-weight:normal;
+	text-align:left;
+}
+.sitepage_edit_insights_table table td {
+	padding:5px 10px;
+	font-size:20px;
+	text-align:left;
+}
+html[dir="rtl"] .sitepage_edit_insights_table table th,
+html[dir="rtl"] .sitepage_edit_insights_table table td {
+	text-align:right;
+}
+.sitepage_edit_insights {
+	clear:both;
+	margin-top:15px;
+	padding:10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	clear:both;
+}
+.sitepage_edit_insights > div {
+	border-width:1px;
+	border-style:solid;
+	padding:10px;
+}
+.sitepage_edit_insights > div p {
+	font-size:11px;
+	margin-bottom: 7px;
+}
+.sitepage_statistics{
+	overflow:hidden;
+}
+.sitepage_edit_insights_nav {
+	float:left;
+	width:100%;
+	font-size:11px;
+	margin-bottom:10px;
+}
+html[dir="rtl"] .sitepage_edit_insights_nav{
+	float:right;
+}
+.sitepage_edit_insights_nav a.icon_previous{
+	background-position:left;
+	background-repeat: no-repeat;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 21px;
+	float:left;
+	cursor:pointer;
+}
+html[dir="rtl"] .sitepage_edit_insights_nav a.icon_previous{
+	float:right;
+}
+.sitepage_edit_insights_nav a.icon_next{
+	background-position:right;
+	background-repeat: no-repeat;
+	display: inline-block;
+	font-weight: bold;
+	padding-right: 21px;
+	float:right;
+	cursor:pointer;
+}
+html[dir="rtl"] .sitepage_edit_insights_nav a.icon_next{
+	float:left;
+}
+.sitepage_edit_insights_search {
+	clear:both;
+	margin-top:0;
+	background-color:transparent;
+	padding:0;
+	clear:both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sitepage_edit_insights_search form {
+	overflow:auto;
+	border:none;
+	border-bottom-width:1px;
+	background-color:transparent;
+	margin-bottom:10px;
+}
+.sitepage_edit_insights_search div {
+	float:left;
+	margin-right:20px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+html[dir="rtl"] .sitepage_edit_insights_search div{
+	float:right;
+	margin-left:20px;
+	margin-right:0;
+}
+.sitepage_edit_insights_search div button {
+	font-size:11px;
+	padding: 10px 16px;
+}
+.sitepage_edit_insights_search div + div + div + div + div {
+	margin-top:-5px;
+}
+.sitepage_edit_insights_search #submit-element {
+	margin-right: 0;
+}
+/*report page*/
+.sitepage_report_head{
+	overflow:auto;
+	border-top-width:1px;
+	padding:10px;
+	clear:both;
+}
+.sitepage_report_head h3{
+	float:left;
+	margin:4px 0 0;
+	letter-spacing:normal;
+	font-size:15px;
+}
+html[dir="rtl"] .sitepage_report_head h3{
+	float:right;
+}
+.sitepage_report_table{
+	clear:both;
+	float:left;
+	margin-top:15px;
+	width:100%;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	padding-bottom:20px;
+	margin-bottom:30px;
+}
+html[dir="rtl"] .sitepage_report_table{
+	float:right;
+}
+.sitepage_report_table table{
+	width:100%;
+}
+.sitepage_report_table table th{
+	padding:5px 10px;
+	text-align:left;
+	font-size:11px;
+	font-weight:normal;
+}
+.sitepage_report_table table td{
+	padding:5px 10px;
+	text-align: left;
+	font-size:11px;
+}
+.sitepage_total_reports{
+	width:100%;
+	clear:both;
+	margin-bottom:15px;
+	overflow:auto;
+	padding-left:5px;
+}
+html[dir="rtl"] .sitepage_total_reports{
+	padding-right:5px;
+	padding-left:0px;
+}
+.sitepage_total_reports div{
+	float:left;
+	margin-right:20px;
+	font-size:11px;
+}
+html[dir="rtl"] .sitepage_total_reports div{
+	float:right;
+	margin-left:20px;
+	margin-right:0;
+}
+.sitepage_total_reports div span{
+	font-size:20px;
+	font-weight:bold;
+}
+.sitepage_reports_list_wrapper{
+	padding:10px;
+	border-radius:3px;
+	clear:both;
+}
+.sitepage_reports_list_wrapper > div{
+	border-width:1px;
+	border-style:solid;
+	padding:5px;
+}
+.sitepage_reports_list_wrapper > div .tip > span{
+	margin:10px !important;
+}
+.sitepage_reports_list_wrapper > div table{
+	width:100%;
+}
+.sitepage_reports_list_wrapper > div table th{
+	padding:5px;
+	text-align:center;
+}
+.sitepage_reports_list_wrapper > div table td{
+	padding:5px;
+	text-align:center;
+	border-top-width:1px;
+	border-top-style:solid;
+	font-size:11px;
+}
+html[dir="rtl"] .sitepage_reports_list_wrapper > div table th,
+html[dir="rtl"] .sitepage_reports_list_wrapper > div table td{
+	text-align:center;
+}
+/*edit style*/
+#show_tab_content #editstyle textarea{
+	width:500px;
+	max-width:500px;
+	height:200px;
+}
+#show_tab_content #editstyle div#submit-label{
+	display:none;
+}
+/*css for sitepage likebox start here*/
+.sitepagelikebox_des{
+	border-top-width:1px;
+	padding-top:15px;
+}
+.sitepagelikebox_des p{
+	margin-bottom:10px;
+}
+.sitepagelikebox_des ul{
+	clear: both;
+	list-style: disc;
+	margin-bottom: 15px;
+}
+.sitepagelikebox_des ul li{
+	line-height:20px;
+}
+.sitepagepage_likebox_create{
+	float:left;
+	width:300px;
+}
+html[dir="rtl"] .sitepagepage_likebox_create{
+	float:right;
+}
+.sitepagepage_likebox_create .global_form, .sitepagepage_likebox_create .global_form > div{
+	overflow:visible !important;
+}
+#sitepages_likebox p,
+#sitepages_likebox .form-wrapper {
+	overflow:visible !important;
+}
+#sitepages_likebox > div > div,
+#sitepages_likebox #url-wrapper #url-element{
+	overflow:visible;
+}
+#sitepages_likebox .form-wrapper > label{
+	float:left;
+	font-weight:bold;
+}
+html[dir="rtl"] #sitepages_likebox .form-wrapper > label{
+	float:right;
+}
+#sitepages_likebox .form-wrapper > .form-element{
+	clear:both;
+	margin-top:5px;
+}
+#sitepages_likebox #url-element input[type="text"]{
+	background-color:#f0f0f0;
+	color:#aca899;
+}
+#sitepages_likebox .form-wrapper #url-element > p,
+#sitepages_likebox .form-wrapper > p.description{
+	margin:0px !important;
+	font-weight:bold;
+}
+#sitepages_likebox .form-wrapper #url-element > p a, #sitepages_likebox .form-wrapper > p.description a,
+#sitepages_likebox .form-wrapper > label a{
+	font-weight:normal;
+}
+#sitepages_likebox #Apps-wrapper .form-label{
+	text-align:left;
+	font-size:14px;
+	font-weight:bold;
+}
+html[dir="rtl"] #sitepages_likebox #Apps-wrapper .form-label{
+	text-align:right;
+}
+#sitepages_likebox #Apps-wrapper .form-element{
+	display:none;
+}
+.sitepagelikebox_show_tooltip {
+	background: #222222;
+	color: #FFFFFF;
+	display: none;
+	font-size: 0.8em;
+	font-weight: normal;
+	left: -0px;
+	opacity: 0.9;
+	padding: 5px;
+	position: absolute;
+	text-align: left;
+	top: 25px;
+	white-space: nowrap;
+	font-size:12px;
+	z-index:99;
+}
+html[dir="rtl"] .sitepagelikebox_show_tooltip{
+	text-align:right;
+	right:0px;
+	left:auto;
+}
+.sitepagelikebox_show_tooltip_wrapper,
+.sitepagelikebox_show_tooltip_wrapper:hover{
+	position:relative;
+	text-decoration:none;
+}
+.sitepagelikebox_show_tooltip_wrapper:hover > .sitepagelikebox_show_tooltip {
+	display: block;
+}
+.sitepagelikebox_show_tooltip img {
+	top: -7px;
+	cursor: pointer;
+	left: 0;
+	margin: 0 3px;
+	position: absolute;
+}
+#sitepages_likebox button{
+	clear:both;
+	display:block;
+}
+#global_page_sitepagelikebox-index-like-box .moor-okButton{
+	display:none;
+}
+/*css for sitepage likebox end here*/
+/**/
+.sitepage_fbconnect_form ul{
+	clear: both;
+	list-style: disc;
+}
+.sitepage_fbconnect_form ul li {
+	line-height: 20px;
+}
+/* Manage Member Role */
+.sitepage_manage_member_role{
+	clear:both;
+}
+.sitepage_manage_member_role > div + div{
+	border-top-width:1px;
+}
+.sitepage_manage_member_role_list div{
+	padding:5px;
+}
+.sitepage_manage_member_role_list_option{
+	width:200px;
+}
+.sitepage_manage_member_role .sitepage_manageadmins_input{
+	margin-left:7px;
+}
+html[dir="rtl"].sitepage_manage_member_role .sitepage_manageadmins_input{
+	margin-right:7px;
+	margin-left:0;
+}
+/*Manage Content*/
+.sitepageint_add_cont_input{
+	float: left;
+	margin: 0px 10px;
+}
+html[dir="rtl"] .sitepageint_add_cont_input{
+	float:right;
+}
+.sitepageint_add_cont_input input{
+	margin-top:5px;
+	width:400px !important;
+}
+.sitepageint_cont_list {
+	clear: both;
+	padding:10px;
+	overflow: auto;
+}
+.sitepageint_cont_list .sitepage_manageadmins_thumb {
+	width:100px;
+}
+.sitepageint_cont_list .sitepage_manageadmins_thumb img{
+	width:98px;
+}
+.sitepageint_add_button {
+	clear: both;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+}
+html[dir="rtl"] .sitepageint_add_button{
+	float:right;
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+.seaocore_db_tabs .seaocore_db_tabs_heading {
+	position: relative;
+	cursor: pointer;
+	font-size: 18px;
+}
+.seaocore_db_tabs .seaocore_db_tabs_list {
+	float: none;
+	display: inline-block;
+}
+.sitepage_form .global_form > div > div, .sitegroup_form .global_form > div > div {
+	display: flex;
+	align-items: center;
+}
+
+/*==================================Responsive Css work for page Plugin====================================*/
+
+@media only screen and (max-width: 920px) {
+/* Notification tab(labels) */
+  .sitepage_edit_content .global_form div.form-element input + label{max-width:inherit;width:92%;}
+  /* marketing tab dashboard[Configure a Page Badge] */
+.sitepagepage_likebox_create {width: 100%;margin:0 0 10px 0;}
+.sitepagepage_likebox_create form.global_form {box-sizing: border-box;}
+/* marketing tab form on dashboard */
+#sitepages_likebox .form-wrapper > .form-element{clear:none;}
+/* Manage admin tab dashboard */
+  .sitepage_manageadmins_input{margin:0;}
+  /* Manage members form [add member role button] */
+.sitepage_manageadmins_button{margin-left:20px;margin-top:24px;}
+/* sitepage dashboard badge content */
+.sitepage_badgerequest_detail{width:100%;margin:10px 0;}
+
+}
+
+@media only screen and (max-width: 600px) {
+/* Sitepage dashboard badge tab content form */
+ .sitepage_badgerequest_img {display: table;float: none;margin: 0 auto;width: auto;}
+  .sitepage_badgerequest_img img{max-width:inherit;}
+/* Sitepage dashboard tabs edit content */
+  .sitepage_edit_content{clear:both;}
+/* manage page admins form */
+	.sitepage_manageadmins_input input{width:100% !important;box-sizing:border-box;}
+/* site page add content input */
+	.sitepageint_add_cont_input input{width:100% !important}
+}
+
+@media only screen and (max-width: 450px) {
+/* edit ilocation form dashboard */
+	.edit_form .global_form_box > div .form-elements > div{width:100%;}
+	/* applications get startde buttons */
+	.sitepage_getstarted_btn > a {float:left;margin:4px 0;}
+}
+
+
+.sitepage_edit_content #show_tab_content .global_form div.form-label {
+	text-align: left;
+	min-width: 200px;
+}
+.sitepage_edit_content #show_tab_content .global_form select {
+	margin-bottom: 10px;
+}
+.sitepage_edit_content #show_tab_content .time .form-wrapper {
+	display: inline-block;
+	float: left;
+	margin: 7px auto;
+}
+.sitepage_edit_content #show_tab_content .time > .form-element input {
+	padding: .5em .8em;
+	border: 1px solid #ddd;
+	margin: 4px 5px 0 0;
+	max-width: 100%;
+	width: 125px;
+}
+.sitepage_edit_content #show_tab_content .time .form-element input[type="checkbox"] {
+	margin: 4px 5px 0 0;
+}
+.sitepage_edit_content #show_tab_content .time > .form-element span {
+	margin: 0 5px;
+}
+
+
+
+/*Sitepage_dashboard*/
+.sitepage_manage_announcements_list {
+	display: inline-block;
+	width: 100%;
+	margin: 15px auto;
+	padding: 10px !important;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.sitepage_manage_announcements_list > div {
+	display: inline-block;
+	vertical-align: top;
+	line-height: normal;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.sitepage_manage_announcements_list img {
+	width: 100%;
+	height: 100%;
+	max-width: 35px;
+	max-height: 35px;
+}
+.sitepage_manage_announcements_list .sitepage_manage_announcements_info {
+	display: inline-block;
+	width: auto;
+	max-width: 100%;
+	vertical-align: top;
+	padding: 0;
+}
+.sitepage_manage_announcements_list .sitepage_manage_announcements_info_dashboard {
+	display: inline-block;
+	width: 100%;
+	max-width: 700px;
+	vertical-align: top;
+	padding: 0;
+}
+.sitepage_manage_announcements_services .sitepage_manage_announcements_list .sitepage_manage_announcements_body {
+  display: inline-block;
+  width: 100%;
+}
+.sitepage_manage_announcements_services .sitepage_manage_announcements_list .sitepage_manage_announcements_body b {
+	font-weight: normal;
+}

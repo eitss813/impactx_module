@@ -1,0 +1,23 @@
+
+
+/*thread view page*/
+.sitepage_discussion_view{
+	border-top:none !important;
+	padding-top:0px !important;
+}
+.sitepage_sitepages_thread_options,
+.sitepage_sitepages_thread_details_options{
+	display:none;
+}
+.sitepage_sitepages_lastreply{
+	display:none;
+}
+.sitepage_sitepages_thread_photo{
+	width:55px !important;
+}
+.sitepage_sitepages_thread_details_date{
+	color:$theme_font_color_light;
+}
+.sitepage_sitepages_thread_body{
+	padding:0px !important;
+}

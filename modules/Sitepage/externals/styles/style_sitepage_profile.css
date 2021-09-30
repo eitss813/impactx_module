@@ -1,0 +1,1604 @@
+/* $Id: style_sitepage_profile.css 2011-05-05 9:40:21Z SocialEngineAddOns Copyright 2010-2011 BigStep Technologies Pvt. Ltd. $ */
+/*  View page start here */
+.layout_sitepage_mainphoto_sitepage {
+  margin-bottom:15px;
+  overflow:hidden;
+  clear:both;
+}
+.sitepage_addremove_fav_popup_wrapper {
+  width:500px;
+}
+.sitepage_addremove_fav_popup_title {
+  padding:5px;
+  border-bottom-width:1px;
+  margin-bottom:10px;
+  font-weight:bold;
+  font-size:14px;
+}
+.sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_img {
+  float:left;
+  margin-right:10px;
+  width:102px;
+}
+[dir="rtl"] .sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_img{
+  float:right;
+  margin-left:10px;
+  margin-right:0px;
+}
+.sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_img img {
+  width:100px;
+  float:left;
+}
+[dir="rtl"] .sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_img img{
+  float:right;
+}
+.sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_detail {
+  overflow:hidden;
+}
+.sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_detail b {
+  float:left;
+  width:100%;
+  margin-bottom:15px;
+}
+[dir="rtl"] .sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_detail b{
+  float:right;
+}
+.sitepage_addremove_fav_popup .sitepage_addremove_fav_popup_detail p {
+  margin-top:15px;
+  clear:both;
+}
+#profile_options .sitepages_gutter_options li {
+  border-bottom-width:1px;
+  border-top:none;
+}
+#profile_options .sitepages_gutter_options {
+  white-space:normal;
+}
+.sitepage_profile_sponsorfeatured {
+  height:30px;
+  width:100%;
+  clear:both;
+  text-align:center;
+  line-height:30px;
+  font-size:17px;
+  color:#fff;
+  font-weight:bold;
+  text-shadow:#666 0px 0px 5px;
+}
+.layout_sitepage_options_sitepage {
+  clear:both;
+  margin-bottom:15px;
+  overflow:hidden;
+}
+.sitepage_photo > img {
+  max-width:none;
+  width:100%;
+  border:none !important;
+}
+.sitepage_photo_edit_wrapper {
+  position:relative;
+  cursor:pointer;
+}
+.sitepage_photo_edit_wrapper .sitepage_photo_edit {
+  display:none;
+  position:absolute;
+  right:0px;
+  background:#222;
+  opacity:.9;
+  color: #fff;
+  padding:5px;
+  color:#FFFFFF;
+  font-size:11px;
+  font-weight:normal;
+}
+.sitepage_photo_edit_wrapper .sitepage_photo_edit img {
+  float:left;
+  margin-right:5px;
+}
+[dir="rtl"] .sitepage_photo_edit_wrapper .sitepage_photo_edit img{
+  float:right;
+  margin-left:5px;
+  margin-right:0px;
+}
+.sitepage_photo_edit_wrapper:hover .sitepage_photo_edit {
+  display:block;
+}
+.sitepage_socialshare span {
+  margin-right:5px;
+}
+.sitepage_socialshare span + span + span + span + span + span + span {
+  margin-right:0px;
+}
+.sitepage_socialshare span img {
+  border:none !important;
+}
+.profile_fields > ul > li > span {
+  width:160px
+}
+.layout_sitepage_location_sitepage .profile_fields > ul > li > span + span, .layout_sitepage_info_sitepage .profile_fields > ul > li > span + span {
+  width:auto;
+  overflow:hidden;
+}
+/*Page View Print and Tell a friend Popup*/
+.sitepage_tellafriend_popup {
+  margin:15px 0 0 15px;
+  width:560px;
+}
+.sitepage_tellafriend_popup .global_form > div > div {
+  width:530px;
+  max-height:480px;
+  overflow:auto;
+}
+.sitepage_tellafriend_popup p.description {
+  font-size:11px !important;
+}
+.sitepage_tellafriend_popup .global_form div.form-element{
+  max-width:350px;  
+}
+.sitepage_tellafriend_popup .global_form input + label{
+  width:300px;
+}
+/*Over view write widget starts here*/
+#global_page_sitepage-index-view .layout_activity_feed h3, .layout_seaocore_feed h3, .layout_sitepagemember_profile_sitepagemembers h3{
+  display:none;
+}
+.layout_sitepage_overview_sitepage > h3{
+  display:none;
+}
+.layout_sitepage_write_page {
+  clear:both;
+}
+div.sitepage_write_overview {
+  margin-bottom:15px;
+  overflow:auto;
+}
+div.sitepage_write_overview a {
+  outline:none;
+}
+div.sitepage_write_overview div {
+  font-size:11px;
+}
+div.details, div.write_link, div.sitepage_write_overview .des_edit {
+  padding:5px 5px 7px;
+  border-width:1px;
+  border-style:solid;
+  overflow:auto;
+}
+div.sitepage_write_overview .des {
+  margin-top:2px;
+  overflow:hidden;
+}
+.sitepage_contect_field .edit_icon, div.sitepage_write_overview .edit_icon {
+  float:right;
+  margin-left:5px;
+  width:18px;
+}
+[dir="rtl"] .sitepage_contect_field .edit_icon, [dir="rtl"] div.sitepage_write_overview .edit_icon{
+  float:left;
+  margin-left:0px;
+  margin-right:5px;
+}
+.sitepage_contect_field .edit_icon a, div.sitepage_write_overview .edit_icon a {
+  height:18px;
+  width:18px;
+  display:block;
+  background:url(../images/write_edit_icon.png);
+}
+.sitepage_contect_field .edit_icon a:hover, div.sitepage_write_overview .edit_icon a:hover {
+  background:url(../images/write_edit_icon.png) 0 18px;
+}
+div.sitepage_write_overview .textarea {
+  float:left;
+  width:80%;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+[dir="rtl"] div.sitepage_write_overview .textarea{
+  float:right;
+}
+div.sitepage_write_overview .textarea textarea {
+  float:left;
+  width:99%;
+  padding:2px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border-width:1px;
+  border-style:solid;
+  height:120px;
+  font-size:11px;
+}
+[dir="rtl"] div.sitepage_write_overview .textarea textarea{
+  float:right;
+}
+.layout_sitepage_overview_sitepage ol {
+  margin-left:20px;
+}
+.layout_sitepage_overview_sitepage ul {
+  margin-left:20px;
+  list-style-type:disc;
+}
+[dir="rtl"] .layout_sitepage_overview_sitepage ol,
+[dir="rtl"] .layout_sitepage_overview_sitepage ul{
+  margin-left:0px;
+  margin-right:20px;
+}
+/*Over view write widget ends here*/
+/* like sitepage Like  widgets start here  */
+.layout_sitepage_page_like {
+  clear:both;
+  overflow:auto;
+  width:100%;
+}
+.sitepagelike_users_block_links {
+  overflow:auto;
+  padding:0 3px;
+}
+ul.sitepagelike_users_block h3 {
+  padding:5px 5px 0px;
+  margin-bottom:3px;
+  border-bottom-width:1px;
+  padding-bottom:5px;
+}
+ul.sitepagelike_users_block .likes_viewall_link {
+  float:right;
+  margin:5px 0;
+  font-size:11px;
+}
+[dir="rtl"] ul.sitepagelike_users_block .likes_viewall_link {
+  float:left;
+}
+ul.sitepagelike_users_block > li {
+  clear:both;
+  overflow:hidden;
+  padding:0;
+}
+ul.sitepagelike_users_block .likes_member_sitepage {
+  float:left;
+  width:48px;
+  padding:5px;
+  overflow:hidden;
+}
+ul.sitepagelike_users_block .likes_member_sitepage .likes_member_thumb {
+  float:left;
+  display:block;
+  width:48px;
+  height:48px;
+  margin-bottom:3px;
+}
+ul.sitepagelike_users_block .likes_member_sitepage .likes_member_name {
+  font-size:11px;
+  float:left;
+  text-align:center;
+  width:100%;
+}
+[dir="rtl"] ul.sitepagelike_users_block .likes_member_sitepage,
+[dir="rtl"] ul.sitepagelike_users_block .likes_member_sitepage .likes_member_thumb,
+[dir="rtl"] ul.sitepagelike_users_block .likes_member_sitepage .likes_member_name{
+  float:right;
+}
+ul.sitepage_sidebar_info li {
+  clear:both;
+  overflow:hidden;
+  padding:2px 5px;
+}
+ul.sitepage_sidebar_info li,
+ul.sitepage_sidebar_info li > div{
+  font-size:11px;
+}
+.sitepage_sidebar_info_photo {
+  margin-right: 6px;
+}
+[dir="rtl"] .sitepage_sidebar_info_photo {
+  margin-right: 0;
+  margin-left: 6px;
+}
+ul.sitepage_sidebar_info li span {
+  font-weight:normal;
+}
+ul.sitepage_sidebar_info li ul li {
+  padding:0px;
+  padding:1px 0;
+}
+ul.sitepage_sidebar_insights > li span {
+  display: block;
+  float: left;
+  font-size: 1.4em;
+  margin-right: 6px;
+}
+ul.sitepage_sidebar_insights > li div {
+  display: block;
+  float: left;
+  line-height: 1.7em;
+}
+[dir="rtl"] ul.sitepage_sidebar_insights > li span,
+[dir="rtl"] ul.sitepage_sidebar_insights > li div{
+  float:right;
+}
+ul.sitepage_sidebar_insights > li a {
+  float:right !important;
+  font-size:11px;
+}
+[dir="rtl"] ul.sitepage_sidebar_insights > li a{
+  float:left !important;
+}
+.sitepage_total_likes {
+  font-size:17px;
+  display:block;
+  font-weight:bold !important;
+}
+/*Location Tab*/
+.sitepage_profile_location {
+  padding:5px !important;
+  margin-bottom:15px;
+}
+/*View page layout simple css start here*/
+.layout_sitepage_thumbphoto_sitepage{
+  clear:both;
+  overflow:hidden;
+}
+#global_page_sitepage-layout-widget .global_form div.form-label {
+  width:70px;
+}
+.layout_simple_head {
+  border-top-width:1px;
+  border-top-style:solid;
+  height:25px;
+  line-height:25px;
+  font-weight:bold;
+  margin:10px 0;
+  padding:0 10px;
+}
+#sitepage_options ul {
+  padding:0px;
+  margin: 0px;
+  white-space: nowrap;
+}
+#sitepage_options li {
+  font-weight:bold;
+  border-bottom-width:1px;
+}
+#sitepage_options li a {
+  display:block;
+  padding:5px 5px 5px 25px;
+  background-position:5px;
+}
+[dir="rtl"] #sitepage_options li a{
+  padding:5px 25px 5px 5px;
+  background-position:right 50%;
+}
+#sitepage_options li a:hover {
+  text-decoration:none;
+}
+.layout_sitepagemember_profile_sitepagemembers, .layout_sitepagemusic_profile_sitepagemusic, .layout_core_profile_links, .layout_sitepage_info_sitepage, .layout_sitepage_overview_sitepage, .layout_sitepagepoll_profile_sitepagepolls, .layout_sitepagenote_profile_sitepagenotes, .layout_sitepageevent_profile_sitepageevents, .layout_sitepagedocument_profile_sitepagedocuments, .layout_sitepagereview_profile_sitepagereviews, .layout_sitepage_discussion_sitepage, .layout_sitepageform_sitepage_viewform, .layout_sitepageoffer_profile_sitepageoffers, .layout_sitepagevideo_profile_sitepagevideos, .layout_sitepage_location_sitepage, .layout_sitepage_photos_sitepage, .layout_seaocore_feed, .layout_sitepageintegration_profile_items, .layout_activity_feed{
+  clear:both;
+  overflow: hidden;
+}
+/*View page layout simple css end here*/
+/*sitepage list filters start here*/
+.sitepage_list_filters {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding:7px;
+  overflow:hidden;
+  margin-bottom:15px;
+  clear:both;
+}
+.sitepage_list_filter_first {
+  float:left;
+  width:25%;
+  padding-top:3px;
+}
+.sitepage_list_filter_field {
+  float:left;
+  width:35%;
+}
+.sitepage_list_filter_field select{
+  width:185px;
+}
+[dir="rtl"] .sitepage_list_filter_first,
+[dir="rtl"] .sitepage_list_filter_field{
+  float:right;
+}
+.layout_sitepageevent_profile_sitepageevents .sitepage_list_filter_field {
+  width:45%;
+}
+/*sitepage list filters end here*/
+/*CSS FOR ALL SITEPAGE MODULE LIST ON SITEPAGE PROFILE START HERE*/
+.layout_sitepagemusic_profile_sitepagemusic > h3, .layout_sitepageform_sitepage_viewform > h3, .layout_sitepageoffer_profile_sitepageoffers > h3, .layout_sitepage_discussion_sitepage > h3, .layout_sitepagereview_profile_sitepagereviews h3, .layout_sitepagepoll_profile_sitepagepolls h3, .layout_sitepageevent_profile_sitepageevents > h3, .layout_sitepagenote_profile_sitepagenotes h3, .layout_sitepageintegration_mixprofile_items > h3, .layout_sitepageintegration_profile_items > h3, .layout_sitepagedocument_profile_sitepagedocuments > h3 {
+  display:none;
+}
+ul.sitepage_profile_list {
+  clear:both;
+}
+ul.sitepage_profile_list > li {
+  clear:both;
+  padding:10px;
+  overflow:hidden;
+}
+ul.sitepage_profile_list > li + li {
+  border-top-width:1px;
+  padding-top:15px;
+}
+ul.sitepage_profile_list > li > img, ul.sitepage_profile_list > li > a {
+  display:block;
+  float:left;
+  overflow:hidden;
+  margin-right:8px;
+  font-weight:bold;
+}
+[dir="rtl"] ul.sitepage_profile_list > li > img, [dir="rtl"]ul.sitepage_profile_list > li > a {
+  float:right;
+}
+ul.sitepage_profile_list li > a img {
+  border-width:1px;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_options {
+  float:right;
+  padding:0 10px;
+  width:150px;
+}
+[dir="rtl"] ul.sitepage_profile_list li .sitepage_profile_list_options{
+  float:left;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_options > a {
+  clear:both;
+  margin:3px 0px 0px 0px;
+  font-size:.8em;
+  padding-top:1px;
+  float:left;
+  line-height:16px;
+}
+[dir="rtl"] ul.sitepage_profile_list li .sitepage_profile_list_options > a{
+  float:right;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_info {
+  overflow:hidden;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_title {
+  font-weight:bold;
+  margin-bottom:5px;
+  overflow:auto;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_title > a, ul.sitepage_profile_list li .sitepage_profile_list_title .list_title {
+  font-size:14px;
+  overflow:hidden;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_title span {
+  float:right;
+}
+[dir="rtl"] ul.sitepage_profile_list li .sitepage_profile_list_title span {
+  float:left;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_info_date {
+  font-size:.8em;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_info_date .rating_star_big_generic {
+  width:8px;
+  height:8px;
+}
+ul.sitepage_profile_list li .sitepage_profile_list_info_des {
+  margin-top:5px;
+}
+ul.sitepage_profile_list li .sitepag_member_status{
+  clear:both;
+}
+ul.sitepage_profile_list li .sitepag_member_status .icon_sitepages_edit{
+  padding-left:13px;
+  margin-left:5px;
+  text-decoration:none !important;
+}
+/*CSS FOR ALL SITEPAGE MODULE LIST ON SITEPAGE PROFILE END HERE*/
+.sitepagedocument_alert-message {
+  color:#FF0000;
+  font-size:11px;
+  font-weight:normal;
+  line-height:13px;
+  margin:5px 0;
+}
+.sitepagedocument_alert-message img {
+  vertical-align:middle;
+}
+/*SITEPAGE EVENT TAB WIDGET START HERE*/
+.sitepage_event_profile_links {
+  float:right;
+  font-weight:normal;
+  margin-bottom:10px;
+}
+[dir="rtl"] .sitepage_event_profile_links{
+  float:left;
+}
+.sitepage_event_profile_links a {
+  font-weight:normal;
+}
+.sitepage_event_profile_links a.selected {
+  font-weight:bold;
+}
+/*SITEPAGE EVENT SIDEBAR WIDGET START HERE*/
+.sitepageevent_sidebar .sitepageevent_sidebar_header {
+  clear:both;
+  overflow:auto;
+  padding-bottom:5px;
+  border-bottom-width:1px;
+  border-bottom-style:solid;
+}
+.sitepageevent_sidebar .sitepageevent_sidebar_header span {
+  float:left;
+}
+[dir="rtl"] .sitepageevent_sidebar .sitepageevent_sidebar_header span{
+  float:right;
+}
+.sitepageevent_sidebar .sitepageevent_sidebar_header span + span {
+  float:right;
+}
+[dir="rtl"] .sitepageevent_sidebar .sitepageevent_sidebar_header span + span{
+  float:left;
+}
+.sitepageevent_sidebar .sitepageevent_sidebar_header a {
+  font-size:11px;
+}
+.sitepageevent_sidebar ul li {
+  padding:5px 0;
+  clear:both;
+}
+.sitepageevent_sidebar ul li > a {
+  float:left;
+  margin-right:5px;
+}
+[dir="rtl"] .sitepageevent_sidebar ul li > a{
+  float:right;
+  margin-left:5px;
+  margin-right:0px;
+}
+.sitepageevent_sidebar_photo {
+  float:left;
+}
+[dir="rtl"] .sitepageevent_sidebar_photo{
+  float:right;
+}
+.sitepageevent_sidebar ul li .sitepageevent_info {
+  overflow:auto;
+}
+.sitepageevent_sidebar ul li .sitepageevent_title {
+  font-weight:bold;
+}
+.sitepageevent_sidebar ul li .sitepageevent_details {
+  font-size:.8em;
+  margin-top:3px;
+}
+/*SITEPAGE EVENT SIDEBAR WIDGET END HERE*/
+/*Siteoagedocument tooltip*/
+.sitepagedocument_tooltip {
+  -moz-border-radius:3px 3px 3px 3px;
+  display: block;
+  background: #222;
+  color: #fff;
+  text-align: left;
+  padding: 5px;
+  width: 260px;
+  font-size: .8em;
+  margin:0;
+  -moz-box-shadow:3px 3px 3px #bcbcbc;
+  -webkit-box-shadow:3px 3px 3px #bcbcbc;
+  box-shadow: 3px 3px 3px #bcbcbc;
+  float:left;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_content {
+  width:250px;
+  float:left;
+  background:#FFFFFF;
+  padding:5px;
+  position:relative;
+}
+[dir="rtl"] .sitepagedocument_tooltip,
+[dir="rtl"] .sitepagedocument_tooltip .sitepagedocument_tooltip_content{
+  float:right;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_content, .sitepagedocument_tooltip .sitepagedocument_tooltip_content div {
+  font-family:Arial, Helvetica, sans-serif !important;
+  line-height:18px;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_content a, .sitepagedocument_tooltip .sitepagedocument_tooltip_content div a {
+  color:#398bcc !important;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_title {
+  font-weight:bold;
+  font-size:13px;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_details {
+  font-size:11px;
+  color:#acacac;
+}
+.sitepagedocument_tooltip .sitepagedocument_tooltip_details .rating_star_big_generic {
+  width:9px;
+  height:9px;
+  margin-top:3px;
+}
+.sitepagedocument_tooltip .tooltip_arrow {
+  position:absolute;
+  width:250px;
+  text-align:center;
+  top:-18px;
+}
+.sitepagedocument_tooltip .tooltip_arrow img {
+  border:none;
+  width:13px;
+  height:9px;
+  float:none;
+}
+/*Siteoagedocument widgets*/
+/*Sitepagedocument Featured Carousel*/
+div.browse_sitepagedocument_carousel {
+  clear:both;
+  padding:0 !important;
+  overflow:auto;
+}
+.sitepagedocument_carousel {
+  width:728px !important;
+  margin:0 !important;
+  text-align:center;
+  border-width:1px;
+  padding:5px;
+  float:left;
+  display:block;
+  -moz-border-radius:3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.sitepagedocument_carousel_sitepagedocuments {
+  width: 692px;
+  padding-top:1px;
+  margin: 0px 5px 0px 5px;
+  text-align: center;
+  overflow: hidden;
+}
+.browse_carousel_item {
+  padding: 5px;
+  text-align:center;
+  font-size:11px;
+}
+.browse_carousel_item img {
+  width:120px;
+  height:120px;
+  border:1px solid #dadada;
+  float:left;
+}
+.browse_carousel_item a img:hover {
+  width:120px;
+  height:120px;
+  border:1px solid #ccc;
+}
+/*Sitepagedocument Featured Carousel end*/
+/*Sitepagemusic start */
+.layout_sitepagemusic_profile_player {
+  margin-bottom:15px;
+}
+/*Sitepagemusic end*/
+/*
+PROFILE MUSIC PLAYER
+Styles the mini-player that only shows up on the member profile page.
+*/
+#sitepageprofile_music_player {
+  margin-top: 5px;
+}
+#sitepageprofile_music_player h3 {
+  display: none;
+}
+#sitepageprofile_music_player .music_player_art {
+  display: none;
+}
+#sitepageprofile_music_player .music_player_button_prev, #sitepageprofile_music_player .music_player_button_next {
+  display: none;
+}
+#sitepageprofile_music_player .music_player_button_play {
+  margin: 0px;
+}
+#sitepageprofile_music_player .music_player_trackname {
+  font-weight: normal;
+}
+/*
+ACTIVITY FEED COMPOSER  ALBUM PHOTO
+These styles are used for the attachment composer above the
+main feed.
+*/
+#compose-photo-activator, #compose-photo-menu span {
+  display: none;
+}
+
+/* contact details */
+.layout_sitepage_contactdetails_sitepage {
+  clear: both;
+  margin-bottom:10px;
+  overflow: hidden;
+  padding: 5px;
+}
+.sitepage_contect_field {
+  float:left;
+  margin-right:15px;
+  line-height:22px;
+}
+[dir="rtl"] .sitepage_contect_field {
+  float:right;
+  margin-left:15px;
+  margin-right:0;
+}
+.sitepage_contect_field > img {
+  float:left;
+  margin-right:5px;
+  margin-top:4px;
+}
+[dir="rtl"] .sitepage_contect_field > img{
+  float:right;
+  margin-right:0;
+  margin-left:5px;
+}
+.layout_left .sitepage_contect_field, .layout_right .sitepage_contect_field {
+  clear:both;
+  margin-right:0px;
+}
+.sitepage_contect_det {
+  float:left;
+}
+[dir="rtl"] .sitepage_contect_det{
+  float:right;
+}
+.layout_right .sitepage_contect_det {
+  max-width:130px;
+  overflow:hidden;
+}
+.sitepage_contect_det > div {
+  font-size:11px;
+  font-weight:bold;
+}
+.sitepage_contect_field input {
+  margin-top:3px;
+  padding:2px;
+  font-size:11px;
+  width:120px;
+}
+.sitepage_contect_field .edit_icon {
+  margin-top:4px;
+}
+.sitepage_contect_error {
+  float:left;
+  color:#FF0000;
+  padding:0 5px;
+  font-size:11px;
+}
+[dir="rtl"] .sitepage_contect_error{
+  float:right;
+}
+
+/*Music Feed Composer*/
+#compose-music-activator, #compose-music-menu span {
+  display: none;
+}
+#compose-sitepagemusic-activator, #compose-sitepagemusic-menu span{
+  background-repeat: no-repeat;
+  background-image: url(../images/music/music.png);
+}
+#compose-sitepagemusic-form-fancy-file{
+  background-image: url(../images/music/new.png);
+}
+a.compose-sitepagemusic-link{
+  background-image: url(../images/music/play.png);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+a.compose-sitepagemusic-link-playing{
+  background-image: url(../images/music/upload_loading.gif);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+html[dir="rtl"] a.compose-sitepagemusic-link, html[dir="rtl"] a.compose-sitepagemusic-link-playing{
+  background-position: 100% 0%;
+  padding-left: 0px;
+  padding-right: 20px;
+}
+/*
+  VIDEO CSS
+  here all video css which comes in page profile.
+*/
+/*Video Feed Composer*/
+#compose-video-activator, #compose-video-menu span {
+  /*display: none;*/
+}
+#compose-sitepagevideo-body .compose-preview-image{
+  float: left;
+  margin-right: 2px;
+  border-width: 1px;
+  border-style:solid;
+}
+html[dir="rtl"] #compose-sitepagevideo-body .compose-preview-image{
+  float: right;
+  margin-right: 0px;
+  margin-left: 2px;
+}
+#compose-sitepagevideo-body .compose-preview-info{
+  overflow: hidden;
+  float:none !important;
+}
+#compose-sitepagevideo-body .compose-preview-info a{
+  font-weight: bold;
+  display: block;
+  margin-bottom: 2px;
+}
+#compose-sitepagevideo-body .compose-preview-info > div{
+  font-size: .8em;
+}
+#compose-sitepagevideo-activator::before, #compose-sitepagevideo-menu span::before{
+  content:"\f03d";
+  font-family: fontawesome;
+}
+#compose-sitepagevideo-form-input{
+  width: 300px;
+  margin-top: 5px;
+}
+#compose-sitepagevideo-form-submit{
+  margin-top: 5px;
+  clear: both;
+}
+/*Page Profile Video Listing*/
+.layout_sitepagevideo_sitepage_video h3{
+  display:none;
+}
+ul.sitepagevideo_profile > li{
+  clear: both;
+  overflow: hidden;
+  padding:10px;
+}
+ul.sitepagevideo_profile > li + li{
+  border-top-width: 1px;
+  padding: 10px;
+}
+ul.sitepagevideo_profile > li > a{
+  float:left;
+}
+ul.sitepagevideo_profile li .sitepagevideo_thumb_wrapper{
+  margin-right:7px;
+}
+ul.sitepagevideo_profile li .sitepagevideo_play{
+  overflow:hidden;
+  margin-bottom:10px;
+}
+ul.sitepagevideo_profile li .sitepagevideo_play object{
+  float:left;
+}
+.sitepagevideo_close{
+  float:left;
+  height:11px;
+  width:11px;
+  margin-left:7px;
+  cursor:pointer;
+  background:url(../images/close_icon.png) no-repeat right;
+}
+.sitepagevideo_close:hover{
+  background:#3b5998 url(../images/close_icon.png) no-repeat left;
+}
+.sitepagevideo_profile_options{
+  float: left;
+  margin:10px 0 0;
+}
+.sitepagevideo_profile_options a{
+  margin: 3px 0px 0px 0px;
+  font-size: .8em;
+  padding-top: 1px;
+  float:left;
+  margin-right:15px;
+}
+.sitepagevideo_profile_info{
+  overflow: hidden;
+}
+.sitepagevideo_profile_title{
+  font-size:14px;
+  margin-bottom:5px;
+  font-weight:bold;
+}
+.sitepagevideo_profile_title > a{
+  overflow:hidden;
+}
+.sitepagevideo_profile_title span{
+  float:right;
+  margin-left:10px;
+}
+.sitepagevideo_profile_info_date{
+  font-size: .8em;
+}
+.sitepagevideo_profile_info_desc{
+  margin-top: 5px;
+}
+.sitepage_video_rate{
+  height:9px;
+  width:9px;
+}
+/*Page Profile Form*/
+.layout_sitepageform_sitepage_viewform .global_form > div{
+  float:none;
+}
+.layout_sitepageform_sitepage_viewform .global_form div > p{
+  max-width: none !important;
+}
+.layout_sitepageform_sitepage_viewform .global_form div.form-element{
+  max-width:300px !important;
+}
+
+/*Photo Feed Composer*/
+#compose-sitepagephoto-activator::before, #compose-sitepagephoto-menu span::before{
+  content:"\f03e";
+  font-family: fontawesome;
+}
+#compose-sitepagephoto-preview-image{
+  max-width: 160px;
+}
+#compose-sitepagae-photo-form-fancy-file::before{
+  content:"\f055";
+}
+
+
+
+/*User Facebook Page Feed Widget*/
+.layout_advancedactivity_feeds_sitepagefacebook,
+.layout_sitebusiness_fblikebox_sitepage{
+  margin-bottom:15px;
+}
+.page_fb_feed_mainbox .white{
+  margin:5px;
+}
+.page_fb_feed_box_top{
+  padding:5px 0;
+  margin:0 5px;
+}
+.page_fb_page_photo{
+  float:left;
+  margin-right:5px;
+}
+.page_fb_page_info{
+  overflow:hidden;
+}
+.page_fb_page_name{
+  font-weight:bold;
+  font-size:14px; 
+  margin-bottom:5px;
+}
+.page_fb_page_like_button{
+  clear:both;
+}
+.page_fb_feed_box{
+  padding:0 5px;
+  margin-bottom:5px;
+}
+ul.page_fb_feeds{
+  clear: both;
+  max-height: 400px;
+  overflow: auto;
+}
+ul.page_fb_feeds > li{
+  padding: 10px 0;
+  overflow: hidden;
+}
+ul.page_fb_feeds > li + li{
+  border-top-width: 1px;
+}
+ul.page_fb_feeds .feed_item_generated{
+  margin-bottom:5px;
+}
+ul.page_fb_feeds .feed_item_photo{
+  float: left;
+  overflow: hidden;
+  margin-right: 7px;
+  line-height: 0px;
+  font-size: 0px;
+}
+ul.page_fb_feeds .feed_item_photo > a{
+  text-decoration: none;
+}
+ul.page_fb_feeds .feed_item_photo > a > img{
+  display: block;
+}
+ul.page_fb_feeds .feed_item_body{
+  overflow:hidden;
+}
+ul.page_fb_feeds .feed_item_username{
+  font-weight: bold;
+}
+ul.page_fb_feeds .feed_item_body_txt{
+  display:inline;
+}
+ul.page_fb_feeds .feed_item_stats{
+  padding-top: 5px;
+}
+ul.page_fb_feeds .feed_item_stats i{
+  background-position:center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  float:left;
+  margin-right:5px;
+  height: 16px;
+  width: 16px;
+}
+ul.page_fb_feeds .feed_item_stats .feed_item_time{
+  font-size: 11px;
+  padding-top:1px;
+  vertical-align: top;
+  width: 10000px;
+}
+ul.page_fb_feeds .feed_item_attachments{
+  overflow: hidden;
+  padding:2px 0px;
+}
+ul.page_fb_feeds .feed_item_link_title{
+  font-size: .8em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+ul.page_fb_feeds .feed_item_link_desc{
+  font-size: 0.8em;
+}
+ul.page_fb_feeds .feed_attachment_facebook {
+  display: block;
+  overflow: hidden;
+  margin: 0px 5px 5px 0px;
+  vertical-align: top;
+}
+ul.page_fb_feeds .feed_attachment_facebook > div > a {
+  display: block;
+  float: left;
+  margin-right: 7px;
+}
+ul.page_fb_feeds .feed_attachment_facebook_photo{
+  padding:2px;
+  margin-bottom:5px;
+}
+ul.page_fb_feeds .feed_attachment_facebook > div > a > img {
+  display: inline-block;
+  max-width: 130px;
+  max-height: 130px;
+  vertical-align: top;
+}
+ul.page_fb_feeds .feed_attachment_facebook > div > div {
+  overflow: hidden;
+  padding:3px 3px 3px 10px;
+}
+ul.page_fb_feeds .feed_attachment_facebook > div > a + div {
+  overflow: hidden;
+  padding:0px;
+  border:none;
+  clear:both;
+}
+ul.page_fb_feeds .feed_attachment_facebook > div > a.feed_attachment_facebook_photo + div{
+  clear:both;
+}
+
+/*Profile Announcements*/
+.sitepage_profile_announcements{
+  border-width: 1px;
+  border-radius: 5px;
+  padding:0 10px;
+  margin-bottom: 15px;
+}
+ul.sitepage_profile_announcements > li{
+  padding:10px 0;
+}
+ul.sitepage_profile_announcements > li + li{
+  border-top-width:1px; 
+}
+/* Page Profile Title  */
+.layout_sitepage_title_sitepage{
+  float:left;
+  margin-right:10px !important;
+  margin-bottom:10px;
+}
+.layout_sitepage_title_sitepage #profile_status > h2{
+  letter-spacing:0px;
+}
+.layout_sitepage_profile_status{
+  float:left;
+}
+.layout_sitelike_common_like_button {
+  float: left;
+  margin: 0 10px 5px;
+}
+.layout_Facebookse_facebookse_commonlike{
+  clear:both;
+  margin-bottom:15px;
+}
+/*Profile Cover Photo Start Here*/
+.layout_sitepage_page_cover_information_sitepage,
+.layout_sitepagemember_pagecover_photo_sitepagemembers{
+  clear:both; 
+  margin-bottom:15px;
+}
+.sitepage_cover_information_wrapper{
+  margin:0;
+}
+.sitepage_cover_wrapper {
+  position:relative;
+  clear:both;
+  padding:0px;
+}
+.sitepage_cover_photo {
+  overflow:hidden;
+  position: relative;
+  height:100%;
+  width:100%;
+}
+.sitepage_cover_photo img {
+  width:100%;
+  min-height:100%;
+  border:none;
+  position: absolute;
+}
+.sitepage_cover_photo_empty {
+  border:none;
+}
+.sitepage_cover_wrapper .draggable{
+  opacity: 0.5;
+  cursor: move;
+}
+/*Profile Cover Photo Endst Here*/
+/*Profile Cover Members Starts Here*/
+.sitepage_members_cover_listing{
+  border-style:solid;
+  border-width:1px;
+  height:120px;
+  overflow:hidden;
+}
+.sitepage_members_cover_listing .sitepage_members_cover_member {
+  float: left;
+  height:120px;
+  overflow: hidden;
+  position: relative;
+  width: 120px;
+}
+.sitepage_members_cover_listing img.thumb_profile {
+  width:100%;
+  min-height:120px;
+  border:none;
+  float:left;
+}
+span.sitepage_members_cover_member_name {
+  display:none;
+  left:0;
+  right:0;
+  width:100%;
+  bottom:0px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-image: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-image: -webkit-gradient(transparent, rgba(0, 0, 0, 0.9));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.0)), color-stop(1, rgba(0, 0, 0, 0.9)));
+  position:absolute;
+  text-align:center;
+  overflow:hidden;
+}
+span.sitepage_members_cover_member_name a {
+  text-decoration:none;
+  color:#fff;
+}
+.sitepage_members_cover_member:hover .sitepage_members_cover_member_name {
+  display:block;
+}
+/*Profile Cover Members Ends Here*/
+/*Cover Information Starts Here*/
+.sitepage_cover_information{
+  border-style:solid;
+  border-width:1px;
+  clear: both;
+  padding:10px 30px 20px;
+}
+.sp_coverinfo_profile_photo_wrapper{
+  width:165px;
+  float:left;
+  margin-right:15px;
+  position:relative;
+  height:2px;
+  overflow:visible;
+}
+.sp_coverinfo_profile_photo{
+  background-color: #FFFFFF;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid;
+  border-width: 1px;
+  bottom: -45px;
+  overflow: hidden;
+  padding: 2px;
+  position: absolute;
+}
+.sp_coverinfo_profile_photo .sitepage_profile_sponsorfeatured{
+  font-size: 11px;
+  height: auto;
+  line-height: inherit;
+  padding: 5px;
+  width: auto;
+}
+.sp_coverinfo_profile_photo .sitepage_photo{
+  height:160px;
+  width:160px;
+  overflow:hidden;
+}
+.sp_coverinfo_profile_photo .sitepage_photo table{
+  height:100%;
+  width:100%;
+}
+.sp_coverinfo_profile_photo .sitepage_photo table td{
+  text-align:center;
+}
+.sp_coverinfo_profile_photo .sitepage_photo table td img{
+  width:100%;
+  border:none;
+  max-height: none;
+  max-width: none;
+}
+.sp_coverinfo_status{
+  overflow:hidden;
+}
+.sp_coverinfo_status h2{
+  margin-bottom:5px;
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing:normal;
+}
+.sp_coverinfo_status .sp_coverinfo_stats,
+.sp_coverinfo_count{
+  font-size:11px;
+}
+.sp_coverinfo_status .sp_coverinfo_stats.seaocore_txt_light a{
+  color: #999999; 
+}
+.sp_coverinfo_buttons{
+  float:right;
+  margin-left:10px;
+}
+.sp_coverinfo_buttons > div{
+  float:left;
+}
+.sp_coverinfo_buttons .layout_seaocore_seaocore_follow,
+.sp_coverinfo_buttons .layout_seaocore_like_button,
+.sp_coverinfo_buttons .sitepage_button{
+  margin:0 0 0 10px;
+}
+.sp_coverinfo_buttons .seaocore_follower_count{
+  display:none;
+}
+.seaocore_follow_button_wrap{
+  margin-right:0px !important;
+}
+/*Cover Information Ends Here*/
+/*Cover Photo Add Edit Options Starts Here*/
+.sitepage_cover_options {
+  position:absolute;
+  top:10px;
+  right:70px;
+  display:none;
+}
+.sitepage_cover_options_btm {
+  bottom: 10px;
+  top: auto !important;
+}
+.sitepage_cover_wrapper:hover .sitepage_cover_options {
+  display:block;
+}
+.sitepage_cover_options > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 3px;
+}
+.sitepage_cover_options ul {
+  background-color:#fff;
+  border: 1px solid #999;
+  float:left;
+}
+.sitepage_cover_options ul.sitepage_cover_options_pulldown {
+  display: none;
+}
+.sitepage_cover_options li:hover ul.sitepage_cover_options_pulldown {
+  display: block;
+  position: absolute;
+}
+.sitepage_cover_options .sitepage_cover_photo_btn {
+  position: relative;
+  font-weight: bold;
+  cursor:pointer;
+}
+.sitepage_cover_options .sitepage_cover_photo_btn::before,
+ul.sitepage_cover_options_pulldown li a::before {
+  font-family: fontawesome;
+  margin-right: 6px;
+  font-weight: normal;
+}
+.sitepage_cover_options .sitepage_cover_photo_btn, 
+ul.sitepage_cover_options_pulldown li a {
+  display: block;
+  font-size:11px;
+  color:#333;
+  padding:5px;
+}
+.cover_photo_wap .cover_tip_wrap{
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  margin-top:-13px;
+  width: 100%;
+}
+.cover_photo_wap .cover_tip {
+  background: #546185 url(../images/drag.png) 9px 8px no-repeat;
+  background-color: rgba(0, 0, 0, .4);
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  color: #fff;
+  display: inline;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 4px 9px 6px 29px;
+}
+ul.sitepage_cover_options_pulldown li + li {
+  border-top: 1px solid #999;
+}
+ul.sitepage_cover_options_pulldown li a {
+  text-decoration: none;
+  white-space: nowrap;
+}
+ul.sitepage_cover_options_pulldown li a:hover {
+  background-color:#CCC;
+}
+ul.sitepage_cover_options_pulldown li {
+  float: none;
+}
+.sitepage_cover_options ul.save-button{
+  background:none;
+  border:none;
+}
+.sitepage_cover_options ul.save-button li{
+  display:inline;
+  margin-left:5px;
+}
+.sitepage_cover_options ul.save-button li .sitepage_cover_action{
+  background-color: #FFFFFF;
+  border:1px solid #AAAAAA;
+  border-radius:3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding:5px 7px;
+  font-size:11px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#555555;
+}
+/*Cover Photo Add Edit Options Ends Here*/
+/*Cover Photo Upload Photo Popup Starts Here*/
+.upload_cover_photo_popup{
+  margin:15px 0 0 15px;
+  width:315px;
+}
+.upload_cover_photo_form .form-label{
+  margin:10px 0 5px;
+  font-weight:bold;
+}
+.upload_cover_photo_popup button{
+  clear:both;
+  margin-top:15px;
+}
+.upload_cover_photo_popup .seaocore_content_loader{
+  margin:15px auto 0 !important;
+}
+/*Cover Photo Upload Photo Popup Ends Here*/
+/*Cover Photo Choose Photo Popup Starts Here*/
+.sitepage_choose_cover_content ul.thumbs{
+  margin:10px;
+}
+.sitepage_choose_cover_content ul.thumbs li{
+  clear: none;
+  display: inline-block;
+  float: none;
+  height: auto;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+/*Cover Photo Choose Photo Popup Endss Here*/
+
+/*Cover Photo Choose Photo Popup Endss Here*/
+/*Sitepage Buttons*/
+/*.sitepage_button{
+  background-color: #FFFFFF;
+  background-image: url(../images/btn-bg.png) !important;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  border: 1px solid #CECECE;
+  border-radius: 3px 3px 3px 3px;
+  clear: both;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  outline: medium none;
+  padding: 7px;
+}*/
+/*.sitepage_button:hover{
+  text-decoration:none;
+  background-image:url(../images/btn-bg-hover.png) !important;
+}*/
+.sitepage_button i{
+  float:none;
+  height:13px;
+  margin-right:5px;
+  width:13px;
+}
+.sitepage_button i.add_people::before {
+  content:"\f067";
+}/*
+.sitepage_button span {
+  color: #333333;
+}*/
+.sitepage_button i.plus_icon::before {
+  content:"\f067";
+}
+.sitepage_button i.minus_icon::before {
+  content:"\f068";
+}
+.icon_sitepage_notification::before {
+  content:"\f0f3"
+}
+
+/*Operating Hours*/
+.layout_sitepage_timing_sitepage .container_ {
+  width: 100%;
+}
+.layout_sitepage_timing_sitepage .container_ .row {
+  display: table;
+  width: 100%;
+  margin: 5px auto;
+}
+/*.layout_sitepage_timing_sitepage .container_ .row span {
+  display: table-cell;
+  width: 100%;
+  max-width: 45%;
+  vertical-align: middle;
+}*/
+.layout_sitepage_timing_sitepage .container_ .row span,
+.layout_sitepage_timing_sitepage .container_ .row .timezone {
+  display: block;
+    overflow: hidden;
+    text-align: right;
+}
+.layout_sitepage_timing_sitepage .container_ .row .timing_day {
+  max-width: 34%;
+  font-size: 13px;
+  float: left;
+}
+span.timing_time {
+    font-size: 13px;
+}
+.layout_sitepage_timing_sitepage .container_ .row .timing_time .start, .layout_sitepage_timing_sitepage .container_ .row .timing_time .end, .layout_sitepage_timing_sitepage .container_ .row span .closed {
+  display: inline-block;
+}
+.layout_sitepage_timing_sitepage .container_ .row .weekzone{
+  float: left;
+  font-weight: bold;
+}
+.layout_sitepage_timing_sitepage .container_ .row .timezone {
+  font-size: 14px;
+  font-weight: 700;
+}
+/*edit_operating_hours*/
+.sitepage_edit_content #show_tab_content {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.sitepage_create_wrapper .sitepage_change_category, .sitepage_create_wrapper .sitepagepage_layout_left .global_form {
+  margin: 0 auto;
+}
+.sitepage_create_wrapper .sitepagepage_layout_left .global_form div {
+  padding: 0;
+}
+/*Sitepage_dashboard*/
+.sitepage_manage_announcements_list {
+  display: inline-block;
+  width: 100%;
+  margin: 15px auto;
+  padding: 10px !important;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.sitepage_manage_announcements_list > div {
+  display: inline-block;
+  vertical-align: top;
+  line-height: normal;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.sitepage_manage_announcements_list img {
+  width: 100%;
+  height: 100%;
+  max-width: 35px;
+  max-height: 35px;
+}
+.sitepage_manage_announcements_list .sitepage_manage_announcements_info {
+  display: inline-block;
+  width: auto;
+  max-width: 65%;
+  vertical-align: top;
+  padding: 0;
+}
+.sitepage_manage_announcements_list .sitepage_manage_announcements_info_dashboard {
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  vertical-align: top;
+  padding: 0;
+}
+
+/*Sitepage_dashboard_new_work*/
+.layout_sitepage_page_services .sitepage_manage_announcements_list img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
+  max-height: 60px;
+  vertical-align: middle;
+}
+.layout_sitepage_page_services .sitepage_manage_announcements_list .sitepage_manage_announcements_title {
+  display: inline;
+  vertical-align: middle;
+}
+.layout_sitepage_page_services .sitepage_manage_announcements_list .sitepage_manage_announcements_title {
+  display: inline-block;
+  width: 100%;
+  max-width: 90%;
+  vertical-align: middle;
+}
+.layout_sitepage_page_services .sitepage_manage_announcements_list .sitepage_manage_announcements_dates, .layout_sitepage_page_services  .sitepage_manage_announcements_list .sitepage_manage_announcements_body {
+  display: inline-block;
+  width: 100%;
+}
+#TB_window {
+  padding: 10px;
+}
+/*==================================Responsive Css work for page Plugin====================================*/
+@media screen and (max-width:920px){
+  /* announce ments tab content */
+.sitepage_profile_announcements .sitepage_profile_list_info_des.show_content_body > div {width: 100% !important;} 
+}
+
+@media only screen and (max-width: 768px) {
+/* Overview tab images profila page */
+.layout_sitepage_overview_sitepage img{width:100%;}
+/* Embeded object videos */
+  object, embed {width: 100%;}
+/* sitepage profile select box- notes tab */
+  .sitepage_list_filter_field select{width:95%;max-width:inherit;}
+}
+
+@media only screen and (max-width: 600px) {
+/* search filter form */
+.sitepage_list_filters div, .sitepage_list_filters div select, .sitepage_list_filters div input[type="text"] {box-sizing: border-box;margin: 4px 0 0;
+max-width: inherit !important;min-width: inherit !important;padding: 5px 0;width: 100% !important;}
+.sitepage_list_filter_field input, .sitepage_list_filter_field select{margin:3px 0 0 0;}
+/* Locations page - add location popup */
+.sitepage_tellafriend_popup{width:100%;margin:0; padding: 8px; box-sizing: border-box;}
+.sitepage_tellafriend_popup .global_form > div > div, .sitepage_tellafriend_popup .global_form input + label{width:auto; box-sizing: border-box;}
+}
+
+@media only screen and (max-width: 450px) {
+/* Page profile cover info 
+  .sp_coverinfo_profile_photo_wrapper {width: 100%;}
+  .sp_coverinfo_status {clear: both;}
+  .sp_coverinfo_buttons{margin-top:60px;}*/
+/* page profiel info tab */
+  .layout_sitepage_location_sitepage .profile_fields > ul > li > span + span, .layout_sitepage_info_sitepage .profile_fields > ul > li > span + span{width:100%;}
+/* page profile forms form */
+  .layout_sitepageform_sitepage_viewform .global_form div.form-element{max-width:100% !important;}
+/* Sitepage list info notes tab */
+  ul.sitepage_profile_list li .sitepage_profile_list_info{width:100%;margin:10px 0 0 0;display:inline-block;}
+  ul.sitepage_profile_list li .sitepage_profile_list_options {float: left;padding: 0;width: 100%;}
+  ul.sitepage_profile_list li .sitepage_profile_list_options a {clear: none;margin: 4px 10px 8px 0;}
+/* Profile page video tab */
+  .sitepagevideo_profile_info{width:100%;display:inline-block;margin:10px 0 0;}
+  ul.sitepagevideo_profile > li > a {display: table;float: none;margin: 0 auto;}
+}

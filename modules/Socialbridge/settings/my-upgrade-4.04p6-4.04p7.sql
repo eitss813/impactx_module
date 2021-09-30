@@ -1,0 +1,2 @@
+UPDATE `engine4_core_modules` SET `version` = '4.04p6' WHERE `engine4_core_modules`.`name` = 'socialbridge' LIMIT 1;
+UPDATE `engine4_core_menuitems` SET `label` = 'Social Bridge' WHERE `engine4_core_menuitems`.`name` = 'core_admin_main_plugins_socialbridge' LIMIT 1;
